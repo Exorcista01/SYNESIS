@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-sidebar',
   imports: [
-    RouterModule, 
+    RouterModule,
     CommonModule
   ],
   templateUrl: './sidebar.component.html',
@@ -55,11 +55,45 @@ export class SidebarComponent {
     },
   ];
 
+  navUser = [
+    {
+      links:  [
+        {
+          name: 'Perfil',
+          route: '/Perfil',
+          icon: 'fa-regular fa-user'
+        },
+        {
+          name: 'Settings',
+          route: '/Settings',
+          icon: 'fa-solid fa-gear'
+        },
+        {
+          name: 'Support',
+          route: '/Support',
+          icon: 'fa-regular fa-circle-question'
+        },
+        {
+          name: 'Logout',
+          route: '/Logout',
+          icon: 'fa-solid fa-arrow-right-from-bracket'
+        }
+      ],
+    },
+  ];
+
   toggleDropdown(link: any): void {
     link.isOpen = !link.isOpen;
-  }
+  };
+
+
+  isUserDropdownOpen = false;
+
+  toggleUserDropdown(): void {
+    this.isUserDropdownOpen = !this.isUserDropdownOpen;
+  };
 
   @Input() isOpen = true;
 
-  constructor() {}
+  constructor() { }
 }

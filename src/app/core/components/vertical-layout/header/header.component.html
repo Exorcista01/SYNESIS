@@ -14,12 +14,12 @@
     </div>
 
     <div class="header-right">
-      
+
       <button class="header-action-btn" aria-label="Alternar tema" (click)="changeTheme()">
         @if(!isDarkMode) {
-          <i class="fa-regular fa-moon"></i>
+        <i class="fa-regular fa-moon"></i>
         }@else {
-          <i class="fas fa-sun"></i>
+        <i class="fas fa-sun"></i>
         }
       </button>
 
@@ -35,17 +35,23 @@
 
 
       <div class="user-menu">
-        <button class="user-menu-button">
-          <img
-            src="https://placehold.co/40x40/E2E8F0/4A5568?text=J"
-            alt="Avatar do usuário"
-            class="user-avatar"
-          />
+        <button class="user-menu-button" (click)="navModalOpen()">
+          <img src="https://placehold.co/40x40/E2E8F0/4A5568?text=J" alt="Avatar do usuário" class="user-avatar" />
           <div class="user-info">
             <span class="user-name">Jorge Luis</span>
             <span class="user-role">Estudante</span>
           </div>
         </button>
+
+        @if (navMenuModal) {
+        <div class="menu-modal" [class.open]="navMenuModal">
+          <ul class="modal-container">
+            <li class="modal-items"  *ngFor="let items of userMenuItems"></li>
+            
+          </ul>
+        </div>
+        }
+
       </div>
 
     </div>

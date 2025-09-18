@@ -1,24 +1,42 @@
 <aside class="sidebar" [class.sidebar-closed]="!isOpen">
+    <div class="sidebar-footer">
+      <button (click)="toggleUserDropdown()" class="sidebar-footer-container">
+        <div class="user-img-info">
+          <img src="https://placehold.co/40x40/E2E8F0/4A5568?text=J" alt="Avatar do usuário" class="user-avatar">
+          <div class="sidebar-footer-text">
+            <span class="user-name">Jorge luis</span>
+            <span class="user-role">3° Manutenção</span>
+          </div>
+        </div>
+        <i class="fas fa-chevron-right nav-arrow" [class.rotate-90]="isUserDropdownOpen"></i>
+      </button>
+    
+      <div class="user-dropdown" [class.open]="isUserDropdownOpen">
+        <ul *ngFor="let user of navUser" class="nav-list">
+          <li *ngFor="let links of user.links">
+            <a [routerLink]="[links.route]" class="nav-link">
+              <i class="{{links.icon}}"></i>
+              <span>{{links.name}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
   <nav class="sidebar-nav">
     <div *ngFor="let section of navSections" class="nav-section">
       <p class="nav-section-title">{{ section.title }}</p>
       <ul class="nav-list">
         <li *ngFor="let link of section.links">
 
-          <a *ngIf="!link.children"
-          [routerLink]="[link.route]" 
-          routerLinkActive="active" 
-          [routerLinkActiveOptions]="{exact: true}"
-            class="nav-link">
+          <a *ngIf="!link.children" [routerLink]="[link.route]" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}" class="nav-link">
             <i class="{{ link.icon }} nav-icon"></i>
             <span>{{ link.name }}</span>
           </a>
 
-          <div *ngIf="link.children"
-          (click)="toggleDropdown(link)"
-          class="nav-link dropdown-toggle" 
-          [class.active-dropdown]="link.isOpen"
-          >
+          <div *ngIf="link.children" (click)="toggleDropdown(link)" class="nav-link dropdown-toggle"
+            [class.active-dropdown]="link.isOpen">
             <i class="{{ link.icon }} nav-icon"></i>
             <span>{{ link.name }}</span>
             <i class="fas fa-chevron-right nav-arrow" [class.rotate-90]="link.isOpen"></i>
@@ -38,10 +56,4 @@
       </ul>
     </div>
   </nav>
-
-  <!-- <div class="sidebar-footer">
-    <i class="fas fa-cog footer-icon" title="Configurações"></i>
-    <i class="fas fa-envelope footer-icon" title="Mensagens"></i>
-    <i class="fas fa-user footer-icon" title="Perfil"></i>
-  </div> -->
 </aside>

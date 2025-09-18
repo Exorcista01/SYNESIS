@@ -4,6 +4,11 @@ import { RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
+interface userMenuitem {
+  name: string,
+  icon: string,
+  router: string,
+}
 
 @Component({
   selector: 'app-header',
@@ -42,4 +47,16 @@ export class HeaderComponent {
 
       document.body.classList.toggle('dark-mode')
     }
+    
+    navMenuModal = false;
+
+    navModalOpen(): void{
+      this.navMenuModal = !this.navMenuModal;
+    }
+
+  userMenuItems: userMenuitem[] = [
+    { name: 'Settings', icon: 'fa-solid fa-gear', router:'/Settings' },
+    { name: 'Perfil', icon: 'fa-regular fa-user', router: '/Perfil' },
+    { name: 'Logout', icon: 'fa-solid fa-arrow-right-from-bracket', router: '/Logout' }
+  ]
 }

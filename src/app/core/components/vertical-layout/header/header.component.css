@@ -15,6 +15,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 100%;
   padding: 0 1.5rem;
 }
 
@@ -23,6 +24,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  height: 100%;
 }
 
 .logo-container a {
@@ -120,6 +122,46 @@
 
 .clear-search-btn .material-symbols-outlined {
   font-size: 1.1rem;
+}
+
+.user-menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+.menu-modal{
+  position: absolute;
+  top: 64px;
+  right: 50px;
+  background-color: var(--color-background);
+  display: none;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--color-text-tertiary);
+  height: auto;
+  width: 8rem;
+  padding: 0.25rem 0.25rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-modal.open{
+  display: flex;
+}
+
+.modal-container{
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-align: start;
+  color: var(--color-text-tertiary);
 }
 
 .user-menu-button {
