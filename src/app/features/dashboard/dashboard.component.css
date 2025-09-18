@@ -1,0 +1,339 @@
+@use '@angular/material' as mat;
+
+
+main-content {
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.dashboard-container {
+    flex: 1.4;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-surface);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 380px;
+}
+
+.welcome-section {
+    flex: 1.5;
+}
+
+.illustration-section {
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.illustration-section img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.welcome-section h1 {
+    font-size: 42px;
+    color: var(--color-text-primary);
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2
+}
+
+.welcome-section h1 span {
+    color: var(--color-accent);
+}
+
+.welcome-section p {
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    margin-bottom: 30px;
+    max-width: 450px
+}
+
+.welcome-section .explore-btn {
+    background-color: var(--color-accent);
+    color: var(--color-text-on-accent);
+    border: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .3s
+}
+
+.welcome-section .explore-btn:hover {
+    background-color: var(--color-accent-hover);
+}
+
+.stats-section {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    max-height: 380px;
+}
+
+.stat-card {
+    background-color: var(--color-surface);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start
+}
+
+.card-body {
+    width: 100%;
+    text-align: left
+}
+
+.card-body .value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0;
+    line-height: 1
+}
+
+.card-body .label {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    margin: 8px 0 0
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-on-accent);
+}
+
+.stat-icon i {
+    font-size: 20px
+}
+
+.icon-blue {
+    background-color: #0052CC;
+}
+
+.icon-green {
+    background-color: #04A08B;
+}
+
+.icon-cyan {
+    background-color: #00BAFF;
+}
+
+.icon-orange {
+    background-color: #FF9920;
+}
+
+.stat-graph {
+    width: 60%;
+    max-width: 120px;
+    height: 40px
+}
+
+.stat-graph svg {
+    width: 100%;
+    height: 100%
+}
+
+.container-cards {
+    width: 100%;
+}
+
+.cards-top {
+    position: relative;
+}
+
+.cards-top-ALL {
+    position: absolute;
+    right: 0;
+    top: 24px; 
+    transform: translateY(-50%); 
+    z-index: 2;
+}
+
+.cards-top-ALL .btn-All {
+    background-color: var(--color-accent);
+    color: var(--color-text-on-accent);
+    border: none;
+    padding: 0.9rem 0.5rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .3s
+}
+
+:host ::ng-deep .mat-mdc-tab-label-container {
+    border-bottom: none;
+}
+
+:host ::ng-deep .mat-mdc-tab-body-wrapper {
+    margin-top: 1rem;
+    max-height: 500px;
+}
+
+.Card-Container {
+    max-width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    overflow: hidden;
+}
+
+.course-card {
+    background-color: var(--color-surface);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 300px;
+    margin: 2rem 1rem;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.card-image-container {
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-category-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--color-surface-translucent);
+    backdrop-filter: blur(5px);
+    color: var(--color-text-primary);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+.card-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-text-content {
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-paragrafo {
+    color: var(--color-text-secondary);
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+
+.card-instructor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.instructor-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.instructor-name {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+.progress-container {
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--color-accent-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--color-accent);
+    border-radius: 4px;
+}
+
+@media(max-width: 1400px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .stats-section {
+        grid-template-columns: repeat(4);
+    }
+
+    .Card-Container {
+        display: flex;
+        flex: 0 0 auto;
+    }
+}

@@ -1,0 +1,53 @@
+<header class="app-header">
+  <div class="navbar-content">
+    <div class="header-left">
+      <button class="header-action-btn toggle-sidebar-btn" (click)="ToggleOpen()" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="logo-container">
+        <a href="/" aria-label="Página Inicial">
+          <img src="logo.png" alt="Logo da Synesis" class="logo-img" />
+          <span class="logo-title">SYNESIS</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="header-right">
+      
+      <button class="header-action-btn" aria-label="Alternar tema" (click)="changeTheme()">
+        @if(!isDarkMode) {
+          <i class="fa-regular fa-moon"></i>
+        }@else {
+          <i class="fas fa-sun"></i>
+        }
+      </button>
+
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" placeholder="Pesquisar..." [(ngModel)]="searchValue" />
+        @if(searchValue){
+        <button class="clear-search-btn" (click)="searchClear()" aria-label="Limpar pesquisa">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        }
+      </div>
+
+
+      <div class="user-menu">
+        <button class="user-menu-button">
+          <img
+            src="https://placehold.co/40x40/E2E8F0/4A5568?text=J"
+            alt="Avatar do usuário"
+            class="user-avatar"
+          />
+          <div class="user-info">
+            <span class="user-name">Jorge Luis</span>
+            <span class="user-role">Estudante</span>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>

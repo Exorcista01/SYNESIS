@@ -1,0 +1,13 @@
+<div class="app-container" [class.sidebar-close]="!isSidebarOpen">
+  
+  <app-header (SidebarToggleEvent)="verificaSidebarOpen()"></app-header>
+
+  
+  <app-sidebar [isOpen]="isSidebarOpen"></app-sidebar>
+
+ 
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+

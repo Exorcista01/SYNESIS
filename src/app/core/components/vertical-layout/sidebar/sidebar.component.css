@@ -1,0 +1,135 @@
+.sidebar {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  border-right: 1px solid var(--color-border);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-nav {
+  flex-grow: 1;
+}
+
+.nav-section-title {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  letter-spacing: 1px;
+  padding: 1rem 2rem;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-icon {
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: .6rem 2rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--color-text-tertiary);
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text-primary);
+}
+
+.nav-link:hover .nav-icon,
+.nav-link:hover .nav-arrow {
+  color: var(--color-text-primary);
+}
+
+.nav-link.active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.nav-link.active .nav-icon,
+.nav-link.active .nav-arrow {
+  color: var(--color-accent);
+}
+
+.sidebar-footer {
+  padding: 15px 20px;
+  border-top: 1px solid var(--color-surface-hover);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-icon {
+  font-size: 20px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-icon:hover {
+  color: var(--color-text-primary);
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.nav-arrow {
+  margin-left: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.sub-nav-list {
+  list-style: none;
+  padding-left: 20px;
+  overflow: hidden;
+  max-height: 500px;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.sub-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: .6rem 2rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--color-text-tertiary);
+  font-weight: 500;
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.sub-nav-link:hover {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+.sub-nav-link {
+  padding-left: 25px;
+}
+
+.sidebar-closed {
+  transform: translateX(-100%);
+}

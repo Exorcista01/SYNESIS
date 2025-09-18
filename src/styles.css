@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@use '@angular/material' as mat;
+
+
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --color-background: #f8f9fa;
+    --color-surface: #ffffff;
+    --color-surface-hover: #f1f5f9;
+    --color-surface-translucent: rgba(255, 255, 255, 0.9);
+    --color-text-primary: #1e2a53;
+    --color-text-secondary: #8a94a6;
+    --color-text-tertiary: #64748b;
+    --color-text-placeholder: #94a3b8;
+    --color-text-on-accent: #ffffff;
+    --color-accent: #0066ff;
+    --color-accent-hover: #0052cc;
+    --color-accent-light: #e6f0ff;
+    --color-icon: #4A5568;
+    --color-border: #e2e8f0;
+}
+
+.dark-mode {
+    --color-background: #12213c;
+    --color-surface: #0c1a32;
+    --color-surface-hover: #1e2a53;
+    --color-surface-translucent: rgba(12, 26, 50, 0.9);
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #8a94a6;
+    --color-text-tertiary: #8a94a6;
+    --color-text-placeholder: #64748b;
+    --color-accent-light: #1e2a53;
+    --color-icon: #8a94a6;
+    --color-border: #1e2a53;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
