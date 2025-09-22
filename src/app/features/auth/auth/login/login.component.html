@@ -1,36 +1,10 @@
 <div class="login-container">
   <div class="login-form-wrapper">
     <div class="logo">
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 2L2 7L12 12L22 7L12 2Z"
-          stroke="#007BFF"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M2 17L12 22L22 17"
-          stroke="#007BFF"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M2 12L12 17L22 12"
-          stroke="#007BFF"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-      <span>SYNESIS</span>
+      <img src="logo.png" alt="">
+      <a href="">
+        <span>SYNESIS</span>
+      </a>
     </div>
 
     <div class="form-header">
@@ -42,27 +16,17 @@
       <img src="https://www.google.com/favicon.ico" alt="Google icon" />
       Faça login com o Google
     </button>
-    <button class="social-login apple">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        fill="currentColor"
-        class="bi bi-apple"
-        viewBox="0 0 16 16"
-      >
-        <path
-          d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.232-1.254-.232c-.657 0-1.954, .311-3.358, 2.337-1.405, 2.025-2.909, 4.717-2.909, 6.472, 0, 2.126, 1.343, 3.123, 3.284, 3.123, 1.51, 0, 2.59-1.017, 3.159-1.017.569, 0, 1.637, 1.017, 3.158, 1.017, 1.94, 0, 3.283-1.002, 3.283-3.128, 0-1.755-1.503-4.446-2.908-6.471-1.404-2.026-2.7-2.337-3.357-2.337-.656, 0-1.254.106-1.254.231s1.723.633, 1.7, 2.853c-.023, 2.188-2.066, 3.326-2.113, 3.422Z"
-        />
-      </svg>
-      Faça login com a Apple
-    </button>
+
 
     <div class="divider">
       <span>or</span>
     </div>
 
     <form>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" />
+      </div>
       <div class="input-group">
         <label for="email">Email</label>
         <input type="email" id="email" placeholder="Enter your email" />
@@ -78,23 +42,24 @@
 
       <div class="form-options">
         <div class="remember-me">
-          <input type="checkbox" id="remember" />
+          <input type="checkbox" id="remember" class="remember-check" />
           <label for="remember">Remember me</label>
         </div>
-        <a href="#" class="forgot-password">Forgot password?</a>
+        <a routerLink="/Forgout-Passoword"  class="forgot-password">Forgot password?</a>
       </div>
 
       <button type="submit" class="login-btn">Login</button>
     </form>
 
     <div class="register-link">
-      Não está registrado?<a href="#">Crie uma conta</a>
+      Não está registrado? <a routerLink="/registration">Crie uma conta</a>
     </div>
 
-    <div class="Footer-form">
-      <div class="copyright">
-        <p>©2025 SYNESIS</p>
-      </div>
+    <div class="footer-politics">
+      <p>
+        Ao continuar, você confirma que entende e aceita os <br> <a href="">Termos e Condições</a> e a <a href="">Política de Privacidade</a>
+
+      </p>
     </div>
   </div>
   <div class="illustration-wrapper">

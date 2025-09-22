@@ -1,1 +1,71 @@
-<p>register works!</p>
+<div class="login-container">
+    <div class="login-form-wrapper">
+        <div class="logo">
+            <img src="logo.png" alt="">
+            <a href="">
+                <span>SYNESIS</span>
+            </a>
+        </div>
+
+        <div class="form-header">
+            <h1>Registro</h1>
+            <p>Por favor registre seu dados</p>
+        </div>
+
+        <button class="social-login google">
+            <img src="https://www.google.com/favicon.ico" alt="Google icon" />
+            Faça login com o Google
+        </button>
+        <div class="divider">
+            <span>or</span>
+        </div>
+
+        <form>
+            <div class="input-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" placeholder="Enter your Name" />
+            </div>
+
+            <div class="input-group">
+                <label for="name">Sobrenome</label>
+                <input type="text" id="lastName" placeholder="Enter your last name" />
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" />
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" />
+            </div>
+
+            <div class="input-group">
+                <label for="password">Confirm-Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm you Password" />
+            </div>
+
+            <div class="form-options">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" class="remember-check" />
+                    <label for="remember">Remember-me</label>
+                </div>
+                <a routerLink="/Forgout-Passoword" class="forgot-password">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <div class="register-link">
+            Já possue uma conta? <a routerLink="/Login">Fazer login</a>
+        </div>
+
+        <div class="footer-politics">
+            <p>
+                Ao continuar, você confirma que entende e aceita os <br> <a href="">Termos e Condições</a> e a <a
+                    href="">Política de Privacidade</a>
+            </p>
+        </div>
+    </div>
+</div>
