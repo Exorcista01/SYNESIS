@@ -1,0 +1,21 @@
+<div class="course-card">
+  <div class="card-image-container">
+    <img class="card-image" [src]="course.imageUrl" [alt]="'Imagem do curso ' + course.title">
+    <span class="card-category-tag">{{ course.category }}</span>
+  </div>
+  <div class="card-content">
+    <div class="card-text-content">
+      <h3 class="card-title">{{ course.title }}</h3>
+      <p class="card-paragrafo">{{ course.description }}</p>
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress-fill" [style.width.%]="course.progress"></div>
+      </div>
+    </div>
+    <div class="card-instructor">
+      <img class="instructor-avatar" [src]="course.instructorAvatar" alt="Avatar do instrutor">
+      <span class="instructor-name">{{ course.instructorName }}</span>
+    </div>
+  </div>
+</div>

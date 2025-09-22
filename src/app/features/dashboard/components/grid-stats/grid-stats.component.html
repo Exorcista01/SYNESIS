@@ -1,0 +1,14 @@
+<div class="stats-section">
+  @for (stat of stats; track stat.label) {
+    <app-stats-card
+      [iconClass]="stat.icon"
+      [iconColorClass]="stat.colorClass"
+      [value]="stat.value"
+      [label]="stat.label"
+      [graphPath]="stat.path"
+      [gradientId]="stat.gradientId"
+      [gradientColor]="stat.gradientColor"
+      [strokeColor]="stat.strokeColor">
+    </app-stats-card>
+  }
+</div>

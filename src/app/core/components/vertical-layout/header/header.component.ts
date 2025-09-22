@@ -57,6 +57,7 @@ export class HeaderComponent {
   userMenuItems: userMenuitem[] = [
     { name: 'Settings', icon: 'fa-solid fa-gear', router:'/Settings' },
     { name: 'Perfil', icon: 'fa-regular fa-user', router: '/Perfil' },
-    { name: 'Logout', icon: 'fa-solid fa-arrow-right-from-bracket', router: '/Logout' }
+    { name: 'Logout', icon: 'fa-solid fa-arrow-right-from-bracket', router: '/Logout' },
+    { name: 'Login', icon: 'fa-solid fa-arrow-right-from-bracket', router: '/Login' }
   ]
 }

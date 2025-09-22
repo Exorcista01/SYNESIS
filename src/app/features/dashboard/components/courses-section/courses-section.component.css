@@ -1,0 +1,18 @@
+.container-cards {
+    width: 100%;
+}
+.Card-Container {
+    max-width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+@media(max-width: 1400px) {
+    .Card-Container {
+        display: flex;
+        flex: 0 0 auto;
+    }
+}

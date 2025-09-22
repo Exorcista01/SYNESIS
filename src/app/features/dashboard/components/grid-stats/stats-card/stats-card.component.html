@@ -1,0 +1,23 @@
+<div class="stat-card">
+  <div class="card-header">
+    <div class="stat-icon" [ngClass]="iconColorClass">
+      <i [ngClass]="iconClass" style="color: #ffffff"></i>
+    </div>
+    <div class="stat-graph">
+      <svg viewBox="0 0 100 50" preserveAspectRatio="none">
+        <defs>
+          <linearGradient [id]="gradientId" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" [attr.stop-color]="gradientColor" stop-opacity="0.4" />
+            <stop offset="100%" [attr.stop-color]="gradientColor" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <path [attr.d]="graphPath + ' L 100 50 L 0 50 Z'" [attr.fill]="'url(#' + gradientId + ')'" stroke="none" />
+        <path [attr.d]="graphPath" [attr.stroke]="strokeColor" stroke-width="2" fill="none" stroke-linecap="round" />
+      </svg>
+    </div>
+  </div>
+  <div class="card-body">
+    <h2 class="value">{{ value }}</h2>
+    <p class="label">{{ label }}</p>
+  </div>
+</div>

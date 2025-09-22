@@ -1,0 +1,31 @@
+<div class="calendar-container">
+  <div class="header">
+    <button (click)="previousMonth()">&#x2039;</button>
+    <h2 class="month-name">{{ monthName | titlecase }}</h2>
+    <button (click)="nextMonth()">&#x203A;</button>
+  </div>
+
+  <div class="weekdays">
+    @for (day of weekDays; track day) {
+      <div class="weekday">{{ day }}</div>
+    }
+  </div>
+
+  <div class="days-grid">
+    @for (day of monthDays; track $index) {
+      <div 
+        class="day-cell"
+        [ngClass]="{ 
+          'progress-low': getProgressLevel(day) === 'low', 
+          'progress-medium': getProgressLevel(day) === 'medium',
+          'progress-high': getProgressLevel(day) === 'high'
+        }">
+        
+        @if (day) {
+          <span class="day-number">{{ day.getDate() }}</span>
+        }
+
+      </div>
+    }
+  </div>
+</div>

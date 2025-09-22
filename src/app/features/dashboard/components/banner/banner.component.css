@@ -1,0 +1,64 @@
+.dashboard-container {
+    flex: 1.4;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-surface);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 380px;
+}
+
+.welcome-section {
+    flex: 1.5;
+}
+
+.illustration-section {
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.illustration-section img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.welcome-section h1 {
+    font-size: 42px;
+    color: var(--color-text-primary);
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2
+}
+
+.welcome-section h1 span {
+    color: var(--color-accent);
+}
+
+.welcome-section p {
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    margin-bottom: 30px;
+    max-width: 450px
+}
+
+.welcome-section .explore-btn {
+    background-color: var(--color-accent);
+    color: var(--color-text-on-accent);
+    border: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .3s
+}
+
+.welcome-section .explore-btn:hover {
+    background-color: var(--color-accent-hover);
+}
