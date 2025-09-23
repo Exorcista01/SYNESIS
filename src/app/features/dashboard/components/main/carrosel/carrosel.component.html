@@ -1,0 +1,39 @@
+<div #swiperContainer class="swiper">
+  <div class="swiper-wrapper">
+
+    @for (course of items; track course.title) {
+      <div class="swiper-slide">
+        
+        <div class="course-card">
+          <div class="card-image-wrapper">
+            <img class="card-image" [src]="course.imageUrl" alt="Imagem do curso">
+          </div>
+          
+          <div class="card-content">
+            <span class="card-category">{{ course.category }}</span>
+            <h3 class="card-title">{{ course.title }}</h3>
+            
+            <div class="progress-info">
+              <span>Progresso</span>
+              <span>{{ course.progress }}%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" [style.width.%]="course.progress"></div>
+            </div>
+            
+            <div class="instructor-info">
+              <img class="instructor-avatar" [src]="course.instructorAvatar" alt="Avatar do instrutor">
+              <span class="instructor-name">{{ course.instructorName }}</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    }
+
+  </div>
+  
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-pagination"></div>
+</div>

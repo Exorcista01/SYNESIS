@@ -1,0 +1,37 @@
+<div class="calendar-container">
+  <div class="header">
+    <button (click)="previousMonth()">&#x2039;</button>
+    <h2 class="month-name">{{ monthName | titlecase }}</h2>
+    <button (click)="nextMonth()">&#x203A;</button>
+  </div>
+
+  <div class="weekdays">
+    @for (day of weekDays; track day) {
+      <div class="weekday">{{ day }}</div>
+    }
+  </div>
+
+  <div class="days-grid">
+    @for (day of monthDays; track day.date) {
+      <div 
+        class="day-cell"
+        [class.other-month]="!day.isCurrentMonth"
+        [ngClass]="'status-' + getDayStatus(day)">
+        
+        @if (day.isCurrentMonth) {
+          @switch (getDayStatus(day)) {
+            @case ('completed') { <div class="icon checkmark"></div> }
+            @case ('missed') { <div class="icon cross"></div> }
+            @case ('in-progress') { <div class="icon spinner"></div> }
+            @default { 
+              <span class="day-number">{{ day.date.getDate() }}</span> 
+            }
+          }
+        } @else {
+          <span class="day-number">{{ day.date.getDate() }}</span>
+        }
+
+      </div>
+    }
+  </div>
+</div>

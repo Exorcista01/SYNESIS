@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CoursesCardsComponent } from './courses-cards/courses-cards.component';
-import { CalendaProgressComponent, ProgressDay } from '../calenda-progress/calenda-progress.component';
-
 
 @Component({
   selector: 'app-courses-section',
-  imports: [MatTabsModule, CoursesCardsComponent, CalendaProgressComponent],
+  imports: [MatTabsModule, CoursesCardsComponent],
   templateUrl: './courses-section.component.html',
   styleUrl: './courses-section.component.css'
 })
@@ -31,25 +29,5 @@ export class CoursesSectionComponent {
   notStartedCourses = [ /* ... */ ];
   completedCourses = [ /* ... */ ];
   
-  // AQUI ESTÃO OS DADOS ADICIONAIS PARA O CALENDÁRIO
-  userProgress: ProgressDay[] = [
-    // Semana 1 de Setembro
-    { date: '2025-09-01', level: 'high' },
-    { date: '2025-09-02', level: 'medium' },
-    { date: '2025-09-04', level: 'high' },
-    { date: '2025-09-06', level: 'low' },
-    
-    // Semana 2 de Setembro
-    { date: '2025-09-08', level: 'medium' },
-    { date: '2025-09-09', level: 'medium' },
-    { date: '2025-09-11', level: 'high' },
-    
-    // Semana 3 de Setembro
-    { date: '2025-09-15', level: 'low' },
-    { date: '2025-09-16', level: 'medium' },
-    { date: '2025-09-18', level: 'high' },
-
-    // Hoje (data atual para o exemplo)
-    { date: '2025-09-21', level: 'medium' },
-  ];
+  
 }

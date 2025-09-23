@@ -1,0 +1,19 @@
+.top-row-main-content {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+:host ::ng-deep app-banner {
+  flex: 2; 
+}
+
+:host ::ng-deep app-calenda-progress {
+  flex: 1;
+  max-width: 400px;
+}
+
+.full-width-section {
+  width: 100%;
+  margin-bottom: 30px;
+}
