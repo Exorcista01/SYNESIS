@@ -1,24 +1,97 @@
-.swiper {
-  width: 100%;
-  padding: 20px 0 50px 0;
+.Carrosel-container .Carrosel-title {
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
 }
+.Carrosel-title .title-top .title-text{
+    font-size: 32px;
+    color: var(--color-text-primary);
+    font-weight: 700;
+    line-height: 1.2
+}
+
+
+
+.Carrosel-title .Carrosel-container-btn button {
+  background-color: var(--color-accent);
+  color: var(--color-text-on-accent);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s;
+  white-space: nowrap;
+}
+
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1560px;
+  margin: 0 auto;
+}
+
+.swiper {
+  flex-grow: 1;
+  width: 100%;
+  min-width: 0;
+  padding: 1rem 0 1rem 0;
+}
+
+.custom-prev,
+.custom-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.custom-prev {
+  margin-right: 16px;
+}
+
+.custom-next {
+  margin-left: 16px;
+}
+
+.custom-prev svg,
+.custom-next svg {
+  width: 20px;
+  height: 20px;
+  color: #3367d6;
+}
+
+
 
 .swiper-slide {
   display: flex;
   justify-content: center;
   height: auto;
-  width: 320px;
-  margin: 0;
-  padding: 0;
+  width: 220px;
   flex-shrink: 0;
 }
 
 .course-card {
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--color-surface);
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #f0f0f0; 
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -32,9 +105,10 @@
 }
 
 .card-image-wrapper {
+  position: relative;
   overflow: hidden;
   width: 100%;
-  height: 160px;
+  height: 150px;
 }
 
 .card-image {
@@ -56,21 +130,23 @@
 }
 
 .card-category {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
   display: inline-block;
-  background-color: #e8f0fe;
-  color: #3367d6;
+  background-color: var(--color-background);
+  color: var(--color-accent);
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
-  margin-bottom: 12px;
-  align-self: flex-start;
 }
 
 .card-title {
   font-size: 18px;
   font-weight: 600;
-  color: #202124;
+  color: var(--color-text-primary);
   margin: 0 0 16px 0;
   line-height: 1.4;
   flex-grow: 1;
@@ -80,7 +156,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  color: #5f6368;
+  color: var(--color-text-secondary);
   margin-bottom: 6px;
 }
 
@@ -115,25 +191,29 @@
 
 .instructor-name {
   font-size: 14px;
-  color: #5f6368;
+  color: var(--color-text-primary);
 }
-
-:host ::ng-deep .swiper-button-prev,
-:host ::ng-deep .swiper-button-next {
-  color: #3367d6;
-  background-color: #ffffff;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.container-Full-All{
+  width: 100%;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-:host ::ng-deep .swiper-button-prev::after,
-:host ::ng-deep .swiper-button-next::after {
-  font-size: 18px;
-  font-weight: bold;
+.container-Full-All .Full-All-btn{
+  color: var(--color-accent);
+  font-size: .900rem;
+  font-weight: 600;
+  width: 300px;
+  height: 46px;
+  border: 1px  solid var(--color-accent);
+  border-radius: 8px;
+  background-color: var(--color-surface);
+  padding: 12.5px 39px;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
 }
-
-
-:host ::ng-deep .swiper-pagination-bullet-active {
-  background-color: #3367d6;
+.container-Full-All .Full-All-btn:hover{
+  background-color: var(--color-accent);
+  color: var(--color-text-on-accent);
 }

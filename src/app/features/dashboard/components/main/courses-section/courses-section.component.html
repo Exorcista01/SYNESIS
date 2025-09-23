@@ -4,16 +4,25 @@
       <mat-tab label="Em Andamento">
         <div class="Card-Container">
           @for (course of inProgressCourses; track course.title) {
-            <app-courses-cards [course]="course"></app-courses-cards>
+          <app-courses-cards [course]="course"></app-courses-cards>
           }
         </div>
       </mat-tab>
-      <mat-tab label="Não Iniciado">....</mat-tab>
-      <mat-tab label="Concluido"> ... </mat-tab>
+      <mat-tab label="Não Iniciado">
+        <div class="Card-Container">
+          @for (course of notStartedCourses; track course.title) {
+          <app-courses-cards [course]="course"></app-courses-cards>
+          }
+        </div>
+      </mat-tab>
+      <mat-tab label="Concluido">
+        <div class="Card-Container">
+          @for (course of completedCourses; track course.title) {
+          <app-courses-cards [course]="course"></app-courses-cards>
+          }
+        </div>
+      </mat-tab>
     </mat-tab-group>
-    <div class="cards-top-ALL">
-      <button class="btn-All">Ver Todos</button>
-    </div>
   </div>
-  
+
 </div>

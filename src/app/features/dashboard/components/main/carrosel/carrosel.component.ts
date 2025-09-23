@@ -19,7 +19,8 @@ export class CarroselComponent implements AfterViewInit{
       slidesPerView: 4, 
       spaceBetween: 20,      
       loop: true,
-      grabCursor: true,     
+      grabCursor: true,    
+    
   };
 
   constructor() { }
@@ -31,15 +32,14 @@ export class CarroselComponent implements AfterViewInit{
       observer: true,
       observeParents: true,
 
-      centeredSlides: this.swiperOptions.centeredSlides,
       slidesPerView: this.swiperOptions.slidesPerView,
       spaceBetween: this.swiperOptions.spaceBetween,
       loop: this.swiperOptions.loop,
       grabCursor: this.swiperOptions.grabCursor,
 
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.custom-next',
+        prevEl: '.custom-prev',
       },
       pagination: {
         el: '.swiper-pagination',

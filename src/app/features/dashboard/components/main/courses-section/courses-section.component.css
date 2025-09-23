@@ -1,9 +1,11 @@
 .container-cards {
     width: 100%;
+    max-width: 1560px;
+    margin: 0 auto;
 }
+
 .Card-Container {
     max-width: 100%;
-    flex-wrap: wrap;
     display: flex;
     gap: 2rem;
     padding: 1rem;
@@ -15,4 +17,14 @@
         display: flex;
         flex: 0 0 auto;
     }
+}
+
+
+:host ::ng-deep .mat-mdc-tab .mdc-tab__text-label {
+    color: var(--color-text-primary);
+}
+
+
+:host ::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label{
+    color: var(--color-accent);
 }

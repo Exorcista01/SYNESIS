@@ -12,18 +12,16 @@ import { CarroselComponent } from "./carrosel/carrosel.component";
   styleUrl: './main.component.css'
 })
 export class MainComponent {
-  // ADICIONE ESTE ARRAY DE DADOS AQUI
+
   userProgress: ProgressDay[] = [
     { date: '2025-09-01', status: 'completed' },
     { date: '2025-09-02', status: 'completed' },
-    // Dia 3 foi perdido (missed)
     { date: '2025-09-04', status: 'completed' },
     { date: '2025-09-08', status: 'completed' },
     { date: '2025-09-10', status: 'completed' },
     { date: '2025-09-11', status: 'completed' },
     { date: '2025-09-15', status: 'completed' },
     { date: '2025-09-18', status: 'completed' },
-    // O dia atual (22) será 'in-progress' pela lógica do calendário
   ];
 
   constructor() { }
