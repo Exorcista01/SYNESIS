@@ -1,4 +1,3 @@
-
 :host {
   display: flex;
   justify-content: center;
@@ -10,10 +9,10 @@
 .login-container {
   display: flex;
   width: 100%;
-  max-width: 1024px;
-  border-radius: 12px;
+  max-width: 102.4rem;
+  border-radius: 1.2rem;
   overflow: hidden;
-  gap: 2rem;
+  gap: 3.2rem;
 }
 
 .login-form-wrapper {
@@ -25,13 +24,13 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 22px;
+  gap: 1.2rem;
+  margin-bottom: 2.2rem;
 }
 
 .logo img {
-  width: 38px;
-  height: 38px;
+  width: 3.8rem;
+  height: 3.8rem;
   cursor: pointer;
 }
 
@@ -40,117 +39,118 @@
 }
 
 .logo span {
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   font-weight: 500;
   color: var(--color-accent);
   cursor: pointer;
 }
 
 .form-header h1 {
-  font-size: 1.875rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #111827;
-  margin: 0 0 8px 0;
+  margin: 0 0 0.8rem 0;
 }
 
 .form-header p {
-  color: #6B7280;
-  margin: 0 0 24px 0;
+  color: #6b7280;
+  margin: 0 0 2.4rem 0;
 }
 
 .social-login {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 1rem;
   width: 100%;
-  padding: 12px;
-  border: 1px solid #D1D5DB;
-  border-radius: 6px;
+  padding: 1.2rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.6rem;
   background-color: var(--color-surface);
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
-  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
 }
 
 .social-login:hover {
-  background-color: #F9FAFB;
+  background-color: #f9fafb;
 }
 
 .social-login img {
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .divider {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #9CA3AF;
-  margin: 24px 0;
-  font-size: 0.875rem;
+  color: #9ca3af;
+  margin: 2.4rem 0;
+  font-size: var(--fs-label-medium);
 }
 
 .divider::before,
 .divider::after {
   content: '';
   flex: 1;
-  border-bottom: 1px solid #E5E7EB;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .divider span {
-  padding: 0 16px;
+  padding: 0 1.6rem;
 }
 
 .input-group {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .input-group label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
   font-weight: 500;
   color: #374151;
-  font-size: 0.875rem;
+  font-size: var(--fs-label-medium);
 }
 
 .input-group input {
   width: 100%;
-  padding: 12px 16px;
-  border: 1px solid #D1D5DB;
-  border-radius: 6px;
+  padding: 1.2rem 1.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.6rem;
   box-sizing: border-box;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .input-group input:focus {
   outline: none;
-  border-color: #3B82F6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 0.3rem rgba(59, 130, 246, 0.2);
 }
 
 .form-options {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
-  font-size: 0.875rem;
+  margin-bottom: 2.4rem;
+  font-size: var(--fs-label-medium);
 }
 
 .remember-me {
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: #4B5563;
+  gap: 0.8rem;
+  color: #4b5563;
 }
-.remember-me .remember-check{
+
+.remember-me .remember-check {
   cursor: pointer;
 }
 
 .forgot-password {
-  color: #3B82F6;
+  color: #3b82f6;
   text-decoration: none;
   font-weight: 500;
 }
@@ -161,30 +161,30 @@
 
 .login-btn {
   width: 100%;
-  padding: 12px;
+  padding: 1.2rem;
   border: none;
-  border-radius: 6px;
-  background-color: #3B82F6;
-  color: #FFFFFF;
-  font-size: 1rem;
+  border-radius: 0.6rem;
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-size: var(--fs-body-large);
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
 
 .login-btn:hover {
-  background-color: #2563EB;
+  background-color: #2563eb;
 }
 
 .register-link {
-  margin-top: 32px;
+  margin-top: 3.2rem;
   text-align: center;
-  font-size: 0.875rem;
-  color: #4B5563;
+  font-size: var(--fs-label-medium);
+  color: #4b5563;
 }
 
 .register-link a {
-  color: #3B82F6;
+  color: #3b82f6;
   text-decoration: none;
   font-weight: 500;
 }
@@ -193,16 +193,18 @@
   text-decoration: underline;
 }
 
-.footer-politics{
-  margin-top: 1rem;
+.footer-politics {
+  margin-top: 1.6rem;
   text-align: center;
 }
-.footer-politics p{
+
+.footer-politics p {
   color: var(--color-text-secondary);
-  font-size: .785rem;
+  font-size: 1.2rem;
 }
-.footer-politics a{
-  font-size: .785rem;
+
+.footer-politics a {
+  font-size: 1.2rem;
   color: var(--color-accent);
 }
 
@@ -212,35 +214,36 @@
   justify-content: center;
   align-items: center;
   background-color: var(--bg-illustration);
-  border-radius: 12px;
+  border-radius: 1.2rem;
   border: 1px solid #e2e8f0;
   margin: 0 auto;
 }
 
 .illustration-wrapper img {
-  width: 100%;       
-  height: 100%;     
-  object-fit: cover; 
-  border-radius: 12px
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.2rem;
 }
 
-@media (max-width: 1040px){
-  .login-container{
-    padding: 1rem;
+@media (max-width: 1040px) {
+  .login-container {
+    padding: 1.6rem;
   }
   .illustration-wrapper {
-      display: none;
+    display: none;
   }
-    .login-form-wrapper{
-      max-width: 500px;
-      margin: 0 auto;
-    }
+  .login-form-wrapper {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
 }
+
 @media (max-width: 768px) {
   .illustration-wrapper {
     display: none;
   }
   .login-container {
-    margin: 16px;
+    margin: 1.6rem;
   }
 }

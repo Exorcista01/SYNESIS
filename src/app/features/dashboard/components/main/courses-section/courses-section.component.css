@@ -1,30 +1,28 @@
 .container-cards {
-    width: 100%;
-    max-width: 1560px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 156rem;
+  margin: 0 auto;
 }
 
 .Card-Container {
-    max-width: 100%;
+  max-width: 100%;
+  display: flex;
+  gap: 3.2rem;
+  padding: 1.6rem;
+  overflow: hidden;
+}
+
+@media (max-width: 1400px) {
+  .Card-Container {
     display: flex;
-    gap: 2rem;
-    padding: 1rem;
-    overflow: hidden;
+    flex: 0 0 auto;
+  }
 }
-
-@media(max-width: 1400px) {
-    .Card-Container {
-        display: flex;
-        flex: 0 0 auto;
-    }
-}
-
 
 :host ::ng-deep .mat-mdc-tab .mdc-tab__text-label {
-    color: var(--color-text-primary);
+  color: var(--color-text-primary);
 }
 
-
-:host ::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label{
-    color: var(--color-accent);
+:host ::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: var(--color-accent);
 }

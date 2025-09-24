@@ -1,8 +1,8 @@
 .stats-section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 2rem;
     flex: 1;
-    max-width: 1560px;
+    max-width: 156rem;
     margin: 0 auto;
 }

@@ -1,21 +1,21 @@
 .top-row-main-content {
   display: flex;
-  gap: 30px;
-  margin-bottom: 30px;
-  max-width: 1560px;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  max-width: 156rem;
   margin: 0 auto 3rem auto;
 }
 
 :host ::ng-deep app-banner {
-  flex: 2; 
+  flex: 2;
 }
 
 :host ::ng-deep app-calenda-progress {
   flex: 1;
-  max-width: 400px;
+  max-width: 40rem;
 }
 
 .full-width-section {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }

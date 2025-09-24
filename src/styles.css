@@ -1,23 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Display:wght@400;600;700&display=swap');
+
 @use '@angular/material' as mat;
-
-
-
-
-html,
-body {
-    height: 100%;
-    width: 100%;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--color-background);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 
 :root {
@@ -35,7 +19,63 @@ body {
     --color-accent-light: #e6f0ff;
     --color-icon: #4A5568;
     --color-border: #e2e8f0;
+
+
+    --font-primary: 'InterDisplay', Helvetica, Arial, sans-serif;
+
+    --fs-base: 62.5%;
+    --fs-headline-large: 3.6rem;
+    --fs-headline-medium: 2.8rem;
+    --fs-headline-small: 2.8rem;
+    --fs-title-large: 2.2rem;
+    --fs-title-medium: 2rem;
+    --fs-title-small: 1.8rem;
+    --fs-body-large: 1.6rem;
+    --fs-body-medium: 1.6rem;
+    --fs-label-large: 1.6rem;
+    --fs-label-medium: 1.4rem;
+    --fs-text-lower: 0.875rem;
+
+
+    --lh-headline-large: 44;
+    --lh-headline-medium: 36;
+    --lh-headline-small: 36;
+    --lh-title-large: 28;
+    --lh-title-medium: 24;
+    --lh-title-small: 24;
+    --lh-body-large: 24;
+    --lh-body-medium: 24;
+    --lh-label-large: 24;
+    --lh-label-medium: 20;
+
+    --weight-bold: 700;
+    --weight-semiBold: 600;
+    --weight-regular: 400;
+
+
+    --tracking-n-025: -0.25px;
+    --tracking-p-05: 0.5px;
+
+
+    --radius-small: 0.8rem;
+    --radius-medium: 1.2rem;
+    --radius-large: 1.6rem;
+    --radius-extra-large: 3.2rem;
+    --radius-full: 100rem;
+    --radius-circle: 50%;
+
+
+    --shadow-1: 0px 2px 4px 0px #00000033;
+    --shadow-2: 0px 5px 10px 0px #0000000D;
+    --shadow-3: 0px 5px 10px 0px #00000033;
+    --shadow-4: 0px 10px 20px 0px #0000001A;
+
+    --transition-easing-quick: cubic-bezier(0, 0.7, 0.3, 1);
+    --transition-duration-quick: 200ms;
+    --transition-duration-smooth: 500ms;
+
 }
+
 
 .dark-mode {
     --color-background: #12213c;
@@ -51,12 +91,73 @@ body {
     --color-border: #1e2a53;
 }
 
-html,
-body {
-    height: 100%;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+
+input,
+select,
+button {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+}
+
+input,
+select,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+select {
+    width: 100%;
+    outline: none;
+}
+
+address {
+    font-style: normal;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+html{
+    font-family: var(--font-primary);
+    font-size: var(--fs-base);
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-background);
 }
+ 
+

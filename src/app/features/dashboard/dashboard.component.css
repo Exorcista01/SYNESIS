@@ -1,7 +1,7 @@
 @use '@angular/material' as mat;
 
 main-content {
-    padding: 30px;
+    padding: 2rem;
     overflow-y: auto;
 }
 
@@ -9,6 +9,6 @@ main-content {
     width: 100%;
     display: flex;
     align-items: stretch;
-    gap: 30px;
-    margin-bottom: 30px;
+    gap: 3rem;
+    margin-bottom: 3rem;
 }

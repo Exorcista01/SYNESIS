@@ -1,9 +1,8 @@
-
 .calendar-container {
-  padding: 15px;
+  padding: 1.5rem;
   background-color: var(--color-surface);
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -13,36 +12,37 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .header button {
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 2.4rem;
   cursor: pointer;
   color: #888;
-  padding: 0 10px;
+  padding: 0 1rem;
 }
 
 .month-name {
-  font-size: 18px;
+  font-size: var(--fs-title-small);
   font-weight: 600;
   color: var(--color-text-primary);
 }
 
-.weekdays, .days-grid {
+.weekdays,
+.days-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
+  gap: 0.5rem;
 }
 
 .weekday {
   text-align: center;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 500;
   color: var(--color-text-secondary);
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .days-grid {
@@ -54,49 +54,47 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 35px;
-  border-radius: 6px;
+  min-height: 3.5rem;
+  border-radius: 0.6rem;
   transition: all 0.2s ease-in-out;
 }
 
-
-
-
-
 .day-number {
-  font-size: 14px;
+  font-size: var(--fs-label-medium);
   color: #555;
 }
 
-.status-completed, .status-in-progress {
+.status-completed,
+.status-in-progress {
   background-color: #e8f0fe;
 }
 
-.status-missed, .status-future {
+.status-missed,
+.status-future {
   background-color: #f0f0f0;
 }
 
-
 .icon.checkmark {
-  width: 8px;
-  height: 15px;
+  width: 0.8rem;
+  height: 1.5rem;
   border: solid #3367d6;
-  border-width: 0 3px 3px 0;
+  border-width: 0 0.3rem 0.3rem 0;
   transform: rotate(45deg);
 }
 
 .icon.cross {
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
   position: relative;
 }
-.icon.cross::before, .icon.cross::after {
+.icon.cross::before,
+.icon.cross::after {
   content: '';
   position: absolute;
-  top: 8px;
+  top: 0.8rem;
   left: 0;
-  width: 20px;
-  height: 3px;
+  width: 2rem;
+  height: 0.3rem;
   background-color: #bdbdbd;
 }
 .icon.cross::before {
@@ -107,25 +105,24 @@
 }
 
 .icon.spinner {
-  width: 22px;
-  height: 22px;
-  border: 3px solid #d2e3fc;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 0.3rem solid #d2e3fc;
   border-top-color: #3367d6;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-
 
 .day-cell.other-month {
-  background-color: #fff !important; 
+  background-color: #fff !important;
 }
 
-
 .day-cell.other-month .day-number {
-  color: #ccc; 
+  color: #ccc;
 }

@@ -1,83 +1,84 @@
 .stat-card {
-    background-color: var(--color-surface);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+  background-color: var(--color-surface);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .card-body {
-    width: 100%;
-    text-align: left
+  width: 100%;
+  text-align: left;
 }
 
 .card-body .value {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--color-text-primary);
-    margin: 0;
-    line-height: 1
+  font-size: var(--fs-headline-medium);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: 1;
 }
 
 .card-body .label {
-    font-size: 16px;
-    color: var(--color-text-secondary);
-    margin: 8px 0 0
+  font-size: var(--fs-body-large);
+  color: var(--color-text-secondary);
+  margin: 0.8rem 0 0;
 }
 
 .stat-icon {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-text-on-accent);
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-on-accent);
 }
 
 .stat-icon i {
-    font-size: 20px
+  font-size: 2rem;
 }
 
 .icon-blue {
-    background-color: #0052CC;
+  background-color: #0052cc;
 }
 
 .icon-green {
-    background-color: #04A08B;
+  background-color: #04a08b;
 }
 
 .icon-cyan {
-    background-color: #00BAFF;
+  background-color: #00baff;
 }
 
 .icon-orange {
-    background-color: #FF9920;
+  background-color: #ff9920;
 }
 
 .stat-graph {
-    width: 60%;
-    max-width: 120px;
-    height: 40px
+  width: 60%;
+  max-width: 12rem;
+  height: 4rem;
 }
 
 .stat-graph svg {
-    width: 100%;
-    height: 100%
+  width: 100%;
+  height: 100%;
 }

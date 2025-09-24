@@ -1,21 +1,21 @@
 <div class="container-cards">
   <div class="cards-top">
     <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-      <mat-tab label="Em Andamento">
+      <mat-tab label="Programação">
         <div class="Card-Container">
           @for (course of inProgressCourses; track course.title) {
           <app-courses-cards [course]="course"></app-courses-cards>
           }
         </div>
       </mat-tab>
-      <mat-tab label="Não Iniciado">
+      <mat-tab label="Redes de Computadores">
         <div class="Card-Container">
           @for (course of notStartedCourses; track course.title) {
           <app-courses-cards [course]="course"></app-courses-cards>
           }
         </div>
       </mat-tab>
-      <mat-tab label="Concluido">
+      <mat-tab label="Manutenção">
         <div class="Card-Container">
           @for (course of completedCourses; track course.title) {
           <app-courses-cards [course]="course"></app-courses-cards>
