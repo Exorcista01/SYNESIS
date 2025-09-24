@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { BannerComponent } from "./banner/banner.component";
 import { CalendaProgressComponent, ProgressDay } from "./calenda-progress/calenda-progress.component";
 import { GridStatsComponent } from "./grid-stats/grid-stats.component";
 import { CoursesSectionComponent } from "./courses-section/courses-section.component";
-import { CarroselComponent } from "./carrosel/carrosel.component";
+import { CarroselComponent } from "../../../../shared/components/carrosel/carrosel.component";
+import { SharedModule } from '../../../../shared/shared.mudule';
 
 @Component({
   selector: 'app-main',
-  imports: [BannerComponent, CalendaProgressComponent, GridStatsComponent, CoursesSectionComponent, CarroselComponent],
+  imports: [CalendaProgressComponent, GridStatsComponent, CoursesSectionComponent, CarroselComponent, SharedModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
@@ -74,4 +74,5 @@ export class MainComponent {
     },
 ];
   
+
 }

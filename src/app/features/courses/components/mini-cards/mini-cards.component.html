@@ -1,0 +1,54 @@
+<div class="Container-mini">
+    <div class="Carrosel-title">
+        <div class="title-top">
+            <h1 class="title-text"> Cursos Acessadas recetemente</h1>
+        </div>
+    </div>
+
+    <div class="custom-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+    </div>
+
+    <div #swiperContainer class="swiper">
+        <div class="swiper-wrapper">
+            @for (course of inProgressCourses; track course.title) {
+            <div class="swiper-slide">
+                <div class="course-card">
+                    <div class="card-image-wrapper">
+                        <img class="card-image" [src]="course.imageUrl" alt="Imagem do curso">
+                        <span class="card-category">{{ course.category }}</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">{{ course.title }}</h3>
+                        <div class="progress-info">
+                            <span>Progresso</span>
+                            <span>{{ course.progress }}%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" [style.width.%]="course.progress"></div>
+                        </div>
+                        <div class="instructor-info">
+                            <img class="instructor-avatar" [src]="course.instructorAvatar" alt="Avatar do instrutor">
+                            <span class="instructor-name">{{ course.instructorName }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+        <div class="container-Full-All">
+            <button class="Full-All-btn">Veja Todos os Cursos</button>
+        </div>
+    </div>
+
+
+    <div class="custom-next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+    </div>
+</div>

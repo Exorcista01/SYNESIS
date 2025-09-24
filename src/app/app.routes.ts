@@ -5,6 +5,7 @@ import { CalendaComponent } from './features/apps/calendar/calendar.component';
 import { LoginComponent } from './features/auth/auth/login/login.component';
 import { RegisterComponent } from './features/auth/auth/register/register.component';
 import { ForgotPasswordComponent } from './features/auth/auth/forgot-password/forgot-password.component';
+import { CoursesComponent } from './features/courses/courses.component';
 
 export const routes: Routes = [
     {
@@ -13,6 +14,7 @@ export const routes: Routes = [
         children: [
             {path: 'dashboard', component: DashboardComponent},
             {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+            {path: 'courses' , component: CoursesComponent},
             {path: 'Calendario', component: CalendaComponent}
         ]
     },

@@ -22,21 +22,23 @@
       <span>or</span>
     </div>
 
-    <form>
+    <form [formGroup]="loginForm">
       <div class="input-group">
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email" />
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Enter your email" 
+          formControlName="email" />
       </div>
-      <div class="input-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email" />
-      </div>
+  
       <div class="input-group">
         <label for="password">Password</label>
         <input
           type="password"
-          id="password"
+          name="password"
           placeholder="Enter your password"
+          formControlName="password"
         />
       </div>
 

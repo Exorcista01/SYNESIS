@@ -1,7 +1,6 @@
 .top-row-main-content {
   display: flex;
   gap: 3rem;
-  margin-bottom: 3rem;
   max-width: 156rem;
   margin: 0 auto 3rem auto;
 }
