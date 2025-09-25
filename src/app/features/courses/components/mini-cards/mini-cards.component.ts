@@ -1,4 +1,5 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef,} 
+from '@angular/core';
 import { CommonModule } from '@angular/common';
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
@@ -14,79 +15,73 @@ export class MiniCardsComponent implements AfterViewInit{
   
   courses = [
     {
-      icon: 'assets/icons/prompt-icon.svg',
+      img: 'https://placehold.co/600x400/000000/FFF?text=IA',
       title: 'Engenharia de Prompt',
       author: 'Rodrigo...',
       year: '2025',
-      tag: 'GRÁTIS ATÉ 29/09'
+      tag: 'Manutenção de Computadores'
     },
     {
-      icon: 'assets/icons/spring-icon.svg',
+      img: 'https://placehold.co/600x400/6DB33F/FFF?text=Spring',
       title: 'Microsserviços com Spring Cloud',
       author: 'Fernanda Kipper',
       year: '2025',
-      tag: 'GRÁTIS ATÉ 29/09'
+      tag: 'Informatica'
     },
     {
-      icon: 'assets/icons/comunicacao-icon.svg',
+      img: 'https://placehold.co/600x400/FFC107/000?text=Comunicação',
       title: 'Comunicação assertiva',
       author: 'Aline Ferreira D...',
       year: '2024',
-      tag: 'GRÁTIS ATÉ 29/09'
+      tag: 'Redes de computadores'
     },
     {
-      icon: 'assets/icons/react-native-icon.svg',
+      img: 'https://placehold.co/600x400/61DAFB/000?text=React+Native',
       title: 'Navegação com Expo Router - React Native',
       author: 'Rodrigo...',
       year: '2024',
-      tag: 'GRÁTIS ATÉ 29/09'
+      tag: 'React'
     },
     {
-      icon: 'assets/icons/web-icon.svg',
+      img: 'https://placehold.co/600x400/1E90FF/FFF?text=Dev',
       title: 'Dev Global - Starter Pack',
       author: 'Vinicius de...',
       year: '2025',
-      tag: 'GRÁTIS'
+      tag: 'Live of Digital'
     },
     {
-      icon: 'assets/icons/angular-icon.svg',
+      img: 'https://placehold.co/600x400/DD0031/FFF?text=Angular',
       title: 'Angular - Curso Introdutório',
       author: 'Vinicius de...',
       year: '2025',
-      tag: 'GRÁTIS'
+      tag: 'Angular'
     },
     {
-      icon: 'assets/icons/discover-icon.svg',
+      img: 'https://placehold.co/600x400/7B1FA2/FFF?text=Discover',
       title: 'Discover',
       author: 'Mayk Brito',
       year: '2025',
-      tag: 'GRÁTIS'
+      tag: 'Discover'
     }
   ];
-
   
   @ViewChild('swiperContainer') swiperContainer!: ElementRef;
-
 
   constructor() { }
 
   ngAfterViewInit(): void {
     const swiper = new Swiper(this.swiperContainer.nativeElement, {
-      
       modules: [Navigation],
 
-      
-      slidesPerView: 3,
-      spaceBetween: 24,
-      
+      observer: true,
+      observeParents: true,
+      slidesPerView: 5.3,
+      spaceBetween: 20,
     
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next-custom-cards',
+        prevEl: '.swiper-button-prev-custom-cards',
       },
-
-
-      
     });
   }
 }

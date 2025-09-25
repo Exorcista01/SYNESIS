@@ -26,7 +26,6 @@
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 156rem;
   margin: 0 auto;
 }
 
@@ -88,7 +87,6 @@
   border-radius: var(--radius-large);
   overflow: hidden;
   box-shadow: 0 0.4rem 1.6rem rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;

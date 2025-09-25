@@ -32,7 +32,7 @@ export interface FeaturedContent {
 export class BannerVideoComponent implements AfterViewInit {
   @ViewChild('swiperContainer') swiperContainer!: ElementRef;
 
-  constructor() {}
+  constructor() { }
 
   ngAfterViewInit(): void {
     if (!this.swiperContainer) return;
@@ -44,7 +44,6 @@ export class BannerVideoComponent implements AfterViewInit {
       observeParents: true,
       slidesPerView: 1,
       spaceBetween: 30,
-      loop: true,
       grabCursor: true,
 
 
@@ -61,7 +60,7 @@ export class BannerVideoComponent implements AfterViewInit {
 
   featuredContent: FeaturedContent[] = [
     {
-      badgeText: 'GRÁTIS ATÉ 26/09',
+      badgeText: 'Manutenção de Computadores',
       isRecommended: true,
       title: 'Introdução a Manutenção de Computadores',
       description:
@@ -71,7 +70,7 @@ export class BannerVideoComponent implements AfterViewInit {
       contentType: 'CURSO',
       level: 'Intermediário',
       videoImageUrl:
-        'https://images.unsplash.com/photo-1575789930778-66f20d18a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29tcHV0ZXIsbWFpbnRlbmFuY2V8fHx8fHwxNzI3MjI5NTI4&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080',
+        'https://images.unsplash.com/photo-1522199755839-a2bacb67c546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bmV0d29yayxjb21wdXRlcnx8fHx8fDE3MjcyMjk1NTg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080',
     },
     {
       isRecommended: false,
