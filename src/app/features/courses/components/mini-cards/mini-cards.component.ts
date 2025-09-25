@@ -1,58 +1,93 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+
 
 @Component({
   selector: 'app-mini-cards',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './mini-cards.component.html',
-  styleUrl: './mini-cards.component.css'
+  styleUrl: './mini-cards.component.css',
 })
-export class MiniCardsComponent {
-  inProgressCourses = [
+export class MiniCardsComponent implements AfterViewInit{
+  
+  courses = [
     {
-      imageUrl: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      title: 'Design de Interfaces com Figma',
-      category: 'UI/UX Design',
-      description: 'Aprenda a criar protótipos interativos e designs incríveis do zero.',
-      progress: 85,
-      instructorAvatar: 'https://randomuser.me/api/portraits/women/34.jpg',
-      instructorName: 'Mariana Lima'
+      icon: 'assets/icons/prompt-icon.svg',
+      title: 'Engenharia de Prompt',
+      author: 'Rodrigo...',
+      year: '2025',
+      tag: 'GRÁTIS ATÉ 29/09'
     },
     {
-      imageUrl: 'https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      title: 'React.js: Construindo Aplicações Modernas',
-      category: 'Desenvolvimento Front-end',
-      description: 'Desenvolva SPAs (Single Page Applications) com a biblioteca mais popular do mercado.',
-      progress: 60,
-      instructorAvatar: 'https://randomuser.me/api/portraits/men/22.jpg',
-      instructorName: 'Carlos Souza'
+      icon: 'assets/icons/spring-icon.svg',
+      title: 'Microsserviços com Spring Cloud',
+      author: 'Fernanda Kipper',
+      year: '2025',
+      tag: 'GRÁTIS ATÉ 29/09'
     },
     {
-      imageUrl: 'https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      title: 'Node.js, Express e MongoDB',
-      category: 'Desenvolvimento Back-end',
-      description: 'Construa APIs RESTful robustas e eficientes para suas aplicações web.',
-      progress: 45,
-      instructorAvatar: 'https://randomuser.me/api/portraits/men/86.jpg',
-      instructorName: 'Ricardo Pereira'
+      icon: 'assets/icons/comunicacao-icon.svg',
+      title: 'Comunicação assertiva',
+      author: 'Aline Ferreira D...',
+      year: '2024',
+      tag: 'GRÁTIS ATÉ 29/09'
     },
     {
-      imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      title: 'Ciência de Dados com Python',
-      category: 'Data Science',
-      description: 'Análise, visualização e manipulação de dados com Pandas e Matplotlib.',
-      progress: 70,
-      instructorAvatar: 'https://randomuser.me/api/portraits/women/65.jpg',
-      instructorName: 'Juliana Castro'
+      icon: 'assets/icons/react-native-icon.svg',
+      title: 'Navegação com Expo Router - React Native',
+      author: 'Rodrigo...',
+      year: '2024',
+      tag: 'GRÁTIS ATÉ 29/09'
     },
     {
-      imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      title: 'Marketing Digital para Iniciantes',
-      category: 'Marketing',
-      description: 'Descubra os canais e estratégias essenciais para alavancar seu negócio online.',
-      progress: 90,
-      instructorAvatar: 'https://randomuser.me/api/portraits/men/51.jpg',
-      instructorName: 'Felipe Santos'
+      icon: 'assets/icons/web-icon.svg',
+      title: 'Dev Global - Starter Pack',
+      author: 'Vinicius de...',
+      year: '2025',
+      tag: 'GRÁTIS'
     },
+    {
+      icon: 'assets/icons/angular-icon.svg',
+      title: 'Angular - Curso Introdutório',
+      author: 'Vinicius de...',
+      year: '2025',
+      tag: 'GRÁTIS'
+    },
+    {
+      icon: 'assets/icons/discover-icon.svg',
+      title: 'Discover',
+      author: 'Mayk Brito',
+      year: '2025',
+      tag: 'GRÁTIS'
+    }
   ];
+
+  
+  @ViewChild('swiperContainer') swiperContainer!: ElementRef;
+
+
+  constructor() { }
+
+  ngAfterViewInit(): void {
+    const swiper = new Swiper(this.swiperContainer.nativeElement, {
+      
+      modules: [Navigation],
+
+      
+      slidesPerView: 3,
+      spaceBetween: 24,
+      
+    
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+
+      
+    });
+  }
 }
 

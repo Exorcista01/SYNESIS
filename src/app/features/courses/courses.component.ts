@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { SharedModule } from '../../shared/shared.mudule';
 import { CarroselComponent } from "../../shared/components/carrosel/carrosel.component";
 import { BannerVideoComponent } from "./components/banner-video/banner-video.component";
+import { MiniCardsComponent } from "./components/mini-cards/mini-cards.component";
 
 @Component({
   selector: 'app-courses',
-  imports: [SharedModule, BannerVideoComponent],
+  imports: [SharedModule, BannerVideoComponent, MiniCardsComponent],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css'
 })

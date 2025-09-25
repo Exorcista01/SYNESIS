@@ -1,7 +1,7 @@
 <div class="login-container">
   <div class="login-form-wrapper">
     <div class="logo">
-      <img src="logo.png" alt="">
+      <img src="logo.png" alt="" />
       <a href="">
         <span>SYNESIS</span>
       </a>
@@ -17,50 +17,90 @@
       Faça login com o Google
     </button>
 
-
     <div class="divider">
       <span>or</span>
     </div>
 
-    <form [formGroup]="loginForm">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="input-group">
         <label for="email">Email</label>
-        <input 
-          type="email" 
-          name="email" 
-          placeholder="Enter your email" 
-          formControlName="email" />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          formControlName="email"
+        />
+
+        @if (isEmailInvalid) {
+        <div class="error-message">
+          @if(emailControl.hasError('required')) {
+          <p>O campo e-mail é obrigatório.</p>
+          } @if(emailControl.hasError('email')) {
+          <div>
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-exclamation-diamond-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.52 0 2.1l6.516 6.516c.58.58 1.52.58 2.1 0l6.516-6.516c.58-.58.58-1.52 0-2.1L9.05.435zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
+                />
+              </svg>
+            </span>
+            O endereço de e-mail deve conter texto antes e depois do símbolo '&#64;'
+          </div>
+          }
+        </div>
+        }
       </div>
-  
+
       <div class="input-group">
         <label for="password">Password</label>
         <input
           type="password"
+          id="password"
           name="password"
           placeholder="Enter your password"
           formControlName="password"
         />
+        @if (isPasswordInvalid) {
+        <div class="error-message">
+          @if(passwordControl.hasError('required')) {
+          <p>O campo Password é obrigatório.</p>
+          } @if (passwordControl.hasError('minlength')) {
+            <p>A senha deve ter pelo menos 6 caracteres</p>
+          }
+        </div>
+        }
       </div>
 
       <div class="form-options">
         <div class="remember-me">
           <input type="checkbox" id="remember" class="remember-check" />
-          <label for="remember">Rememberme</label>
+          <label for="remember">Remember_me</label>
         </div>
-        <a routerLink="/Forgout-Passoword"  class="forgot-password">Forgot password?</a>
+        <a routerLink="/Forgout-Passoword" class="forgot-password"
+          >Forgot password?</a
+        >
       </div>
 
       <button type="submit" class="login-btn">Login</button>
     </form>
 
     <div class="register-link">
-      Não está registrado? <a routerLink="/registration">Crie uma conta</a>
+       Não está registrado? <a routerLink="/registration">Crie uma conta</a>
     </div>
 
     <div class="footer-politics">
       <p>
-        Ao continuar, você confirma que entende e aceita os <br> <a href="">Termos e Condições</a> e a <a href="">Política de Privacidade</a>
-
+        Ao continuar, você confirma que entende e aceita os <br />
+        <a href="">Termos e Condições</a> e a
+        <a href="">Política de Privacidade</a>
       </p>
     </div>
   </div>

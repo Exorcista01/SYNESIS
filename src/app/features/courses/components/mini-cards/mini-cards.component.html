@@ -1,54 +1,44 @@
-<div class="Container-mini">
-    <div class="Carrosel-title">
-        <div class="title-top">
-            <h1 class="title-text"> Cursos Acessadas recetemente</h1>
-        </div>
-    </div>
+<div class="swiper-area">
+  <button class="swiper-button-prev">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+    </svg>
+  </button>
+  
+  <div #swiperContainer class="swiper course-swiper">
+    <div class="swiper-wrapper">
 
-    <div class="custom-prev">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 18 9 12 15 6"></polyline>
-        </svg>
-    </div>
-
-    <div #swiperContainer class="swiper">
-        <div class="swiper-wrapper">
-            @for (course of inProgressCourses; track course.title) {
-            <div class="swiper-slide">
-                <div class="course-card">
-                    <div class="card-image-wrapper">
-                        <img class="card-image" [src]="course.imageUrl" alt="Imagem do curso">
-                        <span class="card-category">{{ course.category }}</span>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">{{ course.title }}</h3>
-                        <div class="progress-info">
-                            <span>Progresso</span>
-                            <span>{{ course.progress }}%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-bar-fill" [style.width.%]="course.progress"></div>
-                        </div>
-                        <div class="instructor-info">
-                            <img class="instructor-avatar" [src]="course.instructorAvatar" alt="Avatar do instrutor">
-                            <span class="instructor-name">{{ course.instructorName }}</span>
-                        </div>
-                    </div>
-                </div>
+      @for (course of courses; track course.title) {
+        <div class="swiper-slide">
+          <div class="course-card">
+            <div class="card-header">
+              <div class="course-icon">
+                <img [src]="course.icon" [alt]="'Ícone do curso ' + course.title" />
+              </div>
+              <span class="course-tag">{{ course.tag }}</span>
             </div>
-            }
+            <div class="card-body">
+              <h3 class="course-title">{{ course.title }}</h3>
+              <div class="course-author">
+                <img src="https://placehold.co/24x24/31313A/FFF?text=A" alt="Avatar do autor" class="author-avatar">
+                <span>{{ course.author }}</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="course-info">CURSO - {{ course.year }}</span>
+              <div class="course-meta-icons">
+                 <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12.5V7M7 12.5V1.5M12.5 12.5V4.5M17.5 12.5V9.5" stroke="#4B5563" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="container-Full-All">
-            <button class="Full-All-btn">Veja Todos os Cursos</button>
-        </div>
+      }
     </div>
-
-
-    <div class="custom-next">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-    </div>
+  </div>
+  
+  <button class="swiper-button-next">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+    </svg>
+  </button>
 </div>
