@@ -18,6 +18,5 @@ export class VerticalLayoutComponent {
 
   verificaSidebarOpen(): void{
     this.isSidebarOpen = !this.isSidebarOpen;
-    console.log("O pai recebeu o envio do header")
   }
 }

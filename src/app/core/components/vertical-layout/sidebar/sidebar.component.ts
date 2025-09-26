@@ -46,13 +46,6 @@ export class SidebarComponent {
         { name: 'Certificados', route: '/charts', icon: 'fas fa-chart-pie' },
       ],
     },
-    {
-      title: 'Outros',
-      links: [
-        { name: 'Perfil', route: '/widgets', icon: 'fas fa-layer-group' },
-        { name: 'Settings', route: '/pages', icon: 'far fa-file-alt' },
-      ],
-    },
   ];
 
   navUser = [
@@ -87,11 +80,23 @@ export class SidebarComponent {
   };
 
 
+  public isMobileMenuOpen = false;
+
   isUserDropdownOpen = false;
 
   toggleUserDropdown(): void {
     this.isUserDropdownOpen = !this.isUserDropdownOpen;
   };
+
+  // Chame esta função a partir do seu botão "hamburger" no header
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  // Esta função será usada pelo overlay para fechar o menu
+  closeMobileMenu(): void {
+    this.isMobileMenuOpen = false;
+  }
 
   @Input() isOpen = true;
 

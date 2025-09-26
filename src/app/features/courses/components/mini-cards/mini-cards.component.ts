@@ -75,14 +75,22 @@ export class MiniCardsComponent implements AfterViewInit{
 
       observer: true,
       observeParents: true,
-      slidesPerView: 5.3,
+      slidesPerView: 'auto',
       spaceBetween: 20,
     
       navigation: {
         nextEl: '.swiper-button-next-custom-cards',
         prevEl: '.swiper-button-prev-custom-cards',
       },
+
+      breakpoints: {
+        // Para telas com 1024px de largura ou mais
+        1600: {
+          slidesPerView: 5.3, // Mostra exatamente 5.3 cards
+        }
+      }
     });
+
   }
 }
 

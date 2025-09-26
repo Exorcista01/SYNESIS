@@ -37,13 +37,8 @@
 
   <main #swiperContainer class="swiper">
     <div class="swiper-wrapper">
-      @for (item of featuredContent; track item.title) {
+      @for (item of featuredContent; track item.title; let i = $index) {
       <div class="swiper-slide">
-        <div
-          class="slide-background"
-          [style.backgroundImage]="'url(' + item.videoImageUrl + ')'"
-        ></div>
-        <div class="slide-overlay"></div>
         <div class="slide-content">
           <div class="content-section">
             <div class="content-header">
@@ -134,20 +129,29 @@
               </button>
             </div>
           </div>
+        </div>
 
-          <button class="play-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="play-icon"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                clip-rule="evenodd"
-              />
-            </svg>
+        <div class="slide-video-container">
+          <video
+            #videoPlayer
+            class="slide-video"
+            [src]="item.safeVideoUrl"
+            [poster]="item.posterUrl"
+            [muted]="item.isMuted"
+            loop
+            playsinline
+          ></video>
+
+          <button class="video-control-button play-pause-button" (click)="togglePlayPause(i)">
+            <i *ngIf="!item.isPlaying" class="fa-solid fa-play"></i>
+            
+            <i *ngIf="item.isPlaying" class="fa-solid fa-pause"></i>
+          </button>
+
+          <button class="video-control-button mute-unmute-button" (click)="toggleMute(i)">
+            <i *ngIf="!item.isMuted" class="fa-solid fa-volume-high"></i>
+            
+            <i *ngIf="item.isMuted" class="fa-solid fa-volume-xmark"></i>
           </button>
         </div>
       </div>

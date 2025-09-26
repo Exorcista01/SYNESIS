@@ -227,6 +227,12 @@
   }
 }
 
+@media (max-width: 1025px) {
+    .search-bar{
+      display: none;
+    }
+}
+
 .user-name {
   font-size: var(--fs-label-medium); 
   font-weight: 600;

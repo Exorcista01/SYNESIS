@@ -1,4 +1,4 @@
-<aside class="sidebar" [class.sidebar-closed]="!isOpen">
+<aside class="sidebar" [class.mini-sidebar]="!isOpen">
     <div class="sidebar-footer">
       <button (click)="toggleUserDropdown()" class="sidebar-footer-container">
         <div class="user-img-info">
@@ -15,7 +15,7 @@
         <ul *ngFor="let user of navUser" class="nav-list">
           <li *ngFor="let links of user.links">
             <a [routerLink]="[links.route]" class="nav-link">
-              <i class="{{links.icon}}"></i>
+              <i class="{{links.icon}} nav-icon"></i>
               <span>{{links.name}}</span>
             </a>
           </li>
