@@ -1,0 +1,165 @@
+/* Container Principal com overlay */
+.course-banner-container {
+  width: 100%;
+  color: #EAEAEA;
+  background-image: 
+    linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)),
+    url(/assets/home/backgraund-banner.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+/* Breadcrumb */
+.breadcrumb-nav ol {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+}
+
+.breadcrumb-nav li {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.breadcrumb-nav a {
+  color: #A0A0A0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-nav a:hover {
+  color: #FFFFFF;
+}
+
+.breadcrumb-nav span {
+  color: #fffefe;
+  font-weight: 500;
+}
+
+.breadcrumb-nav .separator {
+  color: #A0A0A0;
+  margin: 0 0.8rem;
+}
+
+/* Conteúdo do Banner */
+.banner-content h1 {
+  font-size: 3.2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #FFFFFF; /* Garante cor branca para contraste */
+}
+
+.banner-content p {
+  font-size: 1.6rem;
+  max-width: 70ch;
+  line-height: 1.6;
+  color: #E0E0E0; /* Cor mais clara para o parágrafo */
+  margin-bottom: 2rem;
+}
+
+/* Tags e Categorias */
+.banner-catalogs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.catalog-tag {
+  background-color: transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #EAEAEA;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+}
+
+.catalog-tag:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.catalog-bar {
+  width: 1px;
+  height: 23px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-inline: 6px;
+}
+
+.level-tag {
+  gap: 0.5rem;
+  color: #BB86FC;
+  border-color: #BB86FC;
+}
+
+.level-tag .material-symbols-outlined {
+  font-size: 1.2rem;
+}
+
+/* Abas de Navegação */
+.banner-tabs {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  gap: 2rem;
+}
+
+.tab-item {
+  padding: 1rem 0.5rem;
+  margin-bottom: -1px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #A0A0A0;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab-item:hover {
+  color: #FFFFFF;
+}
+
+.tab-item.active {
+  color: #BB86FC;
+  border-bottom-color: #BB86FC;
+}
+
+/* Lógica de responsividade */
+.more-tags {
+  display: contents;
+}
+
+@media (max-width: 768px) {
+  .catalog-bar,
+  .more-tags {
+    display: none;
+  }
+}
+
+/* Área de conteúdo principal */
+.course-content-area {
+  max-width: 1280px;
+  margin: 3rem auto 0;
+  padding: 0 2rem;
+}

@@ -6,6 +6,7 @@ import { LoginComponent } from './features/auth/auth/login/login.component';
 import { RegisterComponent } from './features/auth/auth/register/register.component';
 import { ForgotPasswordComponent } from './features/auth/auth/forgot-password/forgot-password.component';
 import { CoursesComponent } from './features/courses/courses.component';
+import { PagesCoursesComponent } from './features/courses/components/pages-courses/pages-courses.component';
 
 export const routes: Routes = [
     {
@@ -15,6 +16,7 @@ export const routes: Routes = [
             {path: 'dashboard', component: DashboardComponent},
             {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
             {path: 'courses' , component: CoursesComponent},
+            {path: 'cursos/:slug', component: PagesCoursesComponent},
             {path: 'Calendario', component: CalendaComponent}
         ]
     },

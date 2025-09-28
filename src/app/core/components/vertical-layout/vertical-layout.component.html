@@ -1,9 +1,12 @@
-<div class="app-container" [class.sidebar-close]="!isSidebarOpen">
+<div class="app-container" [class.sidebar-close]="!isSidebarOpen" [class.mobile-menu-active]="isMobileMenuOpen">
   
   <app-header (SidebarToggleEvent)="verificaSidebarOpen()"></app-header>
 
   
-  <app-sidebar [isOpen]="isSidebarOpen"></app-sidebar>
+  <app-sidebar [isOpen]="isSidebarOpen"
+    [isMobileOpen]="isMobileMenuOpen"
+    (closeMobileMenuEvent)="closeMobileMenu()">
+</app-sidebar>
 
  
   <main class="main-content">

@@ -3,6 +3,13 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     flex: 1;
-    max-width: 156rem;
     margin: 0 auto;
+}
+
+
+@media (max-width: 860px){
+  .stats-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

@@ -1,0 +1,60 @@
+@if (course) {
+
+  <section class="course-banner-container">
+    <div class="wrapper">
+      
+      <nav class="breadcrumb-nav" aria-label="breadcrumb">
+        <ol>
+          @for (item of breadcrumbItems; track item.label; let last = $last) {
+          <li>
+            @if (!last) {
+            <a [routerLink]="item.url">{{ item.label }}</a>
+            } @else {
+            <span aria-current="page">{{ item.label }}</span>
+            }
+          </li>
+          @if (!last) {
+          <li class="separator" aria-hidden="true">></li>
+          } }
+        </ol>
+      </nav>
+
+      <div class="banner">
+        <div class="banner-content">
+          <h1>{{ course.title }}</h1>
+          <p>{{ course.description }}</p>
+        </div>
+        <div class="banner-catalogs">
+          @if (course.tags.length > 0) {
+          <a href="#" class="catalog-tag">{{ course.tags[0] }}</a>
+          <span class="catalog-tag level-tag">
+            <span class="material-symbols-outlined">bar_chart</span>
+            {{ course.level }}
+          </span>
+          <span class="catalog-bar"></span>
+          <span class="more-tags">
+            @for (tag of course.tags.slice(1); track tag) {
+            <a href="#" class="catalog-tag">{{ tag }}</a>
+            }
+          </span>
+          }
+        </div>
+      </div>
+
+      <nav class="banner-tabs">
+        <div
+          class="tab-item"
+          [class.active]="activeTab === 'vision'"
+          (click)="setActiveTab('vision')">
+          Visão geral
+        </div>
+
+      </nav>
+    </div>
+  </section>
+
+  <main class="course-content-area">
+    <app-vision-all [course]="course"></app-vision-all>
+  </main>
+
+}

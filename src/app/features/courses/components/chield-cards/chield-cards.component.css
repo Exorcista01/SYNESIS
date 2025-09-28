@@ -1,0 +1,109 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  gap: 2rem;
+}
+
+.chield-header h2 {
+  color: var(--color-text-primary);
+  font-size: var(--fs-title-small);
+  font-weight: var(--weight-semiBold);
+}
+
+.course-swiper {
+  width: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  width: auto;
+}
+
+.swiper-slide a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  border-radius: 1.6rem;
+  width: 140px;
+  height: 120px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.swiper-slide a:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.swiper-slide img {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
+
+.swiper-slide span {
+  color: var(--color-text-primary);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.swiper-button-prev-mini,
+.swiper-button-next-mini {
+  display: none;
+}
+
+.swiper-button-prev-mini,
+.swiper-button-next-mini {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-button);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-button-prev-mini:hover,
+.swiper-button-next-mini:hover {
+    background-color: var(--color-surface-hover);
+    transform: translateY(-50%) scale(1.1);
+
+}
+
+.swiper-button-prev-mini {
+    opacity: 0;
+    pointer-events: none;
+    left: -16px;
+}
+
+.swiper-button-prev-mini:not(.swiper-button-disabled) {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.swiper-button-next-mini {
+    right: -16px;
+    opacity: 1;
+}
+
+.swiper-button-next-mini.swiper-button-disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+

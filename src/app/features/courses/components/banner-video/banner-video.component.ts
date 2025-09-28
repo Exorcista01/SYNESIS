@@ -87,7 +87,7 @@ export class BannerVideoComponent implements AfterViewInit {
       modules: [Navigation, Pagination],
       observer: true,
       observeParents: true,
-      slidesPerView: 1.05,
+      slidesPerView: 1,
       spaceBetween: 30,
       grabCursor: true,
       navigation: {

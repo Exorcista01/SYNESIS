@@ -15,6 +15,5 @@ export class BannerComponent {
   @Input() palavraEmDestaque: string = 'Aprender';
   @Input() subtitulo: string = 'Discover courses, track progress, and achieve your learning goals seamlessly.';
   @Input() textoDoBotao: string = 'Explore Courses';
-  @Input() urlDaImagem: string = 'student.png';
-  @Input() altDaImagem: string = 'Ilustração de um estudante';
+  @Input() urlDaImagem: string = 'backgraund-banner.png';
 }

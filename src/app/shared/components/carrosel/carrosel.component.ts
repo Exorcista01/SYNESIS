@@ -10,42 +10,34 @@ import { Navigation, Pagination } from 'swiper/modules';
   styleUrl: './carrosel.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CarroselComponent implements AfterViewInit{
+export class CarroselComponent implements AfterViewInit {
+  @Input() items: any[] = [];
   @ViewChild('swiperContainer') swiperContainer!: ElementRef;
-
-  @Input() items: any[] = []; 
-
-  @Input() swiperOptions: any = {
-      slidesPerView: 4, 
-      spaceBetween: 20,      
-      loop: true,
-      grabCursor: true,    
-    
-  };
 
   constructor() { }
 
   ngAfterViewInit(): void {
-    const swiper = new Swiper(this.swiperContainer.nativeElement, {
-      modules: [Navigation, Pagination],
-      
-      observer: true,
-      observeParents: true,
+    if (this.swiperContainer) {
+      const swiper = new Swiper(this.swiperContainer.nativeElement, {
+        modules: [Navigation],
 
-      slidesPerView: this.swiperOptions.slidesPerView,
-      spaceBetween: this.swiperOptions.spaceBetween,
-      loop: this.swiperOptions.loop,
-      grabCursor: this.swiperOptions.grabCursor,
+        observer: true,
+        observeParents: true,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
 
-      navigation: {
-        nextEl: '.custom-next',
-        prevEl: '.custom-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
+        navigation: {
+          nextEl: '.carrosel-button-next',
+          prevEl: '.carrosel-button-prev',
+        },
+
+        breakpoints: {
+          1600: {
+            slidesPerView: 4.3,
+          }
+        }
+      });
+    }
   }
 
 

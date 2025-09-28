@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -12,6 +12,14 @@ import { RouterModule } from '@angular/router';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
+   // --- Inputs e Outputs ---
+  @Input() isOpen = true;
+  @Input() isMobileOpen = false; // Nome corrigido para consistência (era isMobileMenuOpen)
+  @Output() closeMobileMenuEvent = new EventEmitter<void>();
+
+  // --- Propriedades de Estado ---
+  isUserDropdownOpen = false;
+
   navSections = [
     {
       title: 'Dashboard & Apps',
@@ -75,30 +83,20 @@ export class SidebarComponent {
     },
   ];
 
-  toggleDropdown(link: any): void {
+   constructor() { }
+
+   toggleDropdown(link: any): void {
     link.isOpen = !link.isOpen;
-  };
-
-
-  public isMobileMenuOpen = false;
-
-  isUserDropdownOpen = false;
+  }
 
   toggleUserDropdown(): void {
     this.isUserDropdownOpen = !this.isUserDropdownOpen;
-  };
-
-  // Chame esta função a partir do seu botão "hamburger" no header
-  toggleMobileMenu(): void {
-    this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 
-  // Esta função será usada pelo overlay para fechar o menu
+  // 2. ADICIONADO: Função para emitir o evento de fechar
+  // O seu (click) no overlay do HTML vai chamar esta função
   closeMobileMenu(): void {
-    this.isMobileMenuOpen = false;
+     this.closeMobileMenuEvent.emit()
   }
 
-  @Input() isOpen = true;
-
-  constructor() { }
 }

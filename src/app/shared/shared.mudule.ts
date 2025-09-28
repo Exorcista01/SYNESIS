@@ -2,15 +2,17 @@
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BannerComponent } from './components/banner/banner.component'; 
+import { BannerComponent } from './components/banner/banner.component';
+import { AuthRoutingModule } from "../features/auth/auth-routing.module"; 
 
 @NgModule({
     declarations: [
         BannerComponent
     ],
     imports: [
-        CommonModule
-    ],
+    CommonModule,
+    AuthRoutingModule
+],
     exports: [
         BannerComponent 
     ]

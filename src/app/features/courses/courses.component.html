@@ -1,4 +1,15 @@
-<div class="top-row-main-content">
-    <app-banner-video></app-banner-video>
-    <app-mini-cards></app-mini-cards>
+<div class="content-layout">
+
+  <app-banner-video></app-banner-video>
+
+  @for (section of cardSections; track section.title; let i = $index) {
+    <app-mini-cards 
+      [title]="section.title" [courses]="section.courses">
+    </app-mini-cards>
+
+    @if (i == 1) {
+      <app-chield-cards></app-chield-cards>
+    }
+  }
+
 </div>
