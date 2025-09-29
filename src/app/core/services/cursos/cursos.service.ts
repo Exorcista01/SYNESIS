@@ -1,64 +1,28 @@
 import { Injectable } from '@angular/core';
+import { Course, CardSection, Module, Lesson, CourseLevel } from '../../../features/courses/course.model';
 
-export type CourseLevel = 'Iniciante' | 'Intermediário' | 'Avançado';
-
-export interface Module {
-  order: number;
-  title: string;
-  durationInHours: number;
-  thumbnail: string;
-  learnings?: string[]; 
-  skills?: string[]; 
-}
-
-
-
-export interface Course {
-  slug: string;
-  id: number;
-  img: string;
-  title: string;
-  author: string;
-  year: string;
-  tags: string[];
-  description: string;
-  descriptionLong?: string;
-  level: CourseLevel;
-  modules?: Module[];
-  studyHours?: number;
-  totalLessons?: number;
-  totalMinutes?: number;
-  studentCount?: number;
-  accessEndDate?: string;
-  activities?: string;
-}
-
-export interface CardSection {
-  title: string;
-  courses: Course[];
-}
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CursosService {
-
   cardSections: CardSection[] = [
     {
-      title: "Desenvolvimento Web Essencial",
+      title: 'Desenvolvimento Web Essencial',
       courses: [
         {
           id: 101,
           slug: 'typescript-tipagem-estatica-para-javascript',
           img: 'https://placehold.co/600x400/3178C6/FFF?text=TS',
           title: 'TypeScript: Tipagem Estática para JavaScript',
-          description: 'Adicione superpoderes ao seu JavaScript. Aprenda a usar tipagem estática para criar aplicações mais robustas, escaláveis e com menos bugs.',
-          descriptionLong: 'Adicione superpoderes ao seu JavaScript. Aprenda a usar tipagem estática para criar aplicações mais robustas, escaláveis e com menos bugs. Neste curso aprofundado, você mergulhará no ecossistema do TypeScript, entendendo não apenas o "como", mas também o "porquê" da tipagem estática. Abordaremos desde os tipos básicos, como string, number e boolean, até conceitos mais avançados como interfaces, generics, enums e utility types que permitirão a você modelar dados complexos com precisão e segurança. Além disso, exploraremos como o TypeScript se integra perfeitamente com frameworks modernos como Angular, React e Vue.js, melhorando a experiência de desenvolvimento (DX) com autocompletar inteligente, refatoração segura e detecção de erros ainda em tempo de desenvolvimento, muito antes do seu código chegar em produção. Prepare-se para elevar a qualidade do seu código e ganhar mais confiança ao construir aplicações de larga escala.',
+          description:
+            'Adicione superpoderes ao seu JavaScript. Aprenda a usar tipagem estática para criar aplicações mais robustas, escaláveis e com menos bugs.',
+          descriptionLong:
+            'Adicione superpoderes ao seu JavaScript. Aprenda a usar tipagem estática para criar aplicações mais robustas, escaláveis e com menos bugs. Neste curso aprofundado, você mergulhará no ecossistema do TypeScript, entendendo não apenas o "como", mas também o "porquê" da tipagem estática. Abordaremos desde os tipos básicos, como string, number e boolean, até conceitos mais avançados como interfaces, generics, enums e utility types que permitirão a você modelar dados complexos com precisão e segurança. Além disso, exploraremos como o TypeScript se integra perfeitamente com frameworks modernos como Angular, React e Vue.js, melhorando a experiência de desenvolvimento (DX) com autocompletar inteligente, refatoração segura e detecção de erros ainda em tempo de desenvolvimento, muito antes do seu código chegar em produção. Prepare-se para elevar a qualidade do seu código e ganhar mais confiança ao construir aplicações de larga escala.',
           author: 'Ana Beatriz Costa',
           year: '2025',
           tags: ['Front-end', 'JavaScript', 'TypeScript', 'Programação'],
           level: 'Intermediário',
-          // 2. ADICIONE OS DETALHES A CADA MÓDULO
           modules: [
             {
               order: 1,
@@ -68,9 +32,31 @@ export class CursosService {
               learnings: [
                 'Instalar o TypeScript e escrever seu primeiro programa',
                 'Descrever os conceitos básicos da linguagem e da tipagem',
-                'Usar variáveis para armazenar, recuperar e calcular informações'
+                'Usar variáveis para armazenar, recuperar e calcular informações',
               ],
-              skills: ['Programação', 'TypeScript', 'Ambiente de Desenvolvimento']
+              skills: [
+                'Programação',
+                'TypeScript',
+                'Ambiente de Desenvolvimento',
+              ],
+              lessons: [
+                {
+                  id: 1011,
+                  title: 'O que é TypeScript e por que usar?',
+                  type: 'video',
+                },
+                { id: 1012, title: 'Instalando o ambiente', type: 'video' },
+                {
+                  id: 1013,
+                  title: 'Tipos Primitivos: string, number e boolean',
+                  type: 'artigo',
+                },
+                {
+                  id: 1014,
+                  title: 'Desafio: Criando seu primeiro tipo',
+                  type: 'video',
+                },
+              ],
             },
             {
               order: 2,
@@ -80,9 +66,22 @@ export class CursosService {
               learnings: [
                 'Modelar dados complexos com interfaces e tipos customizados',
                 'Aplicar conceitos de Programação Orientada a Objetos com classes',
-                'Utilizar tipos avançados como Union, Intersection e Tuplas'
+                'Utilizar tipos avançados como Union, Intersection e Tuplas',
               ],
-              skills: ['TypeScript', 'POO', 'Modelagem de Dados', 'Interfaces']
+              skills: ['TypeScript', 'POO', 'Modelagem de Dados', 'Interfaces'],
+              lessons: [
+                 {
+                  id: 1021,
+                  title: 'Modelando dados com Interfaces',
+                  type: 'video',
+                },
+                { id: 1022, title: 'POO com Classes e Herança', type: 'video' },
+                {
+                  id: 1023,
+                  title: 'Tipos Union e Intersection',
+                  type: 'artigo',
+                },
+              ]
             },
             {
               order: 3,
@@ -92,9 +91,14 @@ export class CursosService {
               learnings: [
                 'Criar componentes reutilizáveis e flexíveis com Generics',
                 'Entender e aplicar Decorators para metaprogramação',
-                'Adicionar funcionalidades a classes e métodos de forma declarativa'
+                'Adicionar funcionalidades a classes e métodos de forma declarativa',
               ],
-              skills: ['Generics', 'Decorators', 'Metaprogramação', 'TypeScript Avançado']
+              skills: [
+                'Generics',
+                'Decorators',
+                'Metaprogramação',
+                'TypeScript Avançado',
+              ],
             },
             {
               order: 4,
@@ -104,22 +108,47 @@ export class CursosService {
               learnings: [
                 'Configurar o arquivo tsconfig.json para diferentes tipos de projetos',
                 'Integrar o TypeScript com ferramentas de build como Webpack',
-                'Compilar seu código para diferentes versões do JavaScript'
+                'Compilar seu código para diferentes versões do JavaScript',
               ],
-              skills: ['Compilação', 'tsconfig', 'Build Tools', 'Módulos']
-            }
+              skills: ['Compilação', 'tsconfig', 'Build Tools', 'Módulos'],
+            },
           ],
           studyHours: 18,
           totalLessons: 42,
           totalMinutes: 1080,
           studentCount: 2274,
           accessEndDate: '29/09/2026',
-          activities: '4 testes e 1 projeto'
+          activities: '4 testes e 1 projeto',
         },
-      ]
+        // ... O resto dos cursos ...
+        {
+          id: 102,
+          slug: 'html5-e-css3-a-base-da-web-moderna',
+          img: 'https://placehold.co/600x400/E34F26/FFF?text=HTML5',
+          title: 'HTML5 e CSS3: A Base da Web Moderna',
+          description: 'Domine as tecnologias fundamentais da web. Crie estruturas semânticas com HTML5 e layouts modernos e responsivos com CSS3.',
+          descriptionLong: 'Domine as tecnologias fundamentais da web. Crie estruturas semânticas com HTML5 e layouts modernos e responsivos com CSS3. Este curso explora desde seletores avançados e Flexbox até Grid Layout e animações, preparando você para construir qualquer interface web.',
+          author: 'Lucas Martins',
+          year: '2024',
+          tags: ['Front-end', 'HTML', 'CSS', 'Programação', 'Web Design'],
+          level: 'Iniciante'
+        },
+        {
+          id: 103,
+          slug: 'react-construindo-interfaces-reativas',
+          img: 'https://placehold.co/600x400/61DAFB/000?text=React',
+          title: 'React: Construindo Interfaces Reativas',
+          description: 'Construa interfaces de usuário dinâmicas e componentizadas com a biblioteca mais popular do mercado, o React.',
+          descriptionLong: 'Construa interfaces de usuário dinâmicas e componentizadas com a biblioteca mais popular do mercado, o React. Explore o conceito de componentização, estado, props e crie SPAs (Single Page Applications) de alta performance do zero.',
+          author: 'Camila Ribeiro',
+          year: '2025',
+          tags: ['Front-end', 'JavaScript', 'React', 'UI/UX', 'SPA'],
+          level: 'Intermediário'
+        },
+      ],
     },
     {
-      title: "Infraestrutura e Hardware",
+      title: 'Infraestrutura e Hardware',
       courses: [
         {
           id: 201,
@@ -131,7 +160,7 @@ export class CursosService {
           author: 'Fábio Gomes',
           year: '2024',
           tags: ['Hardware', 'Manutenção', 'Suporte Técnico'],
-          level: 'Iniciante'
+          level: 'Iniciante',
         },
         {
           id: 202,
@@ -143,12 +172,12 @@ export class CursosService {
           author: 'Sérgio Almeida',
           year: '2025',
           tags: ['Hardware', 'Manutenção', 'Diagnóstico', 'Suporte Técnico'],
-          level: 'Avançado'
-        }
-      ]
+          level: 'Avançado',
+        },
+      ],
     },
     {
-      title: "Redes de Computadores",
+      title: 'Redes de Computadores',
       courses: [
         {
           id: 301,
@@ -160,7 +189,7 @@ export class CursosService {
           author: 'Patrícia Lima',
           year: '2024',
           tags: ['Redes', 'Infraestrutura', 'TCP/IP', 'Internet'],
-          level: 'Iniciante'
+          level: 'Iniciante',
         },
         {
           id: 302,
@@ -172,7 +201,7 @@ export class CursosService {
           author: 'Gustavo Pereira',
           year: '2025',
           tags: ['Redes', 'Segurança', 'Infraestrutura', 'Cybersecurity'],
-          level: 'Iniciante'
+          level: 'Iniciante',
         },
         {
           id: 303,
@@ -184,12 +213,12 @@ export class CursosService {
           author: 'Vanessa Santos',
           year: '2024',
           tags: ['Redes', 'Infraestrutura', 'Cisco', 'Hardware de Rede'],
-          level: 'Intermediário'
-        }
-      ]
+          level: 'Intermediário',
+        },
+      ],
     },
     {
-      title: "Ecossistema Java",
+      title: 'Ecossistema Java',
       courses: [
         {
           id: 401,
@@ -201,7 +230,7 @@ export class CursosService {
           author: 'Ricardo Oliveira',
           year: '2024',
           tags: ['Back-end', 'Java', 'Programação', 'POO'],
-          level: 'Iniciante'
+          level: 'Iniciante',
         },
         {
           id: 402,
@@ -213,12 +242,12 @@ export class CursosService {
           author: 'Fernanda Kipper',
           year: '2025',
           tags: ['Back-end', 'Java', 'Spring', 'APIs', 'Microsserviços'],
-          level: 'Avançado'
-        }
-      ]
+          level: 'Avançado',
+        },
+      ],
     },
     {
-      title: "Mundo Python",
+      title: 'Mundo Python',
       courses: [
         {
           id: 501,
@@ -230,7 +259,7 @@ export class CursosService {
           author: 'Juliana Souza',
           year: '2025',
           tags: ['Data Science', 'Python', 'Pandas', 'Análise de Dados'],
-          level: 'Intermediário'
+          level: 'Intermediário',
         },
         {
           id: 502,
@@ -242,7 +271,7 @@ export class CursosService {
           author: 'Marcos Azevedo',
           year: '2024',
           tags: ['Automação', 'Python', 'Scripts', 'DevOps'],
-          level: 'Iniciante'
+          level: 'Iniciante',
         },
         {
           id: 503,
@@ -254,13 +283,13 @@ export class CursosService {
           author: 'Letícia Barros',
           year: '2025',
           tags: ['Back-end', 'Python', 'Django', 'Web Development'],
-          level: 'Intermediário'
-        }
-      ]
-    }
+          level: 'Intermediário',
+        },
+      ],
+    },
   ];
 
-  constructor() { }
+  constructor() {}
 
   getCardSections() {
     return this.cardSections;
@@ -268,7 +297,9 @@ export class CursosService {
 
   getCourseById(slug: string): Course | undefined {
     for (const section of this.cardSections) {
-      const foundCourse = section.courses.find(course => course.slug === slug);
+      const foundCourse = section.courses.find(
+        (course) => course.slug === slug
+      );
       if (foundCourse) {
         return foundCourse;
       }
@@ -276,3 +307,4 @@ export class CursosService {
     return undefined;
   }
 }
+

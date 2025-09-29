@@ -1,7 +1,7 @@
 import { CommonModule  } from '@angular/common';
 import { Component,  Input, OnChanges, SimpleChanges } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Course } from '../../../../../core/services/cursos/cursos.service';
+import { Course } from '../../../course.model';
 import { AuthRoutingModule } from "../../../../auth/auth-routing.module";
 import { VisionAllComponent } from "./vision-all/vision-all.component";
 import { ContentComponent } from "./content/content.component";
@@ -13,7 +13,7 @@ export interface BreadcrumbItem {
 
 @Component({
   selector: 'app-introducion',
-  imports: [RouterLink, CommonModule, AuthRoutingModule, VisionAllComponent, ContentComponent],
+  imports: [RouterLink, CommonModule, AuthRoutingModule, VisionAllComponent],
   templateUrl: './introducion.component.html',
   styleUrl: './introducion.component.css'
 })
