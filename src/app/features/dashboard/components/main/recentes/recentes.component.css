@@ -1,0 +1,96 @@
+.recentes {
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-surface);
+}
+
+.recentes-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 2.5rem;
+}
+
+.recentes-progress {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.recentes-progress p {
+    color: var(#1e2a53);
+    font-size: 1rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+}
+
+.card h3 {
+    font-size: var(--fs-title-small);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    line-height: 1.4;
+}
+
+.card p {
+    font-size: var(--fs-label-medium);
+    color: var(--color-text-secondary);
+}
+
+.modulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-border);
+    padding: 1.2rem;
+    border-radius: var(--radius-small);
+    gap: 0.8rem;
+}
+
+.modulo .modulo-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.modulo .modulo-info {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.grup-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.grup-more,
+.grup-contine {
+    background-color: var(--color-accent);
+    color: var(--color-text-on-accent);
+    border: none;
+    padding: 1.5rem 3.5rem;
+    border-radius: var(--radius-small);
+    font-size: var(--fs-body-large);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 100%;
+    flex: 1 1 0;
+}
+
+.grup-contine{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

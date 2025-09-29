@@ -4,10 +4,11 @@ import { GridStatsComponent } from "./grid-stats/grid-stats.component";
 import { CoursesSectionComponent } from "./courses-section/courses-section.component";
 import { CarroselComponent } from "../../../../shared/components/carrosel/carrosel.component";
 import { SharedModule } from '../../../../shared/shared.mudule';
+import { RecentesComponent } from "./recentes/recentes.component";
 
 @Component({
   selector: 'app-main',
-  imports: [CalendaProgressComponent, GridStatsComponent, CoursesSectionComponent, CarroselComponent, SharedModule],
+  imports: [CalendaProgressComponent, GridStatsComponent, CoursesSectionComponent, CarroselComponent, SharedModule, RecentesComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })

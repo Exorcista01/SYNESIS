@@ -27,7 +27,7 @@
   grid-area: main;
   overflow-y: auto; 
   background-color: var(--color-background);
-  padding: 3rem;
+  
 }
 
 
