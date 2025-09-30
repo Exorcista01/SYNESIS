@@ -114,13 +114,12 @@ export class CursosService {
             },
           ],
           studyHours: 18,
-          totalLessons: 42,
+          totalLessons: 12,
           totalMinutes: 1080,
           studentCount: 2274,
           accessEndDate: '29/09/2026',
-          activities: '4 testes e 1 projeto',
+          activities: '4 exercícios ',
         },
-        // ... O resto dos cursos ...
         {
           id: 102,
           slug: 'html5-e-css3-a-base-da-web-moderna',
@@ -305,6 +304,17 @@ export class CursosService {
       }
     }
     return undefined;
+  }
+
+  getTotalLessons(slug: string): number {
+    const course = this.getCourseById(slug);
+    if (!course || !course.modules) {
+      return 0;
+    }
+
+    return course.modules.reduce((total, module) => {
+      return total + (module.lessons ? module.lessons.length : 0);
+    }, 0);
   }
 }
 

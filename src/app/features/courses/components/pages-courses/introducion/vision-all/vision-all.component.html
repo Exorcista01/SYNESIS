@@ -19,48 +19,51 @@
     </section>
 
     @if (course.modules && course.modules.length > 0) {
-    <section class="new-course-content">
+    <section class="course-content-section">
       <div class="content-header">
         <h2>Conteúdo do curso</h2>
       </div>
 
-      <div class="accordion">
-        @for (module of course.modules; track module.order) {
-        <div
-          class="accordion-item"
-          [class.expanded]="isModuleExpanded(module.order)"
-        >
+      <div class="accordion-container">
+        @for (module of course.modules; track module.order; let i = $index) {
+        <div class="accordion-item" [class.expanded]="isModuleExpanded(module.order)">
           <div class="accordion-header" (click)="toggleModule(module.order)">
-            <div class="header-info">
-              <span class="module-identifier">MÓDULO {{ module.order }}</span>
-              <h3 class="module-title">{{ module.title }}</h3>
+            <div class="module-main-info">
+              <span class="module-icon material-symbols-outlined">bookmark</span>
+              <span class="module-title">MODULE {{ module.order }}</span>
             </div>
-            <div class="header-action">
-              <button class="btn-start">Start Learning</button>
-              <span class="material-symbols-outlined expand-icon"
-                >expand_more</span
-              >
-            </div>
+            <h3 class="module-subtitle">{{ module.title }}</h3>
+            <button class="btn-start-learning" (click)="startModuleLearning($event, module.order)">Start Learning</button>
+            <span class="expand-icon material-symbols-outlined">expand_more</span>
           </div>
 
           @if (isModuleExpanded(module.order)) {
           <div class="accordion-body">
             <p class="module-description">
-              Neste módulo, você aprenderá os conceitos fundamentais, desde a
-              configuração inicial até a criação de tipos e interfaces...
-              <a>Read More</a>
+              In this module, you are given an introduction to behaviour based safety. You will learn what behaviour is
+              and what is involved in behaviour based safety.
             </p>
             <ul class="lessons-list">
               @for (lesson of module.lessons; track lesson.id; let i = $index) {
-              <li class="lesson-item">
-                <div class="lesson-number">{{ i + 1 }}</div>
-                <div class="lesson-details">
-                  <span class="lesson-title">{{ lesson.title }}</span>
-                  <div class="lesson-meta">
-                    <span class="material-symbols-outlined">videocam</span> 0
-                    <span class="material-symbols-outlined">article</span> 1
-                  </div>
+
+              <li class="lesson-item" [class.completed]="(completedLessons$ | async)?.has(lesson.id)">
+
+                <span class="lesson-status-icon material-symbols-outlined">
+                  {{ (completedLessons$ | async)?.has(lesson.id) ? 'check_circle' : 'radio_button_unchecked' }}
+                </span>
+
+                <div class="lesson-info">
+                  <a [routerLink]="['/cursos', course.slug, 'lesson', lesson.id]" class="lesson-title-link">
+                    <span class="lesson-number">{{ i + 1 }}.</span>
+                    <span class="lesson-title">{{ lesson.title }}</span>
+                  </a>
                 </div>
+
+                <div class="lesson-meta">
+                  <span class="material-symbols-outlined">videocam</span> 0
+                  <span class="material-symbols-outlined">article</span> 11
+                </div>
+
               </li>
               }
             </ul>
@@ -88,24 +91,20 @@
           <span class="material-symbols-outlined">smart_display</span>
           <div>
             <span class="detail-label">Aulas</span>
-            <span class="detail-value"
-              >{{ course.totalLessons }} aulas em 1h 19min</span
-            >
+            <span class="detail-value">{{ course.totalLessons }} aulas</span>
           </div>
         </div>
         <div class="detail-item">
           <span class="material-symbols-outlined">school</span>
           <div>
-            <span class="detail-label">Alunos desta trilha</span>
-            <span class="detail-value">{{
-              course.studentCount?.toLocaleString("pt-BR")
-            }}</span>
+            <span class="detail-label">Alunos</span>
+            <span class="detail-value">{{ course.studentCount?.toLocaleString("pt-BR") }}</span>
           </div>
         </div>
         <div class="detail-item">
           <span class="material-symbols-outlined">bar_chart</span>
           <div>
-            <span class="detail-label">Nível de dificuldade</span>
+            <span class="detail-label">Nível</span>
             <span class="detail-value">{{ course.level }}</span>
           </div>
         </div>
@@ -129,20 +128,13 @@
     <div class="sidebar-card">
       <div class="progress-header">
         <h3>Progresso geral</h3>
-        <span>?</span>
       </div>
       <div class="progress-bar-container">
-        <div class="progress-bar"></div>
+        <div class="progress-bar-fill" [style.width.%]="courseProgress$ | async"></div>
       </div>
-      <span class="progress-percent">0%</span>
-      <button class="btn-primary">Iniciar</button>
+      <span class="progress-percent">{{ courseProgress$ | async }}%</span>
+      <button class="btn-primary" (click)="startCourse()">Iniciar Curso</button>
       <button class="btn-secondary">Acessar conteúdos</button>
-    </div>
-
-    <div class="sidebar-card">
-      <h3>Compartilhe com um amigo</h3>
-      <p>Envie esse conteúdo e ajude um amigo a aprender algo novo.</p>
-      <button class="btn-secondary">Compartilhar</button>
     </div>
   </aside>
 </div>

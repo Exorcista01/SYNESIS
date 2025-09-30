@@ -2,6 +2,12 @@
 
 @use '@angular/material' as mat;
 
+:root {
+  @include mat.progress-bar-overrides((
+    active-indicator-color: orange,
+    track-color: red,
+  ));
+}
 
 :root {
     --color-background: #f8f9fa;
@@ -89,6 +95,12 @@
     --color-accent-light: #1e2a53;
     --color-icon: #8a94a6;
     --color-border: #1e2a53;
+
+
+  --mdc-linear-progress-active-indicator-color: #0066ff; 
+  --mdc-linear-progress-track-color: #e2e8f0;           
+  --mdc-linear-progress-active-indicator-height: 8px;  
+
 }
 
 

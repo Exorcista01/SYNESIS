@@ -19,17 +19,13 @@
 }
 
 .cards-and-recent{
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
   gap: 3rem;
 }
 
-:host ::ng-deep app-recentes{
-  flex: 1;
-}
-:host ::ng-deep app-grid-stats{
-  flex: 1;
-}
+
 
 @media (max-width: 1120px){
   .top-row-main-content{

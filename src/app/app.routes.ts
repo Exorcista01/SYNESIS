@@ -7,6 +7,7 @@ import { RegisterComponent } from './features/auth/auth/register/register.compon
 import { ForgotPasswordComponent } from './features/auth/auth/forgot-password/forgot-password.component';
 import { CoursesComponent } from './features/courses/courses.component';
 import { PagesCoursesComponent } from './features/courses/components/pages-courses/pages-courses.component';
+import { LessonPageComponent } from './features/courses/components/pages-courses/lesson-page/lesson-page.component';
 
 export const routes: Routes = [
     {
@@ -17,6 +18,7 @@ export const routes: Routes = [
             {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
             {path: 'courses' , component: CoursesComponent},
             {path: 'cursos/:slug', component: PagesCoursesComponent},
+            {path: 'cursos/:slug/lesson/:lessonId', component: LessonPageComponent},
             {path: 'Calendario', component: CalendaComponent}
         ]
     },

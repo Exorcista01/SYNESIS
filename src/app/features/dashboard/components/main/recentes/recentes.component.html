@@ -1,27 +1,46 @@
 <div class="recentes">
+  
+  @if (recentCourse$ | async; as recentCourse) {
     <div class="recentes-wrapper">
-        <div class="recentes-progress">
-            <mat-progress-bar mode="determinate" [value]="progressBar"></mat-progress-bar>
-            <p>{{progressBar}}%</p>
+      <div class="recentes-progress">
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" [style.width.%]="recentCourse.progress$ | async"></div>
         </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="/assets/login/login-banner.jpg" alt="">
-            </div>
-            <div class="card-textp">
-                <h3>Desenvolvimento Web Essencial</h3>
-                <p>Adicione superpoderes ao seu JavaScript. Aprenda a usar tipagem estática para criar aplicações mais robustas</p>
-            </div>
+        <p>{{ recentCourse.progress$ | async }}%</p>
+      </div>
+      
+      <div class="card">
+        <div class="card-img">
+          <img [src]="recentCourse.img" [alt]="'Capa do curso ' + recentCourse.title">
         </div>
-        <div class="modulo">
-            <p class="modulo-name">Modulo 1</p>
-            <p class="modulo-info">Instalação de ferramentas essenciais</p>
+        <div class="card-textp">
+          <h3>{{ recentCourse.title }}</h3>
+          <p>{{ recentCourse.description }}</p>
         </div>
-        <div class="grup-btns">
-            <button class="grup-more">Ver todo o curso</button>
-            <button class="grup-contine">Continuar estudanto <span class="material-symbols-outlined">
-                arrow_right_alt
-            </span></button>
-        </div>
+      </div>
+
+      <div class="modulo">
+        <span class="material-symbols-outlined">bookmark</span>
+        <p class="modulo-name">{{ recentCourse.modules && recentCourse.modules.length > 0 ? 'Módulo ' + recentCourse.modules[0].order : 'Introdução' }}</p>
+        <p class="modulo-info">{{ recentCourse.modules && recentCourse.modules.length > 0 ? recentCourse.modules[0].title : 'Visão geral do curso' }}</p>
+      </div>
+
+      <div class="grup-btns">
+        <button class="grup-more" (click)="viewCourse(recentCourse.slug)">Ver todo o curso</button>
+        <button class="grup-contine">
+          Continuar estudando
+          <span class="material-symbols-outlined">arrow_right_alt</span>
+        </button>
+      </div>
     </div>
+
+  } @else {
+    <div class="recentes-wrapper empty-state">
+      <span class="material-symbols-outlined empty-icon">school</span>
+      <h4>Nenhum curso em andamento</h4>
+      <p>Que tal começar uma nova jornada de aprendizado?</p>
+      <button class="grup-more full-width-btn" (click)="navigateToAllCourses()">Ver todos os cursos</button>
+    </div>
+  }
+
 </div>
