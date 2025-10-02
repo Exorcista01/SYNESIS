@@ -1,3 +1,4 @@
+import { Navigation } from 'swiper/modules';
 import { Component, OnInit } from '@angular/core';
 import {ProgressSpinnerMode, MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatRadioModule} from '@angular/material/radio';
@@ -19,13 +20,14 @@ import { switchMap } from 'rxjs/operators';
 export class LessonPageComponent implements OnInit {
   mode: ProgressSpinnerMode = 'determinate';
   value = 50;
-
+  expandedModules: { [key: number]: boolean } = {};
   course: Course | undefined;
   ActiveLesson: Lesson | undefined;
   ActiveModule: Module | undefined;
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private cursosService: CursosService
   ){}
 
@@ -57,7 +59,31 @@ export class LessonPageComponent implements OnInit {
           this.ActiveModule = module;
           break
         }
+
+      if (this.ActiveModule) {
+        this.expandedModules = {}; 
+        this.expandedModules[this.ActiveModule.order] = true;
+      }
       }
     } 
+  }
+
+  toggleModule(moduleOrder: number): void {
+    const wasOpen = this.expandedModules[moduleOrder];
+    this.expandedModules = {}; 
+    if (!wasOpen) {
+      this.expandedModules[moduleOrder] = true;
+    }
+  }
+
+  isModuleExpanded(moduleOrder: number): boolean {
+    return this.expandedModules[moduleOrder] || false;
+  }
+
+  viewCurse(): void {
+    if(this.course){
+      this.router.navigate(['/course', this.course.slug]);
+      console.log("voltei para o conteudo")
+    }
   }
 }

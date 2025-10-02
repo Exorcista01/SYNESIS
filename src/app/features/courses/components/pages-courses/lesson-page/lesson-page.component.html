@@ -1,74 +1,90 @@
 @if (course) {
 
 <div class="lesson-page-container">
+  <main class="main-content-lesson">
+    @if (ActiveLesson) {
+    <div class="lesson-header">
+      <div class="lesson-actions">
+        <button class="btn-nav">
+          <span class="material-symbols-outlined">arrow_back</span>
+          <span>Anterior</span>
+        </button>
 
-  <aside class="sidebar-mudules">
+        <div class="lesson-header">
+          @if (ActiveModule) {
+          <p class="module-context">
+            {{ ActiveModule.order }}: {{ ActiveLesson.title }}
+          </p>
+          }
+        </div>
+
+        <button class="btn-nav">
+          <span class="material-symbols-outlined">arrow_forward</span>
+          <span>Proximo</span>
+        </button>
+      </div>
+    </div>
+    <div class="lesson-content-placeholder">
+      <span class="material-symbols-outlined">smart_display</span>
+      <p>Área do conteúdo da aula</p>
+    </div>
+    }
+  </main>
+
+  <aside class="sidebar-modules">
     <div class="sidebar-content">
       <div class="sidebar-top">
         <div class="sidebar-header">
           <a [routerLink]="['/cursos', course.slug]"></a>
-          <h2 class="course-title"> {{course.title}}</h2>
+          <h2 class="course-title">{{ course.title }}</h2>
         </div>
         <div class="sidebar-main">
           @for (module of course.modules; track module.order) {
-            <div class="module-group">
-              <h3 class="module-title"> Módulo {{module.order}}: {{module.title}}</h3>
+          <div class="module-accordion-item" [class.expanded]="isModuleExpanded(module.order)">
 
+            <div class="module-header" (click)="toggleModule(module.order)">
+              <span class="module-icon material-symbols-outlined">check_circle</span>
+              <div class="module-text">
+                <span class="module-identifier">Módulo {{ module.order }}</span>
+                <span class="module-title-text">{{ module.title }}</span>
+              </div>
+              <span class="expand-icon material-symbols-outlined">expand_more</span>
+            </div>
+
+            @if (isModuleExpanded(module.order)) {
+            <div class="module-lessons-panel">
               <ul class="lessons-list">
                 @for (lesson of module.lessons; track lesson.id) {
-                  <li>
-                    <a class="lesson-link" [class.active]="lesson.id === ActiveLesson?.id" [routerLink]="['/cursos', course.slug, 'lesson', lesson.id]">
-                      <span class="lesson-status-icon material-symbols-outlined">radio_button_unchecked</span>
-                      <div class="lesson-text">
-                        <span class="lesson-item-title">{{ lesson.title }}</span>
-                        <span class="lesson-item-type">{{ lesson.type === 'video' ? 'Vídeo' : 'Artigo/Exercício' }}</span>
-                      </div>
-                    </a>
-                  </li>
+                <li>
+                  <a class="lesson-link" [routerLink]="['/cursos', course.slug, 'lesson', lesson.id]"
+                    [class.active]="lesson.id === ActiveLesson?.id">
+
+                    @if (lesson.id === ActiveLesson?.id) {
+                    <div class="active-indicator"></div>
+                    }
+                    <span class="lesson-status-icon material-symbols-outlined">radio_button_unchecked</span>
+                    <div class="lesson-text">
+                      <span class="lesson-item-title">{{ lesson.title }}</span>
+                      <span class="lesson-item-type">{{ lesson.type === 'video' ? 'Vídeo' : 'Artigo/Exercício' }}</span>
+                    </div>
+                  </a>
+                </li>
                 }
               </ul>
             </div>
+            }
+          </div>
           }
         </div>
-
       </div>
       <div class="sidebar-footer">
-       <button class="btn-back">
+        <button class="btn-back" (click)="viewCurse()">
           <span class="material-symbols-outlined">arrow_back</span>
           Voltar para o curso
         </button>
       </div>
     </div>
   </aside>
-
-<main class="main-content-lesson">
-      @if (ActiveLesson) {
-        <div class="lesson-header">
-          <h1>{{ ActiveLesson.title }}</h1>
-          @if (ActiveModule) {
-            <p class="module-context">do Módulo {{ActiveModule.order}}: {{ActiveModule.title}}</p>
-          }
-        </div>
-        <div class="lesson-content-placeholder">
-          <span class="material-symbols-outlined">smart_display</span>
-          <p>Área do conteúdo da aula</p>
-        </div>
-        <div class="lesson-actions">
-          <button class="btn-nav">
-            <span class="material-symbols-outlined">arrow_back</span>
-            Anterior
-          </button>
-          <button class="btn-complete">
-            <span class="material-symbols-outlined">radio_button_unchecked</span>
-            Marcar como Concluída
-          </button>
-          <button class="btn-nav">
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </button>
-        </div>
-      }
-    </main>
-
 </div>
 
 }
