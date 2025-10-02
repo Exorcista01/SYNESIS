@@ -1,12 +1,10 @@
-<div
-  class="sidebar-overlay"
-  [class.active]="isMobileOpen"
-  (click)="closeMobileMenu()"
-></div>
+<div class="sidebar-overlay" [class.active]="isMobileOpen" (click)="closeMobileMenu()"></div>
 
 <aside class="sidebar" [class.mini-sidebar]="!isOpen" [class.mobile-open]="isMobileOpen">
-  <div class="aside-top"> 
-    <button class="close-button" (click)="closeMobileMenu()"><i class="fa-solid fa-xmark"></i></button>
+  <div class="aside-top">
+    <button class="close-button" (click)="closeMobileMenu()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
     <a class="logo-container" aria-label="Página Inicial">
       <img src="logo.png" alt="Logo da Synesis" class="logo-img" />
       <span class="logo-title">SYNESIS</span>
@@ -15,20 +13,13 @@
   <div class="sidebar-footer">
     <button (click)="toggleUserDropdown()" class="sidebar-footer-container">
       <div class="user-img-info">
-        <img
-          src="https://placehold.co/40x40/E2E8F0/4A5568?text=J"
-          alt="Avatar do usuário"
-          class="user-avatar"
-        />
+        <img src="https://placehold.co/40x40/E2E8F0/4A5568?text=J" alt="Avatar do usuário" class="user-avatar" />
         <div class="sidebar-footer-text">
           <span class="user-name">Jorge luis</span>
           <span class="user-role">3° Manutenção</span>
         </div>
       </div>
-      <i
-        class="fas fa-chevron-right nav-arrow"
-        [class.rotate-90]="isUserDropdownOpen"
-      ></i>
+      <i class="fas fa-chevron-right nav-arrow" [class.rotate-90]="isUserDropdownOpen"></i>
     </button>
 
     <div class="user-dropdown" [class.open]="isUserDropdownOpen">
@@ -47,43 +38,24 @@
     <div *ngFor="let section of navSections" class="nav-section">
       <p class="nav-section-title">{{ section.title }}</p>
       <ul class="nav-list">
-        <li
-          *ngFor="let link of section.links"
-          [class.dropdown-open-container]="link.isOpen && link.children"
-        >
-          <a
-            *ngIf="!link.children"
-            [routerLink]="[link.route]"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            class="nav-link"
-          >
+        <li *ngFor="let link of section.links" [class.dropdown-open-container]="link.isOpen && link.children">
+          <a *ngIf="!link.children" [routerLink]="[link.route]" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
             <i class="{{ link.icon }} nav-icon"></i>
             <span>{{ link.name }}</span>
           </a>
 
-          <div
-            *ngIf="link.children"
-            (click)="toggleDropdown(link)"
-            class="nav-link dropdown-toggle"
-            [class.active-dropdown]="link.isOpen"
-          >
+          <div *ngIf="link.children" (click)="toggleDropdown(link)" class="nav-link dropdown-toggle"
+            [class.active-dropdown]="link.isOpen">
             <i class="{{ link.icon }} nav-icon"></i>
             <span>{{ link.name }}</span>
-            <i
-              class="fas fa-chevron-right nav-arrow"
-              [class.rotate-90]="link.isOpen"
-            ></i>
+            <i class="fas fa-chevron-right nav-arrow" [class.rotate-90]="link.isOpen"></i>
           </div>
 
           <ul *ngIf="link.children && link.isOpen" class="sub-nav-list">
             <li *ngFor="let sublink of link.children">
-              <a
-                [routerLink]="[sublink.route]"
-                routerLinkActive="active"
-                [routerLinkActiveOptions]="{ exact: true }"
-                class="sub-nav-link"
-              >
+              <a [routerLink]="[sublink.route]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                class="sub-nav-link">
                 <i class="{{ sublink.icon }} nav-icon"></i>
                 <span>{{ sublink.name }}</span>
               </a>

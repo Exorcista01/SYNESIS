@@ -17,7 +17,6 @@ export class VisionAllComponent {
 
   completedLessons$: Observable<Set<number>> = of(new Set<number>());
   
-  // CORREÇÃO: Adicione esta linha que estava faltando
   courseProgress$: Observable<number> = of(0); 
 
   isCollapsed = true;
@@ -30,9 +29,7 @@ export class VisionAllComponent {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['course'] && this.course) {
-      // Busca as aulas completas para este curso
       this.completedLessons$ = this.userProgressService.getCompletedLessons(this.course.slug);
-      // Busca o progresso geral para este curso
       this.courseProgress$ = this.userProgressService.getCourseProgress(this.course.slug);
     }
   }
@@ -63,10 +60,7 @@ export class VisionAllComponent {
   }
 
   startModuleLearning(event: MouseEvent, moduleOrder: number): void {
-    event.stopPropagation(); // <-- A linha mais importante! Impede o clique de "borbulhar".
-    
+    event.stopPropagation(); 
     console.log(`Botão 'Start Learning' clicado para o Módulo ${moduleOrder}!`);
-    
-    // No futuro, aqui você pode colocar a lógica para navegar para a primeira aula do módulo, por exemplo.
   }
 }
