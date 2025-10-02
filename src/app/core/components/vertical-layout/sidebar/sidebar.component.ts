@@ -93,8 +93,7 @@ export class SidebarComponent {
     this.isUserDropdownOpen = !this.isUserDropdownOpen;
   }
 
-  // 2. ADICIONADO: Função para emitir o evento de fechar
-  // O seu (click) no overlay do HTML vai chamar esta função
+  
   closeMobileMenu(): void {
      this.closeMobileMenuEvent.emit()
   }

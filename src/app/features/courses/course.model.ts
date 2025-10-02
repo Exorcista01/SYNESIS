@@ -5,6 +5,7 @@ export interface Lesson {
   id: number;
   title: string;
   type: 'video' | 'artigo';
+  description: string;
 }
 
 

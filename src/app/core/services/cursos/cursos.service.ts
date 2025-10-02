@@ -44,17 +44,26 @@ export class CursosService {
                   id: 1011,
                   title: 'O que é TypeScript e por que usar?',
                   type: 'video',
+                  description: 'Nesta aula, explorei como a gestão do tempo está ligada aos pilares do bem-estar. Falei sobre a importância de equilibrar vida pessoal e profissional, reduzir o estresse e aumentar a autoestima. Ao organizar suas tarefas, você não só melhora sua produtividade, mas também sua qualidade de sono e satisfação com a vida. Enfatizei que dedicar tempo ao que realmente importa traz felicidade e saúde mental. Espero que você aproveite essas dicas e as aplique na sua rotina!'
                 },
-                { id: 1012, title: 'Instalando o ambiente', type: 'video' },
+                { id: 1012, 
+                  title: 'Instalando o ambiente', 
+                  type: 'video' ,
+                  description: 'Aqui você vai aprender a configurar o ambiente de desenvolvimento, instalando o TypeScript e preparando tudo para começar a codar.'
+
+                },
                 {
                   id: 1013,
                   title: 'Tipos Primitivos: string, number e boolean',
                   type: 'artigo',
+                  description: 'Este artigo apresenta os principais tipos primitivos do TypeScript — string, number e boolean — explicando como e quando utilizá-los no código.'
+
                 },
                 {
                   id: 1014,
                   title: 'Desafio: Criando seu primeiro tipo',
                   type: 'video',
+                  description: 'esse '
                 },
               ],
             },
@@ -74,12 +83,20 @@ export class CursosService {
                   id: 1021,
                   title: 'Modelando dados com Interfaces',
                   type: 'video',
+                  description: 'Neste vídeo, você vai aprender como usar Interfaces para estruturar e organizar dados no TypeScript, criando contratos claros e reutilizáveis dentro do seu código.'
                 },
-                { id: 1022, title: 'POO com Classes e Herança', type: 'video' },
+                { id: 1022, title:
+                   'POO com Classes e Herança',
+                    type: 'video',
+                    description: 'Aqui vamos explorar a Programação Orientada a Objetos, entendendo como criar Classes, aplicar Herança e reaproveitar código de forma prática e eficiente.'
+
+                  },
                 {
                   id: 1023,
                   title: 'Tipos Union e Intersection',
                   type: 'artigo',
+                  description: 'Este artigo apresenta os tipos Union e Intersection no TypeScript, mostrando como combinar e restringir tipos para tornar seu código mais seguro e flexível.'
+
                 },
               ]
             },

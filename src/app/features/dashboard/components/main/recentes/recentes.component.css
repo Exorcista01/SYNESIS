@@ -3,7 +3,7 @@
 }
 
 .recentes-wrapper {
-    background-color: #ffffff;
+    background-color: var(--color-surface);
     border-radius: 16px;
     padding: 2.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 10px 20px rgba(0, 0, 0, 0.05);
@@ -117,9 +117,9 @@
 }
 
 .grup-more {
-    background-color: #ffffff;
-    color: #1e2a53;
-    border: 2px solid #eef2f7;
+    background-color: var(--color-accent);
+    color: var(--color-text-on-accent);
+    border: 2px solid var(--color-accent);
 }
 
 .grup-more:hover {
@@ -137,4 +137,36 @@
     filter: brightness(1.1);
     box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
     transform: translateY(-2px);
+}
+
+
+.empty-state{
+    display: flex;
+    flex-direction: column;
+}
+
+.empty-text{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.empty-text h1{
+    font-size: 2.2rem;
+    color: var(--color-text-primary);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.empty-text p{
+    font-size: 1.2rem;
+    color: var(--color-text-secondary)
+}
+
+
+@media (max-width: 836px) {
+    .empty-text{
+        margin-block: 5rem ;
+    }
 }

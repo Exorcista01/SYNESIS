@@ -24,6 +24,9 @@ export class LessonPageComponent implements OnInit {
   course: Course | undefined;
   ActiveLesson: Lesson | undefined;
   ActiveModule: Module | undefined;
+  proximoLesson: boolean = false;
+  anteriorLesson: boolean = false;
+  toggleButtonSidebar = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -82,8 +85,12 @@ export class LessonPageComponent implements OnInit {
 
   viewCurse(): void {
     if(this.course){
-      this.router.navigate(['/course', this.course.slug]);
-      console.log("voltei para o conteudo")
+      this.router.navigate(['/cursos', this.course.slug]);
+
     }
   }
+
+ toggleOpen(): void {
+  this.toggleButtonSidebar = !this.toggleButtonSidebar;
+ }
 }

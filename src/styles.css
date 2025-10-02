@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Display:wght@400;600;700&display=swap');
 
-@use '@angular/material' as mat;
 
-:root {
-  @include mat.progress-bar-overrides((
-    active-indicator-color: orange,
-    track-color: red,
-  ));
-}
 
 :root {
     --color-background: #f8f9fa;
@@ -24,7 +17,8 @@
     --color-accent-hover: #0052cc;
     --color-accent-light: #e6f0ff;
     --color-icon: #4A5568;
-    --color-border: #e2e8f0;
+    --color-border: #d1d5db;
+    --color-border-50: #babcbe;
 
 
     --font-primary: 'InterDisplay', Helvetica, Arial, sans-serif;

@@ -36,9 +36,10 @@
 
   } @else {
     <div class="recentes-wrapper empty-state">
-      <span class="material-symbols-outlined empty-icon">school</span>
-      <h4>Nenhum curso em andamento</h4>
-      <p>Que tal começar uma nova jornada de aprendizado?</p>
+      <div class="empty-text">
+        <h1>Nenhum curso em andamento</h1>
+        <p>Que tal começar uma nova jornada de aprendizado?</p>
+      </div>
       <button class="grup-more full-width-btn" (click)="navigateToAllCourses()">Ver todos os cursos</button>
     </div>
   }

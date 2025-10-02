@@ -1,9 +1,6 @@
-/* ============================================== */
-/* LAYOUT PRINCIPAL E SEÇÃO "SOBRE O CURSO"       */
-/* ============================================== */
 .vision-layout-container {
   display: grid;
-  grid-template-columns: 2.5fr 1fr; /* Proporção ajustada para mais espaço no conteúdo */
+  grid-template-columns: 2.5fr 1fr;
   gap: 3rem;
 }
 
@@ -30,12 +27,11 @@
 }
 
 .description-wrapper.collapsed {
-  max-height: 110px; /* Altura máxima quando colapsado */
+  max-height: 110px;
   overflow: hidden;
   position: relative;
 }
 
-/* Efeito de degradê para suavizar o corte do texto */
 .description-wrapper.collapsed::after {
   content: '';
   position: absolute;
@@ -47,7 +43,7 @@
 }
 
 .toggle-button {
-  display: none; /* Controlado por media query */
+  display: none;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -62,10 +58,6 @@
   margin-top: 1rem;
 }
 
-
-/* ============================================== */
-/* CONTEÚDO DO CURSO (NOVO ACCORDION)             */
-/* ============================================== */
 .course-content-section h2 {
   font-size: 2rem;
   font-weight: 600;
@@ -90,6 +82,7 @@
 .accordion-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1.5rem;
   padding: 2rem;
   cursor: pointer;
@@ -103,10 +96,18 @@
 
 .module-main-info {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
   gap: 1rem;
-  color: #007bff; /* Cor do ícone e texto 'MODULE 1' */
+  color: #007bff;
 }
+
+.module-and-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .module-icon {
   font-size: 2rem;
@@ -122,7 +123,7 @@
   font-weight: 600;
   color: var(--color-text-primary);
   margin: 0;
-  flex-grow: 1; /* Faz o subtítulo ocupar o espaço restante */
+  flex-grow: 1;
 }
 
 .btn-start-learning {
@@ -134,27 +135,23 @@
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
-  
-  /* 1. ESTADO PADRÃO: Escondido e não-interativo */
   opacity: 0;
-  transform: translateX(10px); /* Leve efeito de deslize */
-  pointer-events: none; /* Impede cliques quando invisível */
+  transform: translateX(10px);
+  pointer-events: none;
   transition: all 0.25s ease-in-out;
 }
 
-/* 2. ESTADO HOVER: Aparece quando o mouse está sobre o cabeçalho */
 .accordion-header:hover .btn-start-learning {
   opacity: 1;
   transform: translateX(0);
-  pointer-events: auto; /* Permite cliques */
+  pointer-events: auto;
 }
 
-/* 3. ESTADO EXPANDIDO: Permanece visível quando o módulo está aberto */
 .accordion-item.expanded .btn-start-learning {
   opacity: 1;
   transform: translateX(0);
-  pointer-events: auto; /* Permite cliques */
-  background-color: #28a745; /* Opcional: Muda o estilo para indicar "ativo" */
+  pointer-events: auto;
+  background-color: #28a745;
   color: white;
 }
 
@@ -169,7 +166,7 @@
 }
 
 .accordion-body {
-  padding: 0 2rem 2rem 5.4rem; /* Alinha o corpo com o subtítulo */
+  padding: 0 2rem 2rem 5.4rem;
   background-color: var(--color-surface);
   animation: fadeIn 0.4s ease;
 }
@@ -183,7 +180,6 @@
   border-bottom: 1px solid var(--color-border, #e2e8f0);
 }
 
-/* COLOQUE ISTO NO LUGAR */
 .lessons-list {
   list-style: none;
   padding: 0;
@@ -213,16 +209,17 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  text-decoration: none; /* Remove o sublinhado do link */
+  text-decoration: none;
   color: var(--color-text-primary);
   transition: color 0.2s ease;
 }
 
 .lesson-title-link:hover {
-  color: var(--color-accent); /* Muda a cor ao passar o mouse */
+  color: var(--color-accent);
 }
 
-.lesson-number, .lesson-title {
+.lesson-number,
+.lesson-title {
   font-size: 1.5rem;
 }
 
@@ -237,9 +234,8 @@
   font-size: 2rem;
 }
 
-/* Estilos para quando a aula estiver concluída */
 .lesson-item.completed .lesson-status-icon {
-  color: #28a745; /* Verde */
+  color: #28a745;
 }
 
 .lesson-item.completed .lesson-title {
@@ -247,15 +243,18 @@
   color: var(--color-text-secondary);
 }
 
-/* Animação (pode manter se quiser) */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* ============================================== */
-/* SIDEBAR E RESPONSIVIDADE                       */
-/* ============================================== */
 .sidebar-content {
   display: flex;
   flex-direction: column;
@@ -269,8 +268,10 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-.sidebar-card h2, .sidebar-card h3 {
+.sidebar-card h2,
+.sidebar-card h3 {
   font-size: var(--fs-title-small);
+  color: var(--color-text-primary);
   margin-top: 0;
   margin-bottom: 1.5rem;
   font-weight: var(--weight-semiBold);
@@ -327,27 +328,27 @@
 }
 
 .progress-bar-container {
-    width: 100%;
-    height: 8px;
-    background-color: #eef2f7;
-    border-radius: 4px;
-    overflow: hidden;
-    margin: 1.5rem 0 0.5rem 0;
+  width: 100%;
+  height: 8px;
+  background-color: #eef2f7;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1.5rem 0 0.5rem 0;
 }
 
 .progress-bar-fill {
-    height: 100%;
-    background-color: #007ACC;
-    border-radius: 4px;
-    transition: width 0.4s ease-in-out;
+  height: 100%;
+  background-color: #007ACC;
+  border-radius: 4px;
+  transition: width 0.4s ease-in-out;
 }
 
 .progress-percent {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--color-text-secondary);
-    margin-bottom: 1.5rem;
-    text-align: right;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  text-align: right;
 }
 
 .sidebar-card .btn-primary,
@@ -368,29 +369,28 @@
   background-color: var(--color-accent);
   color: white;
 }
+
 .sidebar-card .btn-primary:hover {
   filter: brightness(1.1);
-  
 }
 
 .sidebar-card .btn-secondary {
-    background-color: var(--color-surface-hover);
-    color: var(--color-text-primary);
+  background-color: var(--color-surface-hover);
+  color: var(--color-text-primary);
 }
+
 .sidebar-card .btn-secondary:hover {
-    background-color: var(--color-border);
+  background-color: var(--color-border);
 }
 
 .toggle-button {
-    display: flex;
-  }
-  
+  display: flex;
+}
+
 @media (max-width: 1024px) {
   .vision-layout-container {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 768px) {
-  
-}
+@media (max-width: 768px) {}

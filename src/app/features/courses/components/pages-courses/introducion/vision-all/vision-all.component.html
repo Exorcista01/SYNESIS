@@ -29,11 +29,15 @@
         <div class="accordion-item" [class.expanded]="isModuleExpanded(module.order)">
           <div class="accordion-header" (click)="toggleModule(module.order)">
             <div class="module-main-info">
-              <span class="module-icon material-symbols-outlined">bookmark</span>
-              <span class="module-title">MODULE {{ module.order }}</span>
+              <div class="module-and-icon">
+                <span class="module-icon material-symbols-outlined">bookmark</span>
+                <span class="module-title">MODULE {{ module.order }}</span>
+              </div>
+
+              <div class="module-main-info-text">
+                <h3 class="module-subtitle">{{ module.title }}</h3>
+              </div>
             </div>
-            <h3 class="module-subtitle">{{ module.title }}</h3>
-            <button class="btn-start-learning" (click)="startModuleLearning($event, module.order)">Start Learning</button>
             <span class="expand-icon material-symbols-outlined">expand_more</span>
           </div>
 

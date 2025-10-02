@@ -55,24 +55,24 @@
   margin: 0 0.8rem;
 }
 
-/* Conteúdo do Banner */
+
 .banner-content h1 {
   font-size: 3.2rem;
   margin-top: 0;
   margin-bottom: 1rem;
   font-weight: 700;
-  color: #FFFFFF; /* Garante cor branca para contraste */
+  color: #FFFFFF; 
 }
 
 .banner-content p {
   font-size: 1.6rem;
   max-width: 70ch;
   line-height: 1.6;
-  color: #E0E0E0; /* Cor mais clara para o parágrafo */
+  color: #E0E0E0;
   margin-bottom: 2rem;
 }
 
-/* Tags e Categorias */
+
 .banner-catalogs {
   display: flex;
   flex-wrap: wrap;
@@ -118,7 +118,7 @@
   font-size: 1.2rem;
 }
 
-/* Abas de Navegação */
+
 .banner-tabs {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
@@ -145,7 +145,7 @@
   border-bottom-color: #BB86FC;
 }
 
-/* Lógica de responsividade */
+
 .more-tags {
   display: contents;
 }
@@ -157,9 +157,11 @@
   }
 }
 
-/* Área de conteúdo principal */
+
 .course-content-area {
   max-width: 1330px;
   margin: 3rem auto 0;
   padding: 0 2rem;
 }
+
+

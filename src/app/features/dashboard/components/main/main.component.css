@@ -38,3 +38,10 @@
   
   }
 }
+
+@media (max-width: 836px){
+  .cards-and-recent{
+    
+    grid-template-columns: 1fr;
+  }
+}
