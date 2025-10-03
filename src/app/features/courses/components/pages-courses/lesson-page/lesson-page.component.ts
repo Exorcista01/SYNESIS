@@ -9,11 +9,16 @@ import { Course, Lesson , Module } from '../../../course.model';
 import { CursosService } from '../../../../../core/services/cursos/cursos.service';
 import { of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { NavigationContentComponent } from "./components/navigation-content/navigation-content.component";
+import { LessonVisionAllComponent } from "./components/lesson-vision-all/lesson-vision-all.component";
+import { LessonContentSidebarComponent } from "./components/lesson-content-sidebar/lesson-content-sidebar.component";
+import { LessonMateriasExtraComponent } from "./components/lesson-materias-extra/lesson-materias-extra.component";
+import { TranscriptionComponent } from "./components/transcription/transcription.component";
 
 
 @Component({
   selector: 'app-lesson-page',
-  imports: [MatProgressSpinnerModule, MatRadioModule, AuthRoutingModule, ],
+  imports: [MatProgressSpinnerModule, MatRadioModule, AuthRoutingModule, NavigationContentComponent, LessonVisionAllComponent, LessonContentSidebarComponent, LessonMateriasExtraComponent, TranscriptionComponent],
   templateUrl: './lesson-page.component.html',
   styleUrl: './lesson-page.component.css'
 })
@@ -27,6 +32,7 @@ export class LessonPageComponent implements OnInit {
   proximoLesson: boolean = false;
   anteriorLesson: boolean = false;
   toggleButtonSidebar = false;
+  activeTab: string = 'Visão-Geral';
 
   constructor(
     private route: ActivatedRoute,
@@ -93,4 +99,8 @@ export class LessonPageComponent implements OnInit {
  toggleOpen(): void {
   this.toggleButtonSidebar = !this.toggleButtonSidebar;
  }
+
+  setActiveTab(tabName: string): void {
+    this.activeTab = tabName
+  }
 }

@@ -1,1 +1,39 @@
-
+<div class="lesson-content-navigation">
+    <nav class="navigation">
+        <ul class="navigation-container">
+            <li class="navigation-items">
+                <button (click)="setActiveTab('Visão-Geral')"  [class.active]="activeTab === 'Visão-Geral'">
+                    <span class="material-symbols-outlined">
+                        info
+                    </span>
+                    <h4>Visão Geral</h4>
+                </button>
+            </li>
+            <li class="navigation-items">
+                <button (click)="setActiveTab('Conteudo')"  [class.active]="activeTab === 'Conteudo'">
+                    <span class="material-symbols-outlined">
+                        play_circle
+                    </span>
+                    <h4>Conteudo</h4>
+                </button>
+            </li>
+            <li class="navigation-items">
+                <button (click)="setActiveTab('Materias-Extra')"  [class.active]="activeTab === 'Materias-Extra'">
+                    <span class="material-symbols-outlined">
+                        content_paste
+                    </span>
+                    <h4>Materias Extra</h4>
+                </button>
+            </li>
+            <li class="navigation-items">
+                <button (click)="setActiveTab('Transcription')"  [class.active]="activeTab === 'Transcription'">
+                    <span class="material-symbols-outlined">
+                        speech_to_text
+                    </span>
+                    <h4>Transcription</h4>
+                </button>
+            </li>
+            <li></li>
+        </ul>
+    </nav>
+</div>

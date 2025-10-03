@@ -1,15 +1,32 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, AfterViewInit, Input, Output, output, EventEmitter } from '@angular/core';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+import { Course, Lesson } from '../../../../../course.model';
 
 
 @Component({
   selector: 'app-navigation-content',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './navigation-content.component.html',
   styleUrl: './navigation-content.component.css'
 })
 export class NavigationContentComponent {
+  @Input() course: Course | undefined;
+  @Input() ActiveLesson: Lesson | undefined;
+
+  @Input() activeTab: string = "Visão-Geral";
+  @Output() tabChange = new EventEmitter<string>();
+
+  
+
+  setActiveTab(tabName: string): void {
+    this.tabChange.emit(tabName);
+    
+  }
+
+
+
   constructor() { }
 
   swiper = new Swiper('.swiper', {

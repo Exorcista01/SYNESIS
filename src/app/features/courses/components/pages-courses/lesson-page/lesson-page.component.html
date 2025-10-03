@@ -20,62 +20,43 @@
     <div class="lesson-content-placeholder">
       <span class="material-symbols-outlined">smart_display</span>
       <p>Área do conteúdo da aula</p>
+
+      <div class="main-button-Open">
+        <button class="button-open" (click)="toggleOpen()">
+          <span class="material-symbols-outlined">
+            arrow_back
+          </span>
+          <span>Conteudo do cursos</span>
+        </button>
+      </div>
     </div>
 
-    <div class="lesson-content-navigation">
-      <nav class="navigation">
-        <ul class="navigation-container">
-          <li class="navigation-items">
-            <button>
-              <span class="material-symbols-outlined">
-                info
-              </span>
-              <h4>Visão Geral</h4>
-            </button>
-          </li>
-          <li class="navigation-items">
-            <button>
-              <span class="material-symbols-outlined">
-                play_circle
-              </span>
-              <h4>Conteudo</h4>
-            </button>
-          </li>
-          <li class="navigation-items">
-            <button>
-              <span class="material-symbols-outlined">
-                content_paste
-              </span>
-              <h4>Materias Extra</h4>
-            </button>
-          </li>
-          <li class="navigation-items">
-            <button>
-              <span class="material-symbols-outlined">
-                speech_to_text
-              </span>
-              <h4>Transcription</h4>
-            </button>
-          </li>
-          <li></li>
-        </ul>
-      </nav>
+    <div class="navigation">
+      <app-navigation-content 
+      [activeTab]="activeTab"
+      (tabChange)="setActiveTab($event)"
+      
+      ></app-navigation-content>
     </div>
 
-    <!-- <div class="lesson-footer">
-      <div class="lesson-header-title">
-        @if (ActiveModule) {
-        <p class="module-context">
-          Modulo {{ ActiveModule.order }}: {{ ActiveLesson.title }}
-        </p>
-        }
-      </div>
+    <div class="footer">
+      @switch (activeTab) {
+      @case ('Visão-Geral'){
+      <app-lesson-vision-all [course]="course" [ActiveLesson]="ActiveLesson">
+      </app-lesson-vision-all>
+      }
+      @case ('Conteudo') {
+        <app-lesson-content-sidebar [course]="course" [ActiveLesson]="ActiveLesson"></app-lesson-content-sidebar>
+      }
+      @case ('Materias-Extra') {
+        <app-lesson-materias-extra [course]="course" [ActiveLesson]="ActiveLesson"></app-lesson-materias-extra>
+      }
+      @case ('Transcription') {
+       <app-transcription  [course]="course" [ActiveLesson]="ActiveLesson"></app-transcription>
+      }
+      }
+    </div>
 
-      <div class="lesson-introdusion">
-        <h2>Visão Geral</h2>
-        <p>{{ActiveLesson.description}}</p>
-      </div>
-    </div> -->
     }
   </main>
 

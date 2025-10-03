@@ -12,12 +12,10 @@ import { RouterModule } from '@angular/router';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
-   // --- Inputs e Outputs ---
   @Input() isOpen = true;
-  @Input() isMobileOpen = false; // Nome corrigido para consistência (era isMobileMenuOpen)
+  @Input() isMobileOpen = false; 
   @Output() closeMobileMenuEvent = new EventEmitter<void>();
 
-  // --- Propriedades de Estado ---
   isUserDropdownOpen = false;
 
   navSections = [

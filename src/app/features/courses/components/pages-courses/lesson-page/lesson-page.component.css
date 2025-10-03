@@ -24,8 +24,24 @@
   align-items: center;
   height: 100%;
   max-height: 500px;
+  position: relative;
+}
+.main-button-Open{
+  position: absolute;
+  right: 0;
+  top: 17%;
+  height: 40px;
+  background-color: var(--color-accent);
 }
 
+.main-button-Open .button-open{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 1rem;
+}
 .lesson-header-title{
   font-size: 1.6rem;
   color: var(--color-text-primary);
@@ -63,56 +79,6 @@
   font-size: 2.5rem;
 }
 
-.lesson-content-navigation{
-  width: 100%;
-  padding-inline: 2rem;
-}
-
-.navigation-container{
-  display: flex;
-  border-bottom: 1px solid var(--color-border-50);
-}
-
-.navigation-items{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-block: 0.8rem;
-  padding-inline: 1rem;
-  
-}
-.navigation-items button {
-  display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border: none;
-    padding: 1rem 1rem;
-    border-radius: var(--radius-small);
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.navigation-items button h4{
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--color-text-tertiary);
-}
-
-.navigation-items button h4:hover{
-  color: var(--color-icon);
-
-}
-
-.navigation-items button span{
-  display: none;
-  font-size: 2rem;
-  color: var(--color-text-primary);
-}
-
-
 
 
 .sidebar-modules {
@@ -126,16 +92,15 @@
 
 .sidebar-button{
   height: 40px;
-  width: 115px;
-  max-width: 130px;
+  
   position: absolute;
-  left: -115px;
+  left: -130px;
   top: 20%;
   background-color: var(--color-accent);
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  
+  padding: 1rem;
   
 }
 .sidebar-button button{
