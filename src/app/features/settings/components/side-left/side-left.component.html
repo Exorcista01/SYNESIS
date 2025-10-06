@@ -1,0 +1,29 @@
+<div class="Sidebar-left">
+    <nav class="sidebar-container">
+        <div class="settings-header">
+            <h3>Settings</h3>
+        </div>
+
+        <div class="sidebar-items">
+            <ul class="sidebar-navigation">
+                @for (item of userMenuItems; track item) {
+                <li class="sidebar-left-item">
+                    @if(item.router) {
+                        <a [routerLink]="item.router" routerLinkActive="active">
+                            <i class="{{ item.icon }}"></i>
+                            <span>{{ item.name }}</span>
+                        </a>
+                    }
+
+                    @if (item.action ) {
+                        <a (click)="logout()">
+                            <i class="{{ item.icon }}"></i>
+                            <span>{{ item.name }}</span>
+                        </a>
+                    }
+                </li>
+                }
+            </ul>
+        </div>
+    </nav>
+</div>

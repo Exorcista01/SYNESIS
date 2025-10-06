@@ -1,0 +1,6 @@
+.settings-content {
+    background-color: var(--color-surface);
+    height: auto;
+    width: 100%;
+    flex: 2;
+}

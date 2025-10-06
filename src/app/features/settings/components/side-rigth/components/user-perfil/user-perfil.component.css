@@ -1,0 +1,184 @@
+.account-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.account-title {
+    font-size: var(--fs-headline-medium);
+    font-weight: var(--weight-bold);
+    color: var(--color-text-primary);
+}
+
+.account-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.avatar-container {
+    position: relative;
+}
+
+.avatar-container img {
+    width: 96px;
+    height: 96px;
+    border-radius: var(--radius-circle);
+    object-fit: cover;
+}
+
+.edit-avatar-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-accent);
+    color: var(--color-text-on-accent);
+    border-radius: var(--radius-circle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-surface);
+    font-size: 1.4rem;
+}
+
+.user-info h3 {
+    font-size: var(--fs-title-large);
+    color: var(--color-text-primary);
+    font-weight: var(--weight-semiBold);
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 0.4rem;
+    background-color: var(--color-accent-light);
+    color: var(--color-accent);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-full);
+    font-size: var(--fs-label-medium);
+    font-weight: var(--weight-semiBold);
+}
+
+.form-grid,
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.full{
+    display: grid;
+    grid-column: 1 / -1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.form-group label {
+    font-size: var(--fs-label-large);
+    font-weight: var(--weight-semiBold);
+    color: var(--color-text-secondary);
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1.2rem 1.6rem;
+    background-color: var(--color-surface-hover);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    font-size: var(--fs-body-large);
+    color: var(--color-text-primary);
+}
+
+.input-wrapper .input-icon {
+    position: absolute;
+    top: 50%;
+    right: 1.6rem;
+    transform: translateY(-50%);
+    color: var(--color-text-tertiary);
+}
+
+.action-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-large);
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    color: var(--color-text-primary);
+    font-size: var(--fs-title-medium);
+    font-weight: var(--weight-semiBold);
+    transition: all var(--transition-duration-quick);
+}
+
+.action-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-2);
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.action-card i {
+    font-size: 2.4rem;
+    color: var(--color-accent);
+}
+
+
+
+.Endereco,
+.institudo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-title {
+    font-size: 1.6rem;
+    color: var(--color-text-secondary);
+}
+
+
+
+.form-group select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 1.2rem 1.6rem;
+    background-color: var(--color-surface-hover);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    font-size: var(--fs-body-large);
+    color: var(--color-text-primary);
+    cursor: pointer;
+    padding-right: 4rem;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: '\f078';
+    font-family: "Font Awesome 5 Free", "Font Awesome 5 Solid";
+    font-weight: 900;
+
+    position: absolute;
+    top: 50%;
+    right: 1.6rem;
+    transform: translateY(-50%);
+
+    color: var(--color-text-tertiary);
+    pointer-events: none;
+}

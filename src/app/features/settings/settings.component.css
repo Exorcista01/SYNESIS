@@ -1,0 +1,14 @@
+.settins-container{
+    display: flex;
+    gap: 3rem;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    padding-top: 4rem;
+    height: 100%;
+}
+
+
+:host ::ng-deep app-side-rigth {
+    flex: 2;
+}
