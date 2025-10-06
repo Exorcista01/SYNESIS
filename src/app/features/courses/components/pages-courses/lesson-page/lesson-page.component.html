@@ -2,76 +2,76 @@
 
 <div class="lesson-page-container">
   <main class="main-content-lesson">
+    @if (toggleButtonSidebar) {
+    <button class="open-sidebar-button" (click)="toggleOpen()">
+      <span class="material-symbols-outlined">menu_open</span>
+      <span class="open-sidebar-button-text">Conteúdo do Curso</span>
+    </button>
+    }
+
     @if (ActiveLesson) {
-    <div class="lesson-header">
+
+    <div class="lesson-content-placeholder">
+      <span class="material-symbols-outlined">smart_display</span>
+      <p>Área do conteúdo da aula</p>
+    </div>
+
+    <div class="lesson-btns-navigation">
+      <div class="lesson-title-block">
+        <p class="lesson-mudule">Modúlo {{ActiveModule?.order}}: {{ActiveModule?.title}}</p>
+        <h2 class="lesson-title">{{ActiveLesson.title}}</h2>
+      </div>
       <div class="lesson-actions">
         <button class="btn-nav">
           <span class="material-symbols-outlined">arrow_back</span>
           <span>Anterior</span>
         </button>
 
-        <button class="btn-nav">
+        <button class="btn-nav btn-proximo">
           <span>Proximo</span>
           <span class="material-symbols-outlined">arrow_forward</span>
         </button>
       </div>
     </div>
 
-    <div class="lesson-content-placeholder">
-      <span class="material-symbols-outlined">smart_display</span>
-      <p>Área do conteúdo da aula</p>
+    <div class="tabs-container">
 
-      <div class="main-button-Open">
-        <button class="button-open" (click)="toggleOpen()">
-          <span class="material-symbols-outlined">
-            arrow_back
-          </span>
-          <span>Conteudo do cursos</span>
-        </button>
+      <app-navigation-content [isSidebarClosed]="toggleButtonSidebar" [activeTab]="activeTab"
+        (tabChange)="setActiveTab($event)">
+      </app-navigation-content>
+
+      <div class="tab-content-area">
+        @switch (activeTab) {
+        @case ('Visão-Geral'){
+        <app-lesson-vision-all [course]="course" [ActiveLesson]="ActiveLesson">
+        </app-lesson-vision-all>
+        }
+        @case ('Conteudo') {
+        <app-lesson-content-sidebar [ActiveModule]="ActiveModule" [course]="course" [ActiveLesson]="ActiveLesson"></app-lesson-content-sidebar>
+        }
+        @case ('Materias-Extra') {
+        <app-lesson-materias-extra [course]="course" [ActiveLesson]="ActiveLesson"></app-lesson-materias-extra>
+        }
+        @case ('Transcription') {
+        <app-transcription [course]="course" [ActiveLesson]="ActiveLesson"></app-transcription>
+        }
+        }
       </div>
     </div>
 
-    <div class="navigation">
-      <app-navigation-content 
-      [activeTab]="activeTab"
-      (tabChange)="setActiveTab($event)"
-      
-      ></app-navigation-content>
-    </div>
-
-    <div class="footer">
-      @switch (activeTab) {
-      @case ('Visão-Geral'){
-      <app-lesson-vision-all [course]="course" [ActiveLesson]="ActiveLesson">
-      </app-lesson-vision-all>
-      }
-      @case ('Conteudo') {
-        <app-lesson-content-sidebar [course]="course" [ActiveLesson]="ActiveLesson"></app-lesson-content-sidebar>
-      }
-      @case ('Materias-Extra') {
-        <app-lesson-materias-extra [course]="course" [ActiveLesson]="ActiveLesson"></app-lesson-materias-extra>
-      }
-      @case ('Transcription') {
-       <app-transcription  [course]="course" [ActiveLesson]="ActiveLesson"></app-transcription>
-      }
-      }
-    </div>
 
     }
   </main>
 
   <aside class="sidebar-modules" [class.sidebar-close]="toggleButtonSidebar">
-    <div class="sidebar-button" (click)="toggleOpen()">
-      <button class="sidebar-close-open">
-        <span class="material-symbols-outlined">
-          arrow_back
-        </span>
-        conteudo do cursos
-      </button>
-    </div>
     <div class="sidebar-content">
       <div class="sidebar-top">
         <div class="sidebar-header">
+          @if (!toggleButtonSidebar) {
+          <button class="btn-close-sidebar" (click)="toggleOpen()">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+          }
           <a [routerLink]="['/cursos', course.slug]"></a>
           <h2 class="course-title">{{ course.title }}</h2>
         </div>

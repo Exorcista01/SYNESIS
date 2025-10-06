@@ -53,6 +53,8 @@
 }
 
 .form-header p {
+  font-size: 1.2rem;
+  font-weight: 500;
   color: #6b7280;
   margin: 0 0 2.4rem 0;
 }
@@ -194,20 +196,6 @@
   text-decoration: underline;
 }
 
-.footer-politics {
-  margin-top: 1.6rem;
-  text-align: center;
-}
-
-.footer-politics p {
-  color: var(--color-text-secondary);
-  font-size: 1.2rem;
-}
-
-.footer-politics a {
-  font-size: 1.2rem;
-  color: var(--color-accent);
-}
 
 .illustration-wrapper {
   flex: 2.5;
@@ -231,9 +219,11 @@
   .login-container {
     padding: 1.6rem;
   }
+
   .illustration-wrapper {
     display: none;
   }
+
   .login-form-wrapper {
     max-width: 50rem;
     margin: 0 auto;
@@ -244,7 +234,40 @@
   .illustration-wrapper {
     display: none;
   }
+
   .login-container {
     margin: 1.6rem;
   }
+}
+
+
+
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #ef4444;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 0.8rem;
+}
+
+.error-message svg {
+  fill: currentColor;
+  width: 1.6rem;
+  height: 1.6rem;
+  flex-shrink: 0;
+}
+
+
+.input-group input.input-invalid {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.input-group input.input-invalid:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 0.3rem rgba(59, 130, 246, 0.2);
+  background-color: #fff;
 }

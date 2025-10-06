@@ -1,14 +1,10 @@
 import { Component, EventEmitter, Output, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { UserMenuItem } from './user-menu-model';
 
-interface userMenuitem {
-  name: string,
-  icon: string,
-  router: string,
-}
 
 @Component({
   selector: 'app-header',
@@ -25,7 +21,7 @@ export class HeaderComponent {
   searchValue: string  = "";
 
 
-    constructor() {};
+    constructor( private router: Router) {};
 
     searchClear(): void{
       this.searchValue = "";
@@ -54,10 +50,15 @@ export class HeaderComponent {
       this.navMenuModal = !this.navMenuModal;
     }
 
-  userMenuItems: userMenuitem[] = [
+  userMenuItems: UserMenuItem[] = [
     { name: 'Settings', icon: 'fa-solid fa-gear', router:'/Settings' },
     { name: 'Perfil', icon: 'fa-regular fa-user', router: '/Perfil' },
     { name: 'Calendario', icon: 'far fa-calendar-alt', router: '/Calendario' },
-    { name: 'Logout', icon: 'fa-solid fa-arrow-right-from-bracket', router: '/Login' },
+    { name: 'Logout', icon: 'fa-solid fa-arrow-right-from-bracket', action:() => this.logout()  },
   ]
+
+  logout() {
+    localStorage.clear();
+    this.router.navigate(['/Login']);
+  }
 }

@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter+Display:wght@400;600;700&display=swap');
 
 
@@ -5,6 +6,7 @@
 :root {
     --color-background: #f8f9fa;
     --color-surface: #ffffff;
+    --color-black: #000000;
     --color-surface-hover: #f1f5f9;
     --color-surface-hover-low: #9290906b;
     --color-surface-translucent: rgba(255, 255, 255, 0.9);

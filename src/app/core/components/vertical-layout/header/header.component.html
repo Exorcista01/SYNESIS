@@ -66,10 +66,19 @@
           <ul class="modal-container">
             @for (item of userMenuItems; track item){
             <li class="modal-items">
-              <a routerLink="{{ item.router }}">
+              @if (item.router) {
+                <a routerLink="{{ item.router }}">
                 <i class="{{ item.icon }}"></i>
                 <span>{{ item.name }}</span>
               </a>
+              }
+
+              @if (item.action) {
+                <a (click)="item.action()">
+                <i class="{{ item.icon }}"></i>
+                <span>{{ item.name }}</span>
+              </a>
+              }
             </li>
             }
           </ul>

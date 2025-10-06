@@ -1,3 +1,7 @@
+
+
+<p-toast />
+
 <div class="login-container">
   <div class="login-form-wrapper">
     <div class="logo">
@@ -21,7 +25,7 @@
       <span>or</span>
     </div>
 
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="loginForm" (ngSubmit)="LoginUser()">
       <div class="input-group">
         <label for="email">Email</label>
         <input
@@ -30,6 +34,7 @@
           name="email"
           placeholder="Enter your email"
           formControlName="email"
+          [ngClass]="{ 'input-invalid': isEmailInvalid }"
         />
 
         @if (isEmailInvalid) {
@@ -67,6 +72,7 @@
           name="password"
           placeholder="Enter your password"
           formControlName="password"
+          [ngClass]="{ 'input-invalid': isEmailInvalid }"
         />
         @if (isPasswordInvalid) {
         <div class="error-message">
@@ -96,13 +102,6 @@
        Não está registrado? <a routerLink="/registration">Crie uma conta</a>
     </div>
 
-    <div class="footer-politics">
-      <p>
-        Ao continuar, você confirma que entende e aceita os <br />
-        <a href="">Termos e Condições</a> e a
-        <a href="">Política de Privacidade</a>
-      </p>
-    </div>
   </div>
   <div class="illustration-wrapper">
     <img

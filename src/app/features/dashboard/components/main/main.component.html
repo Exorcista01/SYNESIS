@@ -9,6 +9,14 @@
   <app-grid-stats ></app-grid-stats>
 </div>
 
-<app-carrosel class="full-width-section" [items]="inProgressCourses"></app-carrosel>
+<app-carrosel 
+  class="full-width-section" 
+  [title]="'Cursos Acessados Recentemente'" 
+  [items]="cursosRecentes">
+</app-carrosel>
 
-<app-courses-section class="full-width-section"></app-courses-section>
+<app-carrosel 
+  class="full-width-section" 
+  [title]="'Cursos Mais Populares'" 
+  [items]="cursosPopulares">
+</app-carrosel>

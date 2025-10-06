@@ -8,11 +8,13 @@ import { ForgotPasswordComponent } from './features/auth/auth/forgot-password/fo
 import { CoursesComponent } from './features/courses/courses.component';
 import { PagesCoursesComponent } from './features/courses/components/pages-courses/pages-courses.component';
 import { LessonPageComponent } from './features/courses/components/pages-courses/lesson-page/lesson-page.component';
+import { authGuard } from './core/guards/auth.guard';
 
 export const routes: Routes = [
     {
         path: '',
         component: VerticalLayoutComponent,
+        canActivate: [authGuard],
         children: [
             {path: 'dashboard', component: DashboardComponent},
             {path: '', redirectTo: 'dashboard', pathMatch: 'full'},

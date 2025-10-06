@@ -1,7 +1,7 @@
 <div class="swiper-area">
 
   <div class="swiper-header-text">
-    <h2>Cursos Acessados Recetemente</h2>
+    <h2>{{ title }}</h2>
   </div>
 
   <button class="carrosel-button-prev btn-carrosel">
@@ -12,28 +12,33 @@
 
   <div #swiperContainer class="swiper">
     <div class="swiper-wrapper">
-      @for (course of items; track course.title) {
-      <div class="swiper-slide">
-        <div class="course-card">
-          <div class="card-image-wrapper">
-            <img class="card-image" [src]="course.imageUrl" alt="Imagem do curso">
-            <span class="card-category">{{ course.category }}</span>
+      @for (course of items; track course.id) { <div class="swiper-slide">
+
+        <a [routerLink]="['/cursos', course.slug]" class="course-card-link">
+          <div class="course-card">
+            <div class="card-image-wrapper">
+              <img class="card-image" [src]="course.img" alt="Imagem do curso">
+              
+              @if(course.tags && course.tags.length > 0){
+                <span class="card-category">{{ course.tags[0] }}</span>
+              }
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">{{ course.title }}</h3>
+              <div class="progress-info">
+                <span>Progresso</span>
+                <span>0%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" [style.width.%]="0"></div>
+              </div>
+              <div class="instructor-info">
+                <img class="instructor-avatar" [src]="'https://i.pravatar.cc/40?u=' + course.author" alt="Avatar do instrutor">
+                <span class="instructor-name">{{ course.author }}</span>
+              </div>
+            </div>
           </div>
-          <div class="card-content">
-            <h3 class="card-title">{{ course.title }}</h3>
-            <div class="progress-info">
-              <span>Progresso</span>
-              <span>{{ course.progress }}%</span>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-bar-fill" [style.width.%]="course.progress"></div>
-            </div>
-            <div class="instructor-info">
-              <img class="instructor-avatar" [src]="course.instructorAvatar" alt="Avatar do instrutor">
-              <span class="instructor-name">{{ course.instructorName }}</span>
-            </div>
-          </div>
-        </div>
+        </a>
       </div>
       }
     </div>
@@ -46,6 +51,6 @@
   </button>
 
   <div class="container-Full-All">
-      <button class="Full-All-btn">Veja Todos os Cursos</button>
+      <button class="Full-All-btn" routerLink="/courses">Veja Todos os Cursos</button>
   </div>
 </div>

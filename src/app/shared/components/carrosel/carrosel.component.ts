@@ -1,17 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
 @Component({
   selector: 'app-carrosel',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './carrosel.component.html',
   styleUrl: './carrosel.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CarroselComponent implements AfterViewInit {
-  @Input() items: any[] = [];
+  @Input() items: any[] = [];   
+  @Input() title: string = ''; 
   @ViewChild('swiperContainer') swiperContainer!: ElementRef;
 
   constructor() { }
@@ -31,9 +33,9 @@ export class CarroselComponent implements AfterViewInit {
           prevEl: '.carrosel-button-prev',
         },
 
-        breakpoints: {
+      breakpoints: {
           1600: {
-            slidesPerView: 4.3,
+            slidesPerView: 4.2,
           }
         }
       });

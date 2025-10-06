@@ -14,15 +14,13 @@ import { Course, Lesson } from '../../../../../course.model';
 export class NavigationContentComponent {
   @Input() course: Course | undefined;
   @Input() ActiveLesson: Lesson | undefined;
-
   @Input() activeTab: string = "Visão-Geral";
   @Output() tabChange = new EventEmitter<string>();
+  @Input() isSidebarClosed: boolean = false; 
 
   
-
-  setActiveTab(tabName: string): void {
+  selectTab(tabName: string): void {
     this.tabChange.emit(tabName);
-    
   }
 
 

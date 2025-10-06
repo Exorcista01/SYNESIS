@@ -1,5 +1,5 @@
 import { Navigation } from 'swiper/modules';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {ProgressSpinnerMode, MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatRadioModule} from '@angular/material/radio';
 import { AuthRoutingModule } from "../../../../auth/auth-routing.module";
@@ -31,7 +31,7 @@ export class LessonPageComponent implements OnInit {
   ActiveModule: Module | undefined;
   proximoLesson: boolean = false;
   anteriorLesson: boolean = false;
-  toggleButtonSidebar = false;
+  @Input() toggleButtonSidebar = false;
   activeTab: string = 'Visão-Geral';
 
   constructor(
