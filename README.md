@@ -1,5 +1,10 @@
 # AngularTCCProject
 
+[![Angular](https://img.shields.io/badge/Angular-19-DD0031?logo=angular&logoColor=white)](https://angular.io/) 
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![JSON Server](https://img.shields.io/badge/JSON--Server-FE692B?logo=json&logoColor=white)](https://github.com/typicode/json-server)
+
 **AngularTCCProject** é uma aplicação desenvolvida em Angular como parte do Trabalho de Conclusão de Curso (TCC).  
 O sistema tem como objetivo **gerenciar o desempenho acadêmico e atividades escolares de forma simples e intuitiva**, facilitando o acompanhamento de alunos e eventos.
 
@@ -27,37 +32,3 @@ O sistema tem como objetivo **gerenciar o desempenho acadêmico e atividades esc
 
 ## 🧩 Estrutura do projeto
 
-src/
-┣ app/
-┃ ┣ core/ # Componentes e serviços principais
-┃ ┣ features/ # Módulos funcionais (dashboard, calendário, etc.)
-┃ ┣ shared/ # Componentes e pipes compartilhados
-┃ ┗ app-routing.module.ts
-┣ assets/
-┣ environments/
-┗ index.html
-
-
----
-
-## 💻 Como executar o projeto
-
-1. **Clonar o repositório**
-
-```bash
-git clone https://github.com/SEU_USUARIO/AngularTCCProject.git
-cd AngularTCCProject
-
-npm install
-
-ng serve
-
-json-server --watch db.json --port 3000
-
-
-ng test
-
-Sobre o projeto
-
-Este projeto foi desenvolvido como parte do TCC, com foco em aplicações web modernas com Angular, design responsivo e integração com APIs RESTful.
-O objetivo principal é aplicar conceitos de desenvolvimento front-end, componentização e boas práticas em Angular.
