@@ -5,8 +5,13 @@
 [![Node.js](https://img.shields.io/badge/Node.js-22-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![JSON Server](https://img.shields.io/badge/JSON--Server-FE692B?logo=json&logoColor=white)](https://github.com/typicode/json-server)
 
-**AngularTCCProject** é uma aplicação desenvolvida em Angular como parte do Trabalho de Conclusão de Curso (TCC).  
-O sistema tem como objetivo **gerenciar o desempenho acadêmico e atividades escolares de forma simples e intuitiva**, facilitando o acompanhamento de alunos e eventos.
+# SYNESIS - Plataforma de Gestão Acadêmica
+
+## 💻 Sobre o Projeto
+
+O **SYNESIS** é uma plataforma educacional criada para transformar o ensino profissionalizante, impulsionando a performance de alunos e professores.
+
+Através de uma abordagem divertida, competitiva e educativa, nosso objetivo é duplo: expandir a capacidade intelectual dos alunos e fornecer aos professores as ferramentas necessárias para garantir que o conhecimento seja absorvido de forma eficaz e engajadora.
 
 ---
 
@@ -14,7 +19,7 @@ O sistema tem como objetivo **gerenciar o desempenho acadêmico e atividades esc
 
 - Angular 19  
 - TypeScript  
-- HTML / SCSS  
+- HTML / CSS  
 - JSON-Server (para simular API back-end)  
 - Node.js (ambiente de execução)  
 
@@ -24,12 +29,14 @@ O sistema tem como objetivo **gerenciar o desempenho acadêmico e atividades esc
 
 - 🔐 **Autenticação de usuários** (login, registro e recuperação de senha)  
 - 📅 **Calendário interativo** para controle de eventos e atividades  
+- ⏱️ **Pomodoro e To-do List** para melhorar a produtividade e planejamento  
 - 🧾 **Dashboard** com estatísticas e informações principais  
 - ⚙️ **Gerenciamento de usuários e permissões**  
-- 🌙 **Modo escuro e claro** (opcional)  
+- 📝 **CRUD (Create, Read, Update e Delete)** para que gestores possam enviar atividades e os alunos responderem  
+- 🌙 **Modo claro e escuro** para melhor acessibilidade  
+- 🏆 **Exercícios e quizzes competitivos** para reforçar a consolidação do aprendizado
 
 ---
-
 
 ## 🧩 Estrutura do Projeto
 
@@ -140,16 +147,29 @@ O SYNESIS é uma solução acadêmica completa, projetada especificamente para i
 
 A plataforma centraliza materiais de estudo, facilita a comunicação entre professores e alunos, e oferece ferramentas robustas para o acompanhamento contínuo do progresso individual, garantindo que cada estudante atinja seu máximo potencial e esteja mais preparado para o mercado de trabalho.
 
-### Principais Funcionalidades
-* Visualização de cursos e trilhas de aprendizado.
-* Acompanhamento de progresso do usuário.
-* Autenticação de usuários.
-* Interface responsiva e intuitiva.
+### ✨ Principais Funcionalidades
+
+- **Acesso Seguro e Personalizado**: Sistema completo de autenticação (login, registro e recuperação de senha) para garantir a privacidade e a segurança dos dados de cada usuário.
+
+- **Dashboard de Performance**: Painel visual com gráficos e estatísticas chave, onde alunos e professores podem acompanhar o progresso acadêmico e o engajamento em tempo real.
+
+- **Gestão de Atividades Interativas**: Interface completa para que professores e gestores possam criar, distribuir e avaliar atividades (CRUD). Os alunos respondem e recebem feedback diretamente na plataforma.
+
+- **Gamificação e Aprendizado Competitivo**: Módulo de exercícios e quizzes com ranking para estimular a participação, aprofundar o conhecimento e tornar o aprendizado mais divertido.
+
+- **Ferramentas de Foco e Produtividade**: Inclui a técnica Pomodoro e To-do lists integradas para ajudar os alunos a gerenciar seu tempo de estudo e organizar suas tarefas de forma eficaz.
+
+- **Organização e Planejamento**: Calendário interativo para que toda a comunidade acadêmica possa controlar eventos, prazos de entrega e atividades importantes.
+
+- **Interface Adaptável**: Modo claro e escuro (Light/Dark Mode) para garantir conforto visual e maior acessibilidade em diferentes ambientes.
+
+- **Administração Flexível**: Sistema de gerenciamento de usuários e permissões, permitindo controle total sobre os níveis de acesso da plataforma.
+
 
 ---
 ## 👤 Autor
 
-Feito por  Jorge Luis Dos Santos
+Feito por Jorge Luis Dos Santos
 
 Desenvolvedor Frond-end
 
