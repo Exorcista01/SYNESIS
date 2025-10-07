@@ -1,59 +1,63 @@
 # AngularTCCProject
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+**AngularTCCProject** é uma aplicação desenvolvida em Angular como parte do Trabalho de Conclusão de Curso (TCC).  
+O sistema tem como objetivo **gerenciar o desempenho acadêmico e atividades escolares de forma simples e intuitiva**, facilitando o acompanhamento de alunos e eventos.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologias utilizadas
+
+- Angular 19  
+- TypeScript  
+- HTML / SCSS  
+- JSON-Server (para simular API back-end)  
+- Node.js (ambiente de execução)  
+
+---
+
+## ⚙️ Funcionalidades principais
+
+- 🔐 **Autenticação de usuários** (login, registro e recuperação de senha)  
+- 📅 **Calendário interativo** para controle de eventos e atividades  
+- 🧾 **Dashboard** com estatísticas e informações principais  
+- ⚙️ **Gerenciamento de usuários e permissões**  
+- 🌙 **Modo escuro e claro** (opcional)  
+
+---
+
+## 🧩 Estrutura do projeto
+
+src/
+┣ app/
+┃ ┣ core/ # Componentes e serviços principais
+┃ ┣ features/ # Módulos funcionais (dashboard, calendário, etc.)
+┃ ┣ shared/ # Componentes e pipes compartilhados
+┃ ┗ app-routing.module.ts
+┣ assets/
+┣ environments/
+┗ index.html
+
+
+---
+
+## 💻 Como executar o projeto
+
+1. **Clonar o repositório**
 
 ```bash
+git clone https://github.com/SEU_USUARIO/AngularTCCProject.git
+cd AngularTCCProject
+
+npm install
+
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+json-server --watch db.json --port 3000
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
 ng test
-```
 
-## Running end-to-end tests
+Sobre o projeto
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este projeto foi desenvolvido como parte do TCC, com foco em aplicações web modernas com Angular, design responsivo e integração com APIs RESTful.
+O objetivo principal é aplicar conceitos de desenvolvimento front-end, componentização e boas práticas em Angular.
