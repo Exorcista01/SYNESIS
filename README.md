@@ -30,20 +30,128 @@ O sistema tem como objetivo **gerenciar o desempenho acadêmico e atividades esc
 
 ---
 
-## 🧩 Estrutura do projeto
 
-src/
- ┣ app/
- ┃ ┣ core/
- ┃ ┃ ┗ header.component.ts
- ┃ ┣ features/
- ┃ ┃ ┗ dashboard/
- ┃ ┃   ┗ dashboard.component.ts
- ┃ ┣ shared/
- ┃ ┃ ┗ button.component.ts
- ┃ ┗ app-routing.module.ts
- ┣ assets/
- ┃ ┗ logo.png
- ┗ index.html
+## 🧩 Estrutura do Projeto
+
+A estrutura de pastas principal do projeto está organizada da seguinte forma para manter o código modular, escalável e seguindo as boas práticas do Angular.
+
+```
+.
+├── back-end/
+│   ┗ db.json           # False API RESTful 
+├── node_modules/
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── core/         # Módulos, serviços e modelos centrais (singleton)
+│   │   │   ├── components/
+│   │   │   ├── guards/
+│   │   │   ├── models/
+│   │   │   └── services/
+│   │   ├── features/     # Funcionalidades de negócio da aplicação (páginas)
+│   │   │   ├── apps/
+│   │   │   ├── auth/
+│   │   │   ├── courses/
+│   │   │   ├── dashboard/
+│   │   │   └── settings/
+│   │   ├── shared/       # Componentes, pipes e diretivas reutilizáveis
+│   │   │   ├── components/
+│   │   │   ├── validator/
+│   │   │   └── shared.module.ts
+│   │   ├── app.component.css
+│   │   ├── app.component.html
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.config.ts
+│   │   └── app.routes.ts
+│   ├── assets/         # Arquivos estáticos como imagens, fontes e ícones
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.css
+├── angular.json
+├── package-lock.json
+├── package.json
+└── ...
+```
 
 
+## ⚙️ Como Executar o Projeto
+
+Siga os passos abaixo para configurar e rodar o projeto em seu ambiente local.
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter as seguintes ferramentas instaladas em sua máquina:
+* [Node.js](https://nodejs.org/en/) (Recomendado: versão LTS)
+* [Angular CLI](https://angular.io/cli)
+* [Git](https://git-scm.com)
+
+Você também precisará do `json-server`, que pode ser instalado globalmente com o seguinte comando:
+```bash
+npm install -g json-server
+```
+
+### Passo a Passo
+
+1.  **Clone o Repositório**
+    
+    Primeiro, clone este repositório para a sua máquina local usando o terminal:
+    ```bash
+    git clone [https://seu-link-para-o-repositorio.git](https://seu-link-para-o-repositorio.git)
+    ```
+
+2.  **Acesse a Pasta do Projeto**
+    
+    ```bash
+    cd nome-do-projeto
+    ```
+
+3.  **Instale as Dependências**
+    
+    Instale todas as dependências necessárias para o front-end e o back-end do projeto:
+    ```bash
+    npm install
+    ```
+
+4.  **Inicie o Back-end (API)**
+    
+    Em um **primeiro terminal**, navegue até a pasta `back-end` e inicie o `json-server`. A API ficará disponível em `http://localhost:3000`.
+    ```bash
+    # Dentro da pasta principal do projeto, navegue para o back-end
+    cd back-end
+
+    # Inicie o servidor
+    json-server --watch db.json --port 3000
+    ```
+
+5.  **Inicie o Front-end (Aplicação Angular)**
+    
+    Abra um **segundo terminal** (mantenha o primeiro rodando o back-end) e execute o comando abaixo para iniciar a aplicação Angular.
+    ```bash
+    ng serve -o
+    ```
+    O comando `-o` abrirá automaticamente o seu navegador na página `http://localhost:4200/`.
+
+---
+
+## 💻 Sobre o Projeto
+
+O SYNSIS é uma plataforma de E-learning desenvolvida com o objetivo de aplicar e aprofundar conhecimentos no ecossistema Angular. A ideia foi construir uma aplicação SPA (Single Page Application) funcional e moderna, simulando um ambiente real de cursos online.
+
+Este projeto aborda desde a estruturação de componentes, gerenciamento de estado com serviços, criação de formulários reativos, até a comunicação com uma API (simulada com `json-server`).
+
+### Principais Funcionalidades
+* Visualização de cursos e trilhas de aprendizado.
+* Acompanhamento de progresso do usuário.
+* Autenticação de usuários.
+* Interface responsiva e intuitiva.
+
+---
+## 👤 Autor
+
+Feito por  Jorge Luis Dos Santos
+Desenvolvedor Frond-end
+
+Entre em contato ou veja outros projetos!
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/[Exorcista01])
