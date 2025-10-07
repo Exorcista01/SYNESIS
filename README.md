@@ -1,4 +1,4 @@
-# AngularTCCProject
+# SYNESIS
 
 [![Angular](https://img.shields.io/badge/Angular-19-DD0031?logo=angular&logoColor=white)](https://angular.io/) 
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -31,4 +31,19 @@ O sistema tem como objetivo **gerenciar o desempenho acadêmico e atividades esc
 ---
 
 ## 🧩 Estrutura do projeto
+
+src/
+ ┣ app/
+ ┃ ┣ core/
+ ┃ ┃ ┗ header.component.ts
+ ┃ ┣ features/
+ ┃ ┃ ┗ dashboard/
+ ┃ ┃   ┗ dashboard.component.ts
+ ┃ ┣ shared/
+ ┃ ┃ ┗ button.component.ts
+ ┃ ┗ app-routing.module.ts
+ ┣ assets/
+ ┃ ┗ logo.png
+ ┗ index.html
+
 
