@@ -136,9 +136,9 @@ npm install -g json-server
 
 ## 💻 Sobre o Projeto
 
-O SYNSIS é uma plataforma de E-learning desenvolvida com o objetivo de aplicar e aprofundar conhecimentos no ecossistema Angular. A ideia foi construir uma aplicação SPA (Single Page Application) funcional e moderna, simulando um ambiente real de cursos online.
+O SYNESIS é uma solução acadêmica completa, projetada especificamente para instituições de ensino médio profissionalizante que buscam potencializar o desempenho de seus alunos.
 
-Este projeto aborda desde a estruturação de componentes, gerenciamento de estado com serviços, criação de formulários reativos, até a comunicação com uma API (simulada com `json-server`).
+A plataforma centraliza materiais de estudo, facilita a comunicação entre professores e alunos, e oferece ferramentas robustas para o acompanhamento contínuo do progresso individual, garantindo que cada estudante atinja seu máximo potencial e esteja mais preparado para o mercado de trabalho.
 
 ### Principais Funcionalidades
 * Visualização de cursos e trilhas de aprendizado.
@@ -150,8 +150,9 @@ Este projeto aborda desde a estruturação de componentes, gerenciamento de esta
 ## 👤 Autor
 
 Feito por  Jorge Luis Dos Santos
+
 Desenvolvedor Frond-end
 
 Entre em contato ou veja outros projetos!
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/[Exorcista01])
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Exorcista01)
