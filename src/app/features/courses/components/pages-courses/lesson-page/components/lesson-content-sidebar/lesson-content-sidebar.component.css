@@ -1,0 +1,130 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.course-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; 
+}
+
+.module-item {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-2);
+  transition: box-shadow var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
+.module-item:hover {
+  box-shadow: var(--shadow-4);
+}
+
+.module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.module-header-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.module-title-text {
+  font-size: var(--fs-title-small);
+  font-weight: var(--weight-semiBold);
+  color: var(--color-text-primary);
+}
+
+.module-meta {
+  font-size: var(--fs-label-medium);
+  color: var(--color-text-secondary);
+}
+
+.expand-icon {
+  font-size: 2.4rem;
+  color: var(--color-text-tertiary);
+  transition: transform var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
+.module-item[aria-expanded="true"] .expand-icon {
+  transform: rotate(180deg);
+}
+
+
+/* --- Lista de Aulas --- */
+.lessons-panel {
+  padding-bottom: 0.5rem;
+}
+
+.lessons-list {
+  list-style: none;
+  padding: 0 1rem;
+  margin: 0;
+}
+
+.lesson-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  border-radius: var(--radius-medium);
+  border: 1px solid transparent; /* Borda invisível para manter o tamanho */
+  transition: all var(--transition-duration-quick) ease;
+}
+
+.lesson-link:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.lesson-link.active {
+  background-color: var(--color-accent-light);
+  border-color: var(--color-accent);
+  color: var(--color-text-primary);
+}
+
+.lesson-status-icon {
+  font-size: 2rem;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.lesson-link.active .lesson-status-icon {
+  color: var(--color-accent);
+}
+
+.lesson-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lesson-title {
+  font-size: var(--fs-body-large);
+  font-weight: var(--weight-semiBold);
+  line-height: 1.4;
+}
+
+.lesson-meta-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--fs-label-medium);
+  color: var(--color-text-secondary);
+}
+
+.meta-icon {
+  font-size: 1.6rem;
+}

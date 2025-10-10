@@ -2,21 +2,851 @@
   "users": [
     {
       "id": "74c4",
-      "name": "Jorge",
+      "name": "Jorge Luis",
       "email": "j345429@gmail.com",
-      "password": "jlds6789011"
-    },
-    {
-      "id": "b929",
-      "name": "Jorge",
-      "email": "Jorgeluis@gmail.com",
-      "password": "123456"
+      "password": "jlds6789011",
+      "profile": {
+        "fullName": "Jorge Luis dos santos",
+        "role": "Aluno",
+        "avatarUrl": "https://placehold.co/96x96/0066ff/FFF?text=JL",
+        "responsibleName": "Victor Santos",
+        "course": "manutencao",
+        "classYear": "3",
+        "address": {
+          "zipCode": "40590-420",
+          "street": "Rio Vermelho",
+          "neighborhood": "laranja",
+          "city": "Salvador",
+          "state": "bahia"
+        },
+        "institution": {
+          "name": "goes calmon",
+          "id": ""
+        }
+      }
     },
     {
       "id": "021b",
-      "name": "jorge",
-      "email": "Jorgeluis@gmail.com",
-      "password": "123456"
+      "name": "jorge luis",
+      "email": "jorgeluis@gmail.com",
+      "password": "123456",
+      "profile": {
+        "fullName": "Jorge Luis dos santos",
+        "responsibleName": "Victor Santoss",
+        "course": "redes",
+        "classYear": "2",
+        "address": {
+          "zipCode": "2321321321",
+          "street": "Rio Vermelho",
+          "neighborhood": "maça",
+          "city": "cuba",
+          "state": "perigo"
+        },
+        "institution": {
+          "name": "visconde",
+          "id": ""
+        }
+      }
+    },
+    {
+      "id": "e67a",
+      "name": "Gabriel",
+      "email": "Gabriel@gmail.com",
+      "password": "123456",
+      "profile": {
+        "fullName": "Gabriel de Jesus",
+        "responsibleName": "victor",
+        "course": "manutencao",
+        "classYear": "3",
+        "address": {
+          "zipCode": "40590-420",
+          "street": "rua de gabriel",
+          "neighborhood": "Brotas",
+          "city": "Salvador",
+          "state": "bahia"
+        },
+        "institution": {
+          "name": "goes calmon",
+          "id": ""
+        }
+      }
+    },
+    {
+      "id": "48d8",
+      "name": "Daniel Augusto",
+      "email": "DanielAug@gmail.com",
+      "password": "daniel123456",
+      "profile": {
+        "fullName": "Daniel Augusto dos Anjos",
+        "responsibleName": "paulo miguel",
+        "course": "manutencao",
+        "classYear": "3",
+        "address": {
+          "zipCode": "402560-952",
+          "street": "rua daniel Lobão",
+          "neighborhood": "brotas",
+          "city": "piru",
+          "state": "perigo"
+        },
+        "institution": {
+          "name": "goes calmon",
+          "id": ""
+        }
+      }
+    }
+  ],
+  "exercicios": [
+    {
+      "id": "1",
+      "catalogo": "Tecnologia da Informação",
+      "type": "iniciante",
+      "professor": "Ivan",
+      "title": "Introdução à TI",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "description": "Conceitos fundamentais de Tecnologia da Informação para iniciantes."
+    },
+    {
+      "id": "2",
+      "catalogo": "Lógica de Programação",
+      "type": "iniciante",
+      "professor": "Carlos",
+      "title": "Algoritmos Básicos",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/45.jpg",
+      "description": "Aprenda a construir seus primeiros algoritmos e a desenvolver o raciocínio lógico."
+    },
+    {
+      "id": "3",
+      "catalogo": "Html",
+      "type": "iniciante",
+      "professor": "Monica",
+      "title": "Estruturando sua Primeira Página",
+      "instructorAvatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "description": "Crie a estrutura semântica de uma página web com HTML5."
+    },
+    {
+      "id": "4",
+      "catalogo": "Css",
+      "type": "iniciante",
+      "professor": "Monica",
+      "title": "Estilizando com CSS",
+      "instructorAvatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "description": "Aprenda o básico de seletores, cores e fontes para estilizar suas páginas."
+    },
+    {
+      "id": "5",
+      "catalogo": "Java Script",
+      "type": "intermediario",
+      "professor": "Alisson",
+      "title": "Manipulação do DOM",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/52.jpg",
+      "description": "Exercícios práticos para manipular elementos HTML com JavaScript."
+    },
+    {
+      "id": "6",
+      "catalogo": "Redes de Computadores",
+      "type": "intermediario",
+      "professor": "Natan",
+      "title": "Modelo OSI e TCP/IP",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/60.jpg",
+      "description": "Entenda as camadas de rede e os principais protocolos de comunicação."
+    },
+    {
+      "id": "7",
+      "catalogo": "Manutenção de Computadores",
+      "type": "intermediario",
+      "professor": "Uelissu",
+      "title": "Diagnóstico de Hardware",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/75.jpg",
+      "description": "Aprenda a identificar e solucionar problemas comuns de hardware."
+    },
+    {
+      "id": "8",
+      "catalogo": "Matematica",
+      "type": "avançado",
+      "professor": "Jorge",
+      "title": "Cálculo para Programadores",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/81.jpg",
+      "description": "Aplique conceitos de cálculo para resolver problemas complexos em programação."
+    },
+    {
+      "id": "9",
+      "catalogo": "Java Script",
+      "type": "avançado",
+      "professor": "Alisson",
+      "title": "JavaScript Assíncrono",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/52.jpg",
+      "description": "Domine Promises, Async/Await para criar aplicações mais eficientes."
+    },
+    {
+      "id": "10",
+      "catalogo": "Redes de Computadores",
+      "type": "avançado",
+      "professor": "Natan",
+      "title": "Configuração de Roteadores",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/60.jpg",
+      "description": "Atividades avançadas de configuração de redes e protocolos de roteamento."
+    },
+    {
+      "id": "11",
+      "catalogo": "Css",
+      "type": "intermediario",
+      "professor": "Monica",
+      "title": "Flexbox e Grid Layout",
+      "instructorAvatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "description": "Crie layouts modernos e responsivos com as ferramentas mais poderosas do CSS."
+    },
+    {
+      "id": "12",
+      "catalogo": "Lógica de Programação",
+      "type": "intermediario",
+      "professor": "Carlos",
+      "title": "Estruturas de Repetição",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/45.jpg",
+      "description": "Exercícios focados em laços como 'for' e 'while' para resolver problemas."
+    },
+    {
+      "id": "13",
+      "catalogo": "Banco de Dados",
+      "type": "iniciante",
+      "professor": "Carlos",
+      "title": "Introdução ao SQL",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/45.jpg",
+      "description": "Aprenda a fazer consultas em bancos de dados relacionais."
+    },
+    {
+      "id": "14",
+      "catalogo": "UX/UI Design",
+      "type": "iniciante",
+      "professor": "Monica",
+      "title": "Princípios do Design",
+      "instructorAvatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "description": "Entenda os conceitos fundamentais de User Experience e User Interface."
+    },
+    {
+      "id": "15",
+      "catalogo": "Java Script",
+      "type": "intermediario",
+      "professor": "Alisson",
+      "title": "Introdução ao TypeScript",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/52.jpg",
+      "description": "Adicione tipagem estática ao seu JavaScript para projetos mais robustos."
+    },
+    {
+      "id": "16",
+      "catalogo": "Tecnologia da Informação",
+      "type": "intermediario",
+      "professor": "Ivan",
+      "title": "Segurança da Informação",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "description": "Conheça as principais ameaças e como proteger seus sistemas."
+    },
+    {
+      "id": "17",
+      "catalogo": "Manutenção de Computadores",
+      "type": "iniciante",
+      "professor": "Uelissu",
+      "title": "Montando um PC do Zero",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/75.jpg",
+      "description": "Um guia passo a passo para escolher e montar as peças do seu computador."
+    },
+    {
+      "id": "18",
+      "catalogo": "Redes de Computadores",
+      "type": "avançado",
+      "professor": "Natan",
+      "title": "Segurança de Redes",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/60.jpg",
+      "description": "Aprenda a configurar firewalls, VPNs e detectar intrusões."
+    },
+    {
+      "id": "19",
+      "catalogo": "Lógica de Programação",
+      "type": "avançado",
+      "professor": "Carlos",
+      "title": "Estruturas de Dados",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/45.jpg",
+      "description": "Aprofunde-se em pilhas, filas, árvores e grafos para otimizar seus algoritmos."
+    },
+    {
+      "id": "20",
+      "catalogo": "Css",
+      "type": "avançado",
+      "professor": "Monica",
+      "title": "Animações e Transições",
+      "instructorAvatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "description": "Dê vida às suas interfaces com animações complexas usando CSS puro."
+    },
+    {
+      "id": "21",
+      "catalogo": "Java Script",
+      "type": "avançado",
+      "professor": "Alisson",
+      "title": "Testes Unitários com Jest",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/52.jpg",
+      "description": "Garanta a qualidade e a estabilidade do seu código com testes automatizados."
+    },
+    {
+      "id": "22",
+      "catalogo": "Matematica",
+      "type": "avançado",
+      "professor": "Jorge",
+      "title": "Álgebra Linear para IA",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/81.jpg",
+      "description": "Entenda os conceitos matemáticos por trás de algoritmos de Machine Learning."
+    },
+    {
+      "id": "23",
+      "catalogo": "Banco de Dados",
+      "type": "intermediario",
+      "professor": "Carlos",
+      "title": "Modelagem de Dados",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/45.jpg",
+      "description": "Aprenda a projetar esquemas de banco de dados eficientes e normalizados."
+    },
+    {
+      "id": "24",
+      "catalogo": "Tecnologia da Informação",
+      "type": "avançado",
+      "professor": "Ivan",
+      "title": "Introdução a Cloud (AWS)",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "description": "Conheça os principais serviços da Amazon Web Services e como utilizá-los."
+    },
+    {
+      "id": "25",
+      "catalogo": "UX/UI Design",
+      "type": "intermediario",
+      "professor": "Monica",
+      "title": "Prototipagem com Figma",
+      "instructorAvatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "description": "Crie protótipos interativos e de alta fidelidade para seus projetos."
+    },
+    {
+      "id": "26",
+      "catalogo": "Redes de Computadores",
+      "type": "iniciante",
+      "professor": "Natan",
+      "title": "O que é um Endereço IP?",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/60.jpg",
+      "description": "Entenda como os dispositivos se identificam e se comunicam na internet."
+    },
+    {
+      "id": "27",
+      "catalogo": "Java Script",
+      "type": "intermediario",
+      "professor": "Alisson",
+      "title": "Requisições com a Fetch API",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/52.jpg",
+      "description": "Aprenda a consumir dados de APIs externas de forma moderna e eficiente."
+    },
+    {
+      "id": "28",
+      "catalogo": "Lógica de Programação",
+      "type": "intermediario",
+      "professor": "Carlos",
+      "title": "Programação Orientada a Objetos",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/45.jpg",
+      "description": "Entenda os pilares da POO: encapsulamento, herança e polimorfismo."
+    },
+    {
+      "id": "29",
+      "catalogo": "Manutenção de Computadores",
+      "type": "avançado",
+      "professor": "Uelissu",
+      "title": "Otimização de Performance",
+      "instructorAvatar": "https://randomuser.me/api/portraits/men/75.jpg",
+      "description": "Técnicas avançadas para extrair o máximo de desempenho do seu hardware."
+    },
+    {
+      "id": "30",
+      "catalogo": "Html",
+      "type": "intermediario",
+      "professor": "Monica",
+      "title": "Acessibilidade Web (WAI-ARIA)",
+      "instructorAvatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "description": "Torne suas páginas acessíveis para todos os usuários, incluindo pessoas com deficiência."
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "q1",
+      "exercicioId": "1",
+      "perguntas": [
+        { "id": "q1p1", "texto": "O que significa a sigla 'CPU'?", "opcoes": ["Central Processing Unit", "Computer Personal Unit", "Central Power Unit", "Core Processing Unit"], "respostaCorreta": "Central Processing Unit" },
+        { "id": "q1p2", "texto": "Qual destes é um dispositivo de entrada?", "opcoes": ["Monitor", "Impressora", "Mouse", "Caixa de Som"], "respostaCorreta": "Mouse" },
+        { "id": "q1p3", "texto": "O que é 'Software'?", "opcoes": ["Partes físicas do computador", "Programas e aplicativos", "A tela do computador", "A conexão com a internet"], "respostaCorreta": "Programas e aplicativos" },
+        { "id": "q1p4", "texto": "Qual componente armazena dados temporariamente enquanto o computador está ligado?", "opcoes": ["HD (Hard Disk)", "SSD (Solid State Drive)", "Memória RAM", "Processador"], "respostaCorreta": "Memória RAM" },
+        { "id": "q1p5", "texto": "O que é um Sistema Operacional?", "opcoes": ["Um programa para editar textos", "O software que gerencia o hardware e outros softwares", "Um antivírus", "Um navegador de internet"], "respostaCorreta": "O software que gerencia o hardware e outros softwares" },
+        { "id": "q1p6", "texto": "Qual dos seguintes é um exemplo de 'Hardware'?", "opcoes": ["Microsoft Word", "Google Chrome", "Placa de vídeo", "Sistema Windows"], "respostaCorreta": "Placa de vídeo" },
+        { "id": "q1p7", "texto": "Para que serve uma 'Placa-Mãe'?", "opcoes": ["Para gerar imagens na tela", "Para conectar todos os componentes do computador", "Para armazenar arquivos permanentemente", "Para resfriar o processador"], "respostaCorreta": "Para conectar todos os componentes do computador" },
+        { "id": "q1p8", "texto": "O que significa 'URL'?", "opcoes": ["Uniform Resource Locator", "Universal Registration Link", "Uniform Registration Locator", "Universal Resource Link"], "respostaCorreta": "Uniform Resource Locator" },
+        { "id": "q1p9", "texto": "Qual a função principal de um 'Navegador' (Browser)?", "opcoes": ["Criar planilhas", "Editar fotos", "Acessar e exibir sites da web", "Proteger o computador de vírus"], "respostaCorreta": "Acessar e exibir sites da web" },
+        { "id": "q1p10", "texto": "O que é 'Cloud Computing' (Computação em Nuvem)?", "opcoes": ["Armazenar dados em um HD externo", "Usar o computador durante um dia nublado", "Entregar serviços de computação pela internet", "Um tipo de supercomputador"], "respostaCorreta": "Entregar serviços de computação pela internet" }
+      ]
+    },
+    {
+      "id": "q2",
+      "exercicioId": "2",
+      "perguntas": [
+        { "id": "q2p1", "texto": "O que é um algoritmo?", "opcoes": ["Uma linguagem de programação", "Uma sequência de passos para resolver um problema", "Um componente de hardware", "Um tipo de vírus"], "respostaCorreta": "Uma sequência de passos para resolver um problema" },
+        { "id": "q2p2", "texto": "O que é uma 'variável' em programação?", "opcoes": ["Um valor que nunca muda", "Um espaço na memória para armazenar dados", "Um comando de repetição", "Um erro no código"], "respostaCorreta": "Um espaço na memória para armazenar dados" },
+        { "id": "q2p3", "texto": "Qual o principal objetivo de um comando 'if/else'?", "opcoes": ["Repetir um bloco de código", "Declarar uma variável", "Tomar decisões baseadas em uma condição", "Exibir uma mensagem na tela"], "respostaCorreta": "Tomar decisões baseadas em uma condição" },
+        { "id": "q2p4", "texto": "O que é 'pseudocódigo'?", "opcoes": ["Um código que contém erros", "Uma forma de escrever algoritmos que se assemelha à linguagem humana", "Uma linguagem de programação antiga", "Um código secreto"], "respostaCorreta": "Uma forma de escrever algoritmos que se assemelha à linguagem humana" },
+        { "id": "q2p5", "texto": "Qual destes é um tipo de dado numérico?", "opcoes": ["String", "Boolean", "Integer", "Character"], "respostaCorreta": "Integer" },
+        { "id": "q2p6", "texto": "O que faz um operador de atribuição como '='?", "opcoes": ["Compara dois valores", "Atribui um valor a uma variável", "Soma dois números", "Executa uma função"], "respostaCorreta": "Atribui um valor a uma variável" },
+        { "id": "q2p7", "texto": "Um 'loop' ou laço de repetição serve para:", "opcoes": ["Executar um bloco de código múltiplas vezes", "Parar a execução do programa", "Definir o tipo de uma variável", "Verificar se uma condição é verdadeira"], "respostaCorreta": "Executar um bloco de código múltiplas vezes" },
+        { "id": "q2p8", "texto": "O que é 'concatenação'?", "opcoes": ["Dividir um número por outro", "Juntar duas ou mais strings", "Encontrar o maior valor em uma lista", "Converter um número para texto"], "respostaCorreta": "Juntar duas ou mais strings" },
+        { "id": "q2p9", "texto": "Qual tipo de dado representa apenas 'verdadeiro' ou 'falso'?", "opcoes": ["Integer", "Float", "String", "Boolean"], "respostaCorreta": "Boolean" },
+        { "id": "q2p10", "texto": "O que significa 'debugar' um código?", "opcoes": ["Escrever o código mais rápido", "Adicionar comentários ao código", "Encontrar e corrigir erros no código", "Traduzir o código para outra linguagem"], "respostaCorreta": "Encontrar e corrigir erros no código" }
+      ]
+    },
+    {
+      "id": "q3",
+      "exercicioId": "3",
+      "perguntas": [
+        { "id": "q3p1", "texto": "Qual tag define o corpo de um documento HTML?", "opcoes": ["<head>", "<body>", "<title>", "<html>"], "respostaCorreta": "<body>" },
+        { "id": "q3p2", "texto": "Qual tag é usada para criar o título principal de uma página?", "opcoes": ["<h1>", "<p>", "<div>", "<header>"], "respostaCorreta": "<h1>" },
+        { "id": "q3p3", "texto": "Como se cria um link em HTML?", "opcoes": ["<link href='...'>", "<a href='...'>", "<href...>", "<url>...</url>"], "respostaCorreta": "<a href='...'>" },
+        { "id": "q3p4", "texto": "Qual tag é usada para inserir uma imagem?", "opcoes": ["<image src='...'>", "<pic source='...'>", "<img src='...'>", "<media src='...'>"], "respostaCorreta": "<img src='...'>" },
+        { "id": "q3p5", "texto": "O que a tag <p> representa?", "opcoes": ["Um parágrafo", "Uma página", "Uma permissão", "Uma partição"], "respostaCorreta": "Um parágrafo" },
+        { "id": "q3p6", "texto": "Qual a função da tag <head> em um documento HTML?", "opcoes": ["Conter o conteúdo principal da página", "Conter metadados, como o título e links para CSS", "Definir o cabeçalho visível da página", "Criar uma lista de links"], "respostaCorreta": "Conter metadados, como o título e links para CSS" },
+        { "id": "q3p7", "texto": "Qual tag cria uma lista não ordenada (com marcadores)?", "opcoes": ["<ol>", "<li>", "<ul>", "<list>"], "respostaCorreta": "<ul>" },
+        { "id": "q3p8", "texto": "O atributo 'alt' em uma tag <img> serve para:", "opcoes": ["Alinhar a imagem", "Fornecer um texto alternativo se a imagem não carregar", "Aumentar o tamanho da imagem", "Adicionar uma borda colorida"], "respostaCorreta": "Fornecer um texto alternativo se a imagem não carregar" },
+        { "id": "q3p9", "texto": "Qual tag HTML é usada para criar uma quebra de linha?", "opcoes": ["<break>", "<lb>", "<br>", "<newline>"], "respostaCorreta": "<br>" },
+        { "id": "q3p10", "texto": "A declaração `<!DOCTYPE html>` no início do arquivo indica:", "opcoes": ["Que o documento é um rascunho", "Que o documento usa HTML5", "Que o documento é um XML", "Que o documento tem um erro"], "respostaCorreta": "Que o documento usa HTML5" }
+      ]
+    },
+    {
+      "id": "q4",
+      "exercicioId": "4",
+      "perguntas": [
+        { "id": "q4p1", "texto": "Como se seleciona um elemento com a classe 'titulo' em CSS?", "opcoes": ["#titulo", ".titulo", "titulo", "*titulo"], "respostaCorreta": ".titulo" },
+        { "id": "q4p2", "texto": "Qual propriedade CSS é usada para alterar a cor do texto?", "opcoes": ["font-color", "text-color", "color", "text-style"], "respostaCorreta": "color" },
+        { "id": "q4p3", "texto": "Como se seleciona um elemento com o id 'logo' em CSS?", "opcoes": [".logo", "logo", "#logo", "&logo"], "respostaCorreta": "#logo" },
+        { "id": "q4p4", "texto": "Qual propriedade altera a cor de fundo de um elemento?", "opcoes": ["background-color", "color", "background", "fill-color"], "respostaCorreta": "background-color" },
+        { "id": "q4p5", "texto": "A propriedade 'font-size' serve para:", "opcoes": ["Alterar a fonte do texto", "Alterar o tamanho da fonte", "Alterar o peso da fonte", "Alterar a cor da fonte"], "respostaCorreta": "Alterar o tamanho da fonte" },
+        { "id": "q4p6", "texto": "Qual a forma correta de linkar um arquivo CSS externo em um HTML?", "opcoes": ["<style src='...'>", "<script href='...'>", "<css link='...'>", "<link rel='stylesheet' href='...'>"], "respostaCorreta": "<link rel='stylesheet' href='...'>" },
+        { "id": "q4p7", "texto": "Qual propriedade controla o espaçamento interno de um elemento?", "opcoes": ["margin", "border", "padding", "spacing"], "respostaCorreta": "padding" },
+        { "id": "q4p8", "texto": "E qual propriedade controla o espaçamento externo (margem)?", "opcoes": ["padding", "margin", "outline", "border"], "respostaCorreta": "margin" },
+        { "id": "q4p9", "texto": "O que a propriedade `font-weight: bold;` faz?", "opcoes": ["Deixa o texto em itálico", "Aumenta o tamanho do texto", "Deixa o texto em negrito", "Sublinha o texto"], "respostaCorreta": "Deixa o texto em negrito" },
+        { "id": "q4p10", "texto": "Qual seletor CSS seleciona TODOS os elementos <p> dentro de uma <div>?", "opcoes": ["div + p", "div p", "div > p", "div, p"], "respostaCorreta": "div p" }
+      ]
+    },
+    {
+      "id": "q5",
+      "exercicioId": "5",
+      "perguntas": [
+        { "id": "q5p1", "texto": "Qual método JavaScript é usado para selecionar um elemento pelo seu ID?", "opcoes": ["document.querySelector()", "document.getElement()", "document.getElementById()", "document.selectById()"], "respostaCorreta": "document.getElementById()" },
+        { "id": "q5p2", "texto": "O que a propriedade '.innerHTML' faz?", "opcoes": ["Define ou obtém o conteúdo HTML de um elemento", "Altera a cor de fundo do elemento", "Cria um novo elemento HTML", "Remove um elemento da página"], "respostaCorreta": "Define ou obtém o conteúdo HTML de um elemento" },
+        { "id": "q5p3", "texto": "Como se adiciona um 'ouvinte de evento' (event listener) a um botão?", "opcoes": ["button.onEvent('click', ...)", "button.listen('click', ...)", "button.addEventListener('click', ...)", "button.attachEvent('click', ...)"], "respostaCorreta": "button.addEventListener('click', ...)" },
+        { "id": "q5p4", "texto": "Para alterar o estilo de um elemento com JavaScript, qual propriedade usamos?", "opcoes": ["element.css", "element.style", "element.design", "element.stylesheet"], "respostaCorreta": "element.style" },
+        { "id": "q5p5", "texto": "O que o método `document.createElement('div')` faz?", "opcoes": ["Seleciona todas as divs", "Remove todas as divs", "Cria um novo elemento <div>", "Conta quantas divs existem"], "respostaCorreta": "Cria um novo elemento <div>" },
+        { "id": "q5p6", "texto": "Qual propriedade é usada para obter o valor de um campo de input?", "opcoes": ["input.text", "input.content", "input.value", "input.innerHTML"], "respostaCorreta": "input.value" },
+        { "id": "q5p7", "texto": "Como se adiciona uma classe CSS a um elemento via JavaScript?", "opcoes": ["element.class = 'nova-classe'", "element.addClass('nova-classe')", "element.className += ' nova-classe'", "element.classList.add('nova-classe')"], "respostaCorreta": "element.classList.add('nova-classe')" },
+        { "id": "q5p8", "texto": "O que é o 'DOM'?", "opcoes": ["Uma linguagem de programação", "Um modelo de objeto que representa a estrutura do documento HTML", "Um servidor de banco de dados", "Um tipo de animação CSS"], "respostaCorreta": "Um modelo de objeto que representa a estrutura do documento HTML" },
+        { "id": "q5p9", "texto": "O método `appendChild()` serve para:", "opcoes": ["Remover um elemento filho", "Substituir um elemento filho", "Adicionar um novo elemento como último filho de outro elemento", "Clonar um elemento"], "respostaCorreta": "Adicionar um novo elemento como último filho de outro elemento" },
+        { "id": "q5p10", "texto": "Qual seletor em `document.querySelector()` selecionaria o primeiro parágrafo da página?", "opcoes": ["document.querySelector('p')", "document.querySelector('.p')", "document.querySelector('#p')", "document.querySelectorAll('p')"], "respostaCorreta": "document.querySelector('p')" }
+      ]
+    },
+    {
+      "id": "q6",
+      "exercicioId": "6",
+      "perguntas": [
+        { "id": "q6p1", "texto": "Quantas camadas tem o modelo OSI?", "opcoes": ["4", "5", "7", "8"], "respostaCorreta": "7" },
+        { "id": "q6p2", "texto": "Em qual camada do modelo OSI os roteadores operam principalmente?", "opcoes": ["Física", "Enlace", "Rede", "Transporte"], "respostaCorreta": "Rede" },
+        { "id": "q6p3", "texto": "Qual protocolo é responsável pela entrega confiável de pacotes na camada de Transporte?", "opcoes": ["IP", "UDP", "TCP", "HTTP"], "respostaCorreta": "TCP" },
+        { "id": "q6p4", "texto": "O protocolo HTTP opera em qual camada do modelo TCP/IP?", "opcoes": ["Aplicação", "Transporte", "Internet", "Enlace"], "respostaCorreta": "Aplicação" },
+        { "id": "q6p5", "texto": "Qual a principal diferença entre TCP e UDP?", "opcoes": ["TCP é mais rápido", "UDP verifica a entrega de pacotes, TCP não", "TCP é orientado à conexão e confiável, UDP não", "UDP é usado para email, TCP para streaming"], "respostaCorreta": "TCP é orientado à conexão e confiável, UDP não" },
+        { "id": "q6p6", "texto": "O que o 'IP' em TCP/IP significa?", "opcoes": ["Internal Protocol", "Internet Protocol", "Information Packet", "Interface Port"], "respostaCorreta": "Internet Protocol" },
+        { "id": "q6p7", "texto": "A camada Física (Camada 1) do modelo OSI é responsável por:", "opcoes": ["Endereçamento lógico", "Transmissão de bits pelo meio físico", "Controle de fluxo", "Roteamento de pacotes"], "respostaCorreta": "Transmissão de bits pelo meio físico" },
+        { "id": "q6p8", "texto": "Em qual camada do modelo OSI os endereços MAC são utilizados?", "opcoes": ["Rede", "Física", "Enlace", "Sessão"], "respostaCorreta": "Enlace" },
+        { "id": "q6p9", "texto": "Qual camada é responsável pela criptografia e formatação de dados?", "opcoes": ["Aplicação", "Apresentação", "Sessão", "Transporte"], "respostaCorreta": "Apresentação" },
+        { "id": "q6p10", "texto": "Qual modelo é mais utilizado na prática hoje em dia?", "opcoes": ["Modelo OSI", "Modelo TCP/IP", "Ambos igualmente", "Nenhum dos dois"], "respostaCorreta": "Modelo TCP/IP" }
+      ]
+    },
+    {
+      "id": "q7",
+      "exercicioId": "7",
+      "perguntas": [
+        { "id": "q7p1", "texto": "O computador não liga e não emite nenhum som ou luz. Qual componente deve ser verificado primeiro?", "opcoes": ["Processador", "Memória RAM", "Fonte de Alimentação (PSU)", "Placa de vídeo"], "respostaCorreta": "Fonte de Alimentação (PSU)" },
+        { "id": "q7p2", "texto": "O que são os 'beeps' que um computador emite ao ligar?", "opcoes": ["Um sinal de que está tudo funcionando perfeitamente", "Códigos de erro do POST para indicar problemas de hardware", "Um aviso de vírus", "O som de inicialização do Windows"], "respostaCorreta": "Códigos de erro do POST para indicar problemas de hardware" },
+        { "id": "q7p3", "texto": "Um computador está superaquecendo e desligando sozinho. Qual a causa mais provável?", "opcoes": ["Problema no HD", "Falta de memória RAM", "Problema no sistema de refrigeração (cooler, pasta térmica)", "Placa de rede com defeito"], "respostaCorreta": "Problema no sistema de refrigeração (cooler, pasta térmica)" },
+        { "id": "q7p4", "texto": "A famosa 'Tela Azul da Morte' (BSOD) no Windows geralmente indica:", "opcoes": ["Um problema de software simples", "Falta de espaço no disco", "Um erro crítico de hardware ou driver", "Que a fonte de alimentação está fraca"], "respostaCorreta": "Um erro crítico de hardware ou driver" },
+        { "id": "q7p5", "texto": "Para que serve a pasta térmica aplicada sobre o processador?", "opcoes": ["Para colar o processador na placa-mãe", "Para melhorar a transferência de calor entre o processador e o cooler", "Para proteger o processador contra poeira", "Para aumentar a velocidade do processador"], "respostaCorreta": "Para melhorar a transferência de calor entre o processador e o cooler" },
+        { "id": "q7p6", "texto": "Se um pente de memória RAM estiver mal encaixado, o que provavelmente acontecerá?", "opcoes": ["O computador ficará mais lento", "A internet não funcionará", "O computador não dará vídeo e poderá emitir bipes de erro", "O mouse e o teclado não funcionarão"], "respostaCorreta": "O computador não dará vídeo e poderá emitir bipes de erro" },
+        { "id": "q7p7", "texto": "O que é o 'POST' (Power-On Self-Test)?", "opcoes": ["O processo de instalação do sistema operacional", "Um teste automático de hardware realizado ao ligar o computador", "Um software de limpeza de disco", "A tela de login do usuário"], "respostaCorreta": "Um teste automático de hardware realizado ao ligar o computador" },
+        { "id": "q7p8", "texto": "O computador está muito lento para iniciar e abrir programas. Qual upgrade de hardware daria o maior impacto?", "opcoes": ["Trocar o gabinete", "Adicionar mais ventoinhas", "Substituir um HD mecânico por um SSD", "Trocar o teclado"], "respostaCorreta": "Substituir um HD mecânico por um SSD" },
+        { "id": "q7p9", "texto": "Se o monitor exibe a mensagem 'Sem Sinal', mas o computador está ligado, o que NÃO seria uma causa provável?", "opcoes": ["O cabo de vídeo está desconectado", "A placa de vídeo está com defeito", "A memória RAM está mal encaixada", "O processador está superaquecendo"], "respostaCorreta": "O processador está superaquecendo" },
+        { "id": "q7p10", "texto": "Qual ferramenta de software é comumente usada para verificar a 'saúde' de um HD ou SSD?", "opcoes": ["Bloco de Notas", "S.M.A.R.T.", "Paint", "Gerenciador de Tarefas"], "respostaCorreta": "S.M.A.R.T." }
+      ]
+    },
+    {
+      "id": "q8",
+      "exercicioId": "8",
+      "perguntas": [
+        { "id": "q8p1", "texto": "O que a notação 'Big O' representa na análise de algoritmos?", "opcoes": ["O número exato de operações", "O pior caso de complexidade de tempo ou espaço", "O melhor caso de performance", "O consumo de memória RAM"], "respostaCorreta": "O pior caso de complexidade de tempo ou espaço" },
+        { "id": "q8p2", "texto": "Um algoritmo com complexidade O(n) significa que seu tempo de execução:", "opcoes": ["É constante", "Cresce linearmente com o tamanho da entrada", "Cresce quadraticamente", "Cresce exponencialmente"], "respostaCorreta": "Cresce linearmente com o tamanho da entrada" },
+        { "id": "q8p3", "texto": "Qual a complexidade de tempo para acessar um elemento em um array pelo seu índice?", "opcoes": ["O(1)", "O(n)", "O(log n)", "O(n^2)"], "respostaCorreta": "O(1)" },
+        { "id": "q8p4", "texto": "Em computação, o que é um 'fatorial' (n!)?", "opcoes": ["A soma de todos os números até n", "O produto de todos os inteiros positivos até n", "A potência de n elevado a n", "A raiz quadrada de n"], "respostaCorreta": "O produto de todos os inteiros positivos até n" },
+        { "id": "q8p5", "texto": "O que é um 'logaritmo' em termos simples?", "opcoes": ["A operação inversa da potenciação", "A multiplicação de um número por ele mesmo", "A divisão de um número por dois", "O resto de uma divisão"], "respostaCorreta": "A operação inversa da potenciação" },
+        { "id": "q8p6", "texto": "Qual algoritmo de busca tem complexidade O(log n)?", "opcoes": ["Busca Linear", "Busca em Profundidade", "Busca Binária", "Busca Aleatória"], "respostaCorreta": "Busca Binária" },
+        { "id": "q8p7", "texto": "O que é recursão em programação?", "opcoes": ["Um tipo de loop 'for'", "Uma função que chama a si mesma", "Uma forma de declarar variáveis", "Uma biblioteca matemática"], "respostaCorreta": "Uma função que chama a si mesma" },
+        { "id": "q8p8", "texto": "Qual destes tem a pior performance (maior complexidade)?", "opcoes": ["O(n)", "O(log n)", "O(1)", "O(n^2)"], "respostaCorreta": "O(n^2)" },
+        { "id": "q8p9", "texto": "A sequência de Fibonacci é um exemplo clássico de qual conceito?", "opcoes": ["Ordenação", "Busca", "Recursão", "Hashing"], "respostaCorreta": "Recursão" },
+        { "id": "q8p10", "texto": "O que a operação 'módulo' (%) calcula?", "opcoes": ["A porcentagem", "O resto de uma divisão inteira", "A média de dois números", "O valor absoluto"], "respostaCorreta": "O resto de uma divisão inteira" }
+      ]
+    },
+    {
+      "id": "q9",
+      "exercicioId": "9",
+      "perguntas": [
+        { "id": "q9p1", "texto": "O que é 'código assíncrono' em JavaScript?", "opcoes": ["Código que executa em uma ordem aleatória", "Código que permite que operações longas ocorram sem bloquear a thread principal", "Um código que só roda em servidores", "Um sinônimo para código com erros"], "respostaCorreta": "Código que permite que operações longas ocorram sem bloquear a thread principal" },
+        { "id": "q9p2", "texto": "O que é uma 'Promise' em JavaScript?", "opcoes": ["Um objeto que representa a eventual conclusão (ou falha) de uma operação assíncrona", "Uma variável que promete não mudar de valor", "Uma função que sempre retorna 'true'", "Um tipo de erro de sintaxe"], "respostaCorreta": "Um objeto que representa a eventual conclusão (ou falha) de uma operação assíncrona" },
+        { "id": "q9p3", "texto": "Uma Promise pode estar em quais três estados?", "opcoes": ["Iniciada, Média, Finalizada", "Pendente, Realizada, Rejeitada", "Pequena, Média, Grande", "Aberta, Fechada, Travada"], "respostaCorreta": "Pendente, Realizada, Rejeitada" },
+        { "id": "q9p4", "texto": "O que o método `.then()` de uma Promise faz?", "opcoes": ["Executa uma função quando a Promise é rejeitada", "Executa uma função quando a Promise é realizada com sucesso", "Cancela a Promise", "Inicia a Promise"], "respostaCorreta": "Executa uma função quando a Promise é realizada com sucesso" },
+        { "id": "q9p5", "texto": "E o método `.catch()`?", "opcoes": ["Captura e trata erros quando a Promise é rejeitada", "Executa em caso de sucesso", "É um apelido para o `.then()`", "Finaliza a Promise, independente do resultado"], "respostaCorreta": "Captura e trata erros quando a Promise é rejeitada" },
+        { "id": "q9p6", "texto": "O que a sintaxe `async/await` permite?", "opcoes": ["Escrever código síncrono que se comporta de forma assíncrona", "Escrever código assíncrono de uma maneira que parece síncrona", "Tornar o JavaScript mais rápido", "Declarar variáveis globais"], "respostaCorreta": "Escrever código assíncrono de uma maneira que parece síncrona" },
+        { "id": "q9p7", "texto": "A palavra-chave `await` só pode ser usada dentro de qual tipo de função?", "opcoes": ["Qualquer função", "Uma função declarada com a palavra-chave `async`", "Uma função de seta (arrow function)", "Uma função anônima"], "respostaCorreta": "Uma função declarada com a palavra-chave `async`" },
+        { "id": "q9p8", "texto": "O que é o 'Callback Hell'?", "opcoes": ["Um erro que trava o navegador", "O aninhamento excessivo de funções de callback, tornando o código difícil de ler", "Um site que ensina sobre callbacks", "Uma função de callback que gera um loop infinito"], "respostaCorreta": "O aninhamento excessivo de funções de callback, tornando o código difícil de ler" },
+        { "id": "q9p9", "texto": "Para que serve `Promise.all()`?", "opcoes": ["Executa todas as Promises, mesmo que uma falhe", "Retorna uma única Promise que resolve quando todas as Promises do array resolverem", "Seleciona a primeira Promise que resolver", "Cria uma Promise que nunca resolve"], "respostaCorreta": "Retorna uma única Promise que resolve quando todas as Promises do array resolverem" },
+        { "id": "q9p10", "texto": "Qual destes é um exemplo de operação assíncrona no navegador?", "opcoes": ["Somar dois números", "Declarar uma variável", "Fazer uma requisição de rede (fetch)", "Mudar a cor de um texto"], "respostaCorreta": "Fazer uma requisição de rede (fetch)" }
+      ]
+    },
+    {
+      "id": "q10",
+      "exercicioId": "10",
+      "perguntas": [
+        { "id": "q10p1", "texto": "O que o 'DHCP' faz em uma rede?", "opcoes": ["Traduz nomes de domínio para IPs", "Atribui endereços IP automaticamente aos dispositivos", "Filtra pacotes maliciosos", "Criptografa a comunicação sem fio"], "respostaCorreta": "Atribui endereços IP automaticamente aos dispositivos" },
+        { "id": "q10p2", "texto": "Qual é o endereço IP de 'localhost'?", "opcoes": ["192.168.0.1", "10.0.0.1", "8.8.8.8", "127.0.0.1"], "respostaCorreta": "127.0.0.1" },
+        { "id": "q10p3", "texto": "O que é 'NAT' (Network Address Translation)?", "opcoes": ["Um protocolo de criptografia", "Um método que permite que múltiplos dispositivos em uma rede local compartilhem um único endereço IP público", "Um tipo de cabo de rede", "Um software de antivírus para roteadores"], "respostaCorreta": "Um método que permite que múltiplos dispositivos em uma rede local compartilhem um único endereço IP público" },
+        { "id": "q10p4", "texto": "Para que serve a 'máscara de sub-rede' (subnet mask)?", "opcoes": ["Para esconder o endereço IP", "Para definir qual parte do endereço IP é a rede e qual parte é o host", "Para aumentar a velocidade da rede", "Para conectar duas redes diferentes"], "respostaCorreta": "Para definir qual parte do endereço IP é a rede e qual parte é o host" },
+        { "id": "q10p5", "texto": "O que é um 'Gateway Padrão'?", "opcoes": ["O endereço do seu computador", "O dispositivo (geralmente o roteador) que conecta a rede local à internet", "O servidor de DNS principal", "A senha da rede Wi-Fi"], "respostaCorreta": "O dispositivo (geralmente o roteador) que conecta a rede local à internet" },
+        { "id": "q10p6", "texto": "O que significa 'LAN'?", "opcoes": ["Long Area Network", "Local Area Network", "Large Access Node", "Logical Access Network"], "respostaCorreta": "Local Area Network" },
+        { "id": "q10p7", "texto": "Qual comando é usado no Windows para verificar a configuração de IP do seu computador?", "opcoes": ["ping", "tracert", "ipconfig", "netstat"], "respostaCorreta": "ipconfig" },
+        { "id": "q10p8", "texto": "O que é um 'Firewall'?", "opcoes": ["Um dispositivo que resfria o roteador", "Um sistema de segurança que monitora e controla o tráfego de rede", "Um protocolo de transferência de arquivos", "Um servidor de email"], "respostaCorreta": "Um sistema de segurança que monitora e controla o tráfego de rede" },
+        { "id": "q10p9", "texto": "O que o serviço 'DNS' faz?", "opcoes": ["Atribui IPs dinamicamente", "Traduz nomes de domínio (ex: google.com) para endereços IP", "Gerencia a velocidade da conexão", "Verifica se os cabos estão conectados"], "respostaCorreta": "Traduz nomes de domínio (ex: google.com) para endereços IP" },
+        { "id": "q10p10", "texto": "Qual a diferença entre um 'hub' e um 'switch'?", "opcoes": ["Não há diferença", "O hub é mais rápido que o switch", "O switch é mais inteligente e envia dados apenas para a porta de destino, enquanto o hub envia para todas", "O hub é para redes sem fio e o switch para redes com fio"], "respostaCorreta": "O switch é mais inteligente e envia dados apenas para a porta de destino, enquanto o hub envia para todas" }
+      ]
+    },
+    {
+      "id": "q11",
+      "exercicioId": "11",
+      "perguntas": [
+        { "id": "q11p1", "texto": "Qual propriedade CSS inicia um container Flexbox?", "opcoes": ["display: flexbox;", "display: flex;", "flex: true;", "display: box;"], "respostaCorreta": "display: flex;" },
+        { "id": "q11p2", "texto": "A propriedade `flex-direction` pode ter quais valores?", "opcoes": ["row, column, wrap", "horizontal, vertical", "left, right, top, bottom", "row, column, row-reverse, column-reverse"], "respostaCorreta": "row, column, row-reverse, column-reverse" },
+        { "id": "q11p3", "texto": "Qual propriedade alinha os itens no eixo principal (main axis)?", "opcoes": ["align-items", "justify-content", "align-content", "flex-flow"], "respostaCorreta": "justify-content" },
+        { "id": "q11p4", "texto": "E qual propriedade alinha os itens no eixo transversal (cross axis)?", "opcoes": ["align-items", "justify-content", "align-content", "flex-wrap"], "respostaCorreta": "align-items" },
+        { "id": "q11p5", "texto": "O que `justify-content: space-between;` faz?", "opcoes": ["Agrupa todos os itens no centro", "Distribui os itens com espaço igual entre eles", "Alinha os itens no início do container", "Alinha os itens no final do container"], "respostaCorreta": "Distribui os itens com espaço igual entre eles" },
+        { "id": "q11p6", "texto": "Qual propriedade inicia um container Grid?", "opcoes": ["display: grid;", "display: layout-grid;", "grid: on;", "layout: grid;"], "respostaCorreta": "display: grid;" },
+        { "id": "q11p7", "texto": "A propriedade `grid-template-columns` serve para:", "opcoes": ["Definir o número e o tamanho das linhas do grid", "Definir o número e o tamanho das colunas do grid", "Definir o espaçamento entre as células", "Definir a cor de fundo do grid"], "respostaCorreta": "Definir o número e o tamanho das colunas do grid" },
+        { "id": "q11p8", "texto": "O que a unidade `fr` representa no CSS Grid?", "opcoes": ["Uma unidade de medida fixa em pixels", "Uma unidade de fração do espaço disponível no container", "Uma referência a um frame", "A fonte de referência"], "respostaCorreta": "Uma unidade de fração do espaço disponível no container" },
+        { "id": "q11p9", "texto": "Qual propriedade controla o espaçamento entre as linhas e colunas do grid?", "opcoes": ["spacing", "margin", "padding", "gap"], "respostaCorreta": "gap" },
+        { "id": "q11p10", "texto": "Quando usar Flexbox e quando usar Grid?", "opcoes": ["Grid para tudo", "Flexbox para tudo", "Flexbox é ideal para layouts unidimensionais (uma linha ou uma coluna), Grid para layouts bidimensionais (linhas E colunas)", "Grid é mais antigo e menos suportado que Flexbox"], "respostaCorreta": "Flexbox é ideal para layouts unidimensionais (uma linha ou uma coluna), Grid para layouts bidimensionais (linhas E colunas)" }
+      ]
+    },
+    {
+      "id": "q12",
+      "exercicioId": "12",
+      "perguntas": [
+        { "id": "q12p1", "texto": "Qual estrutura de repetição é ideal quando você sabe exatamente quantas vezes quer repetir o bloco de código?", "opcoes": ["while", "do-while", "for", "if"], "respostaCorreta": "for" },
+        { "id": "q12p2", "texto": "O laço `for (i = 0; i < 5; i++)` executará quantas vezes?", "opcoes": ["4", "5", "6", "0"], "respostaCorreta": "5" },
+        { "id": "q12p3", "texto": "Qual a principal característica do laço `while`?", "opcoes": ["Executa um número fixo de vezes", "Executa enquanto uma condição for verdadeira", "Executa pelo menos uma vez, sempre", "É usado para tomar decisões"], "respostaCorreta": "Executa enquanto uma condição for verdadeira" },
+        { "id": "q12p4", "texto": "E a principal característica do `do-while`?", "opcoes": ["Nunca executa o bloco de código", "É igual ao `for`", "Verifica a condição antes de executar", "Executa o bloco de código pelo menos uma vez antes de verificar a condição"], "respostaCorreta": "Executa o bloco de código pelo menos uma vez antes de verificar a condição" },
+        { "id": "q12p5", "texto": "O que é um 'loop infinito'?", "opcoes": ["Um loop que executa para sempre porque sua condição de parada nunca é atingida", "Um loop muito grande", "Um loop que roda em todos os computadores do mundo", "Um erro de sintaxe"], "respostaCorreta": "Um loop que executa para sempre porque sua condição de parada nunca é atingida" },
+        { "id": "q12p6", "texto": "O que a palavra-chave `break` faz dentro de um loop?", "opcoes": ["Pula para a próxima iteração", "Interrompe o loop imediatamente e continua a execução após ele", "Pausa o loop por um tempo", "Reinicia o loop do começo"], "respostaCorreta": "Interrompe o loop imediatamente e continua a execução após ele" },
+        { "id": "q12p7", "texto": "E a palavra-chave `continue`?", "opcoes": ["Para o loop completamente", "Pula o resto da iteração atual e vai para a próxima", "Gera um erro no programa", "Deleta a variável do contador"], "respostaCorreta": "Pula o resto da iteração atual e vai para a próxima" },
+        { "id": "q12p8", "texto": "Qual laço é mais apropriado para percorrer todos os itens de um array?", "opcoes": ["if-else", "do-while", "for", "switch"], "respostaCorreta": "for" },
+        { "id": "q12p9", "texto": "No laço `for (let i = 1; i <= 3; i++)`, quais valores a variável `i` assumirá?", "opcoes": ["0, 1, 2", "1, 2", "1, 2, 3", "0, 1, 2, 3"], "respostaCorreta": "1, 2, 3" },
+        { "id": "q12p10", "texto": "Qual o perigo de usar `while (true)` sem uma instrução `break` dentro?", "opcoes": ["Nenhum, é uma prática comum", "Pode deixar o computador mais rápido", "Cria um loop infinito que pode travar o programa", "Apaga os dados da memória"], "respostaCorreta": "Cria um loop infinito que pode travar o programa" }
+      ]
+    },
+    {
+      "id": "q13",
+      "exercicioId": "13",
+      "perguntas": [
+        { "id": "q13p1", "texto": "Qual comando SQL é usado para consultar dados de uma tabela?", "opcoes": ["GET", "SELECT", "QUERY", "FETCH"], "respostaCorreta": "SELECT" },
+        { "id": "q13p2", "texto": "A cláusula `WHERE` é usada para:", "opcoes": ["Ordenar os resultados", "Agrupar os resultados", "Filtrar os registros com base em uma condição", "Juntar duas tabelas"], "respostaCorreta": "Filtrar os registros com base em uma condição" },
+        { "id": "q13p3", "texto": "Qual comando é usado para inserir um novo registro em uma tabela?", "opcoes": ["ADD NEW", "CREATE ROW", "INSERT INTO", "NEW RECORD"], "respostaCorreta": "INSERT INTO" },
+        { "id": "q13p4", "texto": "Para atualizar um registro existente, qual comando usamos?", "opcoes": ["MODIFY", "UPDATE", "CHANGE", "ALTER"], "respostaCorreta": "UPDATE" },
+        { "id": "q13p5", "texto": "Qual comando remove registros de uma tabela?", "opcoes": ["REMOVE FROM", "DROP", "ERASE", "DELETE FROM"], "respostaCorreta": "DELETE FROM" },
+        { "id": "q13p6", "texto": "O que o comando `SELECT * FROM clientes` faz?", "opcoes": ["Seleciona apenas a primeira coluna da tabela clientes", "Seleciona todas as colunas de todos os registros da tabela clientes", "Cria uma tabela chamada clientes", "Conta quantos clientes existem"], "respostaCorreta": "Seleciona todas as colunas de todos os registros da tabela clientes" },
+        { "id": "q13p7", "texto": "A cláusula `ORDER BY` serve para:", "opcoes": ["Ordenar os resultados da consulta", "Filtrar os dados", "Limitar o número de resultados", "Agrupar dados"], "respostaCorreta": "Ordenar os resultados da consulta" },
+        { "id": "q13p8", "texto": "O que é uma 'Primary Key' (Chave Primária)?", "opcoes": ["Uma coluna que pode ter valores duplicados", "Uma coluna (ou conjunto de colunas) que identifica unicamente cada registro na tabela", "A última coluna da tabela", "Uma chave para criptografar os dados"], "respostaCorreta": "Uma coluna (ou conjunto de colunas) que identifica unicamente cada registro na tabela" },
+        { "id": "q13p9", "texto": "Qual comando junta registros de duas ou mais tabelas?", "opcoes": ["COMBINE", "UNION", "MERGE", "JOIN"], "respostaCorreta": "JOIN" },
+        { "id": "q13p10", "texto": "O que significa 'SQL'?", "opcoes": ["Structured Query Language", "Simple Query Logic", "Standard Question Language", "System Query Lingo"], "respostaCorreta": "Structured Query Language" }
+      ]
+    },
+    {
+      "id": "q14",
+      "exercicioId": "14",
+      "perguntas": [
+        { "id": "q14p1", "texto": "Quais são os 4 princípios básicos do design conhecidos pela sigla 'CRAP'?", "opcoes": ["Cor, Repetição, Animação, Proporção", "Contraste, Repetição, Alinhamento, Proximidade", "Criatividade, Resposta, Ação, Publicação", "Círculo, Retângulo, Ângulo, Ponto"], "respostaCorreta": "Contraste, Repetição, Alinhamento, Proximidade" },
+        { "id": "q14p2", "texto": "O princípio do 'Contraste' sugere que:", "opcoes": ["Todos os elementos devem ter a mesma cor", "Se os itens não são exatamente os mesmos, eles devem ser muito diferentes", "A página deve ter um fundo escuro", "O texto deve ser sempre pequeno"], "respostaCorreta": "Se os itens não são exatamente os mesmos, eles devem ser muito diferentes" },
+        { "id": "q14p3", "texto": "O que é 'Hierarquia Visual' em design?", "opcoes": ["A organização dos arquivos do projeto", "A técnica de organizar elementos para mostrar sua ordem de importância", "Usar apenas fontes hierárquicas", "A estrutura de links de um site"], "respostaCorreta": "A técnica de organizar elementos para mostrar sua ordem de importância" },
+        { "id": "q14p4", "texto": "O princípio do 'Alinhamento' significa que:", "opcoes": ["Nada deve ser colocado na página de forma arbitrária", "Todo o texto deve ser centralizado", "As imagens devem estar sempre à esquerda", "As cores devem estar alinhadas no círculo cromático"], "respostaCorreta": "Nada deve ser colocado na página de forma arbitrária" },
+        { "id": "q14p5", "texto": "O que é 'Espaço em Branco' (ou espaço negativo)?", "opcoes": ["Uma área da página que contém um erro", "O espaço vazio entre os elementos de design", "A cor branca usada no fundo", "Um texto que não foi preenchido"], "respostaCorreta": "O espaço vazio entre os elementos de design" },
+        { "id": "q14p6", "texto": "Qual o objetivo do princípio da 'Proximidade'?", "opcoes": ["Agrupar itens relacionados para que sejam vistos como uma unidade coesa", "Deixar todos os elementos o mais longe possível um do outro", "Usar apenas cores próximas no círculo cromático", "Colocar o logo próximo ao rodapé"], "respostaCorreta": "Agrupar itens relacionados para que sejam vistos como uma unidade coesa" },
+        { "id": "q14p7", "texto": "O que é 'Tipografia'?", "opcoes": ["A arte de tirar fotografias", "O estudo dos tipos de papel", "A arte e a técnica de arranjar tipos para tornar a linguagem escrita legível e atraente", "Um programa de computador para desenhar"], "respostaCorreta": "A arte e a técnica de arranjar tipos para tornar a linguagem escrita legível e atraente" },
+        { "id": "q14p8", "texto": "O que o princípio da 'Repetição' ajuda a criar?", "opcoes": ["Confusão visual", "Unidade e consistência no design", "Um design mais colorido", "Páginas mais pesadas para carregar"], "respostaCorreta": "Unidade e consistência no design" },
+        { "id": "q14p9", "texto": "Cores 'análogas' no círculo cromático são:", "opcoes": ["Cores que estão opostas umas às outras", "Cores que estão lado a lado", "Apenas tons de cinza", "Cores primárias"], "respostaCorreta": "Cores que estão lado a lado" },
+        { "id": "q14p10", "texto": "O que é 'User Experience' (UX) Design?", "opcoes": ["O design da aparência visual de um produto", "O processo de criar produtos que forneçam experiências significativas e relevantes aos usuários", "O design do logo de uma empresa", "A programação da interface"], "respostaCorreta": "O processo de criar produtos que forneçam experiências significativas e relevantes aos usuários" }
+      ]
+    },
+    {
+      "id": "q15",
+      "exercicioId": "15",
+      "perguntas": [
+        { "id": "q15p1", "texto": "Qual a principal vantagem do TypeScript sobre o JavaScript?", "opcoes": ["É mais rápido em todos os navegadores", "Adiciona tipagem estática ao código", "Tem mais bibliotecas disponíveis", "É mais fácil de aprender para iniciantes"], "respostaCorreta": "Adiciona tipagem estática ao código" },
+        { "id": "q15p2", "texto": "Como se declara uma variável do tipo 'string' em TypeScript?", "opcoes": ["var nome = 'Maria';", "let nome: string = 'Maria';", "string nome = 'Maria';", "let nome = new String('Maria');"], "respostaCorreta": "let nome: string = 'Maria';" },
+        { "id": "q15p3", "texto": "O que é uma 'interface' em TypeScript?", "opcoes": ["A aparência visual de um componente", "Uma forma de definir um 'contrato' para a estrutura de um objeto", "Uma função que se conecta a uma API", "Um tipo de classe abstrata"], "respostaCorreta": "Uma forma de definir um 'contrato' para a estrutura de um objeto" },
+        { "id": "q15p4", "texto": "O que o tipo `any` faz?", "opcoes": ["Define que a variável pode ser de qualquer tipo, desabilitando a verificação de tipo", "Gera um erro de compilação", "Define que a variável só pode ser um número", "É um apelido para o tipo 'string'"], "respostaCorreta": "Define que a variável pode ser de qualquer tipo, desabilitando a verificação de tipo" },
+        { "id": "q15p5", "texto": "TypeScript é compilado ou interpretado?", "opcoes": ["É interpretado diretamente pelo navegador", "É compilado para JavaScript puro, que é então interpretado", "É compilado e executado em uma máquina virtual", "É tanto compilado quanto interpretado"], "respostaCorreta": "É compilado para JavaScript puro, que é então interpretado" },
+        { "id": "q15p6", "texto": "Qual o tipo de retorno de uma função que não retorna nada?", "opcoes": ["any", "null", "undefined", "void"], "respostaCorreta": "void" },
+        { "id": "q15p7", "texto": "Como definimos um array de números em TypeScript?", "opcoes": ["let numeros: array<number> = [1, 2];", "let numeros: number[] = [1, 2];", "let numeros: [number] = [1, 2];", "let numeros = new Array<number>(1, 2);"], "respostaCorreta": "let numeros: number[] = [1, 2];" },
+        { "id": "q15p8", "texto": "O que o compilador do TypeScript (TSC) faz?", "opcoes": ["Executa o código TypeScript no servidor", "Converte o código TypeScript (.ts) em código JavaScript (.js)", "Otimiza as imagens do projeto", "Instala pacotes e dependências"], "respostaCorreta": "Converte o código TypeScript (.ts) em código JavaScript (.js)" },
+        { "id": "q15p9", "texto": "Qual o benefício da tipagem estática?", "opcoes": ["Deixa o código mais curto", "Permite encontrar erros em tempo de compilação, antes da execução", "Não oferece nenhum benefício real", "Aumenta a velocidade de download da página"], "respostaCorreta": "Permite encontrar erros em tempo de compilação, antes da execução" },
+        { "id": "q15p10", "texto": "Qual a sintaxe para um parâmetro de função opcional?", "opcoes": ["function fn(param?)", "function fn(optional param)", "function fn(param: string?)", "function fn(param?: string)"], "respostaCorreta": "function fn(param?: string)" }
+      ]
+    },
+    {
+      "id": "q16",
+      "exercicioId": "16",
+      "perguntas": [
+        { "id": "q16p1", "texto": "O que forma a 'Tríade CIA' da Segurança da Informação?", "opcoes": ["Confidencialidade, Integridade, Acessibilidade", "Confidencialidade, Integridade, Disponibilidade", "Controle, Informação, Acesso", "Criptografia, Internet, Antivírus"], "respostaCorreta": "Confidencialidade, Integridade, Disponibilidade" },
+        { "id": "q16p2", "texto": "O que é 'Phishing'?", "opcoes": ["Um tipo de vírus que se espalha pela rede", "Uma tentativa de enganar usuários para que revelem informações sensíveis, como senhas e dados de cartão de crédito", "Um software que protege contra ataques de rede", "Uma técnica de criptografia de dados"], "respostaCorreta": "Uma tentativa de enganar usuários para que revelem informações sensíveis, como senhas e dados de cartão de crédito" },
+        { "id": "q16p3", "texto": "Qual o objetivo de um 'Firewall'?", "opcoes": ["Acelerar a conexão com a internet", "Monitorar e controlar o tráfego de rede para bloquear acessos não autorizados", "Limpar arquivos desnecessários do computador", "Detectar e remover vírus"], "respostaCorreta": "Monitorar e controlar o tráfego de rede para bloquear acessos não autorizados" },
+        { "id": "q16p4", "texto": "O que é 'Malware'?", "opcoes": ["Qualquer componente físico de um computador", "Um termo genérico para qualquer software malicioso, como vírus e spyware", "A senha de acesso a um sistema", "Um protocolo de segurança de rede"], "respostaCorreta": "Um termo genérico para qualquer software malicioso, como vírus e spyware" },
+        { "id": "q16p5", "texto": "O princípio da 'Confidencialidade' garante que:", "opcoes": ["A informação esteja sempre disponível", "A informação só possa ser acessada por pessoas autorizadas", "A informação não seja alterada sem permissão", "A informação possa ser recuperada em caso de desastre"], "respostaCorreta": "A informação só possa ser acessada por pessoas autorizadas" },
+        { "id": "q16p6", "texto": "O que é 'Engenharia Social'?", "opcoes": ["A prática de manipular psicologicamente as pessoas para que executem ações ou divulguem informações confidenciais", "Um curso de graduação em ciências sociais", "A criação de redes sociais seguras", "O estudo da estrutura de redes de computadores"], "respostaCorreta": "A prática de manipular psicologicamente as pessoas para que executem ações ou divulguem informações confidenciais" },
+        { "id": "q16p7", "texto": "Para que serve a 'criptografia'?", "opcoes": ["Para comprimir arquivos e economizar espaço", "Para tornar a informação ilegível para quem não tem a chave de decodificação", "Para organizar os dados em um banco de dados", "Para aumentar a velocidade de processamento"], "respostaCorreta": "Para tornar a informação ilegível para quem não tem a chave de decodificação" },
+        { "id": "q16p8", "texto": "O que é 'autenticação de dois fatores' (2FA)?", "opcoes": ["Usar a mesma senha em dois sites diferentes", "Um método de segurança que requer duas formas de verificação para conceder acesso", "Ter duas senhas diferentes para a mesma conta", "Um tipo de login que só funciona duas vezes"], "respostaCorreta": "Um método de segurança que requer duas formas de verificação para conceder acesso" },
+        { "id": "q16p9", "texto": "O que é um ataque de 'Força Bruta'?", "opcoes": ["Um ataque que explora uma falha no software", "Uma tentativa de adivinhar uma senha testando todas as combinações possíveis", "Um ataque que desliga um servidor sobrecarregando-o", "Um email de phishing bem elaborado"], "respostaCorreta": "Uma tentativa de adivinhar uma senha testando todas as combinações possíveis" },
+        { "id": "q16p10", "texto": "Qual das seguintes é a prática mais segura para senhas?", "opcoes": ["Usar a mesma senha forte em todos os sites", "Usar senhas curtas e fáceis de lembrar", "Usar senhas longas, complexas e únicas para cada serviço", "Anotar as senhas em um papel e deixar ao lado do computador"], "respostaCorreta": "Usar senhas longas, complexas e únicas para cada serviço" }
+      ]
+    },
+    {
+      "id": "q17",
+      "exercicioId": "17",
+      "perguntas": [
+        { "id": "q17p1", "texto": "Qual é, geralmente, o primeiro componente a ser instalado na placa-mãe?", "opcoes": ["Placa de vídeo", "HD/SSD", "Processador (CPU)", "Fonte de alimentação"], "respostaCorreta": "Processador (CPU)" },
+        { "id": "q17p2", "texto": "Para que serve a pequena alavanca ao lado do soquete do processador?", "opcoes": ["Para ejetar o processador", "Para travar e destravar o processador no lugar", "Para ligar o computador", "Para ajustar a velocidade do cooler"], "respostaCorreta": "Para travar e destravar o processador no lugar" },
+        { "id": "q17p3", "texto": "Onde a memória RAM deve ser instalada?", "opcoes": ["Nos slots PCI Express", "Nos slots DIMM na placa-mãe", "Diretamente no processador", "Na fonte de alimentação"], "respostaCorreta": "Nos slots DIMM na placa-mãe" },
+        { "id": "q17p4", "texto": "O que é crucial verificar ao comprar um processador e uma placa-mãe?", "opcoes": ["Se as cores combinam", "A compatibilidade do soquete (socket)", "O tamanho do gabinete", "A marca da fonte de alimentação"], "respostaCorreta": "A compatibilidade do soquete (socket)" },
+        { "id": "q17p5", "texto": "Qual o propósito da pasta térmica?", "opcoes": ["Limpar o processador", "Garantir uma boa condução de calor entre o CPU e o cooler", "Isolar eletricamente o processador", "Fixar o cooler na placa-mãe"], "respostaCorreta": "Garantir uma boa condução de calor entre o CPU e o cooler" },
+        { "id": "q17p6", "texto": "Onde a placa de vídeo (GPU) é tipicamente instalada?", "opcoes": ["No slot SATA", "No slot de memória RAM", "No slot PCI Express (PCIe) x16", "Em uma baia de drive de 5.25 polegadas"], "respostaCorreta": "No slot PCI Express (PCIe) x16" },
+        { "id": "q17p7", "texto": "O que são os 'espaçadores' (standoffs) usados entre a placa-mãe e o gabinete?", "opcoes": ["Parafusos decorativos", "Pequenos parafusos que evitam que a placa-mãe encoste no metal do gabinete, prevenindo curtos-circuitos", "Adaptadores para a fonte de energia", "Clipes para organizar os cabos"], "respostaCorreta": "Pequenos parafusos que evitam que a placa-mãe encoste no metal do gabinete, prevenindo curtos-circuitos" },
+        { "id": "q17p8", "texto": "Qual conector de energia da fonte é o maior e se conecta à placa-mãe?", "opcoes": ["Conector de 8 pinos da CPU", "Conector SATA", "Conector de 24 pinos ATX", "Conector PCIe de 6+2 pinos"], "respostaCorreta": "Conector de 24 pinos ATX" },
+        { "id": "q17p9", "texto": "Qual a primeira coisa a fazer após montar todo o hardware?", "opcoes": ["Instalar os jogos", "Conectar os periféricos (teclado, mouse) e ligar para verificar o POST/BIOS", "Fechar o gabinete permanentemente", "Navegar na internet"], "respostaCorreta": "Conectar os periféricos (teclado, mouse) e ligar para verificar o POST/BIOS" },
+        { "id": "q17p10", "texto": "O que é 'Cable Management' (Gerenciamento de Cabos)?", "opcoes": ["O ato de cortar os cabos que sobram", "A organização dos cabos dentro do gabinete para melhorar o fluxo de ar e a estética", "Um software que gerencia os cabos de rede", "Comprar cabos mais caros"], "respostaCorreta": "A organização dos cabos dentro do gabinete para melhorar o fluxo de ar e a estética" }
+      ]
+    },
+    {
+      "id": "q18",
+      "exercicioId": "18",
+      "perguntas": [
+        { "id": "q18p1", "texto": "O que é uma VPN (Virtual Private Network)?", "opcoes": ["Uma rede Wi-Fi pública", "Uma conexão de rede que cria um 'túnel' criptografado pela internet", "Um tipo de antivírus", "Um hardware de rede"], "respostaCorreta": "Uma conexão de rede que cria um 'túnel' criptografado pela internet" },
+        { "id": "q18p2", "texto": "Qual é o protocolo de segurança Wi-Fi mais seguro atualmente?", "opcoes": ["WEP", "WPA", "WPA2", "WPA3"], "respostaCorreta": "WPA3" },
+        { "id": "q18p3", "texto": "O que é um ataque 'Man-in-the-Middle' (MITM)?", "opcoes": ["Um ataque onde o invasor intercepta e retransmite secretamente a comunicação entre duas partes", "Um vírus que se posiciona no meio do HD", "Um ataque de força bruta", "Desligar o roteador do meio da rede"], "respostaCorreta": "Um ataque onde o invasor intercepta e retransmite secretamente a comunicação entre duas partes" },
+        { "id": "q18p4", "texto": "A desativação da transmissão do SSID (nome da rede Wi-Fi) é uma medida de segurança:", "opcoes": ["Muito forte e recomendada", "Fraca, pois o nome da rede ainda pode ser facilmente descoberto", "Que impede qualquer um de se conectar", "Que aumenta a velocidade da rede"], "respostaCorreta": "Fraca, pois o nome da rede ainda pode ser facilmente descoberto" },
+        { "id": "q18p5", "texto": "O que é um 'IDS' (Intrusion Detection System)?", "opcoes": ["Um sistema que impede ativamente as intrusões", "Um sistema que monitora a rede em busca de atividades maliciosas e emite alertas", "Um software para detectar se a internet caiu", "Um sistema de detecção de incêndio para data centers"], "respostaCorreta": "Um sistema que monitora a rede em busca de atividades maliciosas e emite alertas" },
+        { "id": "q18p6", "texto": "Qual a diferença entre um IDS e um 'IPS' (Intrusion Prevention System)?", "opcoes": ["Não há diferença", "O IPS apenas detecta, enquanto o IDS previne", "O IDS apenas detecta, enquanto o IPS pode tomar medidas para bloquear o ataque", "IPS é para redes pequenas, IDS para redes grandes"], "respostaCorreta": "O IDS apenas detecta, enquanto o IPS pode tomar medidas para bloquear o ataque" },
+        { "id": "q18p7", "texto": "O que é uma 'DMZ' (Demilitarized Zone) em uma rede?", "opcoes": ["Uma área da rede que está completamente bloqueada", "Uma sub-rede que fica entre a rede interna e a internet, expondo serviços externos de forma segura", "Uma rede sem acesso à internet", "Uma zona de guerra entre hackers"], "respostaCorreta": "Uma sub-rede que fica entre a rede interna e a internet, expondo serviços externos de forma segura" },
+        { "id": "q18p8", "texto": "O que é 'filtragem de MAC Address' em um roteador?", "opcoes": ["Uma forma muito segura de proteger a rede", "Uma técnica que permite apenas que dispositivos com endereços MAC específicos se conectem à rede", "Uma forma de bloquear o acesso a Macs (computadores da Apple)", "Uma técnica que muda o endereço MAC do roteador"], "respostaCorreta": "Uma técnica que permite apenas que dispositivos com endereços MAC específicos se conectem à rede" },
+        { "id": "q18p9", "texto": "HTTPS é mais seguro que HTTP porque:", "opcoes": ["É mais rápido", "Usa uma porta diferente", "Usa criptografia (SSL/TLS) para proteger os dados em trânsito", "É uma versão mais nova do protocolo"], "respostaCorreta": "Usa criptografia (SSL/TLS) para proteger os dados em trânsito" },
+        { "id": "q18p10", "texto": "O que é um ataque 'DDoS' (Distributed Denial of Service)?", "opcoes": ["Um ataque para roubar senhas", "Um ataque que tenta tornar um serviço indisponível sobrecarregando-o com tráfego de múltiplas fontes", "Um vírus que deleta arquivos", "Uma técnica para invadir câmeras de segurança"], "respostaCorreta": "Um ataque que tenta tornar um serviço indisponível sobrecarregando-o com tráfego de múltiplas fontes" }
+      ]
+    },
+    {
+      "id": "q19",
+      "exercicioId": "19",
+      "perguntas": [
+        { "id": "q19p1", "texto": "Qual estrutura de dados opera no princípio LIFO (Last-In, First-Out)?", "opcoes": ["Fila (Queue)", "Pilha (Stack)", "Lista Ligada", "Árvore"], "respostaCorreta": "Pilha (Stack)" },
+        { "id": "q19p2", "texto": "E qual opera no princípio FIFO (First-In, First-Out)?", "opcoes": ["Pilha (Stack)", "Fila (Queue)", "Array", "Hash Table"], "respostaCorreta": "Fila (Queue)" },
+        { "id": "q19p3", "texto": "Qual a principal vantagem de uma 'Lista Ligada' sobre um 'Array'?", "opcoes": ["Acesso mais rápido aos elementos pelo índice", "Inserção e remoção de elementos no meio da lista é mais eficiente", "Usa menos memória", "É mais fácil de implementar"], "respostaCorreta": "Inserção e remoção de elementos no meio da lista é mais eficiente" },
+        { "id": "q19p4", "texto": "Em uma 'Árvore Binária de Busca', onde estão os valores menores que o nó raiz?", "opcoes": ["Na sub-árvore da direita", "Em qualquer lugar", "Na sub-árvore da esquerda", "Apenas nas folhas"], "respostaCorreta": "Na sub-árvore da esquerda" },
+        { "id": "q19p5", "texto": "O que é um 'Hash Table' (Tabela de Dispersão)?", "opcoes": ["Uma estrutura de dados para armazenar dados ordenados", "Uma estrutura que mapeia chaves a valores para buscas rápidas", "Um tipo de grafo direcionado", "Uma pilha com limite de tamanho"], "respostaCorreta": "Uma estrutura que mapeia chaves a valores para buscas rápidas" },
+        { "id": "q19p6", "texto": "Qual a complexidade de tempo média para busca, inserção e remoção em uma Hash Table?", "opcoes": ["O(n)", "O(log n)", "O(1)", "O(n^2)"], "respostaCorreta": "O(1)" },
+        { "id": "q19p7", "texto": "O que é um 'Grafo' em ciência da computação?", "opcoes": ["Um tipo de gráfico de pizza", "Uma estrutura de dados que consiste em um conjunto de vértices (nós) e arestas", "Um algoritmo de ordenação", "Uma imagem em alta resolução"], "respostaCorreta": "Uma estrutura de dados que consiste em um conjunto de vértices (nós) e arestas" },
+        { "id": "q19p8", "texto": "Qual operação adiciona um item ao topo de uma Pilha (Stack)?", "opcoes": ["enqueue", "add", "push", "insert"], "respostaCorreta": "push" },
+        { "id": "q19p9", "texto": "E qual operação remove o item do topo de uma Pilha?", "opcoes": ["dequeue", "remove", "pop", "get"], "respostaCorreta": "pop" },
+        { "id": "q19p10", "texto": "O histórico de 'Voltar' de um navegador web é um exemplo clássico de qual estrutura de dados?", "opcoes": ["Fila", "Pilha", "Árvore", "Grafo"], "respostaCorreta": "Pilha" }
+      ]
+    },
+    {
+      "id": "q20",
+      "exercicioId": "20",
+      "perguntas": [
+        { "id": "q20p1", "texto": "Qual propriedade CSS é usada para definir uma transição suave de estilo?", "opcoes": ["animate", "transition", "transform", "move"], "respostaCorreta": "transition" },
+        { "id": "q20p2", "texto": "A propriedade `transform` permite quais tipos de manipulação?", "opcoes": ["Apenas mudança de cor", "Apenas mudança de tamanho", "Rotação, escala, inclinação e translação", "Alteração da fonte do texto"], "respostaCorreta": "Rotação, escala, inclinação e translação" },
+        { "id": "q20p3", "texto": "O que a regra `@keyframes` define?", "opcoes": ["A duração de uma transição", "Os pontos inicial e final de um estilo", "Uma sequência de etapas de uma animação CSS", "A compatibilidade da animação com navegadores"], "respostaCorreta": "Uma sequência de etapas de uma animação CSS" },
+        { "id": "q20p4", "texto": "Qual propriedade é usada para aplicar uma animação `@keyframes` a um elemento?", "opcoes": ["animation-name", "keyframe-name", "animation-apply", "use-keyframe"], "respostaCorreta": "animation-name" },
+        { "id": "q20p5", "texto": "O que `transform: scale(1.5);` faz a um elemento?", "opcoes": ["Gira em 1.5 graus", "Move 1.5 pixels para a direita", "Aumenta seu tamanho em 50%", "Diminui sua opacidade em 50%"], "respostaCorreta": "Aumenta seu tamanho em 50%" },
+        { "id": "q20p6", "texto": "A propriedade `transition-timing-function` controla:", "opcoes": ["A duração da transição", "O atraso antes da transição começar", "A curva de velocidade da transição (ex: ease-in, linear)", "Quais propriedades devem ser transicionadas"], "respostaCorreta": "A curva de velocidade da transição (ex: ease-in, linear)" },
+        { "id": "q20p7", "texto": "O que o seletor `:hover` faz em conjunto com `transition`?", "opcoes": ["Aplica a transição apenas uma vez", "Inicia a transição quando o mouse passa sobre o elemento", "A transição só funciona se o elemento for clicado", "Ignora a transição"], "respostaCorreta": "Inicia a transição quando o mouse passa sobre o elemento" },
+        { "id": "q20p8", "texto": "Qual propriedade define quantas vezes uma animação deve se repetir?", "opcoes": ["animation-duration", "animation-repeat", "animation-iteration-count", "animation-play-count"], "respostaCorreta": "animation-iteration-count" },
+        { "id": "q20p9", "texto": "O que `transform: rotate(90deg);` faz?", "opcoes": ["Aumenta o elemento em 90%", "Move o elemento 90 pixels", "Gira o elemento em 90 graus no sentido horário", "Define a opacidade do elemento para 90%"], "respostaCorreta": "Gira o elemento em 90 graus no sentido horário" },
+        { "id": "q20p10", "texto": "É melhor animar a propriedade `opacity` e `transform` do que `width` e `height` por quê?", "opcoes": ["Porque é mais fácil de escrever", "Porque elas são mais eficientes e podem ser aceleradas pela GPU, resultando em animações mais suaves", "Porque `width` e `height` não podem ser animadas", "Porque `opacity` e `transform` funcionam em navegadores mais antigos"], "respostaCorreta": "Porque elas são mais eficientes e podem ser aceleradas pela GPU, resultando em animações mais suaves" }
+      ]
+    },
+    {
+      "id": "q21",
+      "exercicioId": "21",
+      "perguntas": [
+        { "id": "q21p1", "texto": "O que é um 'teste unitário'?", "opcoes": ["Testar a aplicação inteira de uma vez", "Testar a menor parte de um código (uma função ou um componente) de forma isolada", "Um teste feito manualmente por um usuário", "Testar a performance da aplicação"], "respostaCorreta": "Testar a menor parte de um código (uma função ou um componente) de forma isolada" },
+        { "id": "q21p2", "texto": "Em Jest, qual função é usada para agrupar testes relacionados?", "opcoes": ["group()", "suite()", "describe()", "testCase()"], "respostaCorreta": "describe()" },
+        { "id": "q21p3", "texto": "Qual função define um caso de teste individual em Jest?", "opcoes": ["assert()", "it() ou test()", "should()", "check()"], "respostaCorreta": "it() ou test()" },
+        { "id": "q21p4", "texto": "A função `expect()` em Jest é usada para:", "opcoes": ["Definir o valor esperado de uma variável", "Criar uma 'asserção' ou verificação", "Executar uma função de teste", "Importar uma biblioteca de teste"], "respostaCorreta": "Criar uma 'asserção' ou verificação" },
+        { "id": "q21p5", "texto": "Qual 'matcher' é usado para verificar igualdade estrita (===)?", "opcoes": [".toEqual()", ".toBe()", ".toStrictEqual()", ".toBeEqual()"], "respostaCorreta": ".toBe()" },
+        { "id": "q21p6", "texto": "E para verificar a igualdade de valores de objetos e arrays (verificação profunda)?", "opcoes": [".toBe()", ".toMatchObject()", ".toEqual()", ".toBeLike()"], "respostaCorreta": ".toEqual()" },
+        { "id": "q21p7", "texto": "O que é um 'mock' em testes?", "opcoes": ["Um erro simulado no teste", "Um objeto ou função falsa que simula o comportamento de um objeto/função real", "Um relatório de cobertura de teste", "O nome de um framework de teste"], "respostaCorreta": "Um objeto ou função falsa que simula o comportamento de um objeto/função real" },
+        { "id": "q21p8", "texto": "Por que 'mockar' uma chamada de API em um teste unitário?", "opcoes": ["Para tornar o teste mais lento", "Para evitar que o teste dependa de uma rede externa e garantir que ele seja rápido e previsível", "Porque as APIs não podem ser testadas", "Para aumentar a segurança da API"], "respostaCorreta": "Para evitar que o teste dependa de uma rede externa e garantir que ele seja rápido e previsível" },
+        { "id": "q21p9", "texto": "O que é 'cobertura de teste' (test coverage)?", "opcoes": ["O número total de testes escritos", "Uma métrica que indica qual porcentagem do seu código é coberta por testes", "O tempo que leva para os testes rodarem", "A documentação dos testes"], "respostaCorreta": "Uma métrica que indica qual porcentagem do seu código é coberta por testes" },
+        { "id": "q21p10", "texto": "Qual o principal benefício de escrever testes unitários?", "opcoes": ["Deixar o código mais longo", "Aumentar a confiança de que novas alterações não quebraram funcionalidades existentes (regressão)", "Substituir completamente os testes manuais", "Tornar o processo de desenvolvimento mais lento"], "respostaCorreta": "Aumentar a confiança de que novas alterações não quebraram funcionalidades existentes (regressão)" }
+      ]
+    },
+    {
+      "id": "q22",
+      "exercicioId": "22",
+      "perguntas": [
+        { "id": "q22p1", "texto": "O que é um 'vetor' em Álgebra Linear?", "opcoes": ["Uma imagem em alta definição", "Uma entidade que possui magnitude e direção", "Um tipo de estrutura de dados", "Uma variável em programação"], "respostaCorreta": "Uma entidade que possui magnitude e direção" },
+        { "id": "q22p2", "texto": "O que é uma 'matriz'?", "opcoes": ["O local de origem de um vetor", "Um arranjo retangular de números, símbolos ou expressões, organizados em linhas e colunas", "O resultado de uma soma de vetores", "O molde para criar objetos"], "respostaCorreta": "Um arranjo retangular de números, símbolos ou expressões, organizados em linhas e colunas" },
+        { "id": "q22p3", "texto": "O 'produto escalar' (dot product) de dois vetores resulta em:", "opcoes": ["Um novo vetor", "Um escalar (um único número)", "Uma matriz", "Um erro"], "respostaCorreta": "Um escalar (um único número)" },
+        { "id": "q22p4", "texto": "Em Machine Learning, os 'pesos' de uma rede neural são frequentemente representados por qual estrutura?", "opcoes": ["Vetores", "Escalares", "Matrizes", "Listas ligadas"], "respostaCorreta": "Matrizes" },
+        { "id": "q22p5", "texto": "O que é a 'transposta' de uma matriz?", "opcoes": ["A matriz com todos os valores negativos", "A matriz rotacionada 90 graus", "A matriz onde as linhas se tornam colunas e as colunas se tornam linhas", "A matriz com valores aleatórios"], "respostaCorreta": "A matriz onde as linhas se tornam colunas e as colunas se tornam linhas" },
+        { "id": "q22p6", "texto": "Para que a multiplicação de matrizes é amplamente usada em IA?", "opcoes": ["Para ordenar dados", "Para aplicar transformações lineares, como em camadas de redes neurais", "Para comprimir imagens", "Para buscar dados em um banco de dados"], "respostaCorreta": "Para aplicar transformações lineares, como em camadas de redes neurais" },
+        { "id": "q22p7", "texto": "O que são 'autovetores' (eigenvectors) de uma matriz?", "opcoes": ["Vetores que só contêm o número um", "Vetores cuja direção não muda quando uma transformação linear é aplicada", "Vetores que apontam para a origem", "Vetores que formam a diagonal da matriz"], "respostaCorreta": "Vetores cuja direção não muda quando uma transformação linear é aplicada" },
+        { "id": "q22p8", "texto": "O que é 'dimensionalidade' de um vetor?", "opcoes": ["O seu comprimento (magnitude)", "O número de componentes que ele possui", "A direção para onde ele aponta", "O seu peso em uma rede neural"], "respostaCorreta": "O número de componentes que ele possui" },
+        { "id": "q22p9", "texto": "Qual técnica de redução de dimensionalidade usa conceitos de autovetores e autovalores?", "opcoes": ["Regressão Linear", "K-Means", "Análise de Componentes Principais (PCA)", "Redes Neurais Convolucionais"], "respostaCorreta": "Análise de Componentes Principais (PCA)" },
+        { "id": "q22p10", "texto": "Um 'tensor', usado em frameworks como TensorFlow e PyTorch, pode ser visto como:", "opcoes": ["Um tipo de gráfico", "Uma generalização de vetores e matrizes para dimensões mais altas", "Um banco de dados otimizado", "Um algoritmo de criptografia"], "respostaCorreta": "Uma generalização de vetores e matrizes para dimensões mais altas" }
+      ]
+    },
+    {
+      "id": "q23",
+      "exercicioId": "23",
+      "perguntas": [
+        { "id": "q23p1", "texto": "Qual o principal objetivo da 'normalização' de um banco de dados?", "opcoes": ["Tornar o banco de dados mais rápido", "Reduzir a redundância de dados e melhorar a integridade", "Aumentar a quantidade de dados armazenados", "Deixar o acesso mais fácil para o usuário"], "respostaCorreta": "Reduzir a redundância de dados e melhorar a integridade" },
+        { "id": "q23p2", "texto": "O que é uma 'Chave Primária' (Primary Key)?", "opcoes": ["A primeira coluna de qualquer tabela", "Um campo que identifica unicamente cada registro em uma tabela", "Uma senha para acessar o banco de dados", "Um índice que melhora a performance"], "respostaCorreta": "Um campo que identifica unicamente cada registro em uma tabela" },
+        { "id": "q23p3", "texto": "E uma 'Chave Estrangeira' (Foreign Key)?", "opcoes": ["Uma chave primária de outro país", "Um campo em uma tabela que é a chave primária de outra tabela, criando um relacionamento", "Uma chave que não pode ser usada para buscas", "Uma chave secundária"], "respostaCorreta": "Um campo em uma tabela que é a chave primária de outra tabela, criando um relacionamento" },
+        { "id": "q23p4", "texto": "A 'Primeira Forma Normal' (1NF) estabelece que:", "opcoes": ["A tabela deve ter uma chave primária", "Todos os atributos devem ser atômicos (não podem ser divididos)", "Não deve haver dependências parciais", "Não deve haver dependências transitivas"], "respostaCorreta": "Todos os atributos devem ser atômicos (não podem ser divididos)" },
+        { "id": "q23p5", "texto": "Um relacionamento 'um para muitos' (1-N) significa que:", "opcoes": ["Um registro na Tabela A pode se relacionar com um registro na Tabela B", "Um registro na Tabela A pode se relacionar com muitos registros na Tabela B", "Muitos registros na Tabela A podem se relacionar com muitos na Tabela B", "Cada tabela só pode ter um registro"], "respostaCorreta": "Um registro na Tabela A pode se relacionar com muitos registros na Tabela B" },
+        { "id": "q23p6", "texto": "O que é um 'Diagrama Entidade-Relacionamento' (DER)?", "opcoes": ["Um diagrama de fluxo do programa", "Uma representação visual da estrutura do banco de dados", "Um gráfico de performance das consultas", "Um tipo de login no banco de dados"], "respostaCorreta": "Uma representação visual da estrutura do banco de dados" },
+        { "id": "q23p7", "texto": "O que é 'redundância de dados'?", "opcoes": ["Dados muito importantes", "A repetição desnecessária da mesma informação em vários locais do banco de dados", "Dados criptografados", "Um backup dos dados"], "respostaCorreta": "A repetição desnecessária da mesma informação em vários locais do banco de dados" },
+        { "id": "q23p8", "texto": "A 'Terceira Forma Normal' (3NF) lida principalmente com a remoção de:", "opcoes": ["Dependências parciais", "Dependências transitivas", "Grupos repetitivos", "Chaves estrangeiras"], "respostaCorreta": "Dependências transitivas" },
+        { "id": "q23p9", "texto": "Em um relacionamento 'muitos para muitos' (N-M), o que é geralmente necessário?", "opcoes": ["Duas chaves estrangeiras na mesma tabela", "Uma tabela intermediária (ou de junção) com duas chaves estrangeiras", "Nenhuma chave especial", "Uma chave primária composta"], "respostaCorreta": "Uma tabela intermediária (ou de junção) com duas chaves estrangeiras" },
+        { "id": "q23p10", "texto": "Qual o problema de não normalizar um banco de dados?", "opcoes": ["Nenhum, a normalização é opcional", "Pode levar a anomalias de inserção, atualização e exclusão", "Ocupa menos espaço em disco", "As consultas ficam mais rápidas"], "respostaCorreta": "Pode levar a anomalias de inserção, atualização e exclusão" }
+      ]
+    },
+    {
+      "id": "q24",
+      "exercicioId": "24",
+      "perguntas": [
+        { "id": "q24p1", "texto": "O que significa 'Cloud Computing'?", "opcoes": ["Armazenar arquivos em um HD externo", "A entrega de serviços de computação (servidores, armazenamento, bancos de dados) pela Internet", "Um tipo de supercomputador", "Uma rede local sem fio"], "respostaCorreta": "A entrega de serviços de computação (servidores, armazenamento, bancos de dados) pela Internet" },
+        { "id": "q24p2", "texto": "O que é 'IaaS' (Infrastructure as a Service)?", "opcoes": ["Oferece um ambiente pronto para desenvolver e implantar aplicativos", "Oferece blocos de construção de computação, rede e armazenamento, como um data center virtual", "Oferece um software completo pronto para uso, como um email", "Um serviço de internet a rádio"], "respostaCorreta": "Oferece blocos de construção de computação, rede e armazenamento, como um data center virtual" },
+        { "id": "q24p3", "texto": "Qual serviço da AWS fornece servidores virtuais (máquinas virtuais)?", "opcoes": ["S3", "RDS", "EC2", "Lambda"], "respostaCorreta": "EC2" },
+        { "id": "q24p4", "texto": "Para que serve o serviço 'Amazon S3'?", "opcoes": ["Para executar código sem provisionar servidores", "Para armazenar objetos (arquivos) de forma escalável", "Para criar bancos de dados relacionais", "Para enviar emails em massa"], "respostaCorreta": "Para armazenar objetos (arquivos) de forma escalável" },
+        { "id": "q24p5", "texto": "O que é 'escalabilidade' na nuvem?", "opcoes": ["A capacidade de aumentar ou diminuir os recursos de computação conforme a necessidade", "A segurança dos dados armazenados", "A velocidade da conexão de rede", "O preço do serviço"], "respostaCorreta": "A capacidade de aumentar ou diminuir os recursos de computação conforme a necessidade" },
+        { "id": "q24p6", "texto": "O que é 'PaaS' (Platform as a Service)?", "opcoes": ["Um serviço que oferece apenas o hardware básico", "Um serviço que fornece uma plataforma permitindo aos clientes desenvolver, executar e gerenciar aplicativos sem a complexidade de construir a infraestrutura", "Um software de edição de fotos na nuvem", "Uma plataforma de jogos online"], "respostaCorreta": "Um serviço que fornece uma plataforma permitindo aos clientes desenvolver, executar e gerenciar aplicativos sem a complexidade de construir a infraestrutura" },
+        { "id": "q24p7", "texto": "Qual serviço da AWS é um banco de dados relacional gerenciado?", "opcoes": ["DynamoDB", "EC2", "S3", "RDS"], "respostaCorreta": "RDS" },
+        { "id": "q24p8", "texto": "O que são as 'Regiões' da AWS?", "opcoes": ["Os países onde a Amazon tem escritórios", "Localizações geográficas físicas ao redor do mundo onde os data centers da AWS estão localizados", "As categorias de serviços oferecidos", "Os planos de preços"], "respostaCorreta": "Localizações geográficas físicas ao redor do mundo onde os data centers da AWS estão localizados" },
+        { "id": "q24p9", "texto": "O modelo 'Pay-as-you-go' da nuvem significa que:", "opcoes": ["Você paga uma taxa fixa mensal, independente do uso", "Você paga apenas pelos recursos que consumir", "O serviço é gratuito", "Você precisa pagar adiantado por um ano de serviço"], "respostaCorreta": "Você paga apenas pelos recursos que consumir" },
+        { "id": "q24p10", "texto": "O que é 'SaaS' (Software as a Service)?", "opcoes": ["Um modelo que oferece servidores virtuais", "Um modelo que oferece uma plataforma de desenvolvimento", "Um modelo que oferece um software pronto para uso pela internet (ex: Gmail, Dropbox)", "Um sistema de segurança como serviço"], "respostaCorreta": "Um modelo que oferece um software pronto para uso pela internet (ex: Gmail, Dropbox)" }
+      ]
+    },
+    {
+      "id": "q25",
+      "exercicioId": "25",
+      "perguntas": [
+        { "id": "q25p1", "texto": "O que é Figma?", "opcoes": ["Um editor de código", "Uma ferramenta de design de interface e prototipagem baseada em navegador", "Um software de edição de vídeo", "Uma rede social para designers"], "respostaCorreta": "Uma ferramenta de design de interface e prototipagem baseada em navegador" },
+        { "id": "q25p2", "texto": "O que é um 'Frame' no Figma?", "opcoes": ["Uma camada de texto", "Um contêiner para o seu design, que pode representar a tela de um dispositivo", "Uma animação entre telas", "Uma paleta de cores"], "respostaCorreta": "Um contêiner para o seu design, que pode representar a tela de um dispositivo" },
+        { "id": "q25p3", "texto": "O que são 'Componentes' no Figma?", "opcoes": ["Elementos de design reutilizáveis que você pode usar em todo o seu projeto", "As cores usadas no design", "As fontes do texto", "Os plugins instalados"], "respostaCorreta": "Elementos de design reutilizáveis que você pode usar em todo o seu projeto" },
+        { "id": "q25p4", "texto": "Para que serve o modo de 'Prototipagem'?", "opcoes": ["Para escrever código CSS", "Para criar links interativos entre os frames, simulando o fluxo de um aplicativo", "Para exportar as imagens em alta resolução", "Para colaborar com outros designers"], "respostaCorreta": "Para criar links interativos entre os frames, simulando o fluxo de um aplicativo" },
+        { "id": "q25p5", "texto": "O que são 'Constraints' (Restrições) no Figma?", "opcoes": ["Regras que definem como os objetos se comportam quando seu frame pai é redimensionado", "Limites de tamanho para os arquivos", "As permissões de edição de um arquivo", "As fontes permitidas no projeto"], "respostaCorreta": "Regras que definem como os objetos se comportam quando seu frame pai é redimensionado" },
+        { "id": "q25p6", "texto": "O que é 'Auto Layout'?", "opcoes": ["Um recurso que organiza automaticamente seus arquivos", "Uma propriedade que permite criar layouts que crescem ou encolhem conforme o conteúdo muda", "Uma ferramenta para criar layouts de impressão", "Um plugin para gerar paletas de cores"], "respostaCorreta": "Uma propriedade que permite criar layouts que crescem ou encolhem conforme o conteúdo muda" },
+        { "id": "q25p7", "texto": "Uma 'instância' de um componente é:", "opcoes": ["O componente mestre original", "Uma cópia vinculada do componente mestre que pode ter suas próprias edições", "Um componente que foi deletado", "Uma versão mais antiga de um componente"], "respostaCorreta": "Uma cópia vinculada do componente mestre que pode ter suas próprias edições" },
+        { "id": "q25p8", "texto": "O que são 'Estilos' (Styles) no Figma?", "opcoes": ["Apenas estilos de texto", "Apenas estilos de cor", "Propriedades reutilizáveis como cores, fontes e efeitos que podem ser aplicadas a objetos", "O tema do aplicativo (claro ou escuro)"], "respostaCorreta": "Propriedades reutilizáveis como cores, fontes e efeitos que podem ser aplicadas a objetos" },
+        { "id": "q25p9", "texto": "Qual a principal vantagem do Figma ser baseado na web?", "opcoes": ["Funciona mais rápido que aplicativos de desktop", "É mais seguro contra vírus", "Facilita a colaboração em tempo real e o acesso de qualquer lugar", "Usa menos memória RAM"], "respostaCorreta": "Facilita a colaboração em tempo real e o acesso de qualquer lugar" },
+        { "id": "q25p10", "texto": "Como se cria uma conexão no modo de prototipagem?", "opcoes": ["Escrevendo um código de link", "Arrastando o nó de conexão de um objeto para outro frame", "Copiando e colando os frames", "Usando um plugin específico"], "respostaCorreta": "Arrastando o nó de conexão de um objeto para outro frame" }
+      ]
+    },
+    {
+      "id": "q26",
+      "exercicioId": "26",
+      "perguntas": [
+        { "id": "q26p1", "texto": "O que é um Endereço IP?", "opcoes": ["O endereço físico da sua casa", "Um rótulo numérico único atribuído a cada dispositivo conectado a uma rede de computadores", "O nome do seu computador na rede", "A velocidade da sua conexão de internet"], "respostaCorreta": "Um rótulo numérico único atribuído a cada dispositivo conectado a uma rede de computadores" },
+        { "id": "q26p2", "texto": "Qual a diferença entre IPv4 e IPv6?", "opcoes": ["IPv6 é mais lento que IPv4", "IPv4 usa 32 bits, enquanto IPv6 usa 128 bits, permitindo um número muito maior de endereços", "IPv4 é para redes com fio, IPv6 para redes sem fio", "Não há diferença funcional"], "respostaCorreta": "IPv4 usa 32 bits, enquanto IPv6 usa 128 bits, permitindo um número muito maior de endereços" },
+        { "id": "q26p3", "texto": "O que é um 'endereço IP público'?", "opcoes": ["O endereço IP do seu computador na sua rede local", "Um endereço IP que é acessível diretamente da internet, fornecido pelo seu provedor", "Qualquer endereço que comece com 192.168", "Um endereço IP que pode ser usado por qualquer pessoa"], "respostaCorreta": "Um endereço IP que é acessível diretamente da internet, fornecido pelo seu provedor" },
+        { "id": "q26p4", "texto": "E um 'endereço IP privado'?", "opcoes": ["Um endereço usado dentro de uma rede local (LAN) e não é roteável na internet", "Um endereço IP que está escondido", "O endereço do servidor do Google", "Um endereço IP que você paga a mais para ter"], "respostaCorreta": "Um endereço usado dentro de uma rede local (LAN) e não é roteável na internet" },
+        { "id": "q26p5", "texto": "Qual faixa de IP é comumente usada para redes privadas?", "opcoes": ["8.8.8.0 - 8.8.8.255", "200.150.10.0 - 200.150.10.255", "192.168.0.0 - 192.168.255.255", "127.0.0.0 - 127.0.0.255"], "respostaCorreta": "192.168.0.0 - 192.168.255.255" },
+        { "id": "q26p6", "texto": "O endereço IP 127.0.0.1 é conhecido como:", "opcoes": ["Gateway padrão", "Servidor DNS", "Endereço de broadcast", "Endereço de loopback ou localhost"], "respostaCorreta": "Endereço de loopback ou localhost" },
+        { "id": "q26p7", "texto": "O que é um endereço IP 'estático'?", "opcoes": ["Um endereço IP que muda a cada conexão", "Um endereço IP que é configurado manualmente e não muda", "Um endereço IP que não está em uso", "Um endereço IP reservado para impressoras"], "respostaCorreta": "Um endereço IP que é configurado manualmente e não muda" },
+        { "id": "q26p8", "texto": "E um endereço IP 'dinâmico'?", "opcoes": ["Um endereço IP que nunca muda", "Um endereço IP atribuído automaticamente por um servidor DHCP por um determinado período", "Um endereço IP que não funciona", "Um endereço IP mais rápido"], "respostaCorreta": "Um endereço IP atribuído automaticamente por um servidor DHCP por um determinado período" },
+        { "id": "q26p9", "texto": "O que o comando `ping` faz?", "opcoes": ["Mede a velocidade do download", "Envia um pacote para um endereço IP para testar a conectividade e o tempo de resposta", "Mostra a configuração de rede do computador", "Traduz um nome de domínio para IP"], "respostaCorreta": "Envia um pacote para um endereço IP para testar a conectividade e o tempo de resposta" },
+        { "id": "q26p10", "texto": "O que é um 'conflito de IP'?", "opcoes": ["Quando dois IPs diferentes acessam o mesmo site", "Quando dois dispositivos na mesma rede recebem o mesmo endereço IP", "Quando um IP público e um privado são iguais", "Uma discussão sobre qual versão do IP é melhor"], "respostaCorreta": "Quando dois dispositivos na mesma rede recebem o mesmo endereço IP" }
+      ]
+    },
+    {
+      "id": "q27",
+      "exercicioId": "27",
+      "perguntas": [
+        { "id": "q27p1", "texto": "O que a 'Fetch API' fornece?", "opcoes": ["Uma interface para buscar recursos pela rede, semelhante a uma requisição de rede", "Uma forma de buscar arquivos no computador do usuário", "Uma biblioteca para criar animações", "Um método para buscar elementos no DOM"], "respostaCorreta": "Uma interface para buscar recursos pela rede, semelhante a uma requisição de rede" },
+        { "id": "q27p2", "texto": "O que a função `fetch()` retorna?", "opcoes": ["Os dados da resposta em formato JSON", "Uma 'Promise' que resolve para o objeto 'Response' da requisição", "Um valor booleano indicando sucesso ou falha", "Uma string com o conteúdo HTML da página"], "respostaCorreta": "Uma 'Promise' que resolve para o objeto 'Response' da requisição" },
+        { "id": "q27p3", "texto": "Após receber o objeto 'Response', qual método é usado para extrair o corpo da resposta em formato JSON?", "opcoes": ["response.text()", "response.getBody()", "response.json()", "response.parseJSON()"], "respostaCorreta": "response.json()" },
+        { "id": "q27p4", "texto": "Como se lida com o resultado de uma chamada `fetch()`?", "opcoes": ["Usando callbacks aninhados", "Usando os métodos `.then()` e `.catch()` da Promise retornada, ou `async/await`", "Aguardando um evento global", "O resultado é atribuído diretamente a uma variável"], "respostaCorreta": "Usando os métodos `.then()` e `.catch()` da Promise retornada, ou `async/await`" },
+        { "id": "q27p5", "texto": "Qual é o método HTTP padrão usado pela função `fetch()` se nenhum for especificado?", "opcoes": ["POST", "PUT", "GET", "DELETE"], "respostaCorreta": "GET" },
+        { "id": "q27p6", "texto": "Como se faz uma requisição 'POST' usando `fetch`?", "opcoes": ["fetch(url, 'POST')", "fetch.post(url)", "Passando um segundo argumento com um objeto de configuração, incluindo `method: 'POST'`", "Não é possível fazer requisições POST com fetch"], "respostaCorreta": "Passando um segundo argumento com um objeto de configuração, incluindo `method: 'POST'`" },
+        { "id": "q27p7", "texto": "Para enviar dados JSON em uma requisição POST, o que é necessário fazer?", "opcoes": ["Enviar o objeto JavaScript diretamente", "Converter o objeto JavaScript para uma string JSON usando `JSON.stringify()` e definir o cabeçalho 'Content-Type'", "Anexar o JSON como um parâmetro na URL", "Compactar o JSON em um arquivo zip"], "respostaCorreta": "Converter o objeto JavaScript para uma string JSON usando `JSON.stringify()` e definir o cabeçalho 'Content-Type'" },
+        { "id": "q27p8", "texto": "Como se tratam erros de rede (ex: falha de conexão) com `fetch`?", "opcoes": ["O `fetch` não trata esses erros", "Usando o bloco `.catch()` da Promise", "Verificando a propriedade `response.ok`", "Dentro de um bloco `try...catch` com `async/await`"], "respostaCorreta": "Usando o bloco `.catch()` da Promise" },
+        { "id": "q27p9", "texto": "A Promise do `fetch` é rejeitada quando o status da resposta é um erro HTTP (como 404 ou 500)?", "opcoes": ["Sim, sempre", "Não, a Promise só é rejeitada em caso de falha de rede. Erros HTTP devem ser verificados na propriedade `response.ok` ou `response.status`", "Apenas para erros 500", "Apenas para erros 404"], "respostaCorreta": "Não, a Promise só é rejeitada em caso de falha de rede. Erros HTTP devem ser verificados na propriedade `response.ok` ou `response.status`" },
+        { "id": "q27p10", "texto": "O que é 'CORS' (Cross-Origin Resource Sharing)?", "opcoes": ["Um tipo de ataque hacker", "Um mecanismo de segurança do navegador que restringe requisições HTTP de origem cruzada", "Uma biblioteca JavaScript para requisições", "Um formato de dados para APIs"], "respostaCorreta": "Um mecanismo de segurança do navegador que restringe requisições HTTP de origem cruzada" }
+      ]
+    },
+    {
+      "id": "q28",
+      "exercicioId": "28",
+      "perguntas": [
+        { "id": "q28p1", "texto": "O que é um 'Objeto' em Programação Orientada a Objetos?", "opcoes": ["Um tipo de dado primitivo", "Uma instância de uma Classe", "Uma função que retorna um valor", "Um arquivo de configuração"], "respostaCorreta": "Uma instância de uma Classe" },
+        { "id": "q28p2", "texto": "E uma 'Classe'?", "opcoes": ["Um objeto já criado", "Um modelo ou 'planta' para criar objetos", "Uma variável global", "Um comentário no código"], "respostaCorreta": "Um modelo ou 'planta' para criar objetos" },
+        { "id": "q28p3", "texto": "Qual pilar da POO se refere ao agrupamento de dados (atributos) e métodos que operam nesses dados dentro de uma única unidade (classe)?", "opcoes": ["Herança", "Polimorfismo", "Abstração", "Encapsulamento"], "respostaCorreta": "Encapsulamento" },
+        { "id": "q28p4", "texto": "O pilar da 'Herança' permite que:", "opcoes": ["Um objeto tenha múltiplos tipos", "Uma classe (filha) herde atributos e métodos de outra classe (pai)", "Os dados de um objeto sejam escondidos", "Um objeto seja criado a partir de um modelo"], "respostaCorreta": "Uma classe (filha) herde atributos e métodos de outra classe (pai)" },
+        { "id": "q28p5", "texto": "O que é 'Polimorfismo'?", "opcoes": ["A capacidade de um objeto ter muitas formas ou de um método se comportar de maneiras diferentes dependendo do objeto que o chama", "A criação de múltiplas cópias do mesmo objeto", "A herança de mais de uma classe", "A conversão de um objeto para uma string"], "respostaCorreta": "A capacidade de um objeto ter muitas formas ou de um método se comportar de maneiras diferentes dependendo do objeto que o chama" },
+        { "id": "q28p6", "texto": "O que é o 'construtor' de uma classe?", "opcoes": ["Um método para destruir o objeto", "Um método especial para criar e inicializar um objeto de uma classe", "Um método que executa em loop", "Uma variável que armazena o nome da classe"], "respostaCorreta": "Um método especial para criar e inicializar um objeto de uma classe" },
+        { "id": "q28p7", "texto": "O pilar da 'Abstração' consiste em:", "opcoes": ["Mostrar todos os detalhes de implementação de um objeto", "Esconder os detalhes complexos de implementação e expor apenas as funcionalidades essenciais", "Criar objetos abstratos que não podem ser instanciados", "Fazer o código ficar mais concreto"], "respostaCorreta": "Esconder os detalhes complexos de implementação e expor apenas as funcionalidades essenciais" },
+        { "id": "q28p8", "texto": "A palavra-chave `this` (ou `self` em algumas linguagens) dentro de um método de uma classe geralmente se refere:", "opcoes": ["À classe em si", "Ao método atual", "À instância atual do objeto", "A uma variável global"], "respostaCorreta": "À instância atual do objeto" },
+        { "id": "q28p9", "texto": "O que são 'atributos' (ou propriedades) de uma classe?", "opcoes": ["As ações que a classe pode realizar", "As características ou dados que um objeto daquela classe terá", "Os eventos que a classe pode disparar", "As outras classes com as quais ela se relaciona"], "respostaCorreta": "As características ou dados que um objeto daquela classe terá" },
+        { "id": "q28p10", "texto": "E os 'métodos'?", "opcoes": ["Os dados do objeto", "As funções ou ações que um objeto daquela classe pode executar", "As variáveis estáticas da classe", "Os construtores da classe"], "respostaCorreta": "As funções ou ações que um objeto daquela classe pode executar" }
+      ]
+    },
+    {
+      "id": "q29",
+      "exercicioId": "29",
+      "perguntas": [
+        { "id": "q29p1", "texto": "O que é 'Overclocking'?", "opcoes": ["Um tipo de relógio digital", "A prática de fazer um componente de hardware (como CPU ou GPU) rodar a uma velocidade maior que a especificada pelo fabricante", "Limpar o excesso de arquivos do sistema", "Instalar um segundo sistema operacional"], "respostaCorreta": "A prática de fazer um componente de hardware (como CPU ou GPU) rodar a uma velocidade maior que a especificada pelo fabricante" },
+        { "id": "q29p2", "texto": "Qual o principal risco do overclocking?", "opcoes": ["Perda de dados no HD", "Aumento do consumo de energia, maior geração de calor e potencial dano permanente ao componente", "Deixar a internet mais lenta", "Incompatibilidade de software"], "respostaCorreta": "Aumento do consumo de energia, maior geração de calor e potencial dano permanente ao componente" },
+        { "id": "q29p3", "texto": "Qual a principal vantagem de um 'SSD' (Solid State Drive) sobre um 'HDD' (Hard Disk Drive)?", "opcoes": ["Maior capacidade de armazenamento pelo mesmo preço", "Maior durabilidade física contra quedas", "Velocidades de leitura e escrita muito superiores", "Menor consumo de energia em modo de espera"], "respostaCorreta": "Velocidades de leitura e escrita muito superiores" },
+        { "id": "q29p4", "texto": "O que significa 'latência' da memória RAM?", "opcoes": ["A capacidade total da memória", "A velocidade de clock da memória", "O tempo de atraso entre o pedido de um dado e sua entrega", "A temperatura da memória"], "respostaCorreta": "O tempo de atraso entre o pedido de um dado e sua entrega" },
+        { "id": "q29p5", "texto": "Ter mais memória RAM (ex: passar de 8GB para 16GB) sempre torna o computador mais rápido?", "opcoes": ["Sim, sempre", "Não, só melhora a performance se o sistema estava usando toda a RAM disponível e recorrendo a paginação em disco", "Sim, dobra a velocidade do processador", "Não, na verdade deixa mais lento"], "respostaCorreta": "Não, só melhora a performance se o sistema estava usando toda a RAM disponível e recorrendo a paginação em disco" },
+        { "id": "q29p6", "texto": "Qual a importância de um bom sistema de 'refrigeração' (cooling) para a performance?", "opcoes": ["Nenhuma, os componentes modernos não esquentam", "Um bom resfriamento evita que os componentes (CPU, GPU) reduzam sua velocidade (throttling) para se proteger do superaquecimento", "Serve apenas para deixar o PC mais silencioso", "Aumenta a capacidade do HD"], "respostaCorreta": "Um bom resfriamento evita que os componentes (CPU, GPU) reduzam sua velocidade (throttling) para se proteger do superaquecimento" },
+        { "id": "q29p7", "texto": "O que é 'desfragmentação de disco'?", "opcoes": ["Um processo importante para SSDs", "Um processo que reorganiza os arquivos fragmentados em um HDD para que fiquem em setores contíguos, melhorando a velocidade de leitura", "Apagar arquivos duplicados", "Formatar o disco rígido"], "respostaCorreta": "Um processo que reorganiza os arquivos fragmentados em um HDD para que fiquem em setores contíguos, melhorando a velocidade de leitura" },
+        { "id": "q29p8", "texto": "O que a 'GPU' (Graphics Processing Unit) faz?", "opcoes": ["Gerencia a conexão com a internet", "É especializada em processar gráficos e cálculos paralelos, sendo crucial para jogos e IA", "Armazena o sistema operacional", "Controla o teclado e o mouse"], "respostaCorreta": "É especializada em processar gráficos e cálculos paralelos, sendo crucial para jogos e IA" },
+        { "id": "q29p9", "texto": "O que pode causar 'gargalo' (bottleneck) de performance em um PC?", "opcoes": ["Quando todos os componentes têm a mesma performance", "Quando um componente é significativamente mais lento que os outros, limitando o desempenho geral do sistema", "Usar um monitor muito grande", "Ter muitos ícones na área de trabalho"], "respostaCorreta": "Quando um componente é significativamente mais lento que os outros, limitando o desempenho geral do sistema" },
+        { "id": "q29p10", "texto": "Atualizar os 'drivers' dos componentes (especialmente da placa de vídeo) pode:", "opcoes": ["Piorar a performance", "Geralmente melhorar a performance, a estabilidade e corrigir bugs", "Aumentar o consumo de energia", "Não tem efeito nenhum na performance"], "respostaCorreta": "Geralmente melhorar a performance, a estabilidade e corrigir bugs" }
+      ]
+    },
+    {
+      "id": "q30",
+      "exercicioId": "30",
+      "perguntas": [
+        { "id": "q30p1", "texto": "O que é 'acessibilidade web' (a11y)?", "opcoes": ["Deixar o site mais rápido", "A prática de tornar os sites utilizáveis pelo maior número possível de pessoas, incluindo aquelas com deficiências", "Tornar o site compatível com o Internet Explorer", "Usar apenas tecnologias web antigas"], "respostaCorreta": "A prática de tornar os sites utilizáveis pelo maior número possível de pessoas, incluindo aquelas com deficiências" },
+        { "id": "q30p2", "texto": "Para que serve o atributo `alt` em uma tag `<img>`?", "opcoes": ["Para adicionar uma legenda visível abaixo da imagem", "Para fornecer uma descrição textual da imagem para leitores de tela e caso a imagem não carregue", "Para definir as dimensões da imagem", "Para criar um link na imagem"], "respostaCorreta": "Para fornecer uma descrição textual da imagem para leitores de tela e caso a imagem não carregue" },
+        { "id": "q30p3", "texto": "Por que o uso de 'HTML semântico' (ex: `<nav>`, `<main>`, `<article>`) é importante para a acessibilidade?", "opcoes": ["Porque deixa o código mais colorido", "Porque ajuda leitores de tela a entender a estrutura e o propósito de diferentes partes da página", "Porque é a única forma de aplicar CSS", "Porque esses elementos são mais rápidos para renderizar"], "respostaCorreta": "Porque ajuda leitores de tela a entender a estrutura e o propósito de diferentes partes da página" },
+        { "id": "q30p4", "texto": "O que é 'WAI-ARIA'?", "opcoes": ["Uma nova linguagem de programação", "Um conjunto de atributos que podem ser adicionados ao HTML para melhorar a acessibilidade de conteúdo dinâmico e interfaces complexas", "Um validador de código HTML", "Uma organização que define os padrões da internet"], "respostaCorreta": "Um conjunto de atributos que podem ser adicionados ao HTML para melhorar a acessibilidade de conteúdo dinâmico e interfaces complexas" },
+        { "id": "q30p5", "texto": "Qual a importância do 'contraste de cores' para a acessibilidade?", "opcoes": ["Nenhuma, as cores são uma preferência pessoal", "Um contraste suficiente entre o texto e o fundo é crucial para pessoas com baixa visão", "Contraste alto sempre deixa o design mais bonito", "O contraste só é importante para imagens"], "respostaCorreta": "Um contraste suficiente entre o texto e o fundo é crucial para pessoas com baixa visão" },
+        { "id": "q30p6", "texto": "Por que é importante que um site seja navegável apenas com o teclado?", "opcoes": ["Porque muitos usuários não têm mouse", "Para atender usuários com deficiências motoras que não podem usar um mouse", "Porque a navegação pelo teclado é mais rápida", "É apenas uma recomendação antiga"], "respostaCorreta": "Para atender usuários com deficiências motoras que não podem usar um mouse" },
+        { "id": "q30p7", "texto": "O que o atributo `role='button'` faz em uma `<div>`?", "opcoes": ["Transforma a div em um botão visualmente", "Informa aos leitores de tela que a div deve ser tratada como um botão interativo", "Adiciona um evento de clique à div automaticamente", "Muda a cor da div para azul"], "respostaCorreta": "Informa aos leitores de tela que a div deve ser tratada como um botão interativo" },
+        { "id": "q30p8", "texto": "O que o atributo `aria-label` permite?", "opcoes": ["Adicionar um rótulo visível a um elemento", "Fornecer um rótulo textual para um elemento que não tem um texto visível, para ser lido por tecnologias assistivas", "Mudar o idioma de um elemento", "Definir uma variável ARIA"], "respostaCorreta": "Fornecer um rótulo textual para um elemento que não tem um texto visível, para ser lido por tecnologias assistivas" },
+        { "id": "q30p9", "texto": "Ao criar formulários, por que a tag `<label>` é importante?", "opcoes": ["Para deixar o texto do campo em negrito", "Para associar um texto descritivo a um campo de formulário (`<input>`), melhorando a usabilidade e a acessibilidade", "Para validar os dados do campo", "Para enviar o formulário"], "respostaCorreta": "Para associar um texto descritivo a um campo de formulário (`<input>`), melhorando a usabilidade e a acessibilidade" },
+        { "id": "q30p10", "texto": "O que o WCAG (Web Content Accessibility Guidelines) define?", "opcoes": ["Padrões de cores para a web", "Um conjunto de recomendações para tornar o conteúdo da web mais acessível", "As regras para nomes de domínio", "Como programar em HTML e CSS"], "respostaCorreta": "Um conjunto de recomendações para tornar o conteúdo da web mais acessível" }
+      ]
     }
   ]
 }

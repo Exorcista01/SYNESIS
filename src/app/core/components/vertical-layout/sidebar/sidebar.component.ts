@@ -48,7 +48,7 @@ export class SidebarComponent {
       title: 'Cursos & Exercice',
       links: [
         { name: 'Cursos', route: '/courses', icon: 'fas fa-pen-ruler' },
-        { name: 'Exercice', route: '/forms-tables', icon: 'far fa-list-alt' },
+        { name: 'Exercice', route: '/Exercise', icon: 'far fa-list-alt' },
         { name: 'Certificados', route: '/charts', icon: 'fas fa-chart-pie' },
       ],
     },

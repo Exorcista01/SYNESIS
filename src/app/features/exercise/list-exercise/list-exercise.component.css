@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    margin: 0 auto;
+    width: 1444px;
+    flex: 1;
+    padding-inline: 3rem ;
+}
+
+.container-rigth{
+    flex: 3;
+    padding: 2rem;
+}
+.container-left{
+ flex: 1;
+ padding: 2rem;
+}
+.wrapper{
+    width: 100%;
+}

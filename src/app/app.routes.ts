@@ -13,6 +13,7 @@ import { SettingsComponent } from './features/settings/settings.component';
 import { UserSettignsComponent } from './features/settings/components/side-rigth/components/user-settigns/user-settigns.component';
 import { UserPerfilComponent } from './features/settings/components/side-rigth/components/user-perfil/user-perfil.component';
 import { UserNotificationComponent } from './features/settings/components/side-rigth/components/user-notification/user-notification.component';
+import { ExerciseComponent } from './features/exercise/exercise.component';
 
 export const routes: Routes = [
     {
@@ -23,6 +24,7 @@ export const routes: Routes = [
             {path: 'dashboard', component: DashboardComponent},
             {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
             {path: 'courses' , component: CoursesComponent},
+            { path: 'Exercise', loadChildren: () => import('./features/exercise/exercise.routes').then(m => m.EXERCISE_ROUTES)},
             {path: 'cursos/:slug', component: PagesCoursesComponent},
             {path: 'cursos/:slug/lesson/:lessonId', component: LessonPageComponent},
             {path: 'Calendario', component: CalendaComponent},

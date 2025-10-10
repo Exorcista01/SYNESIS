@@ -6,6 +6,7 @@ export interface Lesson {
   title: string;
   type: 'video' | 'artigo';
   description: string;
+  durationInMinutes?: number;
 }
 
 
@@ -37,7 +38,7 @@ export interface Course {
   totalMinutes?: number;
   studentCount?: number;
   accessEndDate?: string;
-  activities?: string;
+  activities?: number;
 }
 
 

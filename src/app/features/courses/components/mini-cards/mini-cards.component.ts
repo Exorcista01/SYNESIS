@@ -36,9 +36,8 @@ export class MiniCardsComponent implements AfterViewInit{
       },
 
       breakpoints: {
-        // Para telas com 1024px de largura ou mais
         1600: {
-          slidesPerView: 5.3, // Mostra exatamente 5.3 cards
+          slidesPerView: 5.3,
         }
       }
     });

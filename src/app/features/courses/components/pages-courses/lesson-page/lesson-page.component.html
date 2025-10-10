@@ -7,27 +7,33 @@
       <span class="material-symbols-outlined">menu_open</span>
       <span class="open-sidebar-button-text">Conteúdo do Curso</span>
     </button>
-    }
+    } @if (ActiveLesson) {
 
-    @if (ActiveLesson) {
-
-    <div class="lesson-content-placeholder">
-      <span class="material-symbols-outlined">smart_display</span>
-      <p>Área do conteúdo da aula</p>
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/3qBXWUpoPHo?si=sDq6L82L0kYm9Qh3"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      >
+      </iframe>
     </div>
 
     <div class="lesson-btns-navigation">
       <div class="lesson-title-block">
-        <p class="lesson-mudule">Modúlo {{ActiveModule?.order}}: {{ActiveModule?.title}}</p>
-        <h2 class="lesson-title">{{ActiveLesson.title}}</h2>
+        <p class="lesson-mudule">
+          Modúlo {{ ActiveModule?.order }}: {{ ActiveModule?.title }}
+        </p>
+        <h2 class="lesson-title">{{ ActiveLesson.title }}</h2>
       </div>
       <div class="lesson-actions">
-        <button class="btn-nav">
+        <button class="btn-nav" (click)="goToPreviousLesson()">
           <span class="material-symbols-outlined">arrow_back</span>
           <span>Anterior</span>
         </button>
 
-        <button class="btn-nav btn-proximo">
+        <button class="btn-nav btn-proximo" (click)="goToNextLesson()">
           <span>Proximo</span>
           <span class="material-symbols-outlined">arrow_forward</span>
         </button>
@@ -35,93 +41,51 @@
     </div>
 
     <div class="tabs-container">
-
-      <app-navigation-content [isSidebarClosed]="toggleButtonSidebar" [activeTab]="activeTab"
-        (tabChange)="setActiveTab($event)">
+      <app-navigation-content
+        [isSidebarClosed]="toggleButtonSidebar"
+        [activeTab]="activeTab"
+        (tabChange)="setActiveTab($event)"
+      >
       </app-navigation-content>
 
       <div class="tab-content-area">
-        @switch (activeTab) {
-        @case ('Visão-Geral'){
+        @switch (activeTab) { @case ('Visão-Geral'){
         <app-lesson-vision-all [course]="course" [ActiveLesson]="ActiveLesson">
         </app-lesson-vision-all>
-        }
-        @case ('Conteudo') {
-        <app-lesson-content-sidebar [ActiveModule]="ActiveModule" [course]="course" [ActiveLesson]="ActiveLesson"></app-lesson-content-sidebar>
-        }
-        @case ('Materias-Extra') {
-        <app-lesson-materias-extra [course]="course" [ActiveLesson]="ActiveLesson"></app-lesson-materias-extra>
-        }
-        @case ('Transcription') {
-        <app-transcription [course]="course" [ActiveLesson]="ActiveLesson"></app-transcription>
-        }
-        }
+        } @case ('Conteudo') {
+        <app-lesson-content-sidebar
+          [course]="course"
+          [ActiveLesson]="ActiveLesson"
+          [expandedModules]="expandedModules"
+          (toggleModuleEvent)="toggleModule($event)">
+        </app-lesson-content-sidebar>
+        } @case ('Materias-Extra') {
+        <app-lesson-materias-extra
+          [course]="course"
+          [ActiveLesson]="ActiveLesson"
+        ></app-lesson-materias-extra>
+        } @case ('Transcription') {
+        <app-transcription
+          [course]="course"
+          [ActiveLesson]="ActiveLesson"
+        ></app-transcription>
+        } }
       </div>
     </div>
-
 
     }
   </main>
 
-  <aside class="sidebar-modules" [class.sidebar-close]="toggleButtonSidebar">
-    <div class="sidebar-content">
-      <div class="sidebar-top">
-        <div class="sidebar-header">
-          @if (!toggleButtonSidebar) {
-          <button class="btn-close-sidebar" (click)="toggleOpen()">
-            <span class="material-symbols-outlined">close</span>
-          </button>
-          }
-          <a [routerLink]="['/cursos', course.slug]"></a>
-          <h2 class="course-title">{{ course.title }}</h2>
-        </div>
-        <div class="sidebar-main">
-          @for (module of course.modules; track module.order) {
-          <div class="module-accordion-item" [class.expanded]="isModuleExpanded(module.order)">
-
-            <div class="module-header" (click)="toggleModule(module.order)">
-              <span class="module-icon material-symbols-outlined">check_circle</span>
-              <div class="module-text">
-                <span class="module-identifier">Módulo {{ module.order }}</span>
-                <span class="module-title-text">{{ module.title }}</span>
-              </div>
-              <span class="expand-icon material-symbols-outlined">expand_more</span>
-            </div>
-
-            @if (isModuleExpanded(module.order)) {
-            <div class="module-lessons-panel">
-              <ul class="lessons-list">
-                @for (lesson of module.lessons; track lesson.id) {
-                <li>
-                  <a class="lesson-link" [routerLink]="['/cursos', course.slug, 'lesson', lesson.id]"
-                    [class.active]="lesson.id === ActiveLesson?.id">
-
-                    @if (lesson.id === ActiveLesson?.id) {
-                    <div class="active-indicator"></div>
-                    }
-                    <span class="lesson-status-icon material-symbols-outlined">radio_button_unchecked</span>
-                    <div class="lesson-text">
-                      <span class="lesson-item-title">{{ lesson.title }}</span>
-                      <span class="lesson-item-type">{{ lesson.type === 'video' ? 'Vídeo' : 'Exercício' }}</span>
-                    </div>
-                  </a>
-                </li>
-                }
-              </ul>
-            </div>
-            }
-          </div>
-          }
-        </div>
-      </div>
-      <div class="sidebar-footer">
-        <button class="btn-back" (click)="viewCurse()">
-          <span class="material-symbols-outlined">arrow_back</span>
-          <span>Volta para o Conteúdo</span>
-        </button>
-      </div>
-    </div>
-  </aside>
+  <app-asider-course
+    [course]="course"
+    [ActiveLesson]="ActiveLesson"
+    [toggleButtonSidebar]="toggleButtonSidebar"
+    [expandedModules]="expandedModules"
+    (closeSidebar)="toggleOpen()"
+    (toggleModuleEvent)="toggleModule($event)"
+    (backToCourse)="viewCurse()"
+  >
+  </app-asider-course>
 </div>
 
 }

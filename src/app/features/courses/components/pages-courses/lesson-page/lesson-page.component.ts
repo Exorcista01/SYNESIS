@@ -14,11 +14,12 @@ import { LessonVisionAllComponent } from "./components/lesson-vision-all/lesson-
 import { LessonContentSidebarComponent } from "./components/lesson-content-sidebar/lesson-content-sidebar.component";
 import { LessonMateriasExtraComponent } from "./components/lesson-materias-extra/lesson-materias-extra.component";
 import { TranscriptionComponent } from "./components/transcription/transcription.component";
+import { AsiderCourseComponent } from "./components/asider-course/asider-course.component";
 
 
 @Component({
   selector: 'app-lesson-page',
-  imports: [MatProgressSpinnerModule, MatRadioModule, AuthRoutingModule, NavigationContentComponent, LessonVisionAllComponent, LessonContentSidebarComponent, LessonMateriasExtraComponent, TranscriptionComponent],
+  imports: [MatProgressSpinnerModule, MatRadioModule, AuthRoutingModule, NavigationContentComponent, LessonVisionAllComponent, LessonContentSidebarComponent, LessonMateriasExtraComponent, TranscriptionComponent, AsiderCourseComponent],
   templateUrl: './lesson-page.component.html',
   styleUrl: './lesson-page.component.css'
 })
@@ -33,6 +34,7 @@ export class LessonPageComponent implements OnInit {
   anteriorLesson: boolean = false;
   @Input() toggleButtonSidebar = false;
   activeTab: string = 'Visão-Geral';
+  private allLessons: Lesson[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -59,6 +61,8 @@ export class LessonPageComponent implements OnInit {
 
   private findLessons(activeLessonId: number): void {
     if(!this.course || !this.course.modules) return;
+
+    this.allLessons = this.course.modules.flatMap(module => module.lessons || []); // <-- ADICIONE ESTA LINHA
 
     for (const module of this.course.modules){
       if(module.lessons) {
@@ -102,5 +106,27 @@ export class LessonPageComponent implements OnInit {
 
   setActiveTab(tabName: string): void {
     this.activeTab = tabName
+  }
+
+  goToNextLesson(): void {
+    if (!this.ActiveLesson || !this.course) return;
+
+    const currentIndex = this.allLessons.findIndex(lesson => lesson.id === this.ActiveLesson?.id);
+
+    if (currentIndex > -1 && currentIndex < this.allLessons.length - 1) {
+      const nextLesson = this.allLessons[currentIndex + 1];
+      this.router.navigate(['/cursos', this.course.slug, 'lesson', nextLesson.id]);
+    }
+  }
+
+  goToPreviousLesson(): void {
+    if (!this.ActiveLesson || !this.course) return;
+
+    const currentIndex = this.allLessons.findIndex(lesson => lesson.id === this.ActiveLesson?.id);
+
+    if (currentIndex > 0) {
+      const previousLesson = this.allLessons[currentIndex - 1];
+      this.router.navigate(['/cursos', this.course.slug, 'lesson', previousLesson.id]);
+    }
   }
 }

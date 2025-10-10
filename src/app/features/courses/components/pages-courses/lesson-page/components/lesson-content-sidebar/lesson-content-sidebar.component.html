@@ -1,1 +1,41 @@
-<p>lesson-content-sidebar works!</p>
+@if (course) {
+<div class="course-content-container">
+  @for (module of course.modules; track module.order) {
+  <div class="module-item">
+    <button class="module-header" (click)="onToggleModule(module.order)" [attr.aria-expanded]="isModuleExpanded(module.order)">
+      <div class="module-header-title">
+        <span class="module-title-text">Seção {{module.order}}: {{ module.title }}</span>
+        <span class="module-meta">{{ getTotalLessonsInModule(module) }} aulas • {{ module.durationInHours }}h</span>
+      </div>
+      <span class="expand-icon material-symbols-outlined">expand_more</span>
+    </button>
+
+    @if (isModuleExpanded(module.order)) {
+    <div class="lessons-panel">
+      <ul class="lessons-list">
+        @for (lesson of module.lessons; track lesson.id) {
+        <li>
+          <a class="lesson-link" [routerLink]="['/cursos', course.slug, 'lesson', lesson.id]" [class.active]="lesson.id === ActiveLesson?.id">
+            
+            <span class="lesson-status-icon material-symbols-outlined">
+              {{ isLessonCompleted(lesson.id) ? 'check_box' : 'check_box_outline_blank' }}
+            </span>
+
+            <div class="lesson-details">
+              <span class="lesson-title">{{ lesson.title }}</span>
+              <div class="lesson-meta-info">
+                <span class="material-symbols-outlined meta-icon">smart_display</span>
+                <span class="lesson-duration">{{ lesson.durationInMinutes || 15 }}m</span>
+              </div>
+            </div>
+
+          </a>
+        </li>
+        }
+      </ul>
+    </div>
+    }
+  </div>
+  }
+</div>
+}

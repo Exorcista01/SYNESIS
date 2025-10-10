@@ -1,0 +1,66 @@
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  font-family: sans-serif;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem;
+}
+
+.pagination-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #EAECEF;
+  background-color: #FFFFFF;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+
+.pagination-item:not(.disabled) a:hover {
+  border-color: #2563EB;
+  color: #2563EB;
+}
+
+/* Estilo do item ATIVO */
+.pagination-item.active a {
+  background-color: #2563EB;
+  color: #FFFFFF;
+  border-color: #2563EB;
+}
+
+/* Estilo do item DESABILITADO */
+.pagination-item.disabled a {
+  color: #D1D5DB;
+  cursor: not-allowed;
+}
+
+.pagination-item.disabled a:hover {
+  background-color: #FFFFFF;
+  border-color: #EAECEF;
+  color: #D1D5DB;
+}
+
+/* Estilo para a elipse "..." */
+.pagination-item a.ellipsis {
+  border-color: transparent;
+  background-color: transparent;
+  cursor: default;
+}
+
+.pagination-item a.ellipsis:hover {
+  color: #374151;
+}

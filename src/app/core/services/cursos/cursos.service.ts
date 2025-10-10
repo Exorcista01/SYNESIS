@@ -21,6 +21,11 @@ export class CursosService {
         year: '2025',
         tags: ['Hardware', 'Manutenção'],
         level: 'Iniciante',
+        studyHours: 7,
+        totalLessons: 5,
+        studentCount: 1253,
+        accessEndDate: 'Vitalício',
+        activities: 2,
         modules: [
           {
             order: 1,
@@ -30,8 +35,8 @@ export class CursosService {
             learnings: ['Identificar ferramentas', 'Segurança elétrica'],
             skills: ['Montagem', 'Manutenção'],
             lessons: [
-              { id: 1011, title: 'Boas Práticas de Segurança', type: 'video', description: 'Uso de EPI e cuidados elétricos.' },
-              { id: 1012, title: 'Ferramentas Essenciais', type: 'artigo', description: 'Chaves, multímetro, pasta térmica.' },
+              { id: 1011, title: 'Boas Práticas de Segurança', type: 'video', description: 'Uso de EPI e cuidados elétricos.', durationInMinutes: 15 },
+              { id: 1012, title: 'Ferramentas Essenciais', type: 'artigo', description: 'Chaves, multímetro, pasta térmica.', durationInMinutes: 10 },
             ],
           },
           {
@@ -42,9 +47,9 @@ export class CursosService {
             learnings: ['Montar um PC do zero', 'Organizar cabos'],
             skills: ['Montagem de PC'],
             lessons: [
-              { id: 1021, title: 'Instalando a Placa-mãe', type: 'video', description: 'Como fixar e conectar corretamente.' },
-              { id: 1022, title: 'Memória RAM e CPU', type: 'video', description: 'Instalação correta e dissipação térmica.' },
-              { id: 1023, title: 'Placa de Vídeo e Periféricos', type: 'artigo', description: 'GPU, SSDs e cabos SATA.' },
+              { id: 1021, title: 'Instalando a Placa-mãe', type: 'video', description: 'Como fixar e conectar corretamente.', durationInMinutes: 10  },
+              { id: 1022, title: 'Memória RAM e CPU', type: 'video', description: 'Instalação correta e dissipação térmica.', durationInMinutes: 10  },
+              { id: 1023, title: 'Placa de Vídeo e Periféricos', type: 'artigo', description: 'GPU, SSDs e cabos SATA.', durationInMinutes: 10 },
             ],
           },
         ],

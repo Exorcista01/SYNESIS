@@ -1,0 +1,25 @@
+<nav class="pagination-container" aria-label="Paginação">
+  <ul>
+    <li class="pagination-item" [class.disabled]="currentPage === 1" (click)="onPrevious()">
+      <a>&#60;</a>
+    </li>
+
+    @for (page of pages; track $index) {
+      <li
+        class="pagination-item"
+        [class.active]="page === currentPage"
+        (click)="selectPage(page)"
+      >
+        @if (page === '...') {
+          <a class="ellipsis">...</a>
+        } @else {
+          <a>{{ page }}</a>
+        }
+      </li>
+    }
+
+    <li class="pagination-item" [class.disabled]="currentPage === totalPages" (click)="onNext()">
+      <a>&#62;</a>
+    </li>
+  </ul>
+</nav>

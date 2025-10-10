@@ -1,0 +1,67 @@
+<section class="wrapper">
+  <div class="container-cards">
+    @for (item of displayedExercices; track item) {
+    <div class="card" (click)="openModalButton(item)">
+      <div class="card-content">
+        <div class="card-header">
+          <span class="card-tag-category">{{ item.catalogo }}</span>
+          <span class="card-tag-level">{{ item.type }}</span>
+        </div>
+        <div class="card-main">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </div>
+        <div class="card-teacher">
+          <img [src]="item.instructorAvatar" alt="Foto do professor {{ item.professor }}" />
+          <p>{{ item.professor }}</p>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="card-button">
+          Acessar Exercício
+          <span class="material-symbols-outlined"> arrow_right_alt </span>
+        </button>
+      </div>
+    </div>
+    }
+  </div>
+
+  @if (openModal && selectedExercise) {
+  <div class="modal-overlay" (click)="closeModalButton()">
+    <div class="modal" (click)="$event.stopPropagation()">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h4>{{ selectedExercise.title }}</h4>
+          <p>{{ selectedExercise.description }}</p>
+        </div>
+
+        <div class="modal-info">
+          <div class="modal-info-item">
+            <span class="material-symbols-outlined">signal_cellular_alt</span>
+            <span>{{ selectedExercise.type }}</span>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button class="modal-btn modal-btn-secondary" (click)="closeModalButton()">
+            Cancelar
+          </button>
+          <button class="modal-btn modal-btn-primary" [routerLink]="['/Exercise', selectedExercise.id]">
+            Confirmar e Iniciar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+
+  <app-pagination [totalItems]="totalItems" [itemsPerPage]="itemsPerPage" [currentPage]="currentPage"
+    (pageChange)="onPageChange($event)">
+  </app-pagination>
+
+  <div class="page-header">
+    <button class="create-exercise-btn" title="Criar Exercício">
+      <span class="material-symbols-outlined">add_circle</span>
+    </button>
+  </div>
+</section>

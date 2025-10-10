@@ -1,0 +1,107 @@
+@if (exercicio$ | async; as exercicio) {
+<div class="exercicio-container">
+    <header class="exercicio-header">
+        <h1>{{ exercicio.title }}</h1>
+        <p class="professor">Professor: {{ exercicio.professor }}</p>
+        <div class="tags">
+            <span class="tag-category">{{ exercicio.catalogo }}</span>
+            <span class="tag-level">{{ exercicio.type }}</span>
+        </div>
+    </header>
+
+    <main class.exercicio-content>
+        @if(quiz$ | async; as quizData) {
+        @if(perguntas.length > 0) {
+        <div class="quiz-container">
+
+            @if(!isQuizSubmitted) {
+            @if(perguntas[currentQuestionIndex]; as currentQuestion) {
+            <div class="pergunta-card">
+                <div class="pergunta-header">
+                    <h4>{{ currentQuestion.texto }}</h4>
+                    <div class="progress-info">
+                        Questão {{ currentQuestionIndex + 1 }} de {{ perguntas.length }}
+                    </div>
+                </div>
+
+                <div class="opcoes-lista">
+                    @for(opcao of currentQuestion.opcoes; track opcao){
+                    <label class="opcao-item" [class.eliminated]="isEliminated(currentQuestion.id, opcao)">
+                        <input type="radio" [name]="currentQuestion.id"
+                            (change)="selectAnswer(currentQuestion.id, opcao)"
+                            [checked]="userAnswers.get(currentQuestion.id) === opcao">
+                        <span class="opcao-texto">{{ opcao }}</span>
+                        <button type="button" class="eliminate-btn" title="Eliminar esta opção"
+                            (click)="toggleEliminate(currentQuestion.id, opcao); $event.stopPropagation()">
+                            <span class="material-symbols-outlined">cleaning_services</span>
+                        </button>
+                    </label>
+                    }
+                </div>
+            </div>
+
+            <div class="quiz-navigation">
+                <button type="button" class="nav-btn" (click)="previousQuestion()"
+                    [disabled]="currentQuestionIndex === 0">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    Anterior
+                </button>
+
+                @if(currentQuestionIndex < perguntas.length - 1) { <button type="button" class="nav-btn nav-btn-primary"
+                    (click)="nextQuestion()">
+                    Próximo
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                    }
+
+                    @if(currentQuestionIndex === perguntas.length - 1) {
+                    <button type="submit" class="submit-quiz-btn" (click)="submitQuiz()">Verificar Respostas</button>
+                    }
+            </div>
+            }
+            }
+
+            @if(isQuizSubmitted) {
+            <div class="resultado-container">
+                <div class="resultado-card">
+                    <h2>Quiz Finalizado!</h2>
+                    <p class="score">Sua pontuação: <strong>{{ score }}</strong> de <strong>{{ perguntas.length
+                            }}</strong></p>
+                </div>
+
+                <h3 class="resumo-titulo">Resumo das Respostas</h3>
+
+                @for (pergunta of perguntas; track pergunta.id) {
+                <div class="pergunta-card-resultado">
+                    <h4>{{ pergunta.texto }}</h4>
+                    <div class="opcoes-lista-resultado">
+                        @for(opcao of pergunta.opcoes; track opcao){
+                        <div class="opcao-item-resultado"
+                            [class.correct]="getOptionState(pergunta, opcao) === 'correct'"
+                            [class.incorrect]="getOptionState(pergunta, opcao) === 'incorrect'">
+
+                            <span class="material-symbols-outlined icon-feedback">
+                                @if(getOptionState(pergunta, opcao) === 'correct'){check_circle}
+                                @if(getOptionState(pergunta, opcao) === 'incorrect'){cancel}
+                            </span>
+
+                            <span class="opcao-texto">{{ opcao }}</span>
+                        </div>
+                        }
+                    </div>
+                </div>
+                }
+            </div>
+            }
+        </div>
+        } @else {
+        <p>Nenhum quiz encontrado para este exercício.</p>
+        }
+        } @else {
+        <p>Carregando quiz...</p>
+        }
+    </main>
+</div>
+} @else {
+<p>Carregando exercício...</p>
+}
