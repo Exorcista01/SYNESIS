@@ -21,8 +21,8 @@ ul {
   height: 40px;
   padding: 0 0.5rem;
   border-radius: 8px;
-  border: 1px solid #EAECEF;
-  background-color: #FFFFFF;
+  border: 1px solid var(--color-surface-hover-low);
+  background-color: var(--color-backgraund);
   color: #374151;
   font-weight: 600;
   cursor: pointer;
@@ -35,14 +35,12 @@ ul {
   color: #2563EB;
 }
 
-/* Estilo do item ATIVO */
 .pagination-item.active a {
   background-color: #2563EB;
   color: #FFFFFF;
   border-color: #2563EB;
 }
 
-/* Estilo do item DESABILITADO */
 .pagination-item.disabled a {
   color: #D1D5DB;
   cursor: not-allowed;
@@ -54,7 +52,6 @@ ul {
   color: #D1D5DB;
 }
 
-/* Estilo para a elipse "..." */
 .pagination-item a.ellipsis {
   border-color: transparent;
   background-color: transparent;

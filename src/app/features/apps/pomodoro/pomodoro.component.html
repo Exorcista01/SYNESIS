@@ -1,1 +1,73 @@
-<p>pomodoro works!</p>
+<div class="wrapper">
+  <section class="main-left">
+    <app-daily-progress
+      [completedCount]="completedTaskCount"
+      [totalCount]="totalTaskCount"
+      [percentage]="progressPercentage"
+    >
+    </app-daily-progress>
+
+    <app-task-list
+      [tasks]="incompleteTasks"
+      [activeTask]="activeTask"
+      (taskSelected)="setActiveTask($event)"
+      (taskToggled)="handleTaskToggled($event)"
+      (addTaskClicked)="openAddTaskModal()"
+    >
+    </app-task-list>
+  </section>
+
+  <section class="main-rigth">
+    <app-time-pomo
+      [activeTask]="activeTask"
+      [focusDuration]="focusDuration"
+      [shortBreakDuration]="shortBreakDuration"
+      [longBreakDuration]="longBreakDuration"
+    >
+    </app-time-pomo>
+
+    <app-custom-pomo
+      [initialFocus]="focusDuration"
+      [initialShort]="shortBreakDuration"
+      [initialLong]="longBreakDuration"
+      (settingsUpdated)="applyNewSettings($event)"
+    >
+    </app-custom-pomo>
+  </section>
+
+  @if (isModalOpen) {
+  <div class="modal-overlay" (click)="closeAddTaskModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <h3>Adicionar Nova Tarefa</h3>
+      <div class="modal-form">
+        <form>
+          <div class="modal-input-content">
+            <label for="taskName">Nome da Tarefa</label>
+            <input
+              [(ngModel)]="newTaskName"
+              name="taskName"
+              id="taskName"
+              type="text"
+            />
+          </div>
+          <div class="modal-input-content">
+            <label for="pomoNumber">Nº de Pomodoros</label>
+            <input
+              [(ngModel)]="newPomoCount"
+              name="pomoNumber"
+              id="pomoNumber"
+              type="number"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-btns">
+        <button class="btn-secondary" (click)="closeAddTaskModal()">
+          Cancelar
+        </button>
+        <button class="btn-primary" (click)="saveTask()">Salvar</button>
+      </div>
+    </div>
+  </div>
+  }
+</div>

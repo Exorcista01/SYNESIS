@@ -1,0 +1,84 @@
+.daily-progress-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.progress-header {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.progress-header h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1E293B;
+  margin: 0;
+}
+
+.progress-content {
+  padding-top: 1.5rem;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.task-count {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.count-pill {
+  background-color: #3B82F6;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+
+.task-count p,
+.date-info p {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #475569;
+}
+
+.date-info p {
+  color: #64748B;
+}
+
+.progress-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.progress-bar-container {
+  flex-grow: 1;
+  height: 2rem;
+  background-color: #E5E7EB;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  
+  border-radius: 5px;
+  background: linear-gradient(90deg, #60A5FA 0%, #3B82F6 100%);
+  transition: width 0.5s ease-in-out;
+}
+
+.progress-percentage {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #334155;
+}

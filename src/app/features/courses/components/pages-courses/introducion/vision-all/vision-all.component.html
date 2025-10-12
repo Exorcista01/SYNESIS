@@ -50,25 +50,25 @@
             <ul class="lessons-list">
               @for (lesson of module.lessons; track lesson.id; let i = $index) {
 
-              <li class="lesson-item" [class.completed]="(completedLessons$ | async)?.has(lesson.id)">
+              <a [routerLink]="['/cursos', course.slug, 'lesson', lesson.id]" class="lesson-item-link">
+                <li class="lesson-item" [class.completed]="(completedLessons$ | async)?.has(lesson.id)">
 
-                <span class="lesson-status-icon material-symbols-outlined">
-                  {{ (completedLessons$ | async)?.has(lesson.id) ? 'check_circle' : 'radio_button_unchecked' }}
-                </span>
+                  <span class="lesson-status-icon material-symbols-outlined">
+                    {{ (completedLessons$ | async)?.has(lesson.id) ? 'check_circle' : 'radio_button_unchecked' }}
+                  </span>
 
-                <div class="lesson-info">
-                  <a [routerLink]="['/cursos', course.slug, 'lesson', lesson.id]" class="lesson-title-link">
+                  <div class="lesson-info">
                     <span class="lesson-number">{{ i + 1 }}.</span>
                     <span class="lesson-title">{{ lesson.title }}</span>
-                  </a>
-                </div>
+                  </div>
 
-                <div class="lesson-meta">
-                  <span class="material-symbols-outlined">videocam</span> 0
-                  <span class="material-symbols-outlined">article</span> 11
-                </div>
+                  <div class="lesson-meta">
+                    <span class="material-symbols-outlined meta-icon">smart_display</span>
+                    <span class="lesson-duration">{{ lesson.durationInMinutes || 15 }}m</span>
+                  </div>
 
-              </li>
+                </li>
+              </a>
               }
             </ul>
           </div>

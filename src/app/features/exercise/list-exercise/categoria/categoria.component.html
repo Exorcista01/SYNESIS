@@ -4,25 +4,6 @@
             <h2 class="categoria-title">Filtro</h2>
             <button class="categoria-btn">Limpar</button>
         </div>
-        <div class="search">
-            <div class="search-container">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input 
-                    type="text"
-                    class="menu-checkbox"
-                    placeholder="Pesquisar..."
-                    [(ngModel)]="searchValue"
-                    aria-label="Campo de pesquisa"
-                >
-            </div>
-           @if (searchValue) {
-            <button (click)="searchClear()" class="menu-checbox-limpa">
-                <span class="material-symbols-outlined">
-                    close_small
-                </span>
-            </button>
-           }
-        </div>
         <div class="categorias-accordions">
             @for (item of accordionsContent; track item) {
             <div class="accordions">

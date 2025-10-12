@@ -9,19 +9,19 @@
 
 .exercicio-header {
     padding-bottom: 2rem;
-    border-bottom: 1px solid #EAECEF;
+    border-bottom: 1px solid var(--color-text-secondary);
 }
 
 .exercicio-header h1 {
     font-size: 3.2rem;
     font-weight: 700;
-    color: #111827;
+    color: var(--color-text-primary);
     margin-bottom: 0.5rem;
 }
 
 .exercicio-header .professor {
     font-size: 1.4rem;
-    color: #6B7280;
+    color: var(--color-text-secondary);
     margin-bottom: 1.5rem;
 }
 
@@ -44,8 +44,8 @@
 }
 
 .exercicio-header .tag-level {
-    background-color: #F3F4F6;
-    color: #374151;
+    background-color: var(--color-background);
+    color: var(--color-accent);
 }
 
 .exercicio-content .description {
@@ -56,13 +56,13 @@
 }
 
 .quiz-container {
-    border-top: 1px solid #EAECEF;
+    border-top: 1px solid var(--color-text-secondary);
     padding-top: 2rem;
 }
 
 .pergunta-card {
-    background-color: #FFFFFF;
-    border: 1px solid #EAECEF;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-text-secondary);
     border-radius: 12px;
     padding: 2.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
@@ -86,7 +86,7 @@
     font-size: 1.2rem;
     font-weight: 500;
     color: #6B7280;
-    background-color: #F3F4F6;
+    background-color: var(--color-surface);
     padding: 0.4rem 0.8rem;
     border-radius: 6px;
 }

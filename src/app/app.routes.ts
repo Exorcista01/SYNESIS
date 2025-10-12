@@ -14,6 +14,7 @@ import { UserSettignsComponent } from './features/settings/components/side-rigth
 import { UserPerfilComponent } from './features/settings/components/side-rigth/components/user-perfil/user-perfil.component';
 import { UserNotificationComponent } from './features/settings/components/side-rigth/components/user-notification/user-notification.component';
 import { ExerciseComponent } from './features/exercise/exercise.component';
+import { PomodoroComponent } from './features/apps/pomodoro/pomodoro.component';
 
 export const routes: Routes = [
     {
@@ -28,6 +29,7 @@ export const routes: Routes = [
             {path: 'cursos/:slug', component: PagesCoursesComponent},
             {path: 'cursos/:slug/lesson/:lessonId', component: LessonPageComponent},
             {path: 'Calendario', component: CalendaComponent},
+            {path: 'Pomodoro', component: PomodoroComponent},
             {
                 path: 'Settings', 
                 component: SettingsComponent,

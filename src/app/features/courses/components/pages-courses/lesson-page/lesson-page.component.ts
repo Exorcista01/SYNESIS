@@ -19,7 +19,16 @@ import { AsiderCourseComponent } from "./components/asider-course/asider-course.
 
 @Component({
   selector: 'app-lesson-page',
-  imports: [MatProgressSpinnerModule, MatRadioModule, AuthRoutingModule, NavigationContentComponent, LessonVisionAllComponent, LessonContentSidebarComponent, LessonMateriasExtraComponent, TranscriptionComponent, AsiderCourseComponent],
+  imports: [
+    MatProgressSpinnerModule, 
+    MatRadioModule, 
+    AuthRoutingModule, 
+    NavigationContentComponent, 
+    LessonVisionAllComponent, 
+    LessonContentSidebarComponent, 
+    LessonMateriasExtraComponent, 
+    TranscriptionComponent, 
+    AsiderCourseComponent],
   templateUrl: './lesson-page.component.html',
   styleUrl: './lesson-page.component.css'
 })

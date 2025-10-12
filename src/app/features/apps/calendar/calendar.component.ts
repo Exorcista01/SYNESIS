@@ -1,113 +1,125 @@
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component, AfterViewInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FullCalendarModule } from '@fullcalendar/angular';
-import { CalendarOptions, EventClickArg } from '@fullcalendar/core';
+import {
+  CalendarOptions,
+  EventClickArg,
+  EventInput,
+  DateSelectArg,
+} from '@fullcalendar/core'; 
 import dayGridPlugin from '@fullcalendar/daygrid';
-import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
-
+import interactionPlugin from '@fullcalendar/interaction';
+import { CalendarEventService } from '../../../core/services/calenda/calendar-event.service';
 
 @Component({
   selector: 'app-calendar',
-  imports: [
-    CommonModule,
-    FullCalendarModule, 
-    FormsModule
-  ],
+  imports: [CommonModule, FullCalendarModule, FormsModule],
   templateUrl: './calendar.component.html',
-  styleUrl: './calendar.component.css'
+  styleUrl: './calendar.component.css',
 })
-export class CalendaComponent implements AfterViewInit, OnDestroy{
-  @ViewChild('externalEvents', { static: true }) externalEvents!: ElementRef;
-  private draggable: Draggable | null = null;
-  
- 
-  dropRemove = true;
+export class CalendaComponent implements OnInit {
   isModalOpen = false;
+  newEventTitle = '';
+  allEvents: EventInput[] = [];
+  selectedDiscipline: string = 'ALL';
 
-  newEvent = { title: '', color: '#0d6efd' };
+  selectedDateInfo: DateSelectArg | null = null;
 
-  draggableEvents = [
-    { title: 'ALMOÇO', color: '#0d6efd' },
-    { title: 'IR PARA CASA', color: '#ffc107' }
+  disciplines = [
+    { code: 'CQP-TI-0027', name: 'Matematica' },
+    { code: 'CQP-TI-0020', name: 'Portugues' },
+    { code: 'CQP-TI-0023', name: 'Lógica de programação' },
+    { code: 'CQP-TI-0021', name: 'Geografia' },
+    { code: 'CQP-TI-0024', name: 'Biologia' },
+    { code: 'CQP-TI-0025', name: 'segurança de Redes' },
+    { code: 'CQP-TI-0028', name: 'Artes' },
+    { code: 'CQP-TI-0022', name: 'Redes de Computadores' },
+    { code: 'CQP-TI-0022', name: 'IMC' },
+    { code: 'CQP-TI-0022', name: 'GDT' },
+    { code: 'CQP-TI-0022', name: 'Quimica' },
+    { code: 'CQP-TI-0022', name: 'Física' },
+    { code: 'CQP-TI-0022', name: 'Mundo do Trabalho' },
+    { code: 'CQP-TI-0022', name: 'Noções Basicas' },
+    { code: 'CQP-TI-0022', name: 'Higiene e Saude - Seg' },
   ];
 
-
-  calendarEvents: any[] = [];
-
-  
   calendarOptions: CalendarOptions = {
     plugins: [dayGridPlugin, interactionPlugin],
     initialView: 'dayGridMonth',
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
-      right: 'dayGridMonth,dayGridWeek,dayGridDay'
+      right: 'dayGridMonth,dayGridWeek,dayGridDay',
     },
     editable: true,
-    droppable: true,
-    
-    
-    events: this.calendarEvents,
-
-    eventReceive: (info) => {
-      const newId = `event_${Date.now()}`;
-      
-      this.calendarEvents.push({
-        id: newId,
-        title: info.event.title,
-        start: info.event.start,
-        color: info.event.backgroundColor
-      });
-
-  
-      info.event.setProp('id', newId);
-    },
-
+    contentHeight: '100%',
+    height: '100%',
+    selectable: true,
+    select: this.handleDateSelect.bind(this),
     eventClick: this.handleEventClick.bind(this),
   };
-  
-  handleEventClick(clickInfo: EventClickArg): void {
-    const message = `Você tem certeza que quer deletar o evento '${clickInfo.event.title}'?`;
-    
-    if (confirm(message)) {
-      clickInfo.event.remove(); 
-      
-      this.calendarEvents = this.calendarEvents.filter(event => event.id !== clickInfo.event.id);
-      
-      console.log('Evento deletado. Lista atual:', this.calendarEvents);
-    }
-  }
 
-  ngAfterViewInit() {
-    this.draggable = new Draggable(this.externalEvents.nativeElement, {
-      itemSelector: '.fc-event',
-      eventData: function(eventEl) {
-        const eventData = JSON.parse(eventEl.getAttribute('data-event') || '{}');
-        return {
-          title: eventData.title,
-          color: eventData.color,
-          create: true
-        };
-      }
+  constructor(private calendarEventService: CalendarEventService) {}
+
+  ngOnInit(): void {
+    this.calendarEventService.getEvents().subscribe((event: EventInput[]) => {
+      this.calendarOptions.events = event;
+      this.filterEvents();
     });
   }
 
-  ngOnDestroy() {
-    this.draggable?.destroy();
-  }
-  
-  getEventData(event: { title: string, color: string }): string {
-    return JSON.stringify(event);
+  handleDateSelect(selectInfo: DateSelectArg): void {
+    this.selectedDateInfo = selectInfo;
+    this.isModalOpen = true;
   }
 
-  openModal(): void { this.isModalOpen = true; }
-  closeModal(): void { this.isModalOpen = false; }
+  handleEventClick(clickInfo: EventClickArg): void {
+    if (
+      confirm(
+        `Tem certeza que quer deletar o evento '${clickInfo.event.title}'?`
+      )
+    ) {
+      const eventId = clickInfo.event.id;
+      this.calendarEventService.deleteEvent(eventId).subscribe(() => {
+        clickInfo.event.remove();
+      });
+    }
+  }
 
-  addEvent(): void {
-    if (this.newEvent.title.trim() === '') return;
-    this.draggableEvents.push({ ...this.newEvent });
-    this.newEvent = { title: '', color: '#0d6efd' };
-    this.closeModal();
+  closeModal(): void {
+    this.isModalOpen = false;
+    this.newEventTitle = '';
+    if (this.selectedDateInfo) {
+      this.selectedDateInfo.view.calendar.unselect();
+    }
+  }
+
+  saveEvent(): void {
+    if (this.newEventTitle.trim() === '' || !this.selectedDateInfo) return;
+
+    const newEvent: EventInput = {
+      id: String(Date.now()),
+      title: this.newEventTitle,
+      start: this.selectedDateInfo.startStr,
+      end: this.selectedDateInfo.endStr,
+      allDay: this.selectedDateInfo.allDay,
+    };
+
+    this.calendarEventService.addEvent(newEvent).subscribe(() => {
+      const calendarApi = this.selectedDateInfo!.view.calendar;
+      calendarApi.addEvent(newEvent);
+      this.closeModal();
+    });
+  }
+
+  filterEvents(): void {
+    if (this.selectedDiscipline === 'ALL') {
+      this.calendarOptions.events = this.allEvents;
+    } else {
+      this.calendarOptions.events = this.allEvents.filter(
+        (e: any) => e.disciplineCode === this.selectedDiscipline
+      );
+    }
   }
 }

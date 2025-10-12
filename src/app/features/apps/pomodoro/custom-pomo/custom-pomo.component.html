@@ -1,0 +1,29 @@
+<div class="custom">
+    <div class="custom-Container">
+        <div class="custom-top">
+            <h2>Custom Timer(Minutes)</h2>
+        </div>
+
+        <div class="custom-config">
+            <form action="">
+                <div class="custom-form-content">
+                    <label for="pomodoro-time">Focus</label>
+                    <input type="number" name="pomodoro-time" id="pomodoro-time" [(ngModel)]="focusTime">
+                </div>
+                <div class="custom-form-content">
+                    <label for="short-break-time">Short Break</label>
+                    <input type="number" name="short-break-time" id="short-break-time" [(ngModel)]="shortTime">
+                </div>
+                <div class="custom-form-content">
+                    <label for="long-break-time">Long Break</label>
+                    <input type="number" name="long-break-time" id="long-break-time" [(ngModel)]="longTime">
+                </div>
+            </form>
+        </div>
+
+        <div class="custom-btns">
+            <button (click)="onReset()">Reset</button>
+            <button class="active" (click)="onUpdate()">Update</button>
+        </div>
+    </div>
+</div>

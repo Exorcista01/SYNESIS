@@ -1,0 +1,24 @@
+<div class="daily-progress-card">
+  <div class="progress-header">
+    <h2>Daily Progress</h2>
+  </div>
+
+  <div class="progress-content">
+    <div class="progress-info">
+      <div class="task-count">
+        <span class="count-pill">{{ completedCount }}/{{ totalCount }}</span>
+        <p>Tasks was done</p>
+      </div>
+      <div class="date-info">
+        <p>{{ date | date: 'dd/MM/yyyy HH:mm' }}</p>
+      </div>
+    </div>
+
+    <div class="progress-bar-wrapper">
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" [style.width.%]="percentage"></div>
+      </div>
+      <span class="progress-percentage">{{ percentage }}%</span>
+    </div>
+  </div>
+</div>

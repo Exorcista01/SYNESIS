@@ -38,8 +38,7 @@ export class SidebarComponent {
               route: '/Calendario',
               icon: 'far fa-calendar-alt',
             },
-            { name: 'To-do', route: '/', icon: 'fas fa-list-check' },
-            { name: 'Pomodoro', route: '/', icon: 'far fa-comments' },
+            { name: 'Pomodoro', route: '/Pomodoro', icon: 'far fa-comments' },
           ],
         },
       ],
@@ -49,7 +48,6 @@ export class SidebarComponent {
       links: [
         { name: 'Cursos', route: '/courses', icon: 'fas fa-pen-ruler' },
         { name: 'Exercice', route: '/Exercise', icon: 'far fa-list-alt' },
-        { name: 'Certificados', route: '/charts', icon: 'fas fa-chart-pie' },
       ],
     },
   ];

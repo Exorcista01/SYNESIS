@@ -1,62 +1,44 @@
+<div class="options">
+  <label>Disciplinas:</label>
+  <select [(ngModel)]="selectedDiscipline" (change)="filterEvents()">
+    <option value="ALL">TODAS</option>
+    <option *ngFor="let d of disciplines" [value]="d.code">{{ d.name }}</option>
+  </select>
+</div>
+
+
 <div class="calendar-container">
   <div class="calendar-wrapper">
     <full-calendar [options]="calendarOptions"></full-calendar>
-  </div>
-  <div class="external-events" #externalEvents>
-    <h4>Eventos Arrastáveis</h4>
-
-    <div
-      *ngFor="let event of draggableEvents"
-      class="fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event"
-      [style.backgroundColor]="event.color"
-      [style.borderColor]="event.color"
-      [attr.data-event]="getEventData(event)"
-    >
-      <div class="fc-event-main">{{ event.title }}</div>
-    </div>
-
-    <p>
-      <input type="checkbox" id="drop-remove" [(ngModel)]="dropRemove" />
-      <label for="drop-remove">Remover após soltar</label>
-    </p>
-
-    <button class="add-event-btn" (click)="openModal()">
-      + Adicionar Novo Evento
-    </button>
   </div>
 </div>
 
 <div class="modal-overlay" *ngIf="isModalOpen">
   <div class="modal-content">
     <div class="modal-header">
-      <h3>Adicionar uma categoria</h3>
+      <h3>Adicionar evento</h3>
       <button class="close-btn" (click)="closeModal()">&times;</button>
     </div>
+
     <div class="modal-body">
-      <form (ngSubmit)="addEvent()">
+      <form>
         <div class="form-group">
-          <label for="category-name">Nome da Categoria</label>
+          <label for="event-title">Título do evento</label>
           <input
-            id="category-name"
+            id="event-title"
             type="text"
-            [(ngModel)]="newEvent.title"
+            [(ngModel)]="newEventTitle"
             name="title"
             required
           />
         </div>
-        <div class="form-group">
-          <label for="category-color">Escolha a Cor da Categoria</label>
-          <select id="category-color" [(ngModel)]="newEvent.color" name="color">
-            <option value="#0d6efd">Primary (Azul)</option>
-            <option value="#ffc107">Warning (Amarelo)</option>
-            <option value="#198754">Success (Verde)</option>
-            <option value="#dc3545">Danger (Vermelho)</option>
-          </select>
-        </div>
+
         <div class="modal-footer">
-          <button type="submit" class="btn-save">Salvar</button>
+          <button type="button" class="btn-save" (click)="saveEvent()">
+            Salvar
+          </button>
           <button type="button" class="btn-close" (click)="closeModal()">
-            Fechar
+            Cancelar
           </button>
         </div>
       </form>

@@ -166,33 +166,4 @@
 
 
 
-.search {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--color-surface-hover);
-  border-radius: var(--radius-small);
-  padding: 0 1.2rem;
-  height: 4rem;
-  border: 1px solid transparent;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
-  margin-bottom: 2rem;
-}
-
-.search input {
-  background: none;
-  border: none;
-  outline: none;
-  width: 15rem;
-  transition: width 0.3s ease;
-  font-size: var(--fs-label-medium);
-  color: var(--color-text-primary);
-}
-
-
-.search-container{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
 

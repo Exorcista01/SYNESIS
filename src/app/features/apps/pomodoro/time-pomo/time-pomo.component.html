@@ -1,0 +1,58 @@
+<div class="time" [class.rest-mode]="activeMode === 'Short Break' || activeMode === 'Long Break'">
+  <div class="container-time">
+    <div class="time-options">
+      <button (click)="setMode('Focus')" [class.active]="activeMode === 'Focus'">
+        Focus
+      </button>
+
+      <button
+        (click)="setMode('Short Break')"
+        [class.active-rest]="activeMode === 'Short Break'"
+      >
+        Short
+      </button>
+
+      <button
+        (click)="setMode('Long Break')"
+        [class.active-rest]="activeMode === 'Long Break'"
+      >
+        Long
+      </button>
+    </div>
+
+    <div class="pomodoro">
+      <div class="pomo-clock" [style.--progress]="progressStyle">
+        @if (seconds < 10) {
+        <h1>{{ minutes }}:{{ seconds | number : "2.0-0" }}</h1>
+        }@else (){
+        <h1>{{ minutes }}:{{ seconds }}</h1>
+        }
+      </div>
+
+      <div class="active-pomo">
+          <p>{{ activeTask ? activeTask.title : 'Selecione uma tarefa' }}</p>
+      </div>
+    </div>
+
+    <div class="buttons-control">
+      <button title="Reiniciar" (click)="resetTimer()">
+        <span class="material-symbols-outlined">restart_alt</span>
+      </button>
+      @if (!isRunning) {
+      <button title="Start/Pause" class="active" (click)="startTime()">
+        <i class="fa-solid fa-play"></i>
+        Start
+      </button>
+      }@else {
+      <button title="Start/Pause" class="active" (click)="pauseTimer()">
+        <i class="fa-solid fa-play"></i>
+        Pause
+      </button>
+      }
+
+      <button title="Skip">
+        <span class="material-symbols-outlined">skip_next</span>
+      </button>
+    </div>
+  </div>
+</div>

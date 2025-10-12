@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input} from '@angular/core';
+import { FormStatsPipe } from '../../../../../../shared/form-stats.pipe';
 
 @Component({
   selector: 'app-stats-card',
-  imports: [CommonModule],
+  imports: [CommonModule, FormStatsPipe],
   templateUrl: './stats-card.component.html',
   styleUrl: './stats-card.component.css'
 })

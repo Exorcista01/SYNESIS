@@ -1,0 +1,50 @@
+<div class="task-list-card">
+  <div class="task-list-header">
+    <h2>Task List 
+      <span class="task-count">
+        ({{ tasks.length }} @if (tasks.length !== 1) { Tasks } @else { Task })
+      </span>
+    </h2>
+    <div class="header-actions">
+      <button class="icon-btn" title="Pesquisar">
+        <span class="material-symbols-outlined">search</span>
+      </button>
+      <button class="icon-btn" title="Mais opções">
+        <span class="material-symbols-outlined">more_vert</span>
+      </button>
+    </div>
+  </div>
+
+  <ul class="task-items-list">
+    @for (task of tasks; track task.id) {
+      <li class="task-item" 
+          (click)="selectTask(task)"
+          [class.active]="task.id === activeTask?.id">
+        
+        <button class="task-status" 
+                (click)="toggleStatus($event, task)" 
+                [class.completed]="task.isCompleted">
+          @if (task.isCompleted) {
+            <span class="material-symbols-outlined">check</span>
+          }
+        </button>
+
+        <div class="task-details">
+          <p class="task-title">{{ task.title }}</p>
+          <p class="task-pomos">Pomos {{ task.pomosCompleted }} / {{ task.pomosEstimated }}</p>
+        </div>
+        
+        <button class="icon-btn task-actions" title="Opções da tarefa">
+          <span class="material-symbols-outlined">more_vert</span>
+        </button>
+      </li>
+    }
+  </ul>
+
+  <div class="task-list-footer">
+    <button class="add-task-btn" (click)="openAddTaskModal()">
+      <span class="material-symbols-outlined">add</span>
+      Add task
+    </button>
+  </div>
+</div>

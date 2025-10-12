@@ -9,7 +9,7 @@
         </div>
     </header>
 
-    <main class.exercicio-content>
+    <main [class.exercicio-content]>
         @if(quiz$ | async; as quizData) {
         @if(perguntas.length > 0) {
         <div class="quiz-container">
