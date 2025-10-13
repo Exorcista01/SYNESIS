@@ -104,7 +104,7 @@ npm install -g json-server
     
     Primeiro, clone este repositório para a sua máquina local usando o terminal:
     ```bash
-    git clone [https://seu-link-para-o-repositorio.git](https://seu-link-para-o-repositorio.git)
+    git clone https://github.com/JorgeLuisDSP/SYNESIS.git
     ```
 
 2.  **Acesse a Pasta do Projeto**
