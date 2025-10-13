@@ -6,9 +6,11 @@
     <div class="setting-item">
       <div class="item-info">
         <h4>Alterar Senha</h4>
-        <p>Recomendamos usar uma senha forte que você não usa em outro lugar.</p>
+        <p>
+          Recomendamos usar uma senha forte que você não usa em outro lugar.
+        </p>
       </div>
-      <button class="btn btn-secondary">Alterar</button>
+      <button class="btn btn-secondary" routerLink="/Forgout-Passoword">Alterar</button>
     </div>
     <div class="setting-item">
       <div class="item-info">
@@ -27,11 +29,22 @@
         <p>Personalize como o Synesis se parece para você.</p>
       </div>
       <div class="theme-selector">
-        <button class="theme-option active" aria-label="Tema Claro">
-            <i class="fas fa-sun"></i> Claro
+        <button
+          class="theme-option"
+          [class.active]="currentTheme === 'light'"
+          (click)="setTheme('light')"
+          aria-label="Tema Claro"
+        >
+          <i class="fas fa-sun"></i> Claro
         </button>
-        <button class="theme-option" aria-label="Tema Escuro">
-            <i class="fas fa-moon"></i> Escuro
+
+        <button
+          class="theme-option"
+          [class.active]="currentTheme === 'dark'"
+          (click)="setTheme('dark')"
+          aria-label="Tema Escuro"
+        >
+          <i class="fas fa-moon"></i> Escuro
         </button>
       </div>
     </div>
@@ -42,10 +55,12 @@
     <div class="setting-item">
       <div class="item-info">
         <h4>Excluir esta conta</h4>
-        <p>Uma vez que você exclui sua conta, não há como voltar atrás. Tenha certeza.</p>
+        <p>
+          Uma vez que você exclui sua conta, não há como voltar atrás. Tenha
+          certeza.
+        </p>
       </div>
       <button class="btn btn-danger">Excluir Conta</button>
     </div>
   </section>
-
 </div>

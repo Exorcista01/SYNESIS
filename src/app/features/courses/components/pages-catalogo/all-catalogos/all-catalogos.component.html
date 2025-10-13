@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <app-banner-catalogos></app-banner-catalogos>
+    <div class="container">
+        <div class="container-left">
+            <app-categoria (filtersChanged)="applyFilters($event)"></app-categoria>
+        </div>
+
+        <div class="container-rigth">
+           <app-all-cards-catalogo [courses]="filteredCourses"></app-all-cards-catalogo>
+        </div>
+
+    </div>
+</div>

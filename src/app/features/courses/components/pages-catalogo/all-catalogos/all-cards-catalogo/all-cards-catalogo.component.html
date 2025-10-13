@@ -1,0 +1,39 @@
+@if (courses.length > 0) {
+  <div class="courses-grid">
+    @for (course of courses; track course.id) {
+      <a class="course-card-link" [routerLink]="['/cursos', course.slug]">
+        <div class="course-card">
+          <div class="card-image-container">
+            <img [src]="course.img" [alt]="course.title" class="course-image">
+            
+            <div class="card-tags">
+              @for(tag of course.tags.slice(0, 2); track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="course-info">
+              <h3 class="course-title">{{ course.title }}</h3>
+              <p class="course-author">por {{ course.author }}</p>
+            </div>
+
+            <div class="card-footer">
+              <span class="metadata-item">
+                <i class="fas fa-signal"></i> {{ course.level }}
+              </span>
+              @if(course.studyHours) {
+                <span class="metadata-item">
+                  <i class="far fa-clock"></i> {{ course.studyHours }} horas
+                </span>
+              }
+            </div>
+          </div>
+        </div>
+      </a>
+    }
+  </div>
+} @else {
+  <p class="no-courses-message">Nenhum curso encontrado.</p>
+}

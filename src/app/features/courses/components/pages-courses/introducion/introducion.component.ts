@@ -4,7 +4,6 @@ import { RouterLink } from '@angular/router';
 import { Course } from '../../../course.model';
 import { AuthRoutingModule } from "../../../../auth/auth-routing.module";
 import { VisionAllComponent } from "./vision-all/vision-all.component";
-import { ContentComponent } from "./content/content.component";
 
 export interface BreadcrumbItem {
   label: string;

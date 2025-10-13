@@ -1,6 +1,13 @@
+@if (errorMessage) {
+  <div class="toast-container error">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="toast-icon bi bi-x-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+    </svg>
+    <p class="toast-message">{{ errorMessage }}</p>
+    <button class="toast-close-btn" (click)="clearError()">&times;</button>
+  </div>
+}
 
-
-<p-toast />
 
 <div class="login-container">
   <div class="login-form-wrapper">
@@ -28,14 +35,8 @@
     <form [formGroup]="loginForm" (ngSubmit)="LoginUser()">
       <div class="input-group">
         <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-          formControlName="email"
-          [ngClass]="{ 'input-invalid': isEmailInvalid }"
-        />
+        <input type="email" id="email" name="email" placeholder="Enter your email" formControlName="email"
+          [ngClass]="{ 'input-invalid': isEmailInvalid }" />
 
         @if (isEmailInvalid) {
         <div class="error-message">
@@ -44,17 +45,10 @@
           } @if(emailControl.hasError('email')) {
           <div>
             <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-exclamation-diamond-fill"
-                viewBox="0 0 16 16"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-exclamation-diamond-fill" viewBox="0 0 16 16">
                 <path
-                  d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.52 0 2.1l6.516 6.516c.58.58 1.52.58 2.1 0l6.516-6.516c.58-.58.58-1.52 0-2.1L9.05.435zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
-                />
+                  d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.52 0 2.1l6.516 6.516c.58.58 1.52.58 2.1 0l6.516-6.516c.58-.58.58-1.52 0-2.1L9.05.435zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
               </svg>
             </span>
             O endereço de e-mail deve conter texto antes e depois do símbolo '&#64;'
@@ -66,20 +60,14 @@
 
       <div class="input-group">
         <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter your password"
-          formControlName="password"
-          [ngClass]="{ 'input-invalid': isEmailInvalid }"
-        />
+        <input type="password" id="password" name="password" placeholder="Enter your password"
+          formControlName="password" [ngClass]="{ 'input-invalid': isEmailInvalid }" />
         @if (isPasswordInvalid) {
         <div class="error-message">
           @if(passwordControl.hasError('required')) {
           <p>O campo Password é obrigatório.</p>
           } @if (passwordControl.hasError('minlength')) {
-            <p>A senha deve ter pelo menos 6 caracteres</p>
+          <p>A senha deve ter pelo menos 6 caracteres</p>
           }
         </div>
         }
@@ -87,26 +75,22 @@
 
       <div class="form-options">
         <div class="remember-me">
-          <input type="checkbox" id="remember" class="remember-check" />
-          <label for="remember">Remember_me</label>
+          <input type="checkbox" id="remember" class="remember-check" formControlName="rememberMe" />
+          <label for="remember">Lembrar-me</label>
         </div>
-        <a routerLink="/Forgout-Passoword" class="forgot-password"
-          >Forgot password?</a
-        >
+        <a routerLink="/Forgout-Passoword" class="forgot-password">Esqueceu a senha?</a>
       </div>
 
       <button type="submit" class="login-btn">Login</button>
     </form>
 
     <div class="register-link">
-       Não está registrado? <a routerLink="/registration">Crie uma conta</a>
+      Não está registrado? <a routerLink="/registration">Crie uma conta</a>
     </div>
 
   </div>
   <div class="illustration-wrapper">
-    <img
-      src="https://img.freepik.com/vetores-premium/ilustracao-do-conceito-de-login-movel_114360-83.jpg"
-      alt="Server room illustration"
-    />
+    <img src="https://img.freepik.com/vetores-premium/ilustracao-do-conceito-de-login-movel_114360-83.jpg"
+      alt="Server room illustration" />
   </div>
 </div>

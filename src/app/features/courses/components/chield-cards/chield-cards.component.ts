@@ -1,10 +1,11 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 
 @Component({
   selector: 'app-chield-cards',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './chield-cards.component.html',
   styleUrl: './chield-cards.component.css'
 })
@@ -13,57 +14,45 @@ export class ChieldCardsComponent implements AfterViewInit {
 
   minoInfo = [
   {
+    slug: 'Lógica de Programação',
     miniImg: 'assets/miniCards/logic.png',
     miniTitle: 'Lógica'
   },
   {
+    slug: 'Java Script',
     miniImg: 'assets/miniCards/js.png',
-    miniTitle: 'JavaScript'
+    miniTitle: 'Java Script'
   },
   {
+    slug: 'Html',
     miniImg: 'assets/miniCards/php.png',
-    miniTitle: 'PHP'
+    miniTitle: 'Html'
   },
   {
+    slug: 'CSS',
     miniImg: 'assets/miniCards/responsive-design.png',
-    miniTitle: 'Design Responsivo'
+    miniTitle: 'CSS'
   },
+
   {
-    miniImg: 'assets/miniCards/dados.png',
-    miniTitle: 'Banco de Dados'
-  },
-  {
+    slug: 'Redes de Computadores',
     miniImg: 'assets/miniCards/conexao-de-rede.png',
     miniTitle: 'Redes'
   },
   {
+    slug: 'Manutenção de Computadores',
     miniImg: 'assets/miniCards/computador.png',
-    miniTitle: 'Manutenção'
+    miniTitle: 'Manutenção de Pcs'
   },
   {
-    miniImg: 'assets/miniCards/app-development.png',
-    miniTitle: 'Desenvolvimento'
+    slug: 'Tecnologia da Informação',
+    miniImg: 'assets/miniCards/ti.png',
+    miniTitle: 'TI'
   },
   {
-    miniImg: 'assets/miniCards/computador.png',
-    miniTitle: 'Manutenção'
-  },
-  {
-    miniImg: 'assets/miniCards/computador.png',
-    miniTitle: 'Manutenção'
-  },
-  {
-    miniImg: 'assets/miniCards/computador.png',
-    miniTitle: 'Manutenção'
-  },
-  {
-    miniImg: 'assets/miniCards/computador.png',
-    miniTitle: 'Manutenção'
-  },
-
-  {
-    miniImg: 'assets/miniCards/computador.png',
-    miniTitle: 'Manutenção'
+    slug: 'Matematica',
+    miniImg: 'assets/miniCards/calculating.png',
+    miniTitle: 'Matematica'
   },
 ];
 

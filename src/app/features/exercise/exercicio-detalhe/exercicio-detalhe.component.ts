@@ -32,8 +32,6 @@ export class ExercicioDetalheComponent {
     if (exercicioId) {
       this.exercicio$ = this.exercicioService.getExercicioById(exercicioId);
       
-      // Usamos o operador 'tap' para "espiar" os dados quando eles chegam
-      // e guardá-los em nossas variáveis locais sem interromper o fluxo.
       this.quiz$ = this.exercicioService.getQuizByExercicioId(exercicioId).pipe(
         tap(quizData => {
           if (quizData && quizData.length > 0) {

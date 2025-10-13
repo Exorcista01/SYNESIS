@@ -2,7 +2,7 @@
     <div class="categoria-wrapper">
         <div class="categoria-top">
             <h2 class="categoria-title">Filtro</h2>
-            <button class="categoria-btn">Limpar</button>
+            <button class="categoria-btn" (click)="clearFilters()">Limpar</button>
         </div>
         <div class="categorias-accordions">
             @for (item of accordionsContent; track item) {

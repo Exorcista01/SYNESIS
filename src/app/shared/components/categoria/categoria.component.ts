@@ -1,16 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { Component, Output, EventEmitter  } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-categoria',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './categoria.component.html',
   styleUrl: './categoria.component.css'
 })
 export class CategoriaComponent {
     @Output() filtersChanged = new EventEmitter <any>();
-    onFilterChange(): void {
-    } 
 
     searchValue: string  = "";
 
@@ -22,8 +21,8 @@ export class CategoriaComponent {
    accordionsContent = [
    { 
       title: 'Categorias',
-      key: 'catalogo',
-      isOpen: false,
+      key: 'category',
+      isOpen: open,
       chields: [
         {label: 'Manutenção de Computadores', checked: false},
         {label: 'Tecnologia da Informação' , checked: false},
@@ -37,7 +36,7 @@ export class CategoriaComponent {
     },
     {
       title: 'Niveis',
-      key: 'nivel',
+      key: 'level',
       isOpen: false,
       chields: [
         {label: 'Iniciante' , checked: false},
@@ -47,7 +46,7 @@ export class CategoriaComponent {
     },
     {
       title: "Professores",
-      key: 'professor',
+      key: 'author',
       isOpen: false,
       chields: [
         {label: 'Ivan' , checked: false},
@@ -67,5 +66,28 @@ export class CategoriaComponent {
   isOpen(): void {
     this.isOpenAccordion = !this.isOpenAccordion;
     console.log("mudei")
+  }
+
+  onFilterChange(): void {
+    const activeFilters: any = {};
+
+    this.accordionsContent.forEach(accordion => {
+      const selectedChildren = accordion.chields
+        .filter(child => child.checked)
+        .map(child => child.label);
+      
+      if (selectedChildren.length > 0) {
+        activeFilters[accordion.key] = selectedChildren;
+      }
+    });
+
+    this.filtersChanged.emit(activeFilters);
+  }
+
+  clearFilters(): void {
+    this.accordionsContent.forEach(accordion => {
+      accordion.chields.forEach(child => child.checked = false);
+    });
+    this.onFilterChange();
   }
 }

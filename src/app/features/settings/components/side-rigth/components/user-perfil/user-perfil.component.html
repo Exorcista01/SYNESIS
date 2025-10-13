@@ -1,14 +1,18 @@
 <div class="account-container" *ngIf="currentUser">
     <h2 class="account-title">Meu Perfil</h2>
 
-  <div class="account-header">
-        <div class="avatar-container">
-            <img [src]="currentUser.profile?.avatarUrl" alt="User Avatar">
-            
-            <button class="edit-avatar-btn" aria-label="Edit avatar">
+    <div class="account-header">
+        <label for="avatarInput" class="avatar-container">
+            <img [src]="avatarUrl || 'https://placehold.co/100x100/E2E8F0/4A5568?text=J'" alt="User Avatar"
+                class="avatar-img">
+
+            <span class="edit-avatar-btn">
                 <i class="fas fa-pencil-alt"></i>
-            </button>
-        </div>
+            </span>
+        </label>
+
+        <input type="file" id="avatarInput" (change)="onAvatarChange($event)">
+
         <div class="user-info">
             <h3>{{ currentUser.name }}</h3>
             <span class="badge">{{ currentUser.profile?.role }}</span>
@@ -16,7 +20,7 @@
     </div>
 
     <form class="account-form" [formGroup]="profileForm" (ngSubmit)="saveProfile()">
-        
+
         <h3 class="form-section-title">Dados Pessoais</h3>
         <div class="form-grid">
             <div class="form-group">
@@ -51,7 +55,7 @@
                     </select>
                 </div>
             </div>
-        
+
             <div class="form-group">
                 <label for="classYear">Turma</label>
                 <div class="select-wrapper">
@@ -99,7 +103,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Botões de Ação -->
         <div class="form-actions">
             <button type="button" class="btn btn-secondary">Cancelar</button>

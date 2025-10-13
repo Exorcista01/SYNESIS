@@ -13,10 +13,10 @@
   <div class="sidebar-footer">
     <button (click)="toggleUserDropdown()" class="sidebar-footer-container">
       <div class="user-img-info">
-        <img src="https://placehold.co/40x40/E2E8F0/4A5568?text=J" alt="Avatar do usuário" class="user-avatar" />
+        <img [src]="avatarUrl" alt="Avatar do usuário" class="user-avatar" />
         <div class="sidebar-footer-text">
-          <span class="user-name">Jorge luis</span>
-          <span class="user-role">3° Manutenção</span>
+          <span class="user-name">{{ currentUser?.name }}</span>
+          <span class="user-role">{{ currentUser?.profile?.course }}</span>
         </div>
       </div>
       <i class="fas fa-chevron-right nav-arrow" [class.rotate-90]="isUserDropdownOpen"></i>

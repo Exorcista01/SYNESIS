@@ -8,6 +8,7 @@
 
 .custom-top {
   padding: 1.5rem 2rem;
+  color: var(--color-text-primary);
   border-bottom: 1px solid var(--color-border, #EAECEF);
 }
 
@@ -47,16 +48,17 @@
   color: var(--color-text-secondary, #64748B);
 }
 
-.custom-form-content input[type="number"] {
+.custom-form-content input {
   width: 100%;
   padding: 1rem;
   border: 1px solid #D1D5DB;
   border-radius: 8px;
-  background-color: #F8FAFC;
-  font-size: 1.6rem;
+  background-color: var(--color-surface-hover);
+  border: 1px solid var(--color-border);
   font-weight: 600;
+  font-size: var(--fs-body-large);
   color: var(--color-text-primary);
-  box-sizing: border-box;
+  transition: all var(--transition-duration-quick);
 }
 
 .custom-form-content input[type="number"]:focus {
@@ -74,7 +76,7 @@
 
 .custom-btns button {
   background-color: transparent;
-  border: 1px solid #D1D5DB;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 1rem 2.5rem;
   font-size: 1.4rem;
@@ -86,8 +88,8 @@
 }
 
 .custom-btns button:hover {
-  background-color: #F8FAFC;
-  border-color: #9CA3AF;
+  background-color: var(--color-surface-hover);
+  color: var(--color-text-primary);
 }
 
 .custom-btns button.active {

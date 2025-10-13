@@ -12,7 +12,7 @@
       <div class="swiper-wrapper">
         @for (infos of minoInfo; track infos.miniTitle) {
         <div class="swiper-slide">
-          <a>
+          <a [routerLink]="['/catalogo', infos.slug]">
             <img [src]="infos.miniImg" [alt]="infos.miniTitle" />
             <span>{{ infos.miniTitle }}</span>
           </a>

@@ -16,6 +16,7 @@ export class TaskListComponent {
   @Output() taskSelected = new EventEmitter<Task>();
   @Output() taskToggled = new EventEmitter<Task>();
   @Output() addTaskClicked = new EventEmitter<void>();
+  @Output() editTaskClicked = new EventEmitter<Task>();
   
   constructor() {}
 

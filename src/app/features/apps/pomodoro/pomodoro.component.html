@@ -13,6 +13,7 @@
       (taskSelected)="setActiveTask($event)"
       (taskToggled)="handleTaskToggled($event)"
       (addTaskClicked)="openAddTaskModal()"
+      (editTaskClicked)="openEditTaskModal($event)"
     >
     </app-task-list>
   </section>
@@ -23,6 +24,10 @@
       [focusDuration]="focusDuration"
       [shortBreakDuration]="shortBreakDuration"
       [longBreakDuration]="longBreakDuration"
+      (pomodoroStarted)="startPomodoro()"
+      (skipTask)="handleSkipTask()"
+      (pomodoroStopped)="stopPomodoro()">
+      
     >
     </app-time-pomo>
 

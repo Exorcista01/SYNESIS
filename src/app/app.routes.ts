@@ -15,6 +15,9 @@ import { UserPerfilComponent } from './features/settings/components/side-rigth/c
 import { UserNotificationComponent } from './features/settings/components/side-rigth/components/user-notification/user-notification.component';
 import { ExerciseComponent } from './features/exercise/exercise.component';
 import { PomodoroComponent } from './features/apps/pomodoro/pomodoro.component';
+import { PagesCatalogoComponent } from './features/courses/components/pages-catalogo/pages-catalogo.component';
+import { AllCatalogosComponent } from './features/courses/components/pages-catalogo/all-catalogos/all-catalogos.component';
+import { OneCatalogosComponent } from './features/courses/components/pages-catalogo/one-catalogos/one-catalogos.component';
 
 export const routes: Routes = [
     {
@@ -39,7 +42,18 @@ export const routes: Routes = [
                     {path: 'Perfil', component: UserPerfilComponent },
                     {path: 'Notification', component: UserNotificationComponent },
                 ]
-            }
+            },
+            { 
+                path: 'catalogo', 
+                component: PagesCatalogoComponent, 
+                children: [
+                { path: '', redirectTo: 'todos', pathMatch: 'full' }, 
+                { path: 'todos', component: AllCatalogosComponent }, 
+        
+                { path: ':category', component: OneCatalogosComponent }
+                ]
+            },
+
         ]
     },
 

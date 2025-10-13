@@ -3925,7 +3925,7 @@
       "pomosEstimated": 1,
       "pomosCompleted": 0,
       "isCompleted": true,
-      "completionDate": "2025-10-12T18:51:56.729Z"
+      "completionDate": "2025-10-13T09:40:26.554Z"
     },
     {
       "id": "049f",
@@ -3949,6 +3949,14 @@
       "pomosEstimated": 1,
       "pomosCompleted": 0,
       "isCompleted": false
+    },
+    {
+      "id": "bdd8",
+      "title": "comer",
+      "pomosEstimated": 1,
+      "pomosCompleted": 0,
+      "isCompleted": true,
+      "completionDate": "2025-10-13T09:40:33.595Z"
     }
   ],
   "events": [
@@ -3972,6 +3980,14 @@
       "start": "2025-10-20",
       "end": "2025-10-20",
       "disciplineCode": "CQP-TI-0022"
+    },
+    {
+      "id": "1760348396074",
+      "title": "15.30 TCC",
+      "start": "2025-10-13",
+      "end": "2025-10-14",
+      "allDay": true,
+      "disciplineCode": "SEM_DISCIPLINA"
     }
   ]
 }

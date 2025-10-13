@@ -1,10 +1,7 @@
 <header class="app-header">
   <nav class="navbar-content" aria-label="Navegação principal">
     <div class="header-left">
-      <button
-        class="header-action-btn toggle-sidebar-btn"
-        (click)="ToggleOpen()"
-        aria-label="Abrir menu">
+      <button class="header-action-btn toggle-sidebar-btn" (click)="ToggleOpen()" aria-label="Abrir menu">
         <i class="fas fa-bars"></i>
       </button>
 
@@ -17,11 +14,7 @@
     </div>
 
     <div class="header-right">
-      <button
-        class="header-action-btn"
-        aria-label="Alternar tema"
-        (click)="changeTheme()"
-      >
+      <button class="header-action-btn" aria-label="Alternar tema" (click)="changeTheme()">
         @if(!isDarkMode) {
         <i class="fa-regular fa-moon"></i>
         }@else {
@@ -31,18 +24,9 @@
 
       <div class="search-bar">
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input
-          type="search"
-          placeholder="Pesquisar..."
-          [(ngModel)]="searchValue"
-          aria-label="Campo de pesquisa"
-        />
+        <input type="search" placeholder="Pesquisar..." [(ngModel)]="searchValue" aria-label="Campo de pesquisa" />
         @if(searchValue){
-        <button
-          class="clear-search-btn"
-          (click)="searchClear()"
-          aria-label="Limpar pesquisa"
-        >
+        <button class="clear-search-btn" (click)="searchClear()" aria-label="Limpar pesquisa">
           <span class="material-symbols-outlined">close</span>
         </button>
         }
@@ -50,31 +34,27 @@
 
       <div class="user-menu">
         <button class="user-menu-button" (click)="navModalOpen()">
-          <img
-            src="https://placehold.co/40x40/E2E8F0/4A5568?text=J"
-            alt="Avatar do usuário"
-            class="user-avatar"
-          />
+          <img [src]="avatarUrl" alt="Avatar do usuário" class="user-avatar" />
           <div class="user-info">
-            <span class="user-name">Jorge Luis</span>
-            <span class="user-role">Estudante</span>
+            <span class="user-name">{{ currentUser?.name }}</span>
+            <span class="user-role">{{ currentUser?.profile?.role }}</span>
           </div>
         </button>
 
         @if (navMenuModal) {
-        <div class="menu-modal" [class.open]="navMenuModal">
+        <div class="menu-modal" [class.open]="navMenuModal" id="userMenuModal">
           <ul class="modal-container">
             @for (item of userMenuItems; track item){
             <li class="modal-items">
               @if (item.router) {
-                <a routerLink="{{ item.router }}">
+              <a routerLink="{{ item.router }}">
                 <i class="{{ item.icon }}"></i>
                 <span>{{ item.name }}</span>
               </a>
               }
 
               @if (item.action) {
-                <a (click)="item.action()">
+              <a (click)="item.action()">
                 <i class="{{ item.icon }}"></i>
                 <span>{{ item.name }}</span>
               </a>

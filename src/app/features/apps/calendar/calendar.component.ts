@@ -58,13 +58,18 @@ export class CalendaComponent implements OnInit {
     selectable: true,
     select: this.handleDateSelect.bind(this),
     eventClick: this.handleEventClick.bind(this),
+    events: [],
   };
 
   constructor(private calendarEventService: CalendarEventService) {}
 
   ngOnInit(): void {
-    this.calendarEventService.getEvents().subscribe((event: EventInput[]) => {
-      this.calendarOptions.events = event;
+     this.loadEvents();
+  }
+
+  loadEvents(): void {
+    this.calendarEventService.getEvents().subscribe((events: EventInput[]) => {
+      this.allEvents = events;
       this.filterEvents();
     });
   }
@@ -75,11 +80,7 @@ export class CalendaComponent implements OnInit {
   }
 
   handleEventClick(clickInfo: EventClickArg): void {
-    if (
-      confirm(
-        `Tem certeza que quer deletar o evento '${clickInfo.event.title}'?`
-      )
-    ) {
+    if (confirm(`Tem certeza que quer deletar o evento '${clickInfo.event.title}'?`)) {
       const eventId = clickInfo.event.id;
       this.calendarEventService.deleteEvent(eventId).subscribe(() => {
         clickInfo.event.remove();
@@ -104,11 +105,11 @@ export class CalendaComponent implements OnInit {
       start: this.selectedDateInfo.startStr,
       end: this.selectedDateInfo.endStr,
       allDay: this.selectedDateInfo.allDay,
+       disciplineCode: this.selectedDiscipline === 'ALL' ? 'SEM_DISCIPLINA' : this.selectedDiscipline
     };
 
     this.calendarEventService.addEvent(newEvent).subscribe(() => {
-      const calendarApi = this.selectedDateInfo!.view.calendar;
-      calendarApi.addEvent(newEvent);
+      this.loadEvents(); 
       this.closeModal();
     });
   }

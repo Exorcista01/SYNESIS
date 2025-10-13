@@ -7,6 +7,7 @@ export interface Lesson {
   type: 'video' | 'artigo';
   description: string;
   durationInMinutes?: number;
+  videoUrl?: string;
 }
 
 
@@ -39,6 +40,7 @@ export interface Course {
   studentCount?: number;
   accessEndDate?: string;
   activities?: number;
+  category: string;
 }
 
 

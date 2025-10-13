@@ -32,10 +32,10 @@ export class MainComponent implements OnInit {
     const todasSecoes = this.cursosService.getCardSections();
 
     if (todasSecoes.length > 0) {
-      this.cursosRecentes = todasSecoes[0].courses; // Pega os cursos da primeira seção
+      this.cursosRecentes = todasSecoes[0].courses; 
     }
     if (todasSecoes.length > 1) {
-      this.cursosPopulares = todasSecoes[1].courses; // Pega os cursos da segunda seção
+      this.cursosPopulares = todasSecoes[1].courses; 
     }
   }
 

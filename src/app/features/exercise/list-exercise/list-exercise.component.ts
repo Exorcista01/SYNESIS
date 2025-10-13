@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CategoriaComponent } from "./categoria/categoria.component";
+import { CategoriaComponent } from "../../../shared/components/categoria/categoria.component";
 import { BannerExerciseComponent } from "./banner-exercise/banner-exercise.component";
 import { AllExerciseComponent } from "./all-exercise/all-exercise.component";
 

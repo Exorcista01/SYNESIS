@@ -16,8 +16,8 @@ export interface Profile {
     responsibleName: string;
     course: string;
     classYear: string;
+    avatarUrl?: string;
     role: string;
-    avatarUrl: string;
     address: Address;
     institution: Institution;
 }
