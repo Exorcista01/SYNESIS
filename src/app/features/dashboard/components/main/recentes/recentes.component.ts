@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 import { CursosService } from '../../../../../core/services/cursos/cursos.service';
 
 type RecentCourseViewModel = Course & { progress$: Observable<number> };
@@ -26,26 +26,29 @@ export class RecentesComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {
-    this.recentCourse$ = this.userProgressService.getRecentCourseSlug().pipe(
-      switchMap(slug => {
-        if (!slug) {
-          return of(null);
-        }
-        
-        const courseData = this.cursosService.getCourseById(slug);
-        if (!courseData) {
-          return of(null);
-        }
+ ngOnInit(): void {
+  this.recentCourse$ = this.userProgressService.getRecentCourseSlug().pipe(
+    switchMap(slug => {
+      if (!slug) {
+        return of(null);
+      }
+      
+      return this.cursosService.getCourseById(slug).pipe(
+        map(course => {
+          if (!course) {
+            return null;
+          }
 
-        const courseViewModel: RecentCourseViewModel = {
-          ...courseData,
-          progress$: this.userProgressService.getCourseProgress(slug)
-        };
-        return of(courseViewModel);
-      })
-    );
-  }
+          const courseViewModel: RecentCourseViewModel = {
+            ...course, 
+            progress$: this.userProgressService.getCourseProgress(slug)
+          };
+          return courseViewModel;
+        })
+      );
+    })
+  );
+}
 
   viewCourse(slug: string): void {
     if (slug) {

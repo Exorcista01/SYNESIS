@@ -2,13 +2,12 @@ import { Navigation } from 'swiper/modules';
 import { Component, Input, OnInit } from '@angular/core';
 import {ProgressSpinnerMode, MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatRadioModule} from '@angular/material/radio';
-import { AuthRoutingModule } from "../../../../auth/auth-routing.module";
 import { UserProgressService } from '../../../../../core/services/user/user-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Course, Lesson , Module } from '../../../course.model';
 import { CursosService } from '../../../../../core/services/cursos/cursos.service';
 import { of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 import { NavigationContentComponent } from "./components/navigation-content/navigation-content.component";
 import { LessonVisionAllComponent } from "./components/lesson-vision-all/lesson-vision-all.component";
 import { LessonContentSidebarComponent } from "./components/lesson-content-sidebar/lesson-content-sidebar.component";
@@ -22,7 +21,6 @@ import { AsiderCourseComponent } from "./components/asider-course/asider-course.
   imports: [
     MatProgressSpinnerModule, 
     MatRadioModule, 
-    AuthRoutingModule, 
     NavigationContentComponent, 
     LessonVisionAllComponent, 
     LessonContentSidebarComponent, 
@@ -51,22 +49,27 @@ export class LessonPageComponent implements OnInit {
     private cursosService: CursosService
   ){}
 
-  ngOnInit(): void {
-    this.route.paramMap.pipe(
-      switchMap(params =>{
-        const slug = params.get('slug');
-        const lessonId = Number(params.get('lessonId'));
+ ngOnInit(): void {
+  this.route.paramMap.pipe(
+    switchMap(params => {
+      const slug = params.get('slug');
+      const lessonId = Number(params.get('lessonId'));
 
-        if(slug){
-          this.course = this.cursosService.getCourseById(slug);
-          if( this.course){
-            this.findLessons(lessonId);
-          }
-        }
-        return of(null);
-      })
-    ).subscribe();
-  }
+      if (slug) {
+        return this.cursosService.getCourseById(slug).pipe(
+          map(course => ({ course, lessonId })) 
+        );
+      }
+      return of({ course: undefined, lessonId: 0 });
+    })
+  )
+  .subscribe(({ course, lessonId }) => {
+    this.course = course;
+    if (this.course) {
+      this.findLessons(lessonId);
+    }
+  });
+}
 
   private findLessons(activeLessonId: number): void {
     if(!this.course || !this.course.modules) return;

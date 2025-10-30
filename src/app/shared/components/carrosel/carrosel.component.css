@@ -109,7 +109,7 @@
 .card-category {
   position: absolute;
   top: 1.2rem;
-  left: 1.2rem;
+  right: 1.2rem;
   z-index: 2;
   display: inline-block;
   background-color: var(--color-background);

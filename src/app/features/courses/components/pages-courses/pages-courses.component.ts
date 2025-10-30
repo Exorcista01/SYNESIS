@@ -25,8 +25,9 @@ export class PagesCoursesComponent implements OnInit {
     const courseSlug = this.route.snapshot.paramMap.get('slug');
 
     if (courseSlug) {
-      this.course = this.cursosService.getCourseById(courseSlug);
-      this.cdr.detectChanges();
+      this.cursosService.getCourseById(courseSlug).subscribe(data => {
+        this.course = data;
+      })
     }
   }
 }

@@ -21,7 +21,9 @@ export class PagesCatalogoComponent {
     const courseSlug = this.route.snapshot.paramMap.get('slug');
 
     if (courseSlug) {
-      this.course = this.cursosService.getCourseById(courseSlug);
+     this.cursosService.getCourseById(courseSlug).subscribe(data => {
+     this.course = data; 
+    });
     }
   }
 }

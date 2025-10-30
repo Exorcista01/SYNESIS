@@ -166,7 +166,7 @@
 
 
 @media (max-width: 836px) {
-    .empty-text{
-        margin-block: 5rem ;
-    }
+   .recentes-wrapper{
+     gap: 2rem;
+   }
 }

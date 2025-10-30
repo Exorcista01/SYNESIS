@@ -1,7 +1,7 @@
 // Caminho do arquivo: src/app/core/services/user/user-service.service.ts
 
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, map } from 'rxjs';
+import { BehaviorSubject, Observable, map, switchMap } from 'rxjs';
 import { CursosService } from '../cursos/cursos.service';
 
 type ProgressMap = Map<string, Set<number>>;
@@ -35,18 +35,22 @@ export class UserProgressService {
 
   getCourseProgress(courseSlug: string): Observable<number> {
     return this.progressData$.pipe(
-      map(progressMap => {
-        const totalLessons = this.cursosService.getTotalLessons(courseSlug);
-        if (totalLessons === 0) return 0;
-        const completedLessons = progressMap.get(courseSlug)?.size || 0;
-        return Math.round((completedLessons / totalLessons) * 100);
+      switchMap(progressMap => {
+        return this.cursosService.getTotalLessons(courseSlug).pipe(
+          map(totalLessons => {
+          if (totalLessons === 0) return 0;
+          
+          const completedLessons = progressMap.get(courseSlug)?.size || 0;
+          return Math.round((completedLessons / totalLessons) * 100);
+        })
+        )
       })
     );
   }
 
   getCompletedLessons(courseSlug: string): Observable<Set<number>> {
     return this.progressData$.pipe(
-      map(progressMap => progressMap.get(courseSlug) || new Set<number>()) // Correção crucial está aqui
+      map(progressMap => progressMap.get(courseSlug) || new Set<number>()) 
     );
   }
 

@@ -1,13 +1,44 @@
 <div class="wrapper">
-    <app-banner-exercise></app-banner-exercise>
-    <div class="container">
-        <div class="container-left">
-            <app-categoria></app-categoria>
-        </div>
+  <app-banner-exercise></app-banner-exercise>
 
-        <div class="container-rigth">
-            <app-all-exercise></app-all-exercise>
-        </div>
+  <div class="filter-toggle-container mobile-only">
+    <button class="filter-toggle-btn" (click)="toggleFilterModal()">
+      <i class="fa-solid fa-filter"></i> Filtros
+    </button>
+  </div>
 
+  <div class="container">
+    <div class="container-left desktop-only">
+      <app-categoria
+        (filterChanged)="onFilterChange()"
+        (clear)="clearFilters()">
+      </app-categoria>
     </div>
+
+    <div class="container-rigth">
+      <app-all-exercise></app-all-exercise>
+    </div>
+  </div>
+
+  @if (isFilterModalOpen) {
+  <div class="filter-modal-overlay" (click)="closeFilterModal()">
+    <div class="filter-modal-content" (click)="$event.stopPropagation()">
+      <div class="filter-modal-header">
+        <h3>Filtros</h3>
+        <button class="close-btn" (click)="closeFilterModal()">&times;</button>
+      </div>
+      <div class="filter-modal-body">
+        <app-categoria
+          (filterChanged)="onFilterChange()"
+          (clear)="clearFilters()">
+        </app-categoria>
+      </div>
+      <div class="filter-modal-footer">
+        <button class="btn-clear" (click)="clearFilters(); closeFilterModal()">Limpar</button>
+        <button class="btn-apply" (click)="applyFiltersAndClose()">Aplicar</button>
+      </div>
+    </div>
+  </div>
+  }
+
 </div>

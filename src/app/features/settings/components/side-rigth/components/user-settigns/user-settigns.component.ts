@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { AuthRoutingModule } from "../../../../../auth/auth-routing.module";
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-user-settigns',
-  imports: [CommonModule, AuthRoutingModule, RouterModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './user-settigns.component.html',
   styleUrl: './user-settigns.component.css'
 })

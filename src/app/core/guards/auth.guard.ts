@@ -1,27 +1,22 @@
+
 import { inject } from '@angular/core';
-import { CanActivateFn, Router } from '@angular/router';
+import { CanActivateFn, Router, UrlTree } from '@angular/router';
+import { Observable } from 'rxjs';
+import { map, take } from 'rxjs/operators';
+import { AuthService } from '../services/auth.service'; 
 
-export const authGuard: CanActivateFn = (route, state) => {
-  const router = inject(Router)
-  const userJson = localStorage.getItem('user')
+export const authGuard: CanActivateFn = (route, state): Observable<boolean | UrlTree> => {
+  const authService = inject(AuthService);
+  const router = inject(Router);
 
-  if(!userJson){
-    return router.navigate(['/Login']);
-  }
-
- try {
-    const user = JSON.parse(userJson);
-
-    if (user && user.email) {
-      return true; 
-    } else {
-      return router.navigate(['/Login']);
-    }
-
-  } 
-    catch (e) {
-    console.error('Erro ao parsear os dados do usuário:', e);
-    return router.navigate(['/Login']);
-  }
-
+  return authService.currentUser$.pipe(
+    take(1), 
+    map(user => {
+      if (user) {
+        return true; 
+      }
+      
+      return router.createUrlTree(['/Login']);
+    })
+  );
 };

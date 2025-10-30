@@ -10,7 +10,7 @@ import { FormsModule } from "@angular/forms";
 })
 export class CategoriaComponent {
     @Output() filtersChanged = new EventEmitter <any>();
-
+    isFilterModalOpen = false;
     searchValue: string  = "";
 
     searchClear(): void{
@@ -85,9 +85,19 @@ export class CategoriaComponent {
   }
 
   clearFilters(): void {
-    this.accordionsContent.forEach(accordion => {
-      accordion.chields.forEach(child => child.checked = false);
-    });
+    this.accordionsContent.forEach(group => group.chields.forEach(child => child.checked = false));
     this.onFilterChange();
+  }
+
+  toggleFilterModal(): void {
+    this.isFilterModalOpen = !this.isFilterModalOpen;
+  }
+
+  closeFilterModal(): void {
+    this.isFilterModalOpen = false;
+  }
+  
+  applyFiltersAndClose(): void {
+    this.closeFilterModal();
   }
 }

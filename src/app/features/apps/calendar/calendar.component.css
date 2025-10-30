@@ -293,7 +293,27 @@
   place-items: center;
   padding: 0;
 }
+::ng-deep .fc-list-event {
+  background-color: transparent !important;
+  border: none !important;
+}
 
+::ng-deep .fc-list-event-title {
+  color: var(--color-text-primary) !important;
+  font-weight: 500 !important;
+  font-size: 1.4rem !important;
+}
+
+::ng-deep .fc-list-event-time {
+  color: var(--color-text-secondary) !important;
+  font-size: 1.3rem !important;
+}
+
+/* Bolinha colorida, como no Google Agenda */
+::ng-deep .fc-list-event-dot {
+  background-color: var(--color-accent, #3b82f6) !important;
+  border-color: var(--color-accent, #3b82f6) !important;
+}
 
 
 ::ng-deep .fc .fc-event {
@@ -350,6 +370,48 @@
   flex-shrink: 0;
 }
 
+/* calenda.component.css */
+
+.custom-calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 1.5rem 0; /* Espaçamento abaixo do header */
+}
+
+.calendar-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-buttons button {
+  background-color: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-border, #D1D5DB);
+  color: var(--color-text-secondary);
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: var(--color-surface-hover, #F8FAFC);
+}
+
+.header-avatar {
+  /* Espaço para o avatar, se você adicionar */
+  width: 40px; 
+  height: 40px;
+}
 
 @media (max-width: 1199px) {
   .calendar-container {

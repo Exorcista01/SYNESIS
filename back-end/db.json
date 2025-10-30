@@ -33,7 +33,7 @@
       "profile": {
         "fullName": "Jorge Luis dos santos",
         "responsibleName": "Victor Santoss",
-        "course": "Manutenção",
+        "course": "manutencao",
         "role": "Aluno",
         "classYear": "3",
         "address": {
@@ -441,12 +441,7 @@
         {
           "id": "q1p2",
           "texto": "Qual destes é um dispositivo de entrada?",
-          "opcoes": [
-            "Monitor",
-            "Impressora",
-            "Mouse",
-            "Caixa de Som"
-          ],
+          "opcoes": ["Monitor", "Impressora", "Mouse", "Caixa de Som"],
           "respostaCorreta": "Mouse"
         },
         {
@@ -590,12 +585,7 @@
         {
           "id": "q2p5",
           "texto": "Qual destes é um tipo de dado numérico?",
-          "opcoes": [
-            "String",
-            "Boolean",
-            "Integer",
-            "Character"
-          ],
+          "opcoes": ["String", "Boolean", "Integer", "Character"],
           "respostaCorreta": "Integer"
         },
         {
@@ -634,12 +624,7 @@
         {
           "id": "q2p9",
           "texto": "Qual tipo de dado representa apenas 'verdadeiro' ou 'falso'?",
-          "opcoes": [
-            "Integer",
-            "Float",
-            "String",
-            "Boolean"
-          ],
+          "opcoes": ["Integer", "Float", "String", "Boolean"],
           "respostaCorreta": "Boolean"
         },
         {
@@ -662,23 +647,13 @@
         {
           "id": "q3p1",
           "texto": "Qual tag define o corpo de um documento HTML?",
-          "opcoes": [
-            "<head>",
-            "<body>",
-            "<title>",
-            "<html>"
-          ],
+          "opcoes": ["<head>", "<body>", "<title>", "<html>"],
           "respostaCorreta": "<body>"
         },
         {
           "id": "q3p2",
           "texto": "Qual tag é usada para criar o título principal de uma página?",
-          "opcoes": [
-            "<h1>",
-            "<p>",
-            "<div>",
-            "<header>"
-          ],
+          "opcoes": ["<h1>", "<p>", "<div>", "<header>"],
           "respostaCorreta": "<h1>"
         },
         {
@@ -728,12 +703,7 @@
         {
           "id": "q3p7",
           "texto": "Qual tag cria uma lista não ordenada (com marcadores)?",
-          "opcoes": [
-            "<ol>",
-            "<li>",
-            "<ul>",
-            "<list>"
-          ],
+          "opcoes": ["<ol>", "<li>", "<ul>", "<list>"],
           "respostaCorreta": "<ul>"
         },
         {
@@ -750,12 +720,7 @@
         {
           "id": "q3p9",
           "texto": "Qual tag HTML é usada para criar uma quebra de linha?",
-          "opcoes": [
-            "<break>",
-            "<lb>",
-            "<br>",
-            "<newline>"
-          ],
+          "opcoes": ["<break>", "<lb>", "<br>", "<newline>"],
           "respostaCorreta": "<br>"
         },
         {
@@ -778,45 +743,25 @@
         {
           "id": "q4p1",
           "texto": "Como se seleciona um elemento com a classe 'titulo' em CSS?",
-          "opcoes": [
-            "#titulo",
-            ".titulo",
-            "titulo",
-            "*titulo"
-          ],
+          "opcoes": ["#titulo", ".titulo", "titulo", "*titulo"],
           "respostaCorreta": ".titulo"
         },
         {
           "id": "q4p2",
           "texto": "Qual propriedade CSS é usada para alterar a cor do texto?",
-          "opcoes": [
-            "font-color",
-            "text-color",
-            "color",
-            "text-style"
-          ],
+          "opcoes": ["font-color", "text-color", "color", "text-style"],
           "respostaCorreta": "color"
         },
         {
           "id": "q4p3",
           "texto": "Como se seleciona um elemento com o id 'logo' em CSS?",
-          "opcoes": [
-            ".logo",
-            "logo",
-            "#logo",
-            "&logo"
-          ],
+          "opcoes": [".logo", "logo", "#logo", "&logo"],
           "respostaCorreta": "#logo"
         },
         {
           "id": "q4p4",
           "texto": "Qual propriedade altera a cor de fundo de um elemento?",
-          "opcoes": [
-            "background-color",
-            "color",
-            "background",
-            "fill-color"
-          ],
+          "opcoes": ["background-color", "color", "background", "fill-color"],
           "respostaCorreta": "background-color"
         },
         {
@@ -844,23 +789,13 @@
         {
           "id": "q4p7",
           "texto": "Qual propriedade controla o espaçamento interno de um elemento?",
-          "opcoes": [
-            "margin",
-            "border",
-            "padding",
-            "spacing"
-          ],
+          "opcoes": ["margin", "border", "padding", "spacing"],
           "respostaCorreta": "padding"
         },
         {
           "id": "q4p8",
           "texto": "E qual propriedade controla o espaçamento externo (margem)?",
-          "opcoes": [
-            "padding",
-            "margin",
-            "outline",
-            "border"
-          ],
+          "opcoes": ["padding", "margin", "outline", "border"],
           "respostaCorreta": "margin"
         },
         {
@@ -877,12 +812,7 @@
         {
           "id": "q4p10",
           "texto": "Qual seletor CSS seleciona TODOS os elementos <p> dentro de uma <div>?",
-          "opcoes": [
-            "div + p",
-            "div p",
-            "div > p",
-            "div, p"
-          ],
+          "opcoes": ["div + p", "div p", "div > p", "div, p"],
           "respostaCorreta": "div p"
         }
       ]
@@ -1010,45 +940,25 @@
         {
           "id": "q6p1",
           "texto": "Quantas camadas tem o modelo OSI?",
-          "opcoes": [
-            "4",
-            "5",
-            "7",
-            "8"
-          ],
+          "opcoes": ["4", "5", "7", "8"],
           "respostaCorreta": "7"
         },
         {
           "id": "q6p2",
           "texto": "Em qual camada do modelo OSI os roteadores operam principalmente?",
-          "opcoes": [
-            "Física",
-            "Enlace",
-            "Rede",
-            "Transporte"
-          ],
+          "opcoes": ["Física", "Enlace", "Rede", "Transporte"],
           "respostaCorreta": "Rede"
         },
         {
           "id": "q6p3",
           "texto": "Qual protocolo é responsável pela entrega confiável de pacotes na camada de Transporte?",
-          "opcoes": [
-            "IP",
-            "UDP",
-            "TCP",
-            "HTTP"
-          ],
+          "opcoes": ["IP", "UDP", "TCP", "HTTP"],
           "respostaCorreta": "TCP"
         },
         {
           "id": "q6p4",
           "texto": "O protocolo HTTP opera em qual camada do modelo TCP/IP?",
-          "opcoes": [
-            "Aplicação",
-            "Transporte",
-            "Internet",
-            "Enlace"
-          ],
+          "opcoes": ["Aplicação", "Transporte", "Internet", "Enlace"],
           "respostaCorreta": "Aplicação"
         },
         {
@@ -1087,23 +997,13 @@
         {
           "id": "q6p8",
           "texto": "Em qual camada do modelo OSI os endereços MAC são utilizados?",
-          "opcoes": [
-            "Rede",
-            "Física",
-            "Enlace",
-            "Sessão"
-          ],
+          "opcoes": ["Rede", "Física", "Enlace", "Sessão"],
           "respostaCorreta": "Enlace"
         },
         {
           "id": "q6p9",
           "texto": "Qual camada é responsável pela criptografia e formatação de dados?",
-          "opcoes": [
-            "Aplicação",
-            "Apresentação",
-            "Sessão",
-            "Transporte"
-          ],
+          "opcoes": ["Aplicação", "Apresentação", "Sessão", "Transporte"],
           "respostaCorreta": "Apresentação"
         },
         {
@@ -1264,12 +1164,7 @@
         {
           "id": "q8p3",
           "texto": "Qual a complexidade de tempo para acessar um elemento em um array pelo seu índice?",
-          "opcoes": [
-            "O(1)",
-            "O(n)",
-            "O(log n)",
-            "O(n^2)"
-          ],
+          "opcoes": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
           "respostaCorreta": "O(1)"
         },
         {
@@ -1319,23 +1214,13 @@
         {
           "id": "q8p8",
           "texto": "Qual destes tem a pior performance (maior complexidade)?",
-          "opcoes": [
-            "O(n)",
-            "O(log n)",
-            "O(1)",
-            "O(n^2)"
-          ],
+          "opcoes": ["O(n)", "O(log n)", "O(1)", "O(n^2)"],
           "respostaCorreta": "O(n^2)"
         },
         {
           "id": "q8p9",
           "texto": "A sequência de Fibonacci é um exemplo clássico de qual conceito?",
-          "opcoes": [
-            "Ordenação",
-            "Busca",
-            "Recursão",
-            "Hashing"
-          ],
+          "opcoes": ["Ordenação", "Busca", "Recursão", "Hashing"],
           "respostaCorreta": "Recursão"
         },
         {
@@ -1485,12 +1370,7 @@
         {
           "id": "q10p2",
           "texto": "Qual é o endereço IP de 'localhost'?",
-          "opcoes": [
-            "192.168.0.1",
-            "10.0.0.1",
-            "8.8.8.8",
-            "127.0.0.1"
-          ],
+          "opcoes": ["192.168.0.1", "10.0.0.1", "8.8.8.8", "127.0.0.1"],
           "respostaCorreta": "127.0.0.1"
         },
         {
@@ -1540,12 +1420,7 @@
         {
           "id": "q10p7",
           "texto": "Qual comando é usado no Windows para verificar a configuração de IP do seu computador?",
-          "opcoes": [
-            "ping",
-            "tracert",
-            "ipconfig",
-            "netstat"
-          ],
+          "opcoes": ["ping", "tracert", "ipconfig", "netstat"],
           "respostaCorreta": "ipconfig"
         },
         {
@@ -1678,12 +1553,7 @@
         {
           "id": "q11p9",
           "texto": "Qual propriedade controla o espaçamento entre as linhas e colunas do grid?",
-          "opcoes": [
-            "spacing",
-            "margin",
-            "padding",
-            "gap"
-          ],
+          "opcoes": ["spacing", "margin", "padding", "gap"],
           "respostaCorreta": "gap"
         },
         {
@@ -1706,23 +1576,13 @@
         {
           "id": "q12p1",
           "texto": "Qual estrutura de repetição é ideal quando você sabe exatamente quantas vezes quer repetir o bloco de código?",
-          "opcoes": [
-            "while",
-            "do-while",
-            "for",
-            "if"
-          ],
+          "opcoes": ["while", "do-while", "for", "if"],
           "respostaCorreta": "for"
         },
         {
           "id": "q12p2",
           "texto": "O laço `for (i = 0; i < 5; i++)` executará quantas vezes?",
-          "opcoes": [
-            "4",
-            "5",
-            "6",
-            "0"
-          ],
+          "opcoes": ["4", "5", "6", "0"],
           "respostaCorreta": "5"
         },
         {
@@ -1783,23 +1643,13 @@
         {
           "id": "q12p8",
           "texto": "Qual laço é mais apropriado para percorrer todos os itens de um array?",
-          "opcoes": [
-            "if-else",
-            "do-while",
-            "for",
-            "switch"
-          ],
+          "opcoes": ["if-else", "do-while", "for", "switch"],
           "respostaCorreta": "for"
         },
         {
           "id": "q12p9",
           "texto": "No laço `for (let i = 1; i <= 3; i++)`, quais valores a variável `i` assumirá?",
-          "opcoes": [
-            "0, 1, 2",
-            "1, 2",
-            "1, 2, 3",
-            "0, 1, 2, 3"
-          ],
+          "opcoes": ["0, 1, 2", "1, 2", "1, 2, 3", "0, 1, 2, 3"],
           "respostaCorreta": "1, 2, 3"
         },
         {
@@ -1822,12 +1672,7 @@
         {
           "id": "q13p1",
           "texto": "Qual comando SQL é usado para consultar dados de uma tabela?",
-          "opcoes": [
-            "GET",
-            "SELECT",
-            "QUERY",
-            "FETCH"
-          ],
+          "opcoes": ["GET", "SELECT", "QUERY", "FETCH"],
           "respostaCorreta": "SELECT"
         },
         {
@@ -1844,34 +1689,19 @@
         {
           "id": "q13p3",
           "texto": "Qual comando é usado para inserir um novo registro em uma tabela?",
-          "opcoes": [
-            "ADD NEW",
-            "CREATE ROW",
-            "INSERT INTO",
-            "NEW RECORD"
-          ],
+          "opcoes": ["ADD NEW", "CREATE ROW", "INSERT INTO", "NEW RECORD"],
           "respostaCorreta": "INSERT INTO"
         },
         {
           "id": "q13p4",
           "texto": "Para atualizar um registro existente, qual comando usamos?",
-          "opcoes": [
-            "MODIFY",
-            "UPDATE",
-            "CHANGE",
-            "ALTER"
-          ],
+          "opcoes": ["MODIFY", "UPDATE", "CHANGE", "ALTER"],
           "respostaCorreta": "UPDATE"
         },
         {
           "id": "q13p5",
           "texto": "Qual comando remove registros de uma tabela?",
-          "opcoes": [
-            "REMOVE FROM",
-            "DROP",
-            "ERASE",
-            "DELETE FROM"
-          ],
+          "opcoes": ["REMOVE FROM", "DROP", "ERASE", "DELETE FROM"],
           "respostaCorreta": "DELETE FROM"
         },
         {
@@ -1910,12 +1740,7 @@
         {
           "id": "q13p9",
           "texto": "Qual comando junta registros de duas ou mais tabelas?",
-          "opcoes": [
-            "COMBINE",
-            "UNION",
-            "MERGE",
-            "JOIN"
-          ],
+          "opcoes": ["COMBINE", "UNION", "MERGE", "JOIN"],
           "respostaCorreta": "JOIN"
         },
         {
@@ -2109,12 +1934,7 @@
         {
           "id": "q15p6",
           "texto": "Qual o tipo de retorno de uma função que não retorna nada?",
-          "opcoes": [
-            "any",
-            "null",
-            "undefined",
-            "void"
-          ],
+          "opcoes": ["any", "null", "undefined", "void"],
           "respostaCorreta": "void"
         },
         {
@@ -2413,12 +2233,7 @@
         {
           "id": "q18p2",
           "texto": "Qual é o protocolo de segurança Wi-Fi mais seguro atualmente?",
-          "opcoes": [
-            "WEP",
-            "WPA",
-            "WPA2",
-            "WPA3"
-          ],
+          "opcoes": ["WEP", "WPA", "WPA2", "WPA3"],
           "respostaCorreta": "WPA3"
         },
         {
@@ -2518,23 +2333,13 @@
         {
           "id": "q19p1",
           "texto": "Qual estrutura de dados opera no princípio LIFO (Last-In, First-Out)?",
-          "opcoes": [
-            "Fila (Queue)",
-            "Pilha (Stack)",
-            "Lista Ligada",
-            "Árvore"
-          ],
+          "opcoes": ["Fila (Queue)", "Pilha (Stack)", "Lista Ligada", "Árvore"],
           "respostaCorreta": "Pilha (Stack)"
         },
         {
           "id": "q19p2",
           "texto": "E qual opera no princípio FIFO (First-In, First-Out)?",
-          "opcoes": [
-            "Pilha (Stack)",
-            "Fila (Queue)",
-            "Array",
-            "Hash Table"
-          ],
+          "opcoes": ["Pilha (Stack)", "Fila (Queue)", "Array", "Hash Table"],
           "respostaCorreta": "Fila (Queue)"
         },
         {
@@ -2573,12 +2378,7 @@
         {
           "id": "q19p6",
           "texto": "Qual a complexidade de tempo média para busca, inserção e remoção em uma Hash Table?",
-          "opcoes": [
-            "O(n)",
-            "O(log n)",
-            "O(1)",
-            "O(n^2)"
-          ],
+          "opcoes": ["O(n)", "O(log n)", "O(1)", "O(n^2)"],
           "respostaCorreta": "O(1)"
         },
         {
@@ -2595,34 +2395,19 @@
         {
           "id": "q19p8",
           "texto": "Qual operação adiciona um item ao topo de uma Pilha (Stack)?",
-          "opcoes": [
-            "enqueue",
-            "add",
-            "push",
-            "insert"
-          ],
+          "opcoes": ["enqueue", "add", "push", "insert"],
           "respostaCorreta": "push"
         },
         {
           "id": "q19p9",
           "texto": "E qual operação remove o item do topo de uma Pilha?",
-          "opcoes": [
-            "dequeue",
-            "remove",
-            "pop",
-            "get"
-          ],
+          "opcoes": ["dequeue", "remove", "pop", "get"],
           "respostaCorreta": "pop"
         },
         {
           "id": "q19p10",
           "texto": "O histórico de 'Voltar' de um navegador web é um exemplo clássico de qual estrutura de dados?",
-          "opcoes": [
-            "Fila",
-            "Pilha",
-            "Árvore",
-            "Grafo"
-          ],
+          "opcoes": ["Fila", "Pilha", "Árvore", "Grafo"],
           "respostaCorreta": "Pilha"
         }
       ]
@@ -2634,12 +2419,7 @@
         {
           "id": "q20p1",
           "texto": "Qual propriedade CSS é usada para definir uma transição suave de estilo?",
-          "opcoes": [
-            "animate",
-            "transition",
-            "transform",
-            "move"
-          ],
+          "opcoes": ["animate", "transition", "transform", "move"],
           "respostaCorreta": "transition"
         },
         {
@@ -2761,23 +2541,13 @@
         {
           "id": "q21p2",
           "texto": "Em Jest, qual função é usada para agrupar testes relacionados?",
-          "opcoes": [
-            "group()",
-            "suite()",
-            "describe()",
-            "testCase()"
-          ],
+          "opcoes": ["group()", "suite()", "describe()", "testCase()"],
           "respostaCorreta": "describe()"
         },
         {
           "id": "q21p3",
           "texto": "Qual função define um caso de teste individual em Jest?",
-          "opcoes": [
-            "assert()",
-            "it() ou test()",
-            "should()",
-            "check()"
-          ],
+          "opcoes": ["assert()", "it() ou test()", "should()", "check()"],
           "respostaCorreta": "it() ou test()"
         },
         {
@@ -2899,12 +2669,7 @@
         {
           "id": "q22p4",
           "texto": "Em Machine Learning, os 'pesos' de uma rede neural são frequentemente representados por qual estrutura?",
-          "opcoes": [
-            "Vetores",
-            "Escalares",
-            "Matrizes",
-            "Listas ligadas"
-          ],
+          "opcoes": ["Vetores", "Escalares", "Matrizes", "Listas ligadas"],
           "respostaCorreta": "Matrizes"
         },
         {
@@ -3120,12 +2885,7 @@
         {
           "id": "q24p3",
           "texto": "Qual serviço da AWS fornece servidores virtuais (máquinas virtuais)?",
-          "opcoes": [
-            "S3",
-            "RDS",
-            "EC2",
-            "Lambda"
-          ],
+          "opcoes": ["S3", "RDS", "EC2", "Lambda"],
           "respostaCorreta": "EC2"
         },
         {
@@ -3164,12 +2924,7 @@
         {
           "id": "q24p7",
           "texto": "Qual serviço da AWS é um banco de dados relacional gerenciado?",
-          "opcoes": [
-            "DynamoDB",
-            "EC2",
-            "S3",
-            "RDS"
-          ],
+          "opcoes": ["DynamoDB", "EC2", "S3", "RDS"],
           "respostaCorreta": "RDS"
         },
         {
@@ -3490,12 +3245,7 @@
         {
           "id": "q27p5",
           "texto": "Qual é o método HTTP padrão usado pela função `fetch()` se nenhum for especificado?",
-          "opcoes": [
-            "POST",
-            "PUT",
-            "GET",
-            "DELETE"
-          ],
+          "opcoes": ["POST", "PUT", "GET", "DELETE"],
           "respostaCorreta": "GET"
         },
         {
@@ -3584,12 +3334,7 @@
         {
           "id": "q28p3",
           "texto": "Qual pilar da POO se refere ao agrupamento de dados (atributos) e métodos que operam nesses dados dentro de uma única unidade (classe)?",
-          "opcoes": [
-            "Herança",
-            "Polimorfismo",
-            "Abstração",
-            "Encapsulamento"
-          ],
+          "opcoes": ["Herança", "Polimorfismo", "Abstração", "Encapsulamento"],
           "respostaCorreta": "Encapsulamento"
         },
         {
@@ -3933,7 +3678,7 @@
       "pomosEstimated": 2,
       "pomosCompleted": 0,
       "isCompleted": true,
-      "completionDate": "2025-10-12T19:21:14.725Z"
+      "completionDate": "2025-10-13T15:34:45.779Z"
     },
     {
       "id": "6382",
@@ -3957,6 +3702,13 @@
       "pomosCompleted": 0,
       "isCompleted": true,
       "completionDate": "2025-10-13T09:40:33.595Z"
+    },
+    {
+      "id": "4f2e",
+      "title": "25 minutos de estudo",
+      "pomosEstimated": 1,
+      "pomosCompleted": 0,
+      "isCompleted": false
     }
   ],
   "events": [
@@ -3988,6 +3740,599 @@
       "end": "2025-10-14",
       "allDay": true,
       "disciplineCode": "SEM_DISCIPLINA"
+    }
+  ],
+
+  "courses": [
+    {
+      "id": 1,
+      "slug": "manutencao-de-computadores",
+      "img": "/assets/course/cards/manutencao.png",
+      "title": "Manutenção de Computadores do Zero ao Avançado",
+      "author": "Carlos Henrique",
+      "year": "2025",
+      "tags": ["hardware", "tecnologia", "suporte"],
+      "description": "Aprenda a identificar, montar e reparar computadores de forma profissional.",
+      "descriptionLong": "Este curso cobre desde os fundamentos da manutenção até técnicas avançadas de diagnóstico e reparo.",
+      "level": "Intermediário",
+      "studyHours": 60,
+      "totalLessons": 15,
+      "totalMinutes": 900,
+      "studentCount": 2430,
+      "accessEndDate": "2026-12-31",
+      "activities": 8,
+      "category": "Manutenção de Computadores",
+      "modules": [
+        {
+          "order": 1,
+          "title": "Introdução e Ferramentas",
+          "durationInHours": 10,
+          "thumbnail": "assets/images/modules/ferramentas.jpg",
+          "learnings": [
+            "Identificar componentes",
+            "Usar ferramentas com segurança"
+          ],
+          "skills": ["Organização técnica", "Diagnóstico inicial"],
+          "lessons": [
+            {
+              "id": 1,
+              "title": "Boas práticas de manutenção",
+              "type": "artigo",
+              "description": "Fundamentos da manutenção preventiva.",
+              "durationInMinutes": 20
+            },
+            {
+              "id": 2,
+              "title": "Ferramentas básicas de técnico",
+              "type": "video",
+              "description": "Conheça as ferramentas essenciais.",
+              "durationInMinutes": 18
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "title": "Hardware Interno",
+          "durationInHours": 15,
+          "thumbnail": "assets/images/modules/hardware.jpg",
+          "learnings": ["Instalar componentes", "Diagnosticar falhas físicas"],
+          "skills": ["Montagem e desmontagem", "Teste de peças"],
+          "lessons": [
+            {
+              "id": 3,
+              "title": "Placas-mãe e processadores",
+              "type": "video",
+              "description": "Instalação e compatibilidade.",
+              "durationInMinutes": 30
+            },
+            {
+              "id": 4,
+              "title": "Memória RAM e Armazenamento",
+              "type": "video",
+              "description": "Configuração de memórias e HD/SSD.",
+              "durationInMinutes": 25
+            },
+            {
+              "id": 5,
+              "title": "Placas de vídeo e periféricos",
+              "type": "artigo",
+              "description": "Instalação e cuidados.",
+              "durationInMinutes": 20
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "title": "Software e Sistemas Operacionais",
+          "durationInHours": 12,
+          "thumbnail": "assets/images/modules/software.jpg",
+          "learnings": ["Instalar sistemas operacionais", "Configurar drivers"],
+          "skills": ["Diagnóstico de software", "Otimização do sistema"],
+          "lessons": [
+            {
+              "id": 6,
+              "title": "Instalação de Windows",
+              "type": "video",
+              "description": "Passo a passo do setup.",
+              "durationInMinutes": 30
+            },
+            {
+              "id": 7,
+              "title": "Instalação de Linux",
+              "type": "video",
+              "description": "Configuração e partições.",
+              "durationInMinutes": 35
+            },
+            {
+              "id": 8,
+              "title": "Drivers e atualizações",
+              "type": "artigo",
+              "description": "Como manter o PC atualizado.",
+              "durationInMinutes": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "montagem-e-configuracao-de-pcs",
+      "img": "/assets/course/cards/montagem.png",
+      "title": "Montagem e Configuração de PCs Profissional",
+      "author": "Bruno Almeida",
+      "year": "2025",
+      "tags": ["hardware", "montagem", "configuração"],
+      "description": "Aprenda a montar e configurar PCs de forma profissional.",
+      "descriptionLong": "Do planejamento do hardware à instalação de sistemas operacionais e softwares.",
+      "level": "Intermediário",
+      "studyHours": 50,
+      "totalLessons": 12,
+      "totalMinutes": 720,
+      "studentCount": 1800,
+      "accessEndDate": "2026-12-31",
+      "activities": 6,
+      "category": "Manutenção de Computadores",
+      "modules": [
+        {
+          "order": 1,
+          "title": "Planejamento e Escolha de Hardware",
+          "durationInHours": 10,
+          "thumbnail": "assets/images/modules/planejamento.jpg",
+          "learnings": [
+            "Escolher componentes compatíveis",
+            "Planejar o orçamento do PC"
+          ],
+          "skills": ["Análise de compatibilidade", "Pesquisa de mercado"],
+          "lessons": [
+            {
+              "id": 1,
+              "title": "Escolha de processadores e placa-mãe",
+              "type": "video",
+              "description": "Como escolher o melhor hardware.",
+              "durationInMinutes": 25
+            },
+            {
+              "id": 2,
+              "title": "Memória, armazenamento e placa de vídeo",
+              "type": "video",
+              "description": "Comparativos e compatibilidade.",
+              "durationInMinutes": 25
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "title": "Montagem e Testes",
+          "durationInHours": 15,
+          "thumbnail": "assets/images/modules/montagem.jpg",
+          "learnings": [
+            "Montar o PC passo a passo",
+            "Testar componentes após montagem"
+          ],
+          "skills": ["Montagem correta", "Testes de estabilidade"],
+          "lessons": [
+            {
+              "id": 3,
+              "title": "Montagem do gabinete",
+              "type": "video",
+              "description": "Organizando cabos e peças.",
+              "durationInMinutes": 30
+            },
+            {
+              "id": 4,
+              "title": "Primeiros testes e BIOS",
+              "type": "artigo",
+              "description": "Verificando se tudo funciona.",
+              "durationInMinutes": 20
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "title": "Configuração de Sistema Operacional",
+          "durationInHours": 10,
+          "thumbnail": "assets/images/modules/configuracao.jpg",
+          "learnings": [
+            "Instalar e configurar Windows e Linux",
+            "Atualizar drivers e softwares"
+          ],
+          "skills": ["Otimização de sistema", "Segurança básica"],
+          "lessons": [
+            {
+              "id": 5,
+              "title": "Instalação do Windows",
+              "type": "video",
+              "description": "Setup e ajustes iniciais.",
+              "durationInMinutes": 30
+            },
+            {
+              "id": 6,
+              "title": "Instalação do Linux",
+              "type": "video",
+              "description": "Configurações iniciais e partições.",
+              "durationInMinutes": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "manutencao-preventiva-e-suporte-tecnico",
+      "img": "/assets/course/cards/preventiva.png",
+      "title": "Manutenção Preventiva e Suporte Técnico",
+      "author": "Fernanda Ribeiro",
+      "year": "2025",
+      "tags": ["manutenção preventiva", "suporte", "hardware"],
+      "description": "Aprenda técnicas de manutenção preventiva e suporte técnico.",
+      "descriptionLong": "Inclui resolução de problemas, otimização de sistemas e atendimento ao cliente.",
+      "level": "Intermediário",
+      "studyHours": 40,
+      "totalLessons": 10,
+      "totalMinutes": 600,
+      "studentCount": 1500,
+      "accessEndDate": "2026-12-31",
+      "activities": 5,
+      "category": "Manutenção de Computadores",
+      "modules": [
+        {
+          "order": 1,
+          "title": "Manutenção Preventiva",
+          "durationInHours": 12,
+          "thumbnail": "assets/images/modules/preventiva.jpg",
+          "learnings": [
+            "Limpeza e cuidado com hardware",
+            "Evitar falhas comuns"
+          ],
+          "skills": ["Rotina preventiva", "Inspeção técnica"],
+          "lessons": [
+            {
+              "id": 1,
+              "title": "Limpeza interna e externa",
+              "type": "video",
+              "description": "Como limpar PCs e notebooks.",
+              "durationInMinutes": 25
+            },
+            {
+              "id": 2,
+              "title": "Check-up de hardware",
+              "type": "artigo",
+              "description": "Como identificar sinais de problemas.",
+              "durationInMinutes": 20
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "title": "Suporte Técnico",
+          "durationInHours": 12,
+          "thumbnail": "assets/images/modules/suporte.jpg",
+          "learnings": [
+            "Atender clientes com eficiência",
+            "Resolução rápida de problemas"
+          ],
+          "skills": ["Comunicação", "Diagnóstico remoto e local"],
+          "lessons": [
+            {
+              "id": 3,
+              "title": "Atendimento ao cliente",
+              "type": "video",
+              "description": "Como prestar suporte de forma profissional.",
+              "durationInMinutes": 25
+            },
+            {
+              "id": 4,
+              "title": "Resolução de problemas comuns",
+              "type": "video",
+              "description": "Soluções rápidas para falhas frequentes.",
+              "durationInMinutes": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "montagem-desktop",
+      "img": "/assets/course/cards/desktop.png",
+      "title": "Montagem de Desktop Profissional",
+      "author": "Rafael Costa",
+      "year": "2025",
+      "tags": ["desktop", "hardware", "montagem"],
+      "description": "Curso completo de montagem de desktops para iniciantes e profissionais.",
+      "descriptionLong": "Aprenda a escolher componentes, montar e configurar desktops de forma segura e eficiente.",
+      "level": "Iniciante",
+      "studyHours": 35,
+      "totalLessons": 8,
+      "totalMinutes": 480,
+      "studentCount": 1200,
+      "accessEndDate": "2026-12-31",
+      "activities": 4,
+      "category": "Manutenção de Computadores",
+      "modules": [
+        {
+          "order": 1,
+          "title": "Escolha de Hardware",
+          "durationInHours": 10,
+          "thumbnail": "assets/images/modules/desktop-hardware.jpg",
+          "learnings": ["Selecionar peças corretas", "Planejar montagem"],
+          "skills": ["Análise de compatibilidade", "Orçamento técnico"],
+          "lessons": [
+            {
+              "id": 1,
+              "title": "Processador e placa-mãe",
+              "type": "video",
+              "description": "Como escolher corretamente.",
+              "durationInMinutes": 20
+            },
+            {
+              "id": 2,
+              "title": "Memória e armazenamento",
+              "type": "video",
+              "description": "Escolha de RAM, SSD e HD.",
+              "durationInMinutes": 20
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "title": "Montagem Física",
+          "durationInHours": 15,
+          "thumbnail": "assets/images/modules/desktop-montagem.jpg",
+          "learnings": [
+            "Montar gabinete corretamente",
+            "Conectar todos os componentes"
+          ],
+          "skills": [
+            "Organização e segurança",
+            "Teste inicial de funcionamento"
+          ],
+          "lessons": [
+            {
+              "id": 3,
+              "title": "Montagem do gabinete",
+              "type": "video",
+              "description": "Organização de cabos e peças.",
+              "durationInMinutes": 30
+            },
+            {
+              "id": 4,
+              "title": "Primeiros testes",
+              "type": "artigo",
+              "description": "Verificar funcionamento do PC.",
+              "durationInMinutes": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "manutencao-notebooks",
+      "img": "/assets/course/cards/notebook.png",
+      "title": "Manutenção de Notebooks",
+      "author": "Patrícia Gomes",
+      "year": "2025",
+      "tags": ["notebook", "hardware", "reparo"],
+      "description": "Curso focado em manutenção e reparo de notebooks.",
+      "descriptionLong": "Aprenda a identificar problemas, substituir peças e otimizar desempenho.",
+      "level": "Intermediário",
+      "studyHours": 45,
+      "totalLessons": 10,
+      "totalMinutes": 675,
+      "studentCount": 1400,
+      "accessEndDate": "2026-12-31",
+      "activities": 5,
+      "category": "Manutenção de Computadores",
+      "modules": [
+        {
+          "order": 1,
+          "title": "Diagnóstico de Notebooks",
+          "durationInHours": 10,
+          "thumbnail": "assets/images/modules/diagnostico.jpg",
+          "learnings": [
+            "Identificar falhas comuns",
+            "Testar componentes internos"
+          ],
+          "skills": ["Diagnóstico técnico", "Análise de desempenho"],
+          "lessons": [
+            {
+              "id": 1,
+              "title": "Falhas comuns em notebooks",
+              "type": "video",
+              "description": "Como identificar problemas frequentes.",
+              "durationInMinutes": 25
+            },
+            {
+              "id": 2,
+              "title": "Testes de bateria e tela",
+              "type": "video",
+              "description": "Métodos de verificação corretos.",
+              "durationInMinutes": 25
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "title": "Reparo e Substituição de Peças",
+          "durationInHours": 12,
+          "thumbnail": "assets/images/modules/reparo.jpg",
+          "learnings": [
+            "Substituir peças com segurança",
+            "Evitar danos adicionais"
+          ],
+          "skills": ["Manuseio de hardware", "Reparo eficiente"],
+          "lessons": [
+            {
+              "id": 3,
+              "title": "Troca de teclado e touchpad",
+              "type": "video",
+              "description": "Passo a passo da substituição.",
+              "durationInMinutes": 30
+            },
+            {
+              "id": 4,
+              "title": "Substituição de HD/SSD",
+              "type": "video",
+              "description": "Como trocar sem perder dados.",
+              "durationInMinutes": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "otimizacao-desempenho-pc",
+      "img": "/assets/course/cards/otimizacao.png",
+      "title": "Otimização de Desempenho de PCs",
+      "author": "André Nascimento",
+      "year": "2025",
+      "tags": ["otimização", "hardware", "software"],
+      "description": "Aprenda técnicas para melhorar o desempenho de PCs.",
+      "descriptionLong": "Inclui otimização de software, limpeza de hardware e manutenção preventiva.",
+      "level": "Avançado",
+      "studyHours": 30,
+      "totalLessons": 8,
+      "totalMinutes": 480,
+      "studentCount": 1100,
+      "accessEndDate": "2026-12-31",
+      "activities": 4,
+      "category": "Manutenção de Computadores",
+      "modules": [
+        {
+          "order": 1,
+          "title": "Otimização de Hardware",
+          "durationInHours": 10,
+          "thumbnail": "assets/images/modules/otimizacao-hardware.jpg",
+          "learnings": [
+            "Melhorar desempenho físico do PC",
+            "Substituir peças antigas"
+          ],
+          "skills": ["Avaliação de performance", "Atualização de hardware"],
+          "lessons": [
+            {
+              "id": 1,
+              "title": "Upgrade de memória e SSD",
+              "type": "video",
+              "description": "Como melhorar performance com upgrades.",
+              "durationInMinutes": 30
+            },
+            {
+              "id": 2,
+              "title": "Limpeza e manutenção física",
+              "type": "video",
+              "description": "Melhorando a durabilidade do PC.",
+              "durationInMinutes": 25
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "title": "Otimização de Software",
+          "durationInHours": 10,
+          "thumbnail": "assets/images/modules/otimizacao-software.jpg",
+          "learnings": [
+            "Ajustes no sistema operacional",
+            "Remoção de programas desnecessários"
+          ],
+          "skills": [
+            "Gerenciamento de recursos",
+            "Aceleração de inicialização"
+          ],
+          "lessons": [
+            {
+              "id": 3,
+              "title": "Configurações do Windows",
+              "type": "video",
+              "description": "Ajustes que melhoram a performance.",
+              "durationInMinutes": 25
+            },
+            {
+              "id": 4,
+              "title": "Software de otimização",
+              "type": "video",
+              "description": "Ferramentas que ajudam na limpeza e desempenho.",
+              "durationInMinutes": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "redes-de-computadores",
+      "img": "/assets/course/cards/redes.png",
+      "title": "Redes de Computadores",
+      "author": "João Ferreira",
+      "year": "2025",
+      "tags": ["redes", "TCP/IP", "configuração"],
+      "description": "Aprenda a configurar e administrar redes de computadores.",
+      "descriptionLong": "Inclui fundamentos de redes, roteadores, switches, protocolos TCP/IP e segurança de rede.",
+      "level": "Intermediário",
+      "studyHours": 60,
+      "totalLessons": 12,
+      "totalMinutes": 720,
+      "studentCount": 2000,
+      "accessEndDate": "2026-12-31",
+      "activities": 6,
+      "category": "Redes de Computadores",
+      "modules": [
+        {
+          "order": 1,
+          "title": "Fundamentos de Redes",
+          "durationInHours": 15,
+          "thumbnail": "assets/images/modules/fundamentos-redes.jpg",
+          "learnings": [
+            "Entender protocolos e topologias",
+            "Configurar endereços IP"
+          ],
+          "skills": ["Planejamento de rede", "Configuração de dispositivos"],
+          "lessons": [
+            {
+              "id": 1,
+              "title": "Introdução a TCP/IP",
+              "type": "video",
+              "description": "Conheça os protocolos básicos.",
+              "durationInMinutes": 30
+            },
+            {
+              "id": 2,
+              "title": "Topologias de rede",
+              "type": "video",
+              "description": "Como diferentes topologias funcionam.",
+              "durationInMinutes": 25
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "title": "Roteadores e Switches",
+          "durationInHours": 15,
+          "thumbnail": "assets/images/modules/roteadores.jpg",
+          "learnings": [
+            "Configurar equipamentos de rede",
+            "Gerenciar tráfego e performance"
+          ],
+          "skills": ["Administração de rede", "Monitoramento de performance"],
+          "lessons": [
+            {
+              "id": 3,
+              "title": "Configuração de roteadores",
+              "type": "video",
+              "description": "Como configurar roteadores domésticos e empresariais.",
+              "durationInMinutes": 30
+            },
+            {
+              "id": 4,
+              "title": "Switches e VLANs",
+              "type": "video",
+              "description": "Separando tráfego de rede eficientemente.",
+              "durationInMinutes": 30
+            }
+          ]
+        }
+      ]
     }
   ]
 }

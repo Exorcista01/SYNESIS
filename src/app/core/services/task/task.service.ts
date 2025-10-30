@@ -1,37 +1,50 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Injectable, inject } from '@angular/core';
+import { from, Observable } from 'rxjs';
+import {
+  Firestore,
+  collection,
+  collectionData,
+  doc,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+} from '@angular/fire/firestore';
 
 export interface Task {
-  id: number;
-  title: string;
-  pomosEstimated: number;
-  pomosCompleted: number;
-  isCompleted: boolean;
-  completionDate?: string | null;
+  id: string; 
+  title: string;
+  pomosEstimated: number;
+  pomosCompleted: number;
+  isCompleted: boolean;
+  completionDate?: string | null;
 }
+
 
 @Injectable({
   providedIn: 'root',
 })
 export class TaskService {
-  private apiUrl = 'http://localhost:3000/tasks';
+  private firestore: Firestore = inject(Firestore);
+  private tasksCollection = collection(this.firestore, 'tasks'); 
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   getTasks(): Observable<Task[]> {
-    return this.http.get<Task[]>(this.apiUrl);
+    return collectionData(this.tasksCollection, { idField: 'id' }) as Observable<Task[]>;
   }
 
-  addTask(taskData: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, taskData);
+  addTask(taskData: Omit<Task, 'id'>): Observable<any> {
+    return from(addDoc(this.tasksCollection, taskData));
   }
 
-  updateTask(taskData: Task): Observable<Task> {
-    return this.http.put<Task>(`${this.apiUrl}/${taskData.id}`, taskData);
+  updateTask(taskData: Task): Observable<void> {
+    const taskDocRef = doc(this.firestore, `tasks/${taskData.id}`);
+    const { id, ...dataToUpdate } = taskData; 
+    return from(updateDoc(taskDocRef, dataToUpdate));
   }
 
-  deleteTask(id: number): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${id}`);
+  deleteTask(id: string): Observable<void> {
+    const taskDocRef = doc(this.firestore, `tasks/${id}`);
+    return from(deleteDoc(taskDocRef));
   }
 }

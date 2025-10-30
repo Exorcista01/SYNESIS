@@ -3,7 +3,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BannerComponent } from './components/banner/banner.component';
-import { AuthRoutingModule } from "../features/auth/auth-routing.module"; 
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -11,10 +11,11 @@ import { AuthRoutingModule } from "../features/auth/auth-routing.module";
     ],
     imports: [
     CommonModule,
-    AuthRoutingModule
+    RouterModule
 ],
     exports: [
-        BannerComponent 
+        BannerComponent ,
+        RouterModule
     ]
 })
 export class SharedModule { }

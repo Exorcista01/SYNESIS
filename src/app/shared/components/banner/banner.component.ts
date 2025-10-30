@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+
 
 
 @Component({
@@ -10,7 +12,7 @@ import { Component, Input } from '@angular/core';
 
 export class BannerComponent {
 
-  @Input() userName: string = 'Jorge';
+  @Input() userName: string = '';
   @Input() tituloPrincipal: string = 'O que você quer';
   @Input() palavraEmDestaque: string = 'Aprender';
   @Input() subtitulo: string = 'Discover courses, track progress, and achieve your learning goals seamlessly.';

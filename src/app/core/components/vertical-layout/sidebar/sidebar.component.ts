@@ -29,7 +29,7 @@ export class SidebarComponent {
     });
 
     const userId = this.authService.getCurrentUserId();
-    if (userId && !this.authService.currentUserValue) {
+    if (userId && !this.authService.currentUser$) {
       this.authService.getUserById(userId).subscribe();
     }
   }

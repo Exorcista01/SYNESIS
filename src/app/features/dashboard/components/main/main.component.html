@@ -1,22 +1,27 @@
+@if (user$ | async; as user) {
 <div class="top-row-main-content">
-  <app-banner></app-banner>
+  <app-banner [userName]="user.name"></app-banner>
 
   <app-calenda-progress [progressData]="userProgress"></app-calenda-progress>
 </div>
-
+}@else {
+  <p>Carregando...</p>
+}
 <div class="cards-and-recent">
   <app-recentes></app-recentes>
-  <app-grid-stats ></app-grid-stats>
+  <app-grid-stats></app-grid-stats>
 </div>
 
-<app-carrosel 
-  class="full-width-section" 
-  [title]="'Manutenção de Computadores'" 
-  [items]="cursosRecentes">
+<app-carrosel
+  class="full-width-section"
+  [title]="'Manutenção de Computadores'"
+  [items]="cursosRecentes"
+>
 </app-carrosel>
 
-<app-carrosel 
-  class="full-width-section" 
-  [title]="'Redes de Computadores'" 
-  [items]="cursosPopulares">
+<app-carrosel
+  class="full-width-section"
+  [title]="'Redes de Computadores'"
+  [items]="cursosPopulares"
+>
 </app-carrosel>
