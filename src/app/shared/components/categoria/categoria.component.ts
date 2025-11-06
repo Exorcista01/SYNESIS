@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Output, EventEmitter  } from '@angular/core';
+import { Component, Output, EventEmitter, Input  } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 
 @Component({
@@ -9,6 +9,7 @@ import { FormsModule } from "@angular/forms";
   styleUrl: './categoria.component.css'
 })
 export class CategoriaComponent {
+    @Input() showHeader: boolean = true;
     @Output() filtersChanged = new EventEmitter <any>();
     isFilterModalOpen = false;
     searchValue: string  = "";

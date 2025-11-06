@@ -1,98 +1,49 @@
 <div class="courses-page-container">
-
-  <div class="filter-toggle-container">
-    <button class="filter-toggle-btn" (click)="toggleFilterModal()">
-      <i class="fa-solid fa-filter"></i> Filtros
-    </button>
-  </div>
-
   <div class="content-wrapper">
-
-    <aside class="aside-accordion desktop-only">
+    <aside class="aside-accordion">
       <div class="categoria-wrapper">
+        @if (showHeader) {
         <div class="categoria-top">
           <h2 class="categoria-title">
             <i class="fa-solid fa-filter"></i> Filtro
           </h2>
           <button class="categoria-btn" (click)="clearFilters()">Limpar</button>
         </div>
+        }
         <div class="categorias-accordions">
           @for (item of accordionsContent; track item) {
-            <div class="accordions">
-              <button (click)="item.isOpen = !item.isOpen">
-                <h2>{{item.title}}</h2>
-                <i class="fas fa-chevron-right nav-arrow " [class.rotate-90]="item.isOpen"></i>
-              </button>
-            </div>
-            @if (item.isOpen) {
-              <div class="accordion-menu">
-                @for (child of item.chields; track child) {
-                  <div class="menu-item-wrapper">
-                    <input type="checkbox"
-                           [id]="child.label" class="menu-checkbox"
-                           [checked]="child.checked"
-                           (change)="child.checked = !child.checked; onFilterChange()">
-                    <label [for]="child.label" class="menu-content">
-                      <span class="checkbox-visual"></span>
-                      <div class="menu-title">
-                        <p>{{ child.label }}</p>
-                      </div>
-                    </label>
-                  </div>
-                }
-              </div>
-            }
-          }
+          <div class="accordions">
+            <button (click)="item.isOpen = !item.isOpen">
+              <h2>{{ item.title }}</h2>
+              <i
+                class="fas fa-chevron-right nav-arrow"
+                [class.rotate-90]="item.isOpen"
+              ></i>
+            </button>
           </div>
+          @if (item.isOpen) {
+          <div class="accordion-menu">
+            @for (child of item.chields; track child) {
+            <div class="menu-item-wrapper">
+              <input
+                type="checkbox"
+                [id]="child.label"
+                class="menu-checkbox"
+                [checked]="child.checked"
+                (change)="child.checked = !child.checked; onFilterChange()"
+              />
+              <label [for]="child.label" class="menu-content">
+                <span class="checkbox-visual"></span>
+                <div class="menu-title">
+                  <p>{{ child.label }}</p>
+                </div>
+              </label>
+            </div>
+            }
+          </div>
+          } }
+        </div>
       </div>
     </aside>
   </div>
-
-  @if (isFilterModalOpen) {
-  <div class="filter-modal-overlay" (click)="closeFilterModal()">
-    <div class="filter-modal-content" (click)="$event.stopPropagation()">
-      <div class="filter-modal-header">
-        <h3>Filtros</h3>
-        <button class="close-btn" (click)="closeFilterModal()">&times;</button>
-      </div>
-      <div class="filter-modal-body">
-        <div class="categoria-wrapper-modal">
-          <div class="categorias-accordions">
-            @for (item of accordionsContent; track item) {
-              <div class="accordions">
-                <button (click)="item.isOpen = !item.isOpen">
-                  <h2>{{item.title}}</h2>
-                  <i class="fas fa-chevron-right nav-arrow " [class.rotate-90]="item.isOpen"></i>
-                </button>
-              </div>
-              @if (item.isOpen) {
-                <div class="accordion-menu">
-                  @for (child of item.chields; track child) {
-                    <div class="menu-item-wrapper">
-                      <input type="checkbox"
-                             [id]="'modal-' + child.label" class="menu-checkbox"
-                             [checked]="child.checked"
-                             (change)="child.checked = !child.checked; onFilterChange()">
-                      <label [for]="'modal-' + child.label" class="menu-content">
-                        <span class="checkbox-visual"></span>
-                        <div class="menu-title">
-                          <p>{{ child.label }}</p>
-                        </div>
-                      </label>
-                    </div>
-                  }
-                </div>
-              }
-            }
-            </div>
-        </div>
-      </div>
-      <div class="filter-modal-footer">
-        <button class="btn-clear" (click)="clearFilters(); closeFilterModal()">Limpar</button>
-        <button class="btn-apply" (click)="applyFiltersAndClose()">Aplicar</button>
-      </div>
-    </div>
-  </div>
-  }
-
 </div>

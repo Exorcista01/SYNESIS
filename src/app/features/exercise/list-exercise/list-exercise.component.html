@@ -11,7 +11,8 @@
     <div class="container-left desktop-only">
       <app-categoria
         (filterChanged)="onFilterChange()"
-        (clear)="clearFilters()">
+        (clear)="clearFilters()"
+      >
       </app-categoria>
     </div>
 
@@ -21,24 +22,35 @@
   </div>
 
   @if (isFilterModalOpen) {
-  <div class="filter-modal-overlay" (click)="closeFilterModal()">
-    <div class="filter-modal-content" (click)="$event.stopPropagation()">
-      <div class="filter-modal-header">
-        <h3>Filtros</h3>
-        <button class="close-btn" (click)="closeFilterModal()">&times;</button>
-      </div>
-      <div class="filter-modal-body">
-        <app-categoria
-          (filterChanged)="onFilterChange()"
-          (clear)="clearFilters()">
-        </app-categoria>
-      </div>
-      <div class="filter-modal-footer">
-        <button class="btn-clear" (click)="clearFilters(); closeFilterModal()">Limpar</button>
-        <button class="btn-apply" (click)="applyFiltersAndClose()">Aplicar</button>
-      </div>
+  <div class="filter-modal-overlay" (click)="closeFilterModal()"></div>
+
+  <div class="filter-modal-content">
+    <div class="filter-modal-header">
+      <h2 class="filter-modal-title">
+        <i class="fa-solid fa-filter"></i> Filtros
+      </h2>
+      <button class="modal-close-btn" (click)="closeFilterModal()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="filter-modal-body">
+      <app-categoria
+        (filterChanged)="onFilterChange()"
+        (clear)="clearFilters()"
+        [showHeader]="false"
+      >
+      </app-categoria>
+    </div>
+
+    <div class="filter-modal-footer">
+      <button class="btn btn-secondary" (click)="clearFilters()">
+        Limpar Filtros
+      </button>
+      <button class="btn btn-primary" (click)="applyFiltersAndClose()">
+        Aplicar
+      </button>
     </div>
   </div>
   }
-
 </div>
